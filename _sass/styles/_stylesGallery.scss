@@ -1,0 +1,53 @@
+.gallery-thumbnails {
+   img {
+      width: auto;
+      display: block;
+      height: 50px;
+   }
+}
+
+.gallery-title {
+    box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0px 0px 0 80px;
+    line-height: 1em;
+    font-size: 20px;
+    width: 100%;
+    background: #323232;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.gallery-thumb {
+   padding: 2px 1px 0;
+}
+
+.owl-carousel.owl-loaded {
+    display: flex;
+    flex-direction: column;
+}
+.owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+.slideshow-buttons {
+    position: fixed;
+    bottom: 80px;
+    z-index: 25;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+   i {
+      font-size: 4em;
+   }
+}

@@ -1,0 +1,87 @@
+/* PAGE */
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+header {
+  @include full;
+  position: relative;
+}
+.navigation {
+}
+nav {
+  @include layout($textarea);
+  @include container;
+}
+.hero-group {
+ flex-basis: 90%;
+}
+.textarea {
+  @include layout($textarea);
+  @include container;
+  position: relative;
+  margin-top: -25px;
+}
+.color-overlay {
+  clear: both;
+  padding: 0 5% 15%;
+}
+.type {
+  @include container;
+}
+.text {
+  @include container;
+}
+.spoudes-group {
+  @include layout($textarea);
+  @include container;
+  margin-bottom: 2rem;
+  display: flex;
+  .type {
+    @include span(4 of 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2%;
+  }
+  .text {
+    @include span(8 of 12 last);
+    display: flex;
+    align-items: center;
+    padding: 2%;
+  }
+}
+.why {
+  .title,
+  .content {
+    @include push ( 5 of 12);
+  }
+}
+.footer {
+  @include layout($textarea);
+  @include container;
+  padding: 5rem 0;
+}
+.contact-footer {
+  @include span(6 of 12);
+  display: flex;
+  flex-direction: column;
+  .contact-group {
+    margin-bottom: 2%;
+  }
+
+}
+.social ul {
+  display: flex;
+}
+
+/* MAP */
+#map-canvas {
+   width: 100%;
+}

@@ -1,0 +1,11 @@
+<!-- DEBUG FILE: html_components/fieldsCases/imageCase.html -->
+
+       <a class="slideshow-thumbnail {{ include.field_Data.class }}" href="#{{ post.[include.field_Data.image-hash] }}"> 
+                  
+       {% if post.[include.field_Data.image-hash] contains 'https://' or post.[include.field_Data.image-hash] contains 'http://' %}
+          <img src="{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+                   {% else %}
+          <img src="{{ site.baseurl}}{{ include.field_Data.images-path }}{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+                   {% endif %}
+                 
+      </a>           

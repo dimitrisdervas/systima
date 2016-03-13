@@ -1,0 +1,25 @@
+@include web-fonts (
+   'Open Sans',
+   'Raleway'
+   );
+
+ //
+// TYPOGRAPHIC
+// Settings
+$systima-font-headers: 'Open Sans','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$lila-logo: 'Tangerine','Damion','Grand+Hotel','Cambria','Georgia','serif';
+$lila-body: 'Raleway','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+
+$line-height-ratio  : 1.75 !default;
+$header-ratio       : $golden !default;
+$body-font          : $lila-body !default;
+$body-font-weight   : 300 !default;
+$body-color         : #2E4E75 !default;
+$header-font        : $systima-font-headers !default;
+$header-font-weight : 500 !default;
+$header-color       : #111 !default;
+$min-font           : 12px !default;
+$max-font           : 20px !default;
+$min-width          : 600px !default;
+$max-width          : 1140px !default;
+$vertical-rhythm    : true !default;

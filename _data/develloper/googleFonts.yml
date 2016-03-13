@@ -1,0 +1,20 @@
+- font: Droid Sans
+- font: Droid Serif
+- font: Arimo
+- font: Ubuntu Mono
+  styles: '400,700'
+- font: Ubuntu Condensed
+- font: Roboto Condensed
+  styles: '400,700'
+- font: Roboto
+  styles: '400,500,700'
+- font: Roboto Slab
+  styles: '400,700'
+- font: Fira Mono
+  styles: '400,700'
+- font: Fira Sans
+  styles: '400,700,500,300'
+- font: Open Sans
+- font: Open Sans Condensed
+  styles: '300,700'
+  lang: 'latin,greek'

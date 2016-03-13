@@ -1,0 +1,36 @@
+- section:
+   data:
+    htmlelement: footer
+   theme:
+    class: footer
+  wrapperSection:
+   theme:
+    class: footer-wrapper
+  divs:
+   - div:
+      theme:
+       class: contact-footer
+     components:
+       - component: posts-list
+         data:
+          content-type: adresses
+          data-type: data-list
+          fields:
+             - field: group
+               class: contact-group
+               fields:
+                - field: name
+                - field: adress
+                - field: tk
+                - field: phone
+   - div:
+      theme:
+       class: social-footer
+     components:
+       - component: social
+         data:
+           title: Let's socialize
+       - component: form
+         data:
+           title: Newsletter Subscribe
+           subtitle: "εγγραφείτε για να ενημερωθείτε για τις προσφορές μας"

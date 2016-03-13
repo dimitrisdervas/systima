@@ -1,0 +1,97 @@
+
+/*  */
+/* Colors */
+/*  */
+$proposed1: #6E2842;
+$proposed2: #FFEEDC;
+$proposed3: #CD5A48;
+$proposed4: #6F2941;
+$proposed5: #CBE896;
+$proposed6: #AAC0AA;
+$proposed7: #2C2C54;
+$proposed8: #2274A5;
+$proposed9: #4D5057;
+$proposed10: #BCE784;
+$color1: #ed6a5a;
+$color2: #f4f1bb;
+$color3: #9bc1bc;
+$color4: #5ca4a9;
+$color5: #e6ebe0;
+$grey: #bcbdc0;
+$light-grey: #919191;
+$lighter-grey: #F7F7F7;
+$blue: #428bca;
+$light-blue: #4280A6;
+$white: #ffffff;
+$light-red: #BD6E6E;
+$beige1: #F1D3B7;
+$beige2: #FDEECD;
+$yellow1: #E7A23D;
+$yello2: #FBC44D;
+$yellow3: #FFCB00;
+$brown1: #B86A3C;
+$brown2: #492617;
+$brown3: #493831;
+$brown4: #EAB05E;
+$black: #1E1E1E;
+$black1: #37464D;
+$black2: #556270;
+$pink1: #D84E34;
+$pink2: #FF6B6B;
+$orange1: #EA7F66;
+$orange2: #F68A1D;
+$blue1: #396F89;
+$blue2: #1273AC;
+$green1: #84A550;
+$green2: #4ECDC4;
+$green3: #A1CF7F;
+$red1: #C44D58;
+$red2: #D24858;
+
+
+
+/* Defaults */
+//
+// BODY
+//
+$bodyBg: $grey;
+$bodyText: #2E4E75;
+//
+// HEADER
+//
+$headerBg: $white;
+$headerText: $proposed4;
+//
+// FOOTER
+//
+$footerBg: $proposed4;
+$footerText: $white;
+//
+// LINK
+//
+$background-grey: $grey;
+$text-color: $black;
+$a-color: $blue;
+$hover-color: $light-blue;
+$header-text: $white;
+//
+// BORDERS
+//
+$border-color: lighten( $light-grey, 30%);
+$page-title: $light-grey;
+//
+// IMAGES
+//
+body {
+
+}
+
+a {
+
+}
+a:hover {
+
+}
+a:hover, a:focus {
+
+}

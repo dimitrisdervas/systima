@@ -1,0 +1,51 @@
+<!-- Import subfields parameter -->
+{% if include.component-data.subfields %}
+   {% for field in include.component-data.subfields  %}
+ <!--  Check what type of field we are prinitng -->
+                     {% case field.subfield  %}
+   <!-- Multiple images --> 
+                              {% when 'images' %}
+                                {% include html_components/fieldsCases/imagesCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!--  One images --> 
+                              {% when 'image' %}
+                                {% include html_components/fieldsCases/imageCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!-- LINK  -->                 
+                               {% when 'link' %}
+                                {% include html_components/fieldsCases/linkCase.html field_Data=field.data field_Field=field.field %}
+   <!-- PERCENTAGE -->
+                              {% when 'percentage' %}
+                                {% include html_components/fieldsCases/percentageCase.html field_Data=field.data field_Field=field.field %}
+   <!--   TEXT -->
+                              {% when 'text' %}
+                                {% include html_components/fieldsCases/textCase.html field_Data=field.data field_Field=field.field  content-type=include.component.content-type %}
+   <!-- TITLE  -->
+                              {% when 'title' %}
+                                {% include html_components/fieldsCases/titleCase.html field_Data=field.data field_Field=field.field %}
+   <!-- ICON  -->             
+                              {% when 'icon' %}
+                                {% include html_components/fieldsCases/iconCase.html field_Data=field.data field_Field=field.field %}        
+   <!-- COUNT  -->             
+                              {% when 'count' %}
+                                {% include html_components/fieldsCases/countCase.html field_Data=field.data field_Field=field.field %}        
+                              {% else %}
+<!-- Print every field as separate div -->
+                            <div class="{{field.subfield}} {{ field.data.class }}">
+                            {{ field.data.link }}
+                            
+                             {% case field.data.link %}
+
+                                 {% when 'posts' %}
+                                       <a href="{{ site.baseurl}}{{ post.url }}"> 
+
+                                 {% when 'products' %}
+                                        <a href="{{ site.baseurl}}products/{{ post.sku }}.html">        
+
+                                 {% endcase %}
+
+                                  {{ post.[field.subfield] }}
+                               </a> 
+<!--  End case of fields -->
+                         {% endcase %}
+
+   {% endfor %}
+{% endif %}

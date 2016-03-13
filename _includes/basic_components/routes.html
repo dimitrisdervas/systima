@@ -1,0 +1,6 @@
+<!-- DEBUG FILE: html_components/basic_components/routes.html -->
+<!-- http://www.sitepoint.com/hacking-routing-component-jekyll/ -->
+<!-- e.x. in markdown Go to our [GitHub repository][repository]. -->
+{% for route in site.data.routes %}
+   [{{ route[0] }}]: {{ route[1] }}
+{% endfor %}

@@ -1,0 +1,99 @@
+  <!-- EJS -->     
+<!-- <script type="text/javascript" >
+(function() {
+
+	var data = {
+		posts: [
+  {% assign comma = false %}
+  {% for post in site.blog %}
+  {% unless post.hidden == true %}
+    {% if comma %},{% endif %}
+    {% assign comma = true %}
+    {
+      "title": "{{ post.title | escape_once  }}"
+    }
+  {% endunless %}
+  {% endfor %}
+]
+	};
+
+	$("#containerEJS").html("tplEJS", data);
+
+})();
+     </script> -->
+     
+<!-- // END EJS
+<!-- // 
+
+// DUSTJS -->
+
+   <script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/dustjs-linkedin/2.7.2/dust-full.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dustjs-helpers/1.5.0/dust-helpers.min.js"></script>
+<script type="text/javascript" >
+   $(document).ready(function () {
+      var value = GetURLParameter("tags");
+
+      
+       var data = {
+           "posts" : [
+              {% assign comma = false %}
+              {% for post in site.blog %}
+              {% unless post.hidden == true %}
+                {% if comma %},{% endif %}
+                {% assign comma = true %}
+                {
+                  "title": "{{ post.title | escape_once  }}",
+                  "tags": "{{ post.tags | escape_once  }}"
+                }
+              {% endunless %}
+              {% endfor %}
+            ]
+       }
+
+       var source   = $("#entry-template").html();
+       var compiled = dust.compile(source, "intro");
+       dust.loadSource(compiled);
+//       IT IS FASTER but to use it inside the same page not possible from outside page - CLICK TO TRY TEST - use no parameters in url
+      $('.tag-param').on('click', function() {
+          var linkCtx = dust.makeBase({ currentTag: $(this).data("tags") }).push(data);
+          dust.render("intro", linkCtx, function(err, out) {
+              $("#output").html(out);
+          });
+      }).first().click();
+
+//       LOAD MORE BUTTON
+//       http://jsfiddle.net/N2QDJ/
+   $('#load-more').on('click', function(){
+       var next3 = data.posts.splice(0, 3);
+
+       if(next3.length == 0){
+           return;
+       }
+
+       dust.render('intro', next3, function(err, str){
+           console.log(err, str);
+           if(str){
+               $('#output').append(str);
+           }
+       });
+   });
+//          WE SHOUL MAKE THIS RUN ONCE IF FROM OUTSIDE PAGE - THE ONLY THE LINKS SHOULD WORK
+       var urlCtx = dust.makeBase({ currentTag: value }).push(data);
+       dust.render("intro", urlCtx, function(err, out) {
+           $("#output").html(out);
+       });
+
+      function GetURLParameter(sParam) {
+         var sPageURL = window.location.search.substring(1);
+         var sURLVariables = sPageURL.split('&');
+         for (var i = 0; i < sURLVariables.length; i++) {
+         var sParameterName = sURLVariables[i].split('=');
+         if (sParameterName[0] == sParam) {
+         return sParameterName[1];
+            }
+         }
+      }
+         
+   });
+     </script>

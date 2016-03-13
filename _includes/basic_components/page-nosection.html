@@ -1,0 +1,132 @@
+<!--      -->
+<!-- PAGE -->
+<!--      -->
+<!-- DEBUG FILE: basic_components/page.html -->
+<!-- Check variable page to include -->
+
+<!--             -->
+<!-- CONFIG FILE -->
+<!--             -->
+{% if include.config-file %}
+   {% assign config = site.data.pages.[include.config-file] %}
+{% else %}
+   {% assign config = page.config %}
+{% endif %}
+
+<!-- Loop through the page .yml file to create the html -->
+{% for section in config %}
+<!--  -->
+<!-- ALIAS SECTION-->
+<!--  -->
+{% assign section.customHtmlName = %}
+{% assign section.customHtmlPath = %}
+{% assign section.wrapperSection = %}
+{% assign section.section.data.htmlelement = %}
+{% assign section.divs = %}
+
+<!-- CASES SECTION NAME -->
+   <!-- Check for custom staff -->
+   {% case section.customHtmlName %}
+   <!-- Check for hr section -->
+      {% when 'hr'%}   <hr>
+   <!-- Check for custom html section -->
+      {% when 'custom' %}   {% include {{section.customHtmlPath}} %}
+   <!-- End section.name case -->
+   {% else %}
+<!--               -->
+<!-- SECTION TITLE -->
+<!--               -->
+<!-- DEBUG FILE: html_components/basic_components/page.html -->
+<!-- INCLUDE basic_components/pageIncludes/title.html -->
+    {% include basic_components/pageIncludes/title.html component-data=section.sectionTitle.data element=section%}
+
+
+<!--                  -->
+<!--  SECTION WRAPPER -->
+<!--                  -->
+<!-- DEBUG FILE: html_components/basic_components/page.html -->
+<!-- INCLUDE basic_components/pageIncludes/pageSectionWrapper.html -->
+   {% include basic_components/pageIncludes/pageSectionWrapper.html %}
+
+<!--                 -->
+<!-- SECTION         -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/basic_components/page.html -->
+<!-- INCLUDE basic_components/pageIncludes/themeElement.html -->  
+  
+
+
+
+                  <!-- DIVS LOOP - Loop through the divs to create them -->   
+                  {% for div in section.divs %}
+
+
+
+                  <!--            -->
+                  <!-- ALIAS DIVS -->
+                  <!--            -->                  
+                  {% assign div.div = %}
+                  {% assign div.components = %}
+                  {% assign div.html = %}
+
+
+
+
+
+                        <!--                  -->
+                        <!--  DIVS            -->
+                        <!--                  -->
+                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
+                        <!-- INCLUDE basic_components/pageIncludes/pageDivs.html -->
+                           {% include basic_components/pageIncludes/pageDivs.html %}
+
+
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
+                           {% for htmlComponent in div.components %}
+
+                            <!--                  -->
+                            <!-- ALIAS COMPONENTS -->
+                            <!--                  -->                  
+                            {% assign htmlComponent.html = %}
+                            {% assign htmlComponent.component = %}
+                            {% assign htmlComponent.data = %}
+
+
+
+                              <!--                        -->
+                              <!-- CUSTOM HTML SHORT CODE -->
+                              <!--                        -->
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
+                                 {% if htmlComponent.html %}{{ div.html }}{% endif %}
+
+
+
+
+                                 <!--                 -->
+                                 <!-- HTML COMPONENTS -->
+                                 <!--                 -->                      
+                                    {% if htmlComponent.component %}
+                                    <!-- Include the html component template and bring it's details -->
+                                       {% include basic_components/pageIncludes/pageComponents.html component-data=htmlComponent.data %} 
+                                    <!-- EndIF htmlComponent.component -->
+                                    {% endif %}
+      
+                                          {% if htmlComponent.data.javascript-plugin == 'photoswipe' %}
+                                             <!-- PHOTOSWIPE -->
+                                              {% include html_components/component_includes/photoswipeDom.html %}        
+                                          {% endif %}
+      
+
+
+
+                           <!--  End Component Loop -->
+                           {% endfor %}         
+                        <!-- End DIV for simple divClass -->
+                        {{ divClassElementEnd }}      
+                     <!--  End DIVS LOOP -->
+                     {% endfor %}                  
+
+           <!-- EndSection name cases -->
+        {% endcase %}
+  <!-- End loop in sections -->
+{% endfor %}

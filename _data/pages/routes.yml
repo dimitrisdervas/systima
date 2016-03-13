@@ -1,0 +1,4 @@
+- .nav_title: Slideshow
+  url: pages/components/slideshow.html
+- .nav_title: Posts-list
+  url: pages/components/posts-list.html

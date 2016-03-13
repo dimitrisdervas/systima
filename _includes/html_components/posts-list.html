@@ -1,0 +1,52 @@
+<!--             -->
+<!-- COMPONENT POSTS LISTS -->
+<!--             -->
+<!-- DEBUG FILE: html_components/posts-list.html -->
+<!-- Check the content type - Data or Collections - Posts -->
+   {% include html_components/component_includes/componentContentType.html %}
+
+<!-- MASONRY -->
+   {% include html_components/component_includes/divMasonrySizer.html %}
+
+<!--    GROUP FIELDS ELEMENT -->
+   {% include html_components/component_includes/groupFieldsElement.html %}
+
+<!-- LIST JS FILTERS HTML -->
+   {% include html_components/component_includes/listsjsFilters.html %}
+
+
+   {{ groupdivUl }}
+<!-- Loop through the posts and set a limit if there it exists -->
+   {% for post in posts limit:{{include.component-data.limit}} offset:{{include.component-data.offset}}%} 
+<!--  Component group fields html element-->  
+   {{ groupdivDiv }}
+
+<!--  If there is grouping div got fields -->
+          
+   {% if include.component-data.group != nill  %}
+              {% for group in include.component-data.groupdiv %}
+                 <div class="{{ group.class }}">
+                    {% assign fields = group.fields %}                   
+                       {% include html_components/component_includes/fieldsCases.html %}
+                 </div>
+                {% endfor %}   
+           {% else %} 
+
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              {% assign fields = include.component-data.fields %}
+              {% include html_components/component_includes/fieldsCases.html componentData=include.component-data %}
+
+<!--  END IF to check for GROUP -->
+           {% endif %}
+<!--    END Component HTML WRAPPER ELEMENT -->         
+<!--          {{ groupdivDivEnd }} -->
+
+         {{ groupdivDivEnd}}
+      {% endfor %} 
+   {{ groupdivUlEnd }}
+
+
+{{ filterDivEnd }}
+

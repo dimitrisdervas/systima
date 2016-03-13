@@ -1,0 +1,34 @@
+<script>
+$(document).ready(function() {
+   <!--    //   JAVASCRIPT PLUGIN
+Find all the yaml files configuration files in _data/pages -->
+             {% for conf in site.data.pages %}
+<!-- Loop through all the Divs -->
+               {% assign confData = conf[1] %}
+                  {% for divs in confData %}
+<!-- Select Current Div -->
+                     {% assign currentSectionDivs = divs.divs %}
+                     {% for components in currentSectionDivs %}
+<!-- Current Component -->
+                           {% assign currentDivComponents = components.components %}
+                           {% for component in currentDivComponents %}
+<!-- Cases for The JAVASCRITP PLUGINS -->
+                              {% if  component.data.javascript-plugin %}
+                                    {% case component.data.javascript-plugin %}
+                                          {% when 'countTo' %}
+                                          {% when 'listjs' %}
+                                                {% include basic_components/javascriptPluginsCases/listjs.js %}
+                                          {% when 'masonry' %}
+                                          {% when 'owl-carousel' %}
+                                               plugins:{{ component.data.javascript-plugin  }}
+                                               {% include basic_components/javascriptPluginsCases/owlSlideshow.js %}
+                                          {% else %}
+                                             test else
+                                       {% endcase %}
+                                 {% endif %}
+                              {% endfor %}
+                        {% endfor %}
+                  {% endfor %}
+               {% endfor %}
+      });
+</script>

@@ -1,0 +1,66 @@
+---
+layout: default
+title: Σύστημα
+cssClass: gallery
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: top-article
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "Ποιοί είμαστε"
+             fields:
+              - field: group
+                class: color-overlay
+                fields:
+                - field: title
+                  data:
+                   class: title
+                - field: content
+      - div:
+         theme:
+          class: spoudes
+        components:
+         - component: posts-list
+           data:
+             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ"
+             subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
+             data-type: data-list
+             content-type: studies
+             fields:
+             - field: group
+               class: spoudes-group
+               fields:
+                - field: type
+                - field: text
+                  data:
+                    class: text
+      - div:
+         theme:
+          class: why
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "και γιατί στο Σύστημα"
+             fields:
+             - field: group
+               class: color-overlay
+               fields:
+               - field: title
+                 data:
+                  class: title
+               - field: content              
+---
+
+{% include basic_components/page.html %}

@@ -1,0 +1,126 @@
+ {% for group in include.component-data.fieldset %}
+                 <fieldset>
+                    <legend>{{ group.legend }} </legend>
+              
+                          {% for field in group.fields %}
+                             <div>
+                              <!--  Check what type of field we are prinitng -->
+                                <label for="{{ field.data.name }}">{{ field.data.label }}</label>
+
+                                    {% case field.field  %}
+                                    <!--  TEXTAREA -->
+                                       {% when 'textarea' %}
+                                          <textarea  {% for data in field.data %}                                                     
+                                                        {% unless data[0] == 'options' or data[0] == 'conditions' %}
+                                                           {{ data[0] }}="{{ data[1] }}" 
+                                                         {% endunless %}
+                                                      {% endfor %}>
+                                         </textarea>
+                                    <!-- INPUT --> 
+                                       {% when 'input' %}
+                                          <input  {% for data in field.data %}
+                                                     
+                                                        {% unless data[0] == 'options' or data[0] == 'conditions' %}
+                                                           {{ data[0] }}="{{ data[1] }}" 
+                                                         {% endunless %}
+                                                      {% endfor %}>
+                                
+                                            {% if field.data.conditions %}
+                                               {% for condition in field.data.conditions %}
+                                
+                                                    <div class="conditional" data-cond-option="{{ condition.conditional-option }}" data-cond-value="{{ condition.conditional-value }}">
+                                                       {% for field in condition.conditional %}
+                                                       
+                                                       <label for="{{ field.data.name }}">{{ field.data.label }}</label>
+                                                       
+                                                          {% case field.field  %}
+                                                            <!--  TEXTAREA -->
+                                                               {% when 'textarea' %}
+                                                                  <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+                                                            <!-- INPUT --> 
+                                                               {% when 'input' %}
+                                                                  <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+                                                            <!-- DROPDOWN BOX --> 
+                                                               {% when 'select' %}
+                                                                     <select>
+                                                                        {% for option in field.data.options %}<option value="{{ option.option }}">{{ option.option }}</option>{%  endfor %}
+                                                                     </select>
+                                                            <!-- CHECKABLE  -->                 
+                                                               {% when 'check' %}
+                                                                     <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+
+                                                         <!--  End case of fields -->
+                                                             {% endcase %}
+                                                       
+                                                       {% endfor %}
+                                                     </div>
+                                                  {% endfor %}
+                                               {% endif %}
+                                
+                                    <!-- DROPDOWN BOX --> 
+                                       {% when 'select' %}
+                                
+                                             <select {% for data in field.data %}
+                                                     
+                                                        {% unless data[0] == 'options' or data[0] == 'conditions' %}
+                                                           {{ data[0] }}="{{ data[1] }}" 
+                                                         {% endunless %}
+                                                      {% endfor %}>
+                                                
+                                                {% for option in field.data.options %}
+                                                   <option value="{{ option.option }}">{{ option.option }}</option>
+                                                {%  endfor %}
+                                                
+                                             </select>
+                                
+                                            {% if field.data.conditions %}
+                                               {% for condition in field.data.conditions %}
+                                
+                                                    <div class="conditional" data-cond-option="{{ condition.conditional-option }}" data-cond-value="{{ condition.conditional-value }}">
+                                                       {% for field in condition.conditional %}
+                                                       
+                                                       <label for="{{ field.data.name }}">{{ field.data.label }}</label>
+                                                       
+                                                          {% case field.field  %}
+                                                            <!--  TEXTAREA -->
+                                                               {% when 'textarea' %}
+                                                                  <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+                                                            <!-- INPUT --> 
+                                                               {% when 'input' %}
+                                                                  <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+                                                            <!-- DROPDOWN BOX --> 
+                                                               {% when 'select' %}
+                                                                     <select>
+                                                                        {% for option in field.data.options %}<option value="{{ option.option }}">{{ option.option }}</option>{%  endfor %}
+                                                                     </select>
+                                                            <!-- CHECKABLE  -->                 
+                                                               {% when 'check' %}
+                                                                     <input {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %}>
+
+                                                         <!--  End case of fields -->
+                                                             {% endcase %}
+                                                       
+                                                       {% endfor %}
+                                                     </div>
+                                                  {% endfor %}
+                                               {% endif %}
+                                
+                                  
+                                
+                                
+                                    <!-- BUTTONS -->
+                                       {% when 'button' %}
+                                             <button type="{{ field.data.type }}">
+                                                    This a <br><strong>submit button</strong>
+                                             </button>
+                                             <input type="{{ include.field_Data.data.type }}" value="This is a submit button">
+                                 <!--  End case of fields -->
+                                     {% endcase %}
+
+                                
+                                 </div>
+                           <!--  End loop in fields -->
+                            {% endfor %} 
+                        
+                  </fieldset>
+                {% endfor %}   

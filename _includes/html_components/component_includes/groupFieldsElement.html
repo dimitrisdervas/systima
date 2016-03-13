@@ -1,0 +1,48 @@
+<!-- Check the group  html element -->  
+{% if include.component-data.groupFieldsElement %}
+
+
+   {% case include.component-data.groupFieldsElement %}
+   {% when 'div' %}
+      {% capture groupdivDiv %}
+        <div {% for data in include.component-data.groupFieldsElement-data %}
+                  {{data[0]}}="{{data[1]}}"
+              {% endfor %}>
+         {% endcapture%}
+
+      {% capture groupdivDivEnd %}</div>{% endcapture%}
+
+   {% when 'ul' %}
+        {% capture groupdivUl %}
+            <ul {% for data in include.component-data.groupFieldsElement-data-ul %}
+                  {{data[0]}}="{{data[1]}}"
+                 {% endfor %}>
+            {% endcapture%}
+
+         {% capture groupdivDiv %}
+            <li {% for data in include.component-data.groupFieldsElement-data-li %}
+               {{ data[0] }}="{{ data[1] }}"
+              {% endfor %} >
+           {% endcapture%}
+
+         {% capture groupdivDivEnd %}</li>{% endcapture%}{% capture groupdivUlEnd %}</ul>{% endcapture%} 
+<!-- JUST IN CASE -->
+{% when 'no' %}
+
+         {% capture groupdivUl %}{% endcapture%}
+         {% capture groupdivUlEnd %}{% endcapture%} 
+
+        {% capture groupdivDiv %}{% endcapture%}
+        {% capture groupdivDivEnd %}{% endcapture%}
+
+   {% endcase %}
+
+{% else %}
+
+         {% capture groupdivUl %}{% endcapture%}
+         {% capture groupdivUlEnd %}{% endcapture%} 
+
+         {% capture groupdivDiv %}{% endcapture%}
+         {% capture groupdivDivEnd %}{% endcapture%}
+
+{% endif %}

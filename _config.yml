@@ -1,0 +1,42 @@
+gems:
+  - jekyll-sitemap
+
+# Site settings
+title: Lila Villas
+email: info@lilavillas.gr
+description: > # this means to ignore newlines until "baseurl:"
+   On the beach of K.Stalos in Chania which is  awarded with a European blue flag for
+   its cleanness and facilities, Lila Villas, will be your perfect refuge for your summer
+   relaxation and the most convenient base for your trips to the island.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://lilavillas.gr" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Compress layout - Settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: true
+
+collections:
+  other:
+    output: true
+    permalink: /other/:path
+  paroxes:
+    output: true
+    permalink: /paroxes/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: paroxes
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: other
+    values:
+      layout: default

@@ -1,0 +1,12 @@
+$("div").hover(
+  function(e){
+    e.stopPropagation();
+    $(".hover").removeClass('hover');
+    $(this).addClass('hover');
+  },
+  function(e){
+    e.stopPropagation();
+    $(".hover").removeClass('hover');
+    $(this).parent().closest('div').addClass('hover');
+  }
+);

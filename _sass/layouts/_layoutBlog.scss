@@ -1,0 +1,9 @@
+.blog {
+   @include layout($symmetric);
+   @include container;
+   .header-wrapper-horizontal,
+   .suggestions {
+      @include container(1170px);      
+   }
+
+}

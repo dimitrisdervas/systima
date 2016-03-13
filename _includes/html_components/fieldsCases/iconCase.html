@@ -1,0 +1,14 @@
+<!-- DEBUG FILE: html_components/fieldsCases/iconCase.html -->
+{% if include.field_Data.htmlElement %}
+   <{{ include.field_Data.htmlElement }} class="{{ include.field_Data.class }}">
+      {% if include.field_Data.link %}
+            <a href="include.field_Data.path">include.field_Data.label</a>
+         {% endif%}
+      <i class="icon-{{ post.icon }}"></i>
+   </{{ include.field_Data.htmlElement }}>
+{% else %}
+      {% if include.field_Data.link %}
+         <a href="include.field_Data.link">include.field_Data.label</a>
+      {% endif%}
+   <i class="icon-{{ post.icon }}"></i>
+{% endif %}

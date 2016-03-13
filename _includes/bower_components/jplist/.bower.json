@@ -1,0 +1,35 @@
+{
+  "name": "jplist",
+  "homepage": "https://github.com/no81no/jplist",
+  "authors": [
+    "Miriam Zusin <no81no@gmail.com>"
+  ],
+  "description": "jQuery jPList Plugin is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc)",
+  "main": [
+    "jplist-core/minified/jplist.core.min.js",
+    "jplist-core/minified/jplist.core.min.css"
+  ],
+  "keywords": [
+    "pagination",
+    "paging",
+    "sort",
+    "sorting",
+    "filter",
+    "filtering",
+    "search"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "jplist-data-sources"
+  ],
+  "_release": "6421620b66",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6421620b669c4425f2619dccf78b405792b9dc28"
+  },
+  "_source": "git://github.com/no81no/jplist.git",
+  "_target": "*",
+  "_originalSource": "jplist",
+  "_direct": true
+}

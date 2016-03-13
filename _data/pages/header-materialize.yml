@@ -1,0 +1,31 @@
+- section:
+   data:
+    htmlelement: header
+  divs:
+   - div:
+      theme:
+        class: navigation
+     components:
+       - component: materialize/navbar
+         data:
+          javascript-plugin: sidenav
+          logo:
+           title: Φροντιστήρια Σύστημα
+           subtitle: Πυλαία-Πανόραμα-Χορτιάτης
+          content-type: menu
+          data-type: data-list
+   - div:
+      theme:
+        class: hero
+     components:
+       - component: posts-list
+         data:
+          content-type: hero
+          data-type: data-list
+          javascript-plugin: navbar
+          fields:
+            - field: group
+              class: hero-group
+              fields:
+               - field: herotitle
+               - field: herosubtitle

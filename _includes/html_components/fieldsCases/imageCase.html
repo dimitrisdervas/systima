@@ -1,0 +1,18 @@
+<!-- DEBUG FILE: html_components/fieldsCases/imageCase.html -->
+<!-- Loop through the images and set limit -->
+   <div class="post-image {{ include.field_Data.class }}" data-eq-pts="{{ include.field_Data.eqs }}">
+      
+      {% case include.field_Data.link %}
+         {% when 'post' %}
+               <a href="{{ site.baseurl}}{{ post.url }}"> 
+         {% when 'products' %}
+                <a href="{{ site.baseurl}}products/{{ post.sku }}.html">         
+         {% endcase %}      
+       {% if post.[include.field_Data.image-hash] contains 'https://' or post.[include.field_Data.image-hash] contains 'http://' %}
+          <img src="{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+                   {% else %}
+          <img src="{{ site.baseurl}}{{ include.field_Data.images-path }}{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+                   {% endif %}
+                 
+      </a>           
+   </div>   

@@ -1,0 +1,63 @@
+/* https://medium.com/@adrjohnston/propasass-aaa0966efe1e */
+@function class-name($prefix, $modifier) {
+  @if not $prefix { $prefix: ''; }
+  @if not $modifier { $modifier: ''; }
+  
+  @return $prefix + $modifier;
+}
+
+@mixin style-with($styles) {
+  @if not $styles {
+    @warn 'No styles were defined';
+  }
+  
+  @each $style in $styles {
+    #{nth($style, 1)}: nth($style, 2);
+  }
+}
+
+@mixin modify-with($props) {
+  @if not $props {
+    @warn 'No props were defined';
+  }
+  
+  @each $prefix, $modifiers in $props {
+    @each $modifier, $styles in $modifiers {
+      &#{class-name($prefix, $modifier)} {
+        @include style-with($styles);
+      }
+    }
+  }
+}
+
+
+$props: (
+  &: (
+    ':hover, :focus': (height: 38px, border-top: 2px, background: darken(grey, 10%)),
+    ':focus': (outline: none),
+    ':active': (height: 36px, border-top: 4px)
+  ),
+  '--': (
+    'primary': (background: blue, border-color: darken(blue, 10%)),
+    'primary:hover, primary:focus': (background: darken(blue, 10%)),
+    'warning': (background: red, border-color: darken(red, 10%)),
+    'warning:hover, warning:focus': (background-color: darken(red, 10%))
+  ),
+  '.is-': (
+    'active': (animation: glow infinite 3s)
+  )
+);
+
+
+
+
+.btn {
+  width: 150px;
+  height: 40px;
+  background: grey;
+  border: 1px solid darken(grey, 10%);
+  color: white;
+  display: inline-block;
+  vertical-align: bottom;
+@include modify-with($props);
+}

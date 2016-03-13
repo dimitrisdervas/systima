@@ -1,0 +1,76 @@
+- name: jquery
+  state: active
+  js: bower_components/jquery/dist/jquery.min.js
+
+- name: owl-carousel
+  js: bower_components/owl.carousel.2/owl.carousel.min.js
+  css:
+   - css: bower_components/owl.carousel.2/assets/owl.carousel.min.css
+   - css: bower_components/owl.carousel.2/assets/owl.theme.default.min.css
+
+- name: listjs
+  js: bower_components/listjs/dist/list.js
+
+- name: masonry
+  js: bower_components/masonry/dist/masonry.pkgd.js
+
+- name: accents
+  js: js/remove-accents.js
+
+- name: webfontloader
+  js: js/webfontloader.js
+
+- name: countTo
+  js: bower_components/jquery-countTo/jquery.countTo.js
+
+- name: materialize
+  state: active
+  js: bower_components/materialize/dist/js/materialize.js
+  css:
+   - css: bower_components/materialize/dist/css/materialize.css
+
+- name: eqjs
+  js: bower_components/eq.js/dist/eq.min.js
+
+- name: bootstrap
+  js: bower_components/bootstrap/dist/js/bootstrap.min.js
+
+- name: thether
+  js: bower_components/tether/dist/js/tether.min.js
+
+- name: dropjs
+  js: bower_components/tether-drop/dist/js/drop.min.js
+  css:
+   - css: bower_components/tether-drop/dist/css/drop-theme-arrows.css
+
+- name: conditionize
+  js: bower_components/conditionize/conditionize.jquery.js
+
+- name: jplist
+  js: bower_components/jplist/jplist-core/jplist.core.min.js
+  css:
+   - css: bower_components/jplist/jplist-core/jplist.core.min.css
+
+- name: simpsum
+  js: bower_components/simpsum/dist/simpsum.js
+
+- name: burger
+  js: bower_components/burger/dist/scripts/burger.min.js
+  css:
+   - css: bower_components/burger/dist/css/burger.min.css
+
+- name: photoswipe
+  js: bower_components/photoswipe/dist/photoswipe.min.js
+  css:
+   - css: bower_components/photoswipe/dist/photoswipe.css
+
+- name: photoswipe-ui
+  js: bower_components/photoswipe/dist/photoswipe-ui-default.min.js
+
+- name: rome
+  js: bower_components/rome/dist/rome.min.js
+  css:
+  - css: bower_components/rome/dist/rome.min.css
+
+- name: parsleyjs
+  js: bower_components/parsleyjs/dist/parsley.min.js

@@ -1,0 +1,30 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="gr">
+
+  {% include basic_components/head.html %}
+
+  <body>
+
+     <div class="page {{ page.title }} {{ page.cssClass }}">
+
+          {% include basic_components/page.html config-file='header-materialize' %}
+
+
+        {{ content }}
+
+        {% include basic_components/page.html config-file='footer' %}
+
+      </div>
+
+      <script type="text/javascript" src="{{ site.baseurl }}/js/components.js"></script>
+
+     {% include basic_components/perpagePlugins.html config-file='header-materialize' %}
+     {% include basic_components/perpagePlugins.html %}
+
+  </body>
+
+</html>

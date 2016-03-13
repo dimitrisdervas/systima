@@ -1,0 +1,72 @@
+<!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
+<!-- Just print the fields -->
+              {% for field in fields  %}
+<!--  Check what type of field we are prinitng -->
+                     {% case field.field  %}
+   <!-- Multiple images --> 
+                              {% when 'images' %}
+                                {% include html_components/fieldsCases/imagesCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!--  One images --> 
+                              {% when 'image' %}
+                                {% include html_components/fieldsCases/imageCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!-- LINK  -->                 
+                              {% when 'link' %}
+                                {% include html_components/fieldsCases/linkCase.html field_Data=field.data field_Field=field.field %}
+   <!-- PERCENTAGE -->
+                              {% when 'percentage' %}
+                                {% include html_components/fieldsCases/percentageCase.html field_Data=field.data field_Field=field.field %}
+   <!--   TEXT -->
+                              {% when 'text' %}
+                                {% include html_components/fieldsCases/textCase.html field_Data=field.data field_Field=field.field  data-type=include.componentData.data-type %}
+   <!-- TITLE  -->
+                              {% when 'title' %}
+                                {% include html_components/fieldsCases/titleCase.html field_Data=field.data field_Field=field.field %}
+   <!-- ICON  -->             
+                              {% when 'icon' %}
+                                {% include html_components/fieldsCases/iconCase.html field_Data=field.data field_Field=field.field %}        
+   <!-- COUNT  -->             
+                              {% when 'count' %}
+                                   {% if include.component-data.javascript-plugin-data.from %}
+                                       {% assign fromNumber = include.component-data.javascript-plugin-data.from %}
+                                   {% else %}
+                                       {% assign fromNumber = 0 %}
+                                    {% endif %}
+
+                                    <div 
+                                         class="countTo" 
+                                         data-from="{{ fromNumber }}" 
+                                         data-to="{{ post.[include.component-data.javascript-plugin-data.toField] }}" 
+                                         data-speed="{{include.component-data.javascript-plugin-data.speed}}" 
+                                         data-refresh-interval="{{include.component-data.javascript-plugin-data.refresh-interval}}">
+                                    </div>  
+   <!-- VIDEO  -->    
+                              {% when 'video' %}
+                                {% include html_components/fieldsCases/videoCase.html field_Data=field.data field_Field=field.field %}  
+                                                                                                           
+                              {% when 'lorem' %}
+                                  <p>{% raw %}{{ simpsum(20) }}{% endraw %}</p>
+
+                    {% else %}
+<!-- Print every field as separate div -->
+                           <div class="{{field.field}} {{field.data.class}}">
+                              {% case field.data.link %}
+                                 {% when 'posts' %}
+                                       <a href="{{ site.baseurl}}{{ post.url }}"> 
+                                       {% capture fieldDivEnd %}</a></div>{% endcapture%}
+                                 {% when 'products' %}
+                                        <a href="{{ site.baseurl}}products/{{ post.sku }}.html">
+                                        {% capture fieldDivEnd %}</a></div>{% endcapture%}
+                                {% else %}
+                                        {% capture fieldDivEnd %}</div>{% endcapture%}
+                                 {% endcase %}
+
+                                 {{ post.[field.field] }}
+
+                                 {{fieldDivEnd}}
+
+
+                   
+<!--  End case of fields -->
+                    {% endcase %}
+<!--  End loop in fields -->
+                  {% endfor %}

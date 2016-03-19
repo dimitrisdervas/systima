@@ -10,8 +10,7 @@
          data:
           javascript-plugin: sidenav
           logo:
-           title: Φροντιστήρια Σύστημα
-           subtitle: Πυλαία-Πανόραμα-Χορτιάτης
+           image: /assets/images/logo-kroki.png
           content-type: menu
           data-type: data-list
    - div:

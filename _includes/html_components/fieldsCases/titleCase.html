@@ -3,7 +3,7 @@
 
       {% case include.field_Data.link %}
       {% when 'posts' %}
-<div>
+      <div>
             <a 
                {% for data in include.field_Data %}
            {% case data[0] %}
@@ -16,8 +16,10 @@
             {% endcase%}
         {% endfor %}
                href="{{ site.baseurl}}{{ post.url }}">{{ post.[include.field_Field] }}</a>
-      {% when 'products' %}
+         </div>
    
+      {% when 'products' %}
+      <div>
              <a 
                 {% for data in include.field_Data %}
            {% case data[0] %}
@@ -30,9 +32,15 @@
             {% endcase%}
         {% endfor %}
                 href="{{ site.baseurl}}products/{{ post.sku }}.html">{{ post.[include.field_Field] }}</a>
+         </div>
       {% else %}
    
-   <div                
+   {% if include.field_Data.element %}
+     <{{ include.field_Data.element }} 
+      {% capture elementEND %}{{ include.field_Data.element }}{% endcapture %}
+      {% else %}
+      <div {% capture elementEND %}div{% endcapture %}
+     {% endif %}
         {% for data in include.field_Data %}
            {% case data[0] %}
             {% when 'id' %}
@@ -45,7 +53,9 @@
         {% endfor %}>
         
            {{ post.[include.field_Field] }} 
-        
+                  
+        </{{ elementEND }}>
       {% endcase %}
+   
+                  
 
-   </div>

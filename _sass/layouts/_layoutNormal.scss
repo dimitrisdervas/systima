@@ -1,4 +1,65 @@
 @include susy-media(normal) {
-
-
+   .page {
+      display: flex;
+      flex-direction: column;
+   }
+   nav {
+     @include layout($full-width);
+      @include container;
+   }
+   .logo {
+      @include span( 2 of 12);
+      max-width: 250px;
+   }
+   #nav-mobile {
+      @include span( 9 of 12 last);  
+   }
+   #nav-mobile a {
+    font-size: 0.8rem;
+   }
+   .hero-group {
+      flex-basis: 80%;
+   }
+   .aboutus .hero-group {
+      color: #CE4646;
+   }
+   .aboutus {
+      .component-title {
+         @include t-h2;
+      }
+   }
+   .aboutus.teacher-group {
+      display: flex;
+      .name {
+         min-width: span( 4 of 12);
+      }
+   }
+   .success {
+     @include layout($textarea);
+     @include container;
+      width: 100%;
+      .component-title {
+         @include t-h2;
+      }
+      .success-group {
+         display: flex;
+      .name {
+         min-width: span( 5 of 12);
+         }
+      }      
+   }
+   .contact {
+      .maincontent {
+         display: flex;
+         flex-wrap: wrap;
+      }
+      .contact-footer {
+         background: #fff;
+         flex-basis: 50%;
+             height: 100%;
+      }
+      .contact .contact-form-materialize {
+         margin-bottom: 10%;
+      }
+   }
 }

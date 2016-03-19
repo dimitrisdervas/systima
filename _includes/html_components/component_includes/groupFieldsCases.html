@@ -59,7 +59,9 @@
                                 {% else %}
                                         {% capture fieldDivEnd %}</div>{% endcapture%}
                                  {% endcase %}
-
+                                      {% if field.data.icon %}
+                                       <i class="material-icons">{{field.data.icon}}</i>
+                                      {% endif %}
                                  {{ post.[field.field] }}
 
                                  {{fieldDivEnd}}

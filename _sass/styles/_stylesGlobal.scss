@@ -2,7 +2,8 @@
   font-family: "Material-Design-Icons";
   src: url("../fonts/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../fonts/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../fonts/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../fonts/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal; 
+}
 
 // Z-levels
 .z-depth-0 {
@@ -32,6 +33,4 @@
    background-color: rgba(119, 147, 60, 0.65);
 }
 
-.page {
-  background-color: $bodyBg;
-}
+

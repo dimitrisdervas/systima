@@ -1,6 +1,3 @@
-header {
-  background-image: radial-gradient( #5965AF, #3c4477 );
-}
 
 nav {
   box-shadow: none;
@@ -8,13 +5,15 @@ nav {
   background-color: transparent;
 }
 #nav-mobile {
-  background-color: #ccc;
+    background-color: #fff;
+    opacity: 0.8;
   a {
-    color: #323232;
+    color: #020510;
+    font-weight: bold;
   }
 }
 .hero{
-    height: 500px;
+    margin: 10% 0;
     padding: 0 5%;
     display: flex;
     justify-content: space-around;
@@ -28,6 +27,7 @@ nav {
     }
     .herotitle {
       align-self: flex-start;
+      margin-bottom: 1%;
     }
     .herosubtitle {
       align-self: flex-end;

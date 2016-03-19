@@ -27,6 +27,7 @@
             {% else %}
                {% assign posts = site.data.content.[include.component-data.content-type] | where: include.component-data.tag-hash, include.component-data.tag %}
             {% endif %}
+
     {% endif %}<!-- END If there is include.component.tag -->
 
       {% if include.component-data.folder %}
@@ -34,9 +35,9 @@
       {% else %}
             {% assign posts = site.data.content.[include.component-data.content-type] %}
       {% endif %}
-<!--  -->
+<!--            -->
 <!-- POST TITLE -->
-<!--  -->
+<!--            -->
    {% if include.component-data.post-title %}
       {% assign onepost = posts.[include.component-data.post-title] %}
    {% else %}

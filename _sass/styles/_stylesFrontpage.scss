@@ -1,38 +1,71 @@
+body {
+  background-color: $bodyBg;
+}
+.textarea {
+}
+.block {
+   margin-bottom: 5rem;
+}
 .top-article {
-      background: url("/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
-      background-size: 100%;
+      background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+      background-size: cover;
       color: $white;
 }
 .color-overlay {
   background-color: rgba(18,23,32,0.7);
+  padding: 4%;
   .title {
     font-size: 24px;
     padding: 5% 0;
   }
 }
-.article {
-  color: #fff;
-  .title {
-    font-size: 24px;
-    padding: 5% 0;
-  }
+.spoudes {
+   .component-header {
+     color: #36648e;
+     margin: 0 0 15%;
+     padding: 3%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 24px;
+     font-weight: bold;
+     text-align: center;
+     border: 3px solid #36648e;
+   }
+   .spoudes-group {
+      color: #fff;
+     .type {
+         background-color: #242833;
+        text-align: center;
+     }
 
+     .text {
+        background-color: #2b303c;
+     }
+    
+   }
+   .spoudes-group:hover {
+      .text {
+             background-color: #474c59;
+      }
+       .type {
+             background-color: #007da6;
+      }
+   }
 }
-.component-header {
-  color: #36648e;
-  padding: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-.spoudes-group {
-  .type {
-    background-color: #2b303c;
 
-  }
-  .text {
-        background-color: #242833;
-  }
+.why {
+    background: url("/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
+    background-size: cover;
+    color: #ffffff;
+   margin-bottom: 10%;
+   .title {
+        border: 3px solid #fff;
+        padding: 3%;
+      text-align: center;
+   }
+}
+.width25 {
+   width: 25%;
+       margin-left: 0%;
 }

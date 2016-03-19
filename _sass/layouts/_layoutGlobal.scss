@@ -1,30 +1,26 @@
 /* PAGE */
-body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-}
 html {
     height: 100%;
 }
-header {
-  @include full;
-  position: relative;
+body {
+    margin: 0;
+    padding: 0;
 }
-.navigation {
-}
-nav {
+
+
+
+.textarea,
+.maincontent {
   @include layout($textarea);
   @include container;
-}
-.hero-group {
- flex-basis: 90%;
-}
-.textarea {
-  @include layout($textarea);
-  @include container;
+  @include break;
+  padding: 0 4%;
   position: relative;
   margin-top: -25px;
+}
+.top-article {
+  @include layout($textarea);
+  @include container;
 }
 .color-overlay {
   clear: both;
@@ -35,6 +31,13 @@ nav {
 }
 .text {
   @include container;
+}
+
+.spoudes {
+  @include layout($textarea);
+  @include container;
+  flex-direction: column;
+  align-items: center;
 }
 .spoudes-group {
   @include layout($textarea);
@@ -54,7 +57,7 @@ nav {
     @include span(8 of 12 last);
     display: flex;
     align-items: center;
-    padding: 2%;
+    padding: 4%;
   }
 }
 .why {
@@ -66,20 +69,40 @@ nav {
 .footer {
   @include layout($textarea);
   @include container;
-  padding: 5rem 0;
-}
-.contact-footer {
-  @include span(6 of 12);
   display: flex;
-  flex-direction: column;
-  .contact-group {
-    margin-bottom: 2%;
-  }
+  flex-direction: row;
+  flex-basis: 50%;
+   .contact-footer {
+     display: flex;
+     flex-direction: column;
+     padding: 6%;
+     .contact-group {
+       margin-bottom: 7%;
+     }
+   }
+   .social-footer {
+      padding: 6%;
+      display: flex;
+      flex-direction: column;
+      .social ul {
+        display: flex;
+          justify-content: space-around;
+      }
 
+   }
 }
-.social ul {
-  display: flex;
-}
+   .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+   .book-group {
+    margin-bottom: 2rem;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+   }
+
 
 /* MAP */
 #map-canvas {

@@ -1,3 +1,45 @@
 @include susy-media(mobile) {
-
+   .page {
+      border: 15px solid #26334A;
+   }
+   header {
+    display: flex;
+    flex-direction: column;
+   }
+   nav {
+     @include layout($textarea);
+     @include container;
+   }
+   .logo {
+    width: 60%;
+    float: left;
+    margin: 0 5% 20% 10%;
+   }
+/*    FRONPAGE */
+   .hero {
+      display:none;
+   }
+   .spoudes .component-header .component-subtitle  {
+      display: none;
+   }
+   .spoudes-group {
+      flex-direction: column;
+     .type {
+       @include span(12 of 12);
+       padding: 1.5rem;
+     }
+     .text {
+       @include span(12 of 12);
+     }
+   }
+   .why {
+     .title,
+     .content {
+       @include container;
+     }
+   }
+   .footer {
+     flex-direction: column;
+     flex-basis: 100%;
+   }
 }

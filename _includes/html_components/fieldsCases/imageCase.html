@@ -4,9 +4,9 @@
       
       {% case include.field_Data.link %}
          {% when 'post' %}
-               <a href="{{ site.baseurl}}{{ post.url }}"> 
+               <a href="{{ site.baseurl}}{{ post.url }}"> {% capture linkEND %} </a> {% endcapture %}  
          {% when 'products' %}
-                <a href="{{ site.baseurl}}products/{{ post.sku }}.html">         
+               <a href="{{ site.baseurl}}products/{{ post.sku }}.html">     {% capture linkEND %} </a> {% endcapture %}    
          {% endcase %}      
        {% if post.[include.field_Data.image-hash] contains 'https://' or post.[include.field_Data.image-hash] contains 'http://' %}
           <img src="{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
@@ -14,5 +14,5 @@
           <img src="{{ site.baseurl}}{{ include.field_Data.images-path }}{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
                    {% endif %}
                  
-      </a>           
+       {{ linkEND }}
    </div>   

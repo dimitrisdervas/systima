@@ -1,0 +1,62 @@
+---
+title: Σχετικά με εμάς
+layout: default-logo-grey
+pagetitle: aboutus
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: maincontent
+   divs:
+      - div:
+         theme:
+          class: preface
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "Σχετικά με εμάς"
+             fields:
+              - field: title
+                data:
+                  element: h1
+                  class: page-title
+              - field: content    
+      - div:
+         theme:
+          class: teachers
+        components:
+         - component: posts-list
+           data:
+             title: "Εκπαιδευτικοί"
+             data-type: data-list
+             content-type: teachers
+             fields:
+              - field: group
+                class: teacher-group
+                fields:
+                  - field: name
+                  - field: teacher
+      - div:
+         theme:
+          class: secretaria
+        components:
+         - component: posts-list
+           data:
+             title: Γραμματεία
+             data-type: data-list
+             content-type: secretaria
+             fields:
+              - field: name
+css: |
+   header {
+    background-image: radial-gradient(#fff, #E3A441);
+   }
+   nav .button-collapse i {
+    color: #414141;
+   }
+              
+---
+{% include basic_components/page.html %}

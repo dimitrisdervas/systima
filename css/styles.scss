@@ -6,14 +6,14 @@
 @import "bower_components/normalize.css/normalize-sass";
 
 // COLORS
-@import "bower_components/crayon/dist/crayon";
+/* @import "bower_components/crayon/dist/crayon"; */
 @import "styles/stylesColors";
 // 
 // FONTS
 // 
-@import "custom-mixins/webfonts/webfonts";
+/* @import "custom-mixins/webfonts/webfonts"; */
 
-// TYPOGRAPHIC
+/* // TYPOGRAPHIC */
 @import "bower_components/typographic/scss/typographic";
 @import "styles/stylesTypographic";
 
@@ -63,6 +63,7 @@
       "styles/stylesGallery",
       "styles/stylesContact",
       "styles/stylesBlog",
+      "styles/stylesAbout",
       "styles/stylesMap" 
    ;
 @import 

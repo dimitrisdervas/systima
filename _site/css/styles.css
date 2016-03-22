@@ -1099,9 +1099,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
       margin-bottom: 0.24011em; } }
 
 @media screen and (min-width: 993px) {
-  .aboutus.teacher-group {
+  .aboutus .teacher-group {
     display: flex; }
-    .aboutus.teacher-group .name {
+    .aboutus .teacher-group .name {
       min-width: 33.33333%; }
 
   .success {

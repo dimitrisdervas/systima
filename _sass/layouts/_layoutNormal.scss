@@ -29,10 +29,10 @@
          @include t-h2;
       }
    }
-   .aboutus.teacher-group {
+   .aboutus .teacher-group {
       display: flex;
       .name {
-         min-width: span( 4 of 12);
+         min-width: span(4 of 12);
       }
    }
    .success {

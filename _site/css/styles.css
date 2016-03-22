@@ -916,7 +916,7 @@ body {
   margin-bottom: 5rem; }
 
 .top-article {
-  background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+  background: url("/systima/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
   color: #ffffff; }
 
@@ -951,7 +951,7 @@ body {
   background-color: #007da6; }
 
 .why {
-  background: url("/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
+  background: url("/systima/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
   color: #ffffff;
   margin-bottom: 10%; }
@@ -1072,7 +1072,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     width: 75%;
     float: right;
     margin-right: 0;
-    max-width: 800px; }
+    max-width: 700px; }
 
   #nav-mobile a {
     font-size: 0.8rem; }

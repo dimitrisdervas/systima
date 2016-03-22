@@ -21,9 +21,12 @@
    
      <style>
       header {
-background: url("/assets/images/blackboard.jpg") no-repeat; 
+background: url("/systima/assets/images/blackboard.jpg") no-repeat; 
 background-size: cover; 
-}              
+}
+#map-canvas-multiple.title {
+   font-weight: bold;
+}
 
    </style>    
    <link rel="stylesheet" href="/systima/css/components.css">   
@@ -38,7 +41,7 @@ background-size: cover;
 
   <body>
         
-      <div class="page contact">
+      <div class="page contactonemap">
 
         <!--      -->
 <!-- PAGE -->
@@ -223,7 +226,7 @@ background-size: cover;
   <nav>
   <div class="nav-wrapper">
      
-       <a href="/" class="logo"><img src="/systima/assets/images/logo-kroki.png" alt="ΣΥΣΤΗΜΑ Φροντιστηρια"></a>
+       <a href="/systima/" class="logo"><img src="/systima/assets/images/logo-kroki.png" alt="ΣΥΣΤΗΜΑ Φροντιστηρια"></a>
      
        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -238,7 +241,7 @@ background-size: cover;
          
            <li><a href="/systima/pages/success">Οι επιτυχίες</a></li>
          
-           <li><a href="/systima/pages/contactonemap">Επικοινωνία</a></li>
+           <li><a href="/systima/pages/contact">Επικοινωνία</a></li>
          
        </ul>
        <ul class="side-nav" id="mobile-demo">
@@ -253,7 +256,7 @@ background-size: cover;
          
            <li><a href="/systima/pages/success">Οι επιτυχίες</a></li>
          
-           <li><a href="/systima/pages/contactonemap">Επικοινωνία</a></li>
+           <li><a href="/systima/pages/contact">Επικοινωνία</a></li>
          
        
       </ul>
@@ -632,7 +635,7 @@ background-size: cover;
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
 <!-- INCLUDE basic_components/pageIncludes/themeElement.html -->  
    <section 
- 		class="mapcontent"
+ 		class="maincontent"
 	>
 
 
@@ -640,6 +643,223 @@ background-size: cover;
 
                   <!-- DIVS LOOP - Loop through the divs to create them -->   
                   
+
+
+
+                  <!--            -->
+                  <!-- ALIAS DIVS -->
+                  <!--            -->                  
+                  
+                  
+                  
+
+
+
+
+
+                        <!--                  -->
+                        <!--  DIVS            -->
+                        <!--                  -->
+                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
+                        <!-- INCLUDE basic_components/pageIncludes/pageDivs.html -->
+                           <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+<div 
+ 		class="preface"
+	>
+
+
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
+                           
+
+                            <!--                  -->
+                            <!-- ALIAS COMPONENTS -->
+                            <!--                  -->                  
+                            
+                            
+                            
+
+
+
+                              <!--                        -->
+                              <!-- CUSTOM HTML SHORT CODE -->
+                              <!--                        -->
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
+                                 
+
+
+
+
+                                 <!--                 -->
+                                 <!-- HTML COMPONENTS -->
+                                 <!--                 -->                      
+                                    
+                                    <!-- Include the html component template and bring it's details -->
+                                       <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+
+
+<!--  -->
+<!-- PAGE COMPONENTS -->
+<!--  -->
+<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
+
+<!-- TITLE COMPONENT -->
+  <!--                 -->
+<!-- COMPONENT TITLE -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it-->
+      
+         <div class="component-header">
+            <div class="component-title ">Επικοινωνία  </div>
+            
+            
+               <!-- COMPONENT SUBTITLE -->
+            
+      </div>
+
+      
+
+
+<!--                       -->
+<!-- COMPONENT WRAPPER DIV -->
+<!--                       -->
+<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
+<!-- INCLUDE basic_components/pageIncludes/pageComponentsWrapper.html -->
+   
+
+
+
+<!--                   -->
+<!-- COMPONENT CONTENT -->
+<!--                   -->
+<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
+<!-- Include the html component template and bring it's details -->
+<!-- Capture the html component template -->
+  
+
+
+  <!--             -->
+<!-- COMPONENT POSTS LISTS -->
+<!--             -->
+<!-- DEBUG FILE: html_components/posts-list.html -->
+<!-- Check the content type - Data or Collections - Posts -->
+   <!--                        -->
+<!-- COMPONENT CONTENT TYPE -->
+<!--                        -->
+<!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
+
+<!--  -->
+<!-- ALIAS -->
+
+
+
+
+
+<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+
+<!--  -->
+<!-- COLLECTION -->
+<!--  -->
+      
+   
+
+
+<!-- MASONRY -->
+   <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
+<!--            Masonry -->
+   
+
+<!--    GROUP FIELDS ELEMENT -->
+   <!-- Check the group  html element -->  
+
+
+         
+          
+
+         
+         
+
+
+
+<!-- LIST JS FILTERS HTML -->
+   <!--                   -->
+<!-- LIST.js - FILTERS -->
+<!--                   -->
+
+
+
+   
+<!-- Loop through the posts and set a limit if there it exists -->
+   
+<!--  Component group fields html element-->
+   
+
+<!--  If there is grouping div got fields -->
+
+   
+
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                <p>Είμαστε περήφανοι για το έργο που επιτελούμε και καθημερινά αυτό το αίσθημα υπεροχής ενισχύεται από την εμπιστοσύνη και την αποδοχή που εκφράζουν απέναντί μας μαθητές και γονείς.</p>
+
+<p>Θα χαρούμε να σας γνωρίσουμε στις εγκαταστάσεις μας. Οι γραμματείες έχουν την υποχρέωση και πολύ περισσότερο τη διάθεση να σας ενημερώσουν αναλυτικά για τα προγράμματά μας και τις παροχές, να απαντήσουν στις απορίες σας και να σας παραδώσουν έντυπο υλικό.</p>
+
+   <!-- COUNT  -->
+                              
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--           -->
+
+         
+      
+   
+
+
+
+ 
+
+
+
+
+
+
+ 
+                                    <!-- EndIF htmlComponent.component -->
+                                    
+      
+                                          
+      
+
+
+
+                           <!--  End Component Loop -->
+                                    
+                        <!-- End DIV for simple divClass -->
+                        </div>      
+                     <!--  End DIVS LOOP -->
+                     
 
 
 
@@ -717,7 +937,7 @@ background-size: cover;
 <!-- Check if there is a title for the html component and print it-->
       
          <div class="component-header">
-            <div class="component-title ">ΣΥΣΤΗΜΑ ΠΥΛΑΙΑΣ  </div>
+            <div class="component-title ">ΦΡΟΝΤΙΣΤΗΡΙΑ ΠΥΛΑΙΑΣ  </div>
             
             
                <!-- COMPONENT SUBTITLE -->
@@ -745,771 +965,7 @@ background-size: cover;
   
 
 
-  <div id="map-canvas1" class="map-canvas" style="height:200px;"></div>
-
- 
-
-
-
-
-
-
- 
-                                    <!-- EndIF htmlComponent.component -->
-                                    
-      
-                                          
-      
-
-
-
-                           <!--  End Component Loop -->
-                           
-
-                            <!--                  -->
-                            <!-- ALIAS COMPONENTS -->
-                            <!--                  -->                  
-                            
-                            
-                            
-
-
-
-                              <!--                        -->
-                              <!-- CUSTOM HTML SHORT CODE -->
-                              <!--                        -->
-                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
-                                 
-
-
-
-
-                                 <!--                 -->
-                                 <!-- HTML COMPONENTS -->
-                                 <!--                 -->                      
-                                    
-                                    <!-- Include the html component template and bring it's details -->
-                                       <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-
-
-<!--  -->
-<!-- PAGE COMPONENTS -->
-<!--  -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-
-<!-- TITLE COMPONENT -->
-  <!--                 -->
-<!-- COMPONENT TITLE -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
-<!-- Check if there is a title for the html component and print it-->
-      
-         <div class="component-header">
-            <div class="component-title ">ΣΥΣΤΗΜΑ ΠΑΝΟΡΑΜΑΤΟΣ  </div>
-            
-            
-               <!-- COMPONENT SUBTITLE -->
-            
-      </div>
-
-      
-
-
-<!--                       -->
-<!-- COMPONENT WRAPPER DIV -->
-<!--                       -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageComponentsWrapper.html -->
-   
-
-
-
-<!--                   -->
-<!-- COMPONENT CONTENT -->
-<!--                   -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- Include the html component template and bring it's details -->
-<!-- Capture the html component template -->
-  
-
-
-  <div id="map-canvas2" class="map-canvas" style="height:200px;"></div>
-
- 
-
-
-
-
-
-
- 
-                                    <!-- EndIF htmlComponent.component -->
-                                    
-      
-                                          
-      
-
-
-
-                           <!--  End Component Loop -->
-                           
-
-                            <!--                  -->
-                            <!-- ALIAS COMPONENTS -->
-                            <!--                  -->                  
-                            
-                            
-                            
-
-
-
-                              <!--                        -->
-                              <!-- CUSTOM HTML SHORT CODE -->
-                              <!--                        -->
-                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
-                                 
-
-
-
-
-                                 <!--                 -->
-                                 <!-- HTML COMPONENTS -->
-                                 <!--                 -->                      
-                                    
-                                    <!-- Include the html component template and bring it's details -->
-                                       <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-
-
-<!--  -->
-<!-- PAGE COMPONENTS -->
-<!--  -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-
-<!-- TITLE COMPONENT -->
-  <!--                 -->
-<!-- COMPONENT TITLE -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
-<!-- Check if there is a title for the html component and print it-->
-      
-         <div class="component-header">
-            <div class="component-title ">ΣΥΣΤΗΜΑ ΧΟΡΤΙΑΤΗ  </div>
-            
-            
-               <!-- COMPONENT SUBTITLE -->
-            
-      </div>
-
-      
-
-
-<!--                       -->
-<!-- COMPONENT WRAPPER DIV -->
-<!--                       -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageComponentsWrapper.html -->
-   
-
-
-
-<!--                   -->
-<!-- COMPONENT CONTENT -->
-<!--                   -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- Include the html component template and bring it's details -->
-<!-- Capture the html component template -->
-  
-
-
-  <div id="map-canvas3" class="map-canvas" style="height:200px;"></div>
-
- 
-
-
-
-
-
-
- 
-                                    <!-- EndIF htmlComponent.component -->
-                                    
-      
-                                          
-      
-
-
-
-                           <!--  End Component Loop -->
-                                    
-                        <!-- End DIV for simple divClass -->
-                        </div>      
-                     <!--  End DIVS LOOP -->
-                                       
-                <!-- END section -->
-            </section>
-           <!-- EndSection name cases -->
-        
-      <!-- SECTION WRAPPER END -->
-   
-  <!-- End loop in sections -->
-
-<!--  -->
-<!-- ALIAS SECTION-->
-<!--  -->
-
-
-
-
-
-
-<!-- CASES SECTION NAME -->
-   <!-- Check for custom staff -->
-   
-<!--               -->
-<!-- SECTION TITLE -->
-<!--               -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/title.html -->
-<!--  -->
-<!-- TO FIX -->
-<!--  -->
-    <!--  -->
-<!-- ALIAS TITLE-->
-<!--  -->
-
-
-
-
-
-
-
-
-
-
-<!--                 -->
-<!-- TITLE -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
-<!-- Check if there is a title for the html component and print it-->
-
-       
-
-
-<!--                  -->
-<!--  SECTION WRAPPER -->
-<!--                  -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageSectionWrapper.html -->
-   <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
- <!--                 -->
-<!--  SECTION WRAPPER -->
-<!--                 -->
-
-
-
-<!--                 -->
-<!-- SECTION         -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/themeElement.html -->  
-   <section 
- 		class="maincontent"
-	>
-
-
-
-
-                  <!-- DIVS LOOP - Loop through the divs to create them -->   
-                  
-
-
-
-                  <!--            -->
-                  <!-- ALIAS DIVS -->
-                  <!--            -->                  
-                  
-                  
-                  
-
-
-
-
-
-                        <!--                  -->
-                        <!--  DIVS            -->
-                        <!--                  -->
-                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
-                        <!-- INCLUDE basic_components/pageIncludes/pageDivs.html -->
-                           <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-<div 
- 		class="contact-footer"
-	>
-
-
-            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
-                           
-
-                            <!--                  -->
-                            <!-- ALIAS COMPONENTS -->
-                            <!--                  -->                  
-                            
-                            
-                            
-
-
-
-                              <!--                        -->
-                              <!-- CUSTOM HTML SHORT CODE -->
-                              <!--                        -->
-                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
-                                 
-
-
-
-
-                                 <!--                 -->
-                                 <!-- HTML COMPONENTS -->
-                                 <!--                 -->                      
-                                    
-                                    <!-- Include the html component template and bring it's details -->
-                                       <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-
-
-<!--  -->
-<!-- PAGE COMPONENTS -->
-<!--  -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-
-<!-- TITLE COMPONENT -->
-  <!--                 -->
-<!-- COMPONENT TITLE -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
-<!-- Check if there is a title for the html component and print it-->
-      
-         <div class="component-header">
-            <div class="component-title ">Contact info  </div>
-            
-               <hr class="width25">
-            
-            
-               <!-- COMPONENT SUBTITLE -->
-            
-      </div>
-
-      
-
-
-<!--                       -->
-<!-- COMPONENT WRAPPER DIV -->
-<!--                       -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageComponentsWrapper.html -->
-   
-
-
-
-<!--                   -->
-<!-- COMPONENT CONTENT -->
-<!--                   -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- Include the html component template and bring it's details -->
-<!-- Capture the html component template -->
-  
-
-
-  <!--             -->
-<!-- COMPONENT POSTS LISTS -->
-<!--             -->
-<!-- DEBUG FILE: html_components/posts-list.html -->
-<!-- Check the content type - Data or Collections - Posts -->
-   <!--                        -->
-<!-- COMPONENT CONTENT TYPE -->
-<!--                        -->
-<!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
-
-<!--  -->
-<!-- ALIAS -->
-
-
-
-
-
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
-
-
-<!-- If there is no post-tile it will look only for the file not inside the file -->
-<!-- Filter file of data -->
-<!--  -->
-<!-- POST TAG -->
-<!--  -->
-   <!-- END If there is include.component.tag -->
-
-      
-<!--            -->
-<!-- POST TITLE -->
-<!--            -->
-   
-
-
-
-
-<!-- MASONRY -->
-   <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
-<!--            Masonry -->
-   
-
-<!--    GROUP FIELDS ELEMENT -->
-   <!-- Check the group  html element -->  
-
-
-         
-          
-
-         
-         
-
-
-
-<!-- LIST JS FILTERS HTML -->
-   <!--                   -->
-<!-- LIST.js - FILTERS -->
-<!--                   -->
-
-
-
-   
-<!-- Loop through the posts and set a limit if there it exists -->
-    
-<!--  Component group fields html element-->  
-   
-
-<!--  If there is grouping div got fields -->
-          
-    
-
-
-<!-- Just print the fields -->
-<!-- Loop each field in the component -->
-              
-              <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-                                   
-                                            <div class="contact-group">
-                                               
-                                    
-
-
-
-                                      
-                                      <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="name ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">room</i>
-                                      
-                                 ΣΥΣΤΗΜΑ ΠΥΛΑΙΑΣ
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="adress ">
-                              
-                                        
-                                 
-                                      
-                                 Προφ. Ηλία 35,Τ.Κ. 55535
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="phone ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">phone</i>
-                                      
-                                 2310303761, 2310324027
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-
-                                   </div>
-
-                               
-<!--  End loop in fields -->
-                  
-
-
-<!--  END IF to check for GROUP -->
-           
-<!--    END Component HTML WRAPPER ELEMENT -->         
-<!--           -->
-
-         
-       
-<!--  Component group fields html element-->  
-   
-
-<!--  If there is grouping div got fields -->
-          
-    
-
-
-<!-- Just print the fields -->
-<!-- Loop each field in the component -->
-              
-              <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-                                   
-                                            <div class="contact-group">
-                                               
-                                    
-
-
-
-                                      
-                                      <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="name ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">room</i>
-                                      
-                                 ΣΥΣΤΗΜΑ ΠΑΝΟΡΑΜΑΤΟΣ 
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="adress ">
-                              
-                                        
-                                 
-                                      
-                                 Κομνηνών 11,Τ.Κ. 55236
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="phone ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">phone</i>
-                                      
-                                 2310343802, 2310347180
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-
-                                   </div>
-
-                               
-<!--  End loop in fields -->
-                  
-
-
-<!--  END IF to check for GROUP -->
-           
-<!--    END Component HTML WRAPPER ELEMENT -->         
-<!--           -->
-
-         
-       
-<!--  Component group fields html element-->  
-   
-
-<!--  If there is grouping div got fields -->
-          
-    
-
-
-<!-- Just print the fields -->
-<!-- Loop each field in the component -->
-              
-              <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-                                   
-                                            <div class="contact-group">
-                                               
-                                    
-
-
-
-                                      
-                                      <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="name ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">room</i>
-                                      
-                                 ΣΥΣΤΗΜΑ ΧΟΡΤΙΑΤΗ
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="adress ">
-                              
-                                        
-                                 
-                                      
-                                 Μετ. Σωτήρος 3,Τ.Κ. 57010
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-<!-- Print every field as separate div -->
-                           <div class="phone ">
-                              
-                                        
-                                 
-                                      
-                                       <i class="material-icons">phone</i>
-                                      
-                                 2310349840
-
-                                 </div>
-
-
-                   
-<!--  End case of fields -->
-                    
-<!--  End loop in fields -->
-                  
-
-                                   </div>
-
-                               
-<!--  End loop in fields -->
-                  
-
-
-<!--  END IF to check for GROUP -->
-           
-<!--    END Component HTML WRAPPER ELEMENT -->         
-<!--           -->
-
-         
-       
-   
-
-
-
+  <div id="map-canvas-multiple" class="map-canvas" style="height:400px;"></div>
 
  
 
@@ -1765,223 +1221,6 @@ background-size: cover;
            
    
     </form> 
-
-
-
-
-
-
- 
-                                    <!-- EndIF htmlComponent.component -->
-                                    
-      
-                                          
-      
-
-
-
-                           <!--  End Component Loop -->
-                                    
-                        <!-- End DIV for simple divClass -->
-                        </div>      
-                     <!--  End DIVS LOOP -->
-                     
-
-
-
-                  <!--            -->
-                  <!-- ALIAS DIVS -->
-                  <!--            -->                  
-                  
-                  
-                  
-
-
-
-
-
-                        <!--                  -->
-                        <!--  DIVS            -->
-                        <!--                  -->
-                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
-                        <!-- INCLUDE basic_components/pageIncludes/pageDivs.html -->
-                           <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-<div 
- 		class="preface"
-	>
-
-
-            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
-                           
-
-                            <!--                  -->
-                            <!-- ALIAS COMPONENTS -->
-                            <!--                  -->                  
-                            
-                            
-                            
-
-
-
-                              <!--                        -->
-                              <!-- CUSTOM HTML SHORT CODE -->
-                              <!--                        -->
-                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
-                                 
-
-
-
-
-                                 <!--                 -->
-                                 <!-- HTML COMPONENTS -->
-                                 <!--                 -->                      
-                                    
-                                    <!-- Include the html component template and bring it's details -->
-                                       <!--       -->
-<!-- ALIAS -->
-<!--       -->
-
-
-
-
-
-<!--  -->
-<!-- PAGE COMPONENTS -->
-<!--  -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-
-<!-- TITLE COMPONENT -->
-  <!--                 -->
-<!-- COMPONENT TITLE -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
-<!-- Check if there is a title for the html component and print it-->
-      
-         <div class="component-header">
-            <div class="component-title ">Επικοινωνία  </div>
-            
-            
-               <!-- COMPONENT SUBTITLE -->
-            
-      </div>
-
-      
-
-
-<!--                       -->
-<!-- COMPONENT WRAPPER DIV -->
-<!--                       -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageComponentsWrapper.html -->
-   
-
-
-
-<!--                   -->
-<!-- COMPONENT CONTENT -->
-<!--                   -->
-<!-- DEBUG FILE: html_components/basic_components/pageIncludes/pageComponents.html -->
-<!-- Include the html component template and bring it's details -->
-<!-- Capture the html component template -->
-  
-
-
-  <!--             -->
-<!-- COMPONENT POSTS LISTS -->
-<!--             -->
-<!-- DEBUG FILE: html_components/posts-list.html -->
-<!-- Check the content type - Data or Collections - Posts -->
-   <!--                        -->
-<!-- COMPONENT CONTENT TYPE -->
-<!--                        -->
-<!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
-
-<!--  -->
-<!-- ALIAS -->
-
-
-
-
-
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
-
-<!--  -->
-<!-- COLLECTION -->
-<!--  -->
-      
-   
-
-
-<!-- MASONRY -->
-   <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
-<!--            Masonry -->
-   
-
-<!--    GROUP FIELDS ELEMENT -->
-   <!-- Check the group  html element -->  
-
-
-         
-          
-
-         
-         
-
-
-
-<!-- LIST JS FILTERS HTML -->
-   <!--                   -->
-<!-- LIST.js - FILTERS -->
-<!--                   -->
-
-
-
-   
-<!-- Loop through the posts and set a limit if there it exists -->
-   
-<!--  Component group fields html element-->
-   
-
-<!--  If there is grouping div got fields -->
-
-   
-
-
-<!-- Just print the fields -->
-<!-- Loop each field in the component -->
-              
-              <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
-<!-- Just print the fields -->
-              
-<!--  Check what type of field we are prinitng -->
-                     
-                                <p>Είμαστε περήφανοι για το έργο που επιτελούμε και καθημερινά αυτό το αίσθημα υπεροχής ενισχύεται από την εμπιστοσύνη και την αποδοχή που εκφράζουν απέναντί μας μαθητές και γονείς.</p>
-
-<p>Θα χαρούμε να σας γνωρίσουμε στις εγκαταστάσεις μας. Οι γραμματείες έχουν την υποχρέωση και πολύ περισσότερο τη διάθεση να σας ενημερώσουν αναλυτικά για τα προγράμματά μας και τις παροχές, να απαντήσουν στις απορίες σας και να σας παραδώσουν έντυπο υλικό.</p>
-
-   <!-- COUNT  -->
-                              
-<!--  End loop in fields -->
-                  
-
-
-<!--  END IF to check for GROUP -->
-           
-<!--    END Component HTML WRAPPER ELEMENT -->
-<!--           -->
-
-         
-      
-   
-
-
-
- 
 
 
 
@@ -3021,6 +2260,11 @@ $('.collapsible').collapsible();
    
       
          
+       
+    
+   
+      
+         
 
             
                   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnz5pux1SPWE0DFlrXitKQO1S_8FnXbg"
@@ -3034,7 +2278,9 @@ $('.collapsible').collapsible();
             
                  
                  var LocationData = [
-    [35.514523, 23.943559, "Lila Villas","+30 6976.68.33.14","Stalos, Chania, Crete"],
+    [40.606991, 22.997580, "ΣΥΣΤΗΜΑ ΠΥΛΑΙΑ","2310303761, 2310324027","Προφ. Ηλία 35"],
+    [40.626758, 22.965183, "ΣΥΣΤΗΜΑ ΧΟΡΤΙΑΤΗ","2310349840","Μετ. Σωτήρος 3"],
+    [40.585009, 22.965607, "ΣΥΣΤΗΜΑ ΠΑΝΟΡΑΜΑ","2310343802, 23103471802","Κομνηνών 11"]
 ];
 
     
@@ -3045,7 +2291,7 @@ function initialize()
                     zoom: 12,
 
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(35.514523, 23.943559),
+                    center: new google.maps.LatLng(40.605351,22.994972), // Touba
                        
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
@@ -3278,7 +2524,7 @@ function initialize()
     }
 ]						
                 };
-    var mapElement = document.getElementById('map-canvas1');
+    var mapElement = document.getElementById('map-canvas-multiple');
     var map = new google.maps.Map(mapElement, mapOptions);
     var bounds = new google.maps.LatLngBounds();
     var infowindow = new google.maps.InfoWindow({ maxWidth: 200 });
@@ -3294,22 +2540,21 @@ function initialize()
             position: latlng,
             map: map,
             title: p[2],
-            mob: p[3],
+            phone: p[3],
             address: p[4]
         });
         
         
         google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent( "<div class='map-title'>" + this.title + "</div>" + "<div class='map-phone'>" + this.mob + "</div>" + "<div class='map-address'>" + this.address + "</div>" );
+            infowindow.setContent( "<div class='title'>" + this.title + "</div>" + "<div class='phone' >" + this.phone + "</div>" + "<div class='address'>" + this.address + "</div>" );
             infowindow.open(map, this);
         });
     }
-            
-   
-    var listener = google.maps.event.addListener(map, "idle", function() { 
-      if (map.getZoom() > 16) map.setZoom(12); 
-      google.maps.event.removeListener(listener); 
-    });
+    
+//     var listener = google.maps.event.addListener(map, "idle", function() { 
+//       if (map.getZoom() > 16) map.setZoom(12); 
+//       google.maps.event.removeListener(listener); 
+//     });
 }
  google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -3320,616 +2565,6 @@ function initialize()
 
 
           
-       
-         
-
-            
-                  <script src="https://maps.googleapis.com/maps/api/js?key="
-  type="text/javascript"></script>
-
-                
-
-  <script type="text/javascript">
-       $(document).ready(function() {
-
-            
-                 
-                 var LocationData = [
-    [35.514523, 23.943559, "Lila Villas","+30 6976.68.33.14","Stalos, Chania, Crete"],
-];
-
-    
-function initialize()
-{
-    var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 12,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(35.514523, 23.943559),
-                       
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    // http://www.mapstylr.com/
-        styles : [
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 65
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 51
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 30
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 40
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.province",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "weight": 0.29
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": -13
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "hue": "#00b3ff"
-            },
-            {
-                "saturation": -21
-            },
-            {
-                "lightness": -25
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#8693a1"
-            },
-            {
-                "weight": 2.3
-            },
-            {
-                "lightness": -13
-            },
-            {
-                "gamma": 1.08
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "weight": 0.48
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "weight": 2.6
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "lightness": -37
-            },
-            {
-                "gamma": 0.01
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#f5f0f5"
-            },
-            {
-                "weight": 4.43
-            }
-        ]
-    }
-]						
-                };
-    var mapElement = document.getElementById('map-canvas2');
-    var map = new google.maps.Map(mapElement, mapOptions);
-    var bounds = new google.maps.LatLngBounds();
-    var infowindow = new google.maps.InfoWindow({ maxWidth: 200 });
-     
-    for (var i in LocationData)
-    {
-        var p = LocationData[i];
-        var latlng = new google.maps.LatLng(p[0], p[1]);
-        bounds.extend(latlng);
-         
-        
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-            title: p[2],
-            mob: p[3],
-            address: p[4]
-        });
-        
-        
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent( "<div class='map-title'>" + this.title + "</div>" + "<div class='map-phone'>" + this.mob + "</div>" + "<div class='map-address'>" + this.address + "</div>" );
-            infowindow.open(map, this);
-        });
-    }
-            
-   
-    var listener = google.maps.event.addListener(map, "idle", function() { 
-      if (map.getZoom() > 16) map.setZoom(12); 
-      google.maps.event.removeListener(listener); 
-    });
-}
- google.maps.event.addDomListener(window, 'load', initialize);
-
-               
-
-       });
- </script>
-
-
-          
-       
-         
-
-            
-                  <script src="https://maps.googleapis.com/maps/api/js?key="
-  type="text/javascript"></script>
-
-                
-
-  <script type="text/javascript">
-       $(document).ready(function() {
-
-            
-                 
-                 var LocationData = [
-    [35.514523, 23.943559, "Lila Villas","+30 6976.68.33.14","Stalos, Chania, Crete"],
-];
-
-    
-function initialize()
-{
-    var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 12,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(35.514523, 23.943559),
-                       
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    // http://www.mapstylr.com/
-        styles : [
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 65
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 51
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 30
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 40
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -100
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.province",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "weight": 0.29
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": -13
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "hue": "#00b3ff"
-            },
-            {
-                "saturation": -21
-            },
-            {
-                "lightness": -25
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#8693a1"
-            },
-            {
-                "weight": 2.3
-            },
-            {
-                "lightness": -13
-            },
-            {
-                "gamma": 1.08
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "weight": 0.48
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "weight": 2.6
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "lightness": -37
-            },
-            {
-                "gamma": 0.01
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#f5f0f5"
-            },
-            {
-                "weight": 4.43
-            }
-        ]
-    }
-]						
-                };
-    var mapElement = document.getElementById('map-canvas3');
-    var map = new google.maps.Map(mapElement, mapOptions);
-    var bounds = new google.maps.LatLngBounds();
-    var infowindow = new google.maps.InfoWindow({ maxWidth: 200 });
-     
-    for (var i in LocationData)
-    {
-        var p = LocationData[i];
-        var latlng = new google.maps.LatLng(p[0], p[1]);
-        bounds.extend(latlng);
-         
-        
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-            title: p[2],
-            mob: p[3],
-            address: p[4]
-        });
-        
-        
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent( "<div class='map-title'>" + this.title + "</div>" + "<div class='map-phone'>" + this.mob + "</div>" + "<div class='map-address'>" + this.address + "</div>" );
-            infowindow.open(map, this);
-        });
-    }
-            
-   
-    var listener = google.maps.event.addListener(map, "idle", function() { 
-      if (map.getZoom() > 16) map.setZoom(12); 
-      google.maps.event.removeListener(listener); 
-    });
-}
- google.maps.event.addDomListener(window, 'load', initialize);
-
-               
-
-       });
- </script>
-
-
-          
-       
-    
- 
-
-   
-   
-      
-         
        
     
    
@@ -3967,11 +2602,6 @@ $('.datepicker-checkout').pickadate({
 
 
           
-       
-    
-   
-      
-         
        
     
  

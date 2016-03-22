@@ -1,9 +1,9 @@
 <nav>
   <div class="nav-wrapper">
      {% if include.component-data.logo.image %}
-       <a href="/" class="logo"><img src="{{site.baseurl}}{{include.component-data.logo.image}}" alt="{{ site.title }}"></a>
+       <a href="{{site.baseurl}}/" class="logo"><img src="{{site.baseurl}}{{include.component-data.logo.image}}" alt="{{ site.title }}"></a>
      {% else %}
-       <a href="/" class="brand-logo">{{ include.component-data.logo.title }}</br>{{ include.component-data.logo.subtitle}}</a>
+       <a href="{{site.baseurl}}/" class="brand-logo">{{ include.component-data.logo.title }}</br>{{ include.component-data.logo.subtitle}}</a>
      {% endif %}
        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">

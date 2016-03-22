@@ -1,8 +1,46 @@
 ---
 title: Επικοινωνία
 layout: default-map
-pagetitle: contactonemap
+pagetitle: contact
 config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: mapcontent
+   divs:
+      - div:
+         theme:
+          class: map
+        components:
+         - component: gmap
+           data:
+            title: ΣΥΣΤΗΜΑ ΠΥΛΑΙΑΣ
+            javascript-plugin: gmap
+            javascript-plugin-data:
+              apiKey: AIzaSyDMnz5pux1SPWE0DFlrXitKQO1S_8FnXbg
+              gmapFilePath: googleMap1.js
+              id: map-canvas1        
+              class: map-canvas
+              height: 200px
+         - component: gmap
+           data:
+            title: ΣΥΣΤΗΜΑ ΠΑΝΟΡΑΜΑΤΟΣ
+            javascript-plugin: gmap
+            javascript-plugin-data:
+              gmapFilePath: googleMap2.js
+              id: map-canvas2        
+              class: map-canvas
+              height: 200px
+         - component: gmap
+           data:
+            title: ΣΥΣΤΗΜΑ ΧΟΡΤΙΑΤΗ
+            javascript-plugin: gmap
+            javascript-plugin-data:
+              gmapFilePath: googleMap3.js
+              id: map-canvas3        
+              class: map-canvas
+              height: 200px
  - section:
     data:
       htmlelement: section
@@ -11,30 +49,26 @@ config:
    divs:
       - div:
          theme:
-          class: preface
+           class: contact-footer
         components:
-         - component: one-post
-           data:
-             title: Επικοινωνία
-             data-type: collection
-             content-type: other
-             post-title: "contact-preface"
+          - component: posts-list
+            data:
+             title: Contact info
+             hr:
+              class: width25
+             content-type: adresses
+             data-type: data-list
              fields:
-              - field: content    
-      - div:
-         theme:
-          class: map
-        components:
-         - component: gmap
-           data:
-            title: ΦΡΟΝΤΙΣΤΗΡΙΑ ΠΥΛΑΙΑΣ
-            javascript-plugin: gmap
-            javascript-plugin-data:
-              apiKey: AIzaSyDMnz5pux1SPWE0DFlrXitKQO1S_8FnXbg
-              gmapFilePath: googleMap-multiplemarkers.js
-              id: map-canvas-multiple        
-              class: map-canvas
-              height: 400px
+                - field: group
+                  class: contact-group
+                  fields:
+                   - field: name
+                     data:
+                      icon: room
+                   - field: adress
+                   - field: phone
+                     data:
+                      icon: phone
       - div:
          theme:
           class: contact-form-materialize
@@ -93,14 +127,23 @@ config:
                     name: action
                     value: Contact
                     button-text: ΑΠΟΣΤΟΛΗ
+      - div:
+         theme:
+          class: preface
+        components:
+         - component: one-post
+           data:
+             title: Επικοινωνία
+             data-type: collection
+             content-type: other
+             post-title: "contact-preface"
+             fields:
+              - field: content
 css: |
    header {
    background: url("/assets/images/blackboard.jpg") no-repeat; 
    background-size: cover; 
-   }
-   #map-canvas-multiple.title {
-      font-weight: bold;
-   }
+   }              
 ---
 
 {% include basic_components/page.html %}

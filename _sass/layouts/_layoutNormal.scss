@@ -13,6 +13,7 @@
    }
    #nav-mobile {
       @include span( 9 of 12 last);  
+      max-width: 700px;
    }
    #nav-mobile a {
     font-size: 0.8rem;

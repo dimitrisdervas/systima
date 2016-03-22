@@ -1071,7 +1071,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   #nav-mobile {
     width: 75%;
     float: right;
-    margin-right: 0; }
+    margin-right: 0;
+    max-width: 800px; }
 
   #nav-mobile a {
     font-size: 0.8rem; }

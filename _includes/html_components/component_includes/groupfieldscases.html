@@ -1,29 +1,29 @@
-<!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
+<!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
 <!-- Just print the fields -->
               {% for field in fields  %}
 <!--  Check what type of field we are prinitng -->
                      {% case field.field  %}
    <!-- Multiple images --> 
                               {% when 'images' %}
-                                {% include html_components/fieldsCases/imagesCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+                                {% include html_components/fieldscases/imagescase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
    <!--  One images --> 
                               {% when 'image' %}
-                                {% include html_components/fieldsCases/imageCase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+                                {% include html_components/fieldscases/imagecase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
    <!-- LINK  -->                 
                               {% when 'link' %}
-                                {% include html_components/fieldsCases/linkCase.html field_Data=field.data field_Field=field.field %}
+                                {% include html_components/fieldscases/linkcase.html field_Data=field.data field_Field=field.field %}
    <!-- PERCENTAGE -->
                               {% when 'percentage' %}
-                                {% include html_components/fieldsCases/percentageCase.html field_Data=field.data field_Field=field.field %}
+                                {% include html_components/fieldscases/percentagecase.html field_Data=field.data field_Field=field.field %}
    <!--   TEXT -->
                               {% when 'text' %}
-                                {% include html_components/fieldsCases/textCase.html field_Data=field.data field_Field=field.field  data-type=include.componentData.data-type %}
+                                {% include html_components/fieldscases/textcase.html field_Data=field.data field_Field=field.field  data-type=include.componentData.data-type %}
    <!-- TITLE  -->
                               {% when 'title' %}
-                                {% include html_components/fieldsCases/titleCase.html field_Data=field.data field_Field=field.field %}
+                                {% include html_components/fieldscases/titlecase.html field_Data=field.data field_Field=field.field %}
    <!-- ICON  -->             
                               {% when 'icon' %}
-                                {% include html_components/fieldsCases/iconCase.html field_Data=field.data field_Field=field.field %}        
+                                {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}        
    <!-- COUNT  -->             
                               {% when 'count' %}
                                    {% if include.component-data.javascript-plugin-data.from %}
@@ -41,7 +41,7 @@
                                     </div>  
    <!-- VIDEO  -->    
                               {% when 'video' %}
-                                {% include html_components/fieldsCases/videoCase.html field_Data=field.data field_Field=field.field %}  
+                                {% include html_components/fieldscases/videocase.html field_Data=field.data field_Field=field.field %}  
                                                                                                            
                               {% when 'lorem' %}
                                   <p>{% raw %}{{ simpsum(20) }}{% endraw %}</p>

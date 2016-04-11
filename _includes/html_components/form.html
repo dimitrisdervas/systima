@@ -17,7 +17,7 @@
                            <!-- DEBUG FILE: html_components/components_includes/fieldsCases.html -->
                            <!-- Just print the fields -->
                            {% for field in fields  %}
-                     <div {% include basic_components/pageIncludes/themeElement.html elementData=field.wrapperDiv.theme %} >
+                     <div {% include basic_components/pageincludes/themeElement.html elementData=field.wrapperDiv.theme %} >
                         
                               {% case field.field  %}
                         
@@ -30,11 +30,11 @@
                                        <input type="date" class="datepicker {{ field.data.class }}" name="{{ field.data.name }}" required>
                      
                                  {% when 'textarea' %}
-                                       <textarea {% include basic_components/pageIncludes/themeElement.html elementData=field.data %}></textarea>
+                                       <textarea {% include basic_components/pageincludes/themeElement.html elementData=field.data %}></textarea>
                               <!-- INPUT --> 
                                  {% when 'input' %}
                               <label for="{{ field.data.id }}">{{ field.data.label }}</label>                 
-                                       <input {% include basic_components/pageIncludes/themeElement.html elementData=field.data %} required>
+                                       <input {% include basic_components/pageincludes/themeElement.html elementData=field.data %} required>
                               <!-- DROPDOWN BOX --> 
                                  {% when 'select' %}
                                        <select required name="{{ field.data.name }}">

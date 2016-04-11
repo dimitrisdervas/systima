@@ -1054,6 +1054,15 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     display: flex;
     flex-direction: column; }
 
+  .contactonemap nav {
+    position: absolute;
+    top: 15px; }
+  .contactonemap .nav-wrapper {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: auto; }
+
   nav {
     max-width: 90%;
     margin-left: auto;

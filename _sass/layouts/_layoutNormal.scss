@@ -3,9 +3,21 @@
       display: flex;
       flex-direction: column;
    }
+   .contactonemap {
+      nav {
+         position: absolute;
+         top: 15px;
+      }
+      .nav-wrapper {
+         position: relative;
+         height: 100%;
+         width: 90%;
+         margin: auto;
+      }
+   }
    nav {
      @include layout($full-width);
-      @include container;
+     @include container;
    }
    .logo {
       @include span( 2 of 12);

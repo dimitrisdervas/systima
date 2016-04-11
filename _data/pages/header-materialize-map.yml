@@ -1,0 +1,24 @@
+- section:
+   data:
+    htmlelement: header
+  divs:
+   - div:
+      theme:
+        class: map
+     components:
+        - component: gmap
+          data:
+           javascript-plugin: gmap
+           javascript-plugin-data:
+             apiKey: AIzaSyDMnz5pux1SPWE0DFlrXitKQO1S_8FnXbg
+             gmapFilePath: googleMap-multiplemarkers.js
+             id: map-canvas-multiple        
+             class: map-canvas
+             height: 600px
+        - component: materialize/navbar
+          data:
+           javascript-plugin: sidenav
+           logo:
+             image: /assets/images/logo-kroki.png
+           content-type: menu
+           data-type: data-list             

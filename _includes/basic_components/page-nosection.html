@@ -45,8 +45,8 @@
 <!--  SECTION WRAPPER -->
 <!--                  -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageincludes/pageSectionWrapper.html -->
-   {% include basic_components/pageincludes/pageSectionWrapper.html %}
+<!-- INCLUDE basic_components/pageincludes/pagesectionwrapper.html -->
+   {% include basic_components/pageincludes/pagesectionwrapper.html %}
 
 <!--                 -->
 <!-- SECTION         -->
@@ -77,8 +77,8 @@
                         <!--  DIVS            -->
                         <!--                  -->
                         <!-- DEBUG FILE: html_components/basic_components/page.html -->
-                        <!-- INCLUDE basic_components/pageincludes/pageDivs.html -->
-                           {% include basic_components/pageincludes/pageDivs.html %}
+                        <!-- INCLUDE basic_components/pageincludes/pagedivs.html -->
+                           {% include basic_components/pageincludes/pagedivs.html %}
 
 
             <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
@@ -107,7 +107,7 @@
                                  <!--                 -->                      
                                     {% if htmlComponent.component %}
                                     <!-- Include the html component template and bring it's details -->
-                                       {% include basic_components/pageincludes/pageComponents.html component-data=htmlComponent.data %} 
+                                       {% include basic_components/pageincludes/pagecomponents.html component-data=htmlComponent.data %} 
                                     <!-- EndIF htmlComponent.component -->
                                     {% endif %}
       

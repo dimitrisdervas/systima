@@ -1,9 +1,8 @@
 ---
 ---
 
-{% for plugin in site.data.pluginssourcefiles.jsSourceFiles %}
+{% for plugin in site.data.pluginssourcefiles.jssourcefiles %}
    {% if plugin.state == 'active' %}
-     {% include {{ plugin.js }} %} 
+     {% include {{ plugin.js }} %}
    {% endif%}
 {% endfor %}
-

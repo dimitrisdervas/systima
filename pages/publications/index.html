@@ -39,15 +39,18 @@ config:
                 - field: title
                   data:
                    element: div
-                   class: book-title
+                   class: book-title editable
                 - field: author
+                  data:
+                   element: div
+                   class: editable                
 css: |
    header {
    background: url("/assets/images/blackboard.jpg") no-repeat;
    background-size: cover;
    }
    .books {
-   background: url("/assets/images/blackboard.jpg") no-repeat; 
+   background: url("/assets/images/blackboard.jpg") no-repeat;
    background-size: cover;
    padding: 6% 4%;
    color: #fff;

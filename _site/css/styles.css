@@ -849,6 +849,12 @@ body {
   of the button to still show through. */
   background-color: rgba(119, 147, 60, 0.65); }
 
+.editor-link {
+  display: none; }
+
+.cms-editor-active .editor-link {
+  display: block; }
+
 html {
   box-sizing: border-box; }
 

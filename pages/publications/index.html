@@ -27,6 +27,7 @@ config:
            data:
              data-type: data-list
              content-type: publications
+             cloudcannon-editor: publications.csv
              fields:
              - field: group
                class: book-group
@@ -41,9 +42,6 @@ config:
                    element: div
                    class: book-title editable
                 - field: author
-                  data:
-                   element: div
-                   class: editable                
 css: |
    header {
    background: url("/assets/images/blackboard.jpg") no-repeat;

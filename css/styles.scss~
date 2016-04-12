@@ -40,11 +40,11 @@
 /* Layouts */
 /*  */
 @import 
-       "layouts/layout-global",
-       "layouts/layout-header",
-       "layouts/layout-frontpage",
-       "layouts/layout-blog",
-       "layouts/layout-footer"
+       "layouts/layoutGlobal",
+       "layouts/layoutHeader",
+       "layouts/layoutFrontpage",
+       "layouts/layoutBlog",
+       "layouts/layoutFooter"
    ;
 
 
@@ -52,24 +52,24 @@
 /* Styles */
 /*  */
 @import 
-      "styles/styles-colors",
-      "styles/styles-global",
-      "styles/styles-basic-components",
-      "styles/styles-header",      
-      "styles/styles-frontpage",
-      "styles/styles-footer",
-      "styles/styles-prices",
-      "styles/styles-facilities",
-      "styles/styles-gallery",
-      "styles/styles-contact",
-      "styles/styles-blog",
-      "styles/styles-about",
-      "styles/styles-map" 
+      "styles/stylesColors",
+      "styles/stylesGlobal",
+      "styles/stylesBasicComponents",
+      "styles/stylesHeader",      
+      "styles/stylesFrontpage",
+      "styles/stylesFooter",
+      "styles/stylesPrices",
+      "styles/stylesFacilities",
+      "styles/stylesGallery",
+      "styles/stylesContact",
+      "styles/stylesBlog",
+      "styles/stylesAbout",
+      "styles/stylesMap" 
    ;
 @import 
-       "layouts/layout-wide",
-       "layouts/layout-normal",
-       "layouts/layout-narrower",   
-       "layouts/layout-mobile"
+       "layouts/layoutWide",
+       "layouts/layoutNormal",
+       "layouts/layoutNarrower",   
+       "layouts/layoutMobile"
    ;      
 

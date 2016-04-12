@@ -7,19 +7,19 @@
 
 // COLORS
 /* @import "bower_components/crayon/dist/crayon"; */
-@import "styles/stylesColors";
-// 
+@import "styles/styles-colors";
+//
 // FONTS
-// 
+//
 /* @import "custom-mixins/webfonts/webfonts"; */
 
 /* // TYPOGRAPHIC */
 @import "bower_components/typographic/scss/typographic";
-@import "styles/stylesTypographic";
+@import "styles/styles-typographic";
 
-// 
+//
 // LAYOUT
-// 
+//
 
 // NEUTRON
 // @import "custom-mixins/neutron/neutron";
@@ -39,7 +39,7 @@
 /*  */
 /* Layouts */
 /*  */
-@import 
+@import
        "layouts/layout-global",
        "layouts/layout-header",
        "layouts/layout-frontpage",
@@ -51,11 +51,11 @@
 /*  */
 /* Styles */
 /*  */
-@import 
+@import
       "styles/styles-colors",
       "styles/styles-global",
       "styles/styles-basic-components",
-      "styles/styles-header",      
+      "styles/styles-header",
       "styles/styles-frontpage",
       "styles/styles-footer",
       "styles/styles-prices",
@@ -64,12 +64,11 @@
       "styles/styles-contact",
       "styles/styles-blog",
       "styles/styles-about",
-      "styles/styles-map" 
+      "styles/styles-map"
    ;
-@import 
+@import
        "layouts/layout-wide",
        "layouts/layout-normal",
-       "layouts/layout-narrower",   
+       "layouts/layout-narrower",
        "layouts/layout-mobile"
-   ;      
-
+   ;

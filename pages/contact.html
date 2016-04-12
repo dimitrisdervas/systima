@@ -20,17 +20,17 @@ config:
              content-type: other
              post-title: "contact-preface"
              fields:
-              - field: content    
+              - field: content
       - div:
          theme:
           class: contact-form-materialize
-        components:                
+        components:
          - component: form
            data:
             title: Φόρμα Επικοινωνίας
             javascript-plugin: form
             theme:
-              class: form    
+              class: form
             fields:
                  - field: redirect
                    data:
@@ -57,32 +57,32 @@ config:
                    wrapperDiv:
                      theme:
                        class: input-field
-                   data: 
+                   data:
                      name: phone
                      class: phone validate
-                     type: text      
+                     type: text
                      label: τηλέφωνο
                  - field: textarea
                    wrapperDiv:
                      theme:
                         class: input-field message
                    data:
-                    class: materialize-textarea 
+                    class: materialize-textarea
                     name: message
                     type: text
                     id: textarea
                     label: μήνυμα
                  - field: button
                    data:
-                    class: submit-button btn waves-effect 
-                    type: submit 
+                    class: submit-button btn waves-effect
+                    type: submit
                     name: action
                     value: Contact
                     button-text: ΑΠΟΣΤΟΛΗ
 css: |
    header {
-   background: url("/systima/assets/images/blackboard.jpg") no-repeat; 
-   background-size: cover; 
+   background: url("/assets/images/blackboard.jpg") no-repeat; 
+   background-size: cover;
    }
    #map-canvas-multiple.title {
       font-weight: bold;

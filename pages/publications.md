@@ -18,12 +18,12 @@ config:
              content-type: other
              post-title: "publications-preface"
              fields:
-              - field: content       
+              - field: content
       - div:
          theme:
           class: books block
         components:
-         - component: posts-list 
+         - component: posts-list
            data:
              data-type: data-list
              content-type: publications
@@ -43,12 +43,12 @@ config:
                 - field: author
 css: |
    header {
-   background: url("/systima/assets/images/blackboard.jpg") no-repeat; 
-   background-size: cover; 
+   background: url("/assets/images/blackboard.jpg") no-repeat;
+   background-size: cover;
    }
    .books {
-   background: url("/systima/assets/images/blackboard.jpg") no-repeat; 
-   background-size: cover; 
+   background: url("/assets/images/blackboard.jpg") no-repeat; 
+   background-size: cover;
    padding: 6% 4%;
    color: #fff;
    }

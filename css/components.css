@@ -3,7 +3,7 @@
 /* http://jebaird.com/2015/04/17/minifying-css-in-jekyll-with-scssify-and-strip_newlines.html */
 {% capture include_to_scssify %}
 
-{% for plugin in site.data.pluginsSourceFiles.jsSourceFiles %}
+{% for plugin in site.data.pluginssourcefiles.jsSourceFiles %}
    {% if plugin.state == 'active' %}
          {% for fileCss in plugin.css %}
               {% include {{ fileCss.css }} %} 

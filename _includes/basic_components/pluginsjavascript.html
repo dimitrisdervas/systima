@@ -17,11 +17,11 @@ Find all the yaml files configuration files in _data/pages -->
                                     {% case component.data.javascript-plugin %}
                                           {% when 'countTo' %}
                                           {% when 'listjs' %}
-                                                {% include basic_components/javascriptPluginsCases/listjs.js %}
+                                                {% include basic_components/javascriptpluginscases/listjs.js %}
                                           {% when 'masonry' %}
                                           {% when 'owl-carousel' %}
                                                plugins:{{ component.data.javascript-plugin  }}
-                                               {% include basic_components/javascriptPluginsCases/owlSlideshow.js %}
+                                               {% include basic_components/javascriptpluginscases/owlSlideshow.js %}
                                           {% else %}
                                              test else
                                        {% endcase %}

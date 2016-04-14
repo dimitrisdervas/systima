@@ -25,12 +25,12 @@ config:
                 - field: title
                   data:
                    class: title
-                - field: content
+                - field: text
       - div:
          theme:
           class: spoudes block
         components:
-         - component: posts-list 
+         - component: posts-list
            data:
              title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ"
              subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
@@ -60,7 +60,20 @@ config:
                - field: title
                  data:
                   class: title
-               - field: content  
+               - field: content
+      - div:
+        theme:
+         class: frontistiria
+        components:
+         - component: posts-list
+           data:
+            title: "Φροντιστηρία"
+            data-type: collection
+            content-type: frontistiria
+            fields:
+                - field: image
+                - field: name
+                - field: phone
 css: |
    header {
     background-image: radial-gradient(#31415D, #1A2231);

@@ -1,0 +1,42 @@
+---
+title: Λειτουργία
+layout: default
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: leitourgia block
+        components:
+         - component: posts-list
+           data:
+             title: Λειτουργία
+             subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
+             data-type: collection
+             content-type: leitourgia
+             fields:
+             - field: group
+               class: leitourgia-group
+               fields:
+                - field: title
+                  data:
+                    class: type
+                - field: text
+                  data:
+                    class: text
+                    text-teaser: yes
+                    text-words: 30
+
+
+css: |
+   header {
+    background-image: radial-gradient(#31415D, #1A2231);
+   }
+
+---
+
+{% include basic_components/page.html %}

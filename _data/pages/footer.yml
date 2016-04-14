@@ -16,7 +16,7 @@
           title: Contact info
           hr:
            class: width25
-          content-type: adresses
+          content-type: frontistiria
           data-type: data-list
           fields:
              - field: group
@@ -43,10 +43,10 @@
            title: Newsletter Subscribe
            hr:
             class: width25
-           subtitle: "εγγραφείτε για να ενημερωθείτε για τις προσφορές μας"    
+           subtitle: "εγγραφείτε για να ενημερωθείτε για τις προσφορές μας"
            javascript-plugin: form
            theme:
-              class: form    
+              class: form
            fields:
                  - field: redirect
                    data:
@@ -62,8 +62,8 @@
                     type: email
                  - field: button
                    data:
-                    class: submit-button btn waves-effect 
-                    type: submit 
+                    class: submit-button btn waves-effect
+                    type: submit
                     name: action
                     value: Contact
                     button-text: Subscribe

@@ -2,8 +2,8 @@
   path: /
 - title: Σχετικά με εμάς
   path: /pages/aboutus
-#- title: Λειτουργία
-#  path: /pages/services
+- title: Λειτουργία
+  path: /pages/services
 - title: Παροχές
   path: /pages/paroxes
 - title: Εκδόσεις

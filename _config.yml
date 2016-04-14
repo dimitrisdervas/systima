@@ -21,7 +21,10 @@ collections:
   other:
     output: true
     permalink: /other/:path
-  paroxes:
+  leitourgia:
+    output: true
+    permalink: /paroxes/:path
+  frontistiria:
     output: true
     permalink: /paroxes/:path
 

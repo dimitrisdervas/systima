@@ -1,0 +1,34 @@
+.leitourgia {
+   .component-header {
+     color: #36648e;
+     margin: 0 0 15%;
+     padding: 3%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 24px;
+     font-weight: bold;
+     text-align: center;
+     border: 3px solid #36648e;
+   }
+   .leitourgia-group {
+      color: #fff;
+     .type {
+         background-color: #242833;
+        text-align: center;
+     }
+
+     .text {
+        background-color: #2b303c;
+     }
+
+   }
+   .leitourgia-group:hover {
+      .text {
+             background-color: #474c59;
+      }
+       .type {
+             background-color: #007da6;
+      }
+   }
+}

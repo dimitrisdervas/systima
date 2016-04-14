@@ -982,6 +982,29 @@ body {
 .material-icons {
   padding: 0 10px 0 0px; }
 
+.leitourgia .component-header {
+  color: #36648e;
+  margin: 0 0 15%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid #36648e; }
+.leitourgia .leitourgia-group {
+  color: #fff; }
+  .leitourgia .leitourgia-group .type {
+    background-color: #242833;
+    text-align: center; }
+  .leitourgia .leitourgia-group .text {
+    background-color: #2b303c; }
+.leitourgia .leitourgia-group:hover .text {
+  background-color: #474c59; }
+.leitourgia .leitourgia-group:hover .type {
+  background-color: #007da6; }
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
   padding: 0.4375em 0; }
 

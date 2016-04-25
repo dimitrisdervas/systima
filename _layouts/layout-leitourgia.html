@@ -1,0 +1,36 @@
+---
+layout: default
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+          theme:
+           class: leitourgia-post card
+        components:
+         - component: /post_components/fields
+           data:
+             fields:
+              - field: title
+              - field: content
+      - div:
+          theme:
+           class: pagination
+        components:
+         - component: /post_components/pagination
+           data:
+             content-type: leitourgia
+             next-label: επόμενο
+             previous-label: προηγούμενο
+css: |
+   header {
+    background-image: radial-gradient(#31415D, #1A2231);
+   /*     background: url("/assets/images/gradient.jpg") no-repeat; */
+   /*     background-size: cover; */
+   }
+---
+
+{% include basic_components/layout.html %}

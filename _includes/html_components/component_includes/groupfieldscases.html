@@ -1,15 +1,15 @@
 <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
 <!-- Just print the fields -->
-              {% for field in fields  %}
+              {% for field in groupfields  %}
 <!--  Check what type of field we are prinitng -->
                      {% case field.field  %}
-   <!-- Multiple images --> 
+   <!-- Multiple images -->
                               {% when 'images' %}
                                 {% include html_components/fieldscases/imagescase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
-   <!--  One images --> 
+   <!--  One images -->
                               {% when 'image' %}
                                 {% include html_components/fieldscases/imagecase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
-   <!-- LINK  -->                 
+   <!-- LINK  -->
                               {% when 'link' %}
                                 {% include html_components/fieldscases/linkcase.html field_Data=field.data field_Field=field.field %}
    <!-- PERCENTAGE -->
@@ -21,10 +21,10 @@
    <!-- TITLE  -->
                               {% when 'title' %}
                                 {% include html_components/fieldscases/titlecase.html field_Data=field.data field_Field=field.field %}
-   <!-- ICON  -->             
+   <!-- ICON  -->
                               {% when 'icon' %}
-                                {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}        
-   <!-- COUNT  -->             
+                                {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}
+   <!-- COUNT  -->
                               {% when 'count' %}
                                    {% if include.component-data.javascript-plugin-data.from %}
                                        {% assign fromNumber = include.component-data.javascript-plugin-data.from %}
@@ -32,26 +32,53 @@
                                        {% assign fromNumber = 0 %}
                                     {% endif %}
 
-                                    <div 
-                                         class="countTo" 
-                                         data-from="{{ fromNumber }}" 
-                                         data-to="{{ post.[include.component-data.javascript-plugin-data.toField] }}" 
-                                         data-speed="{{include.component-data.javascript-plugin-data.speed}}" 
+                                    <div
+                                         class="countTo"
+                                         data-from="{{ fromNumber }}"
+                                         data-to="{{ post.[include.component-data.javascript-plugin-data.toField] }}"
+                                         data-speed="{{include.component-data.javascript-plugin-data.speed}}"
                                          data-refresh-interval="{{include.component-data.javascript-plugin-data.refresh-interval}}">
-                                    </div>  
-   <!-- VIDEO  -->    
+                                    </div>
+   <!-- VIDEO  -->
                               {% when 'video' %}
-                                {% include html_components/fieldscases/videocase.html field_Data=field.data field_Field=field.field %}  
-                                                                                                           
+                                {% include html_components/fieldscases/videocase.html field_Data=field.data field_Field=field.field %}
+
                               {% when 'lorem' %}
                                   <p>{% raw %}{{ simpsum(20) }}{% endraw %}</p>
+
+                              {% when 'group' %}
+                                   {% if field.background %}
+                                          <div class="post-image {{ field.class }}"
+                                               {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
+                                                    style="background-image:url({{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
+                                                 {% else %}
+                                                    style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
+                                              {% endif %}
+
+                                          {% capture divEnd %}</div>{% endcapture %}
+
+                                    {% elsif  field.link %}
+                                          <a href="{{ post.url}}">
+                                          {% capture divEnd %}</a>{% endcapture %}
+
+                                    {% else %}
+                                            <div class="{{ field.class }}">
+                                               {% capture divEnd %}</div>{% endcapture%}
+                                    {% endif %}
+
+
+
+                                      {% assign groupfields = field.fields %}
+                                      {% include html_components/component_includes/groupfieldscases.html %}
+
+                                   {{ divEnd }}
 
                     {% else %}
 <!-- Print every field as separate div -->
                            <div class="{{field.field}} {{field.data.class}}">
                               {% case field.data.link %}
                                  {% when 'posts' %}
-                                       <a href="{{ site.baseurl}}{{ post.url }}"> 
+                                       <a href="{{ site.baseurl}}{{ post.url }}">
                                        {% capture fieldDivEnd %}</a></div>{% endcapture%}
                                  {% when 'products' %}
                                         <a href="{{ site.baseurl}}products/{{ post.sku }}.html">
@@ -67,7 +94,7 @@
                                  {{fieldDivEnd}}
 
 
-                   
+
 <!--  End case of fields -->
                     {% endcase %}
 <!--  End loop in fields -->

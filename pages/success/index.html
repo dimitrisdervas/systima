@@ -7,7 +7,7 @@ config:
       htmlelement: section
     theme:
       class: textarea
-    sectionTitle:
+    seoTitle:
      data:
       label: "Οι επιτυχίες μας"
    divs:
@@ -15,43 +15,69 @@ config:
          theme:
           class: success block
         components:
-         - component: posts-list
+         - component: materialize/tabs
            data:
-             title: "2015"
-             data-type: data-list
-             content-type: success2015
-             folder: success
-             fields:
-             - field: group
-               class: success-group
-               fields:
-                - field: name
-                  data:
-                   element: div
-                   class: name-title
-                - field: school
+            tabs:
+              - title: "2015"
+                data:
+                  data-type: data-list
+                  content-type: success2015
+                  folder: success
+                  fields:
+                    - field: group
+                      class: success-group
+                      fields:
+                       - field: name
+                         data:
+                          element: div
+                          class: name-title
+                       - field: school
+              - title: "2014"
+                data:
+                 data-type: data-list
+                 content-type: success2014
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
+              - title: "2013"
+                data:
+                 data-type: data-list
+                 content-type: success2013
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
+              - title: "2012"
+                data:
+                 data-type: data-list
+                 content-type: success2013
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
 css: |
    header {
-   background: url("/assets/images/blackboard.jpg") no-repeat; 
-   background-size: cover;
-   }
-   .books {
    background: url("/assets/images/blackboard.jpg") no-repeat;
    background-size: cover;
-   padding: 6% 4%;
-   color: #fff;
-   }
-   .book-group {
-   margin-bottom: 15%;
-   }
-   .book-title {
-   font-weight: bold;
-   @include t-h4;
-   }
-   /* Fallback styles  - http://codepen.io/jasondavis/pen/szbDf */
-   .book-image {
-   box-shadow: 0 2px 7.68px .32px rgba(0, 0, 0, 0.4),0 12px 26px 0 rgba(0, 0, 0, 0.4);
-   max-width: 200px;
    }
 ---
 {% include basic_components/page.html %}

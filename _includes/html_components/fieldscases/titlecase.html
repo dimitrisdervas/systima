@@ -3,9 +3,8 @@
 
       {% case include.field_Data.link %}
       {% when 'posts' %}
-      <div>
-            <a 
-               {% for data in include.field_Data %}
+      <div
+       {% for data in include.field_Data %}
            {% case data[0] %}
             {% when 'id' %}
                {{data[0]}}="{{data[1]}}"
@@ -14,13 +13,13 @@
             {% when 'theme' %}
                {{data[0]}}="{{data[1]}}"
             {% endcase%}
-        {% endfor %}
-               href="{{ site.baseurl}}{{ post.url }}">{{ post.[include.field_Field] }}</a>
+        {% endfor %}>
+            <a href="{{ site.baseurl}}{{ post.url }}">{{ post.[include.field_Field] }}</a>
          </div>
-   
+
       {% when 'products' %}
       <div>
-             <a 
+             <a
                 {% for data in include.field_Data %}
            {% case data[0] %}
             {% when 'id' %}
@@ -34,9 +33,9 @@
                 href="{{ site.baseurl}}products/{{ post.sku }}.html">{{ post.[include.field_Field] }}</a>
          </div>
       {% else %}
-   
+
    {% if include.field_Data.element %}
-     <{{ include.field_Data.element }} 
+     <{{ include.field_Data.element }}
       {% capture elementEND %}{{ include.field_Data.element }}{% endcapture %}
       {% else %}
       <div {% capture elementEND %}div{% endcapture %}
@@ -51,11 +50,8 @@
                {{data[0]}}="{{data[1]}}"
             {% endcase%}
         {% endfor %}>
-        
-           {{ post.[include.field_Field] }} 
-                  
+
+           {{ post.[include.field_Field] }}
+
         </{{ elementEND }}>
       {% endcase %}
-   
-                  
-

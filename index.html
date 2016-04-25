@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Σύστημα
+pagetitle: frontpage
 image: /assets/images/logo-kroki.png
 config:
  - section:
@@ -32,8 +33,7 @@ config:
         components:
          - component: posts-list
            data:
-             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ"
-             subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
+             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ ΓΙΑ ΟΛΑ ΤΑ ΕΠΙΣΤΗΜΟΝΙΚΑ ΠΕΔΙΑ"
              data-type: data-list
              content-type: studies
              fields:
@@ -54,26 +54,38 @@ config:
              content-type: other
              post-title: "και γιατί στο Σύστημα"
              fields:
-             - field: group
-               class: color-overlay
-               fields:
-               - field: title
-                 data:
-                  class: title
-               - field: content
+              - field: group
+                class: color-overlay
+                fields:
+                 - field: title
+                   data:
+                    class: title
+                 - field: content
       - div:
-        theme:
-         class: frontistiria
+         theme:
+          class: frontistiria--block
         components:
          - component: posts-list
            data:
             title: "Φροντιστηρία"
             data-type: collection
             content-type: frontistiria
+            groupElement: div
+            groupElement-data:
+              class: frontistiria
             fields:
-                - field: image
-                - field: name
-                - field: phone
+             - field: group
+               class: frontistirio
+               fields:
+                 - field: images
+                   data:
+                    tag: main
+                    link: post
+                    images-path: /assets/images/frontistiria/
+                    image-hash: image
+                 - field: name
+                   data:
+                    link: posts
 css: |
    header {
     background-image: radial-gradient(#31415D, #1A2231);

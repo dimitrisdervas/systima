@@ -1,0 +1,14 @@
+- name: Νέα
+  url: /pages/news
+- name: Άρθρα
+  url: /pages/articles
+- name: Φώτο
+  url: /pages/photos
+- name: Σχολές
+  url: /pages/sxoles
+- name: Λύκειο
+  url: /pages/lykeio
+- name: Βάσεις
+  url: /pages/baseis
+- name: Επικοινωνία
+  url: /pages/contact

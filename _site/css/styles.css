@@ -685,21 +685,35 @@ body {
 
 .textarea,
 .maincontent {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   clear: both;
   padding: 0 4%;
   position: relative;
-  margin-top: -25px; }
+  margin-top: -50px; }
   .textarea:after,
   .maincontent:after {
     content: " ";
     display: block;
     clear: both; }
 
+.notextarea,
+.maincontent {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding: 0 4%;
+  position: relative; }
+  .notextarea:after,
+  .maincontent:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
 .top-article {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto; }
   .top-article:after {
@@ -712,7 +726,7 @@ body {
   padding: 0 5% 15%; }
 
 .type {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto; }
   .type:after {
@@ -721,7 +735,7 @@ body {
     clear: both; }
 
 .text {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto; }
   .text:after {
@@ -730,7 +744,7 @@ body {
     clear: both; }
 
 .spoudes {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
@@ -741,7 +755,7 @@ body {
     clear: both; }
 
 .spoudes-group {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
@@ -767,29 +781,66 @@ body {
     align-items: center;
     padding: 4%; }
 
+.leitourgia-group {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  display: flex; }
+  .leitourgia-group:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .leitourgia-group .type {
+    width: 33.33333%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2%; }
+  .leitourgia-group .text {
+    width: 66.66667%;
+    float: right;
+    margin-right: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 4%;
+    flex-direction: column; }
+
 .why .title,
 .why .content {
   margin-left: 41.66667%; }
 
 .footer {
-  max-width: 1258px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  flex-basis: 50%; }
+  flex-basis: 50%;
+  justify-content: space-between;
+  padding: 4%; }
   .footer:after {
     content: " ";
     display: block;
     clear: both; }
+  .footer div {
+    flex-basis: 33.33333%; }
   .footer .contact-footer {
     display: flex;
-    flex-direction: column;
-    padding: 6%; }
+    flex-direction: column; }
     .footer .contact-footer .contact-group {
       margin-bottom: 7%; }
+  .footer .menu nav {
+    margin-top: 0; }
+  .footer .menu ul {
+    display: flex;
+    flex-direction: column; }
+  .footer .menu a {
+    line-height: 2.1; }
   .footer .social-footer {
-    padding: 6%;
     display: flex;
     flex-direction: column; }
     .footer .social-footer .social ul {
@@ -810,6 +861,21 @@ body {
 /* MAP */
 #map-canvas {
   width: 100%; }
+
+.pagination {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  background: #fff;
+  margin-bottom: 5%;
+  padding: 2%; }
+  .pagination:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .pagination .next {
+    margin-left: auto; }
 
 /*  */
 /* Styles */
@@ -854,6 +920,47 @@ body {
 
 .cms-editor-active .editor-link {
   display: block; }
+
+.paroxes h1.title {
+  font-size: 48px;
+  padding: 0;
+  text-align: center; }
+.paroxes h3 {
+  font-weight: bold; }
+
+.baseis .textarea {
+  background: #fff;
+  padding: 3%;
+  margin-bottom: 5%; }
+  .baseis .textarea tr:first-child {
+    padding-bottom: 2%; }
+
+.more {
+  text-transform: none; }
+
+.card-content {
+  padding: 20px;
+  border-radius: 0; }
+
+.articles .title,
+.news .title {
+  color: #175394;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 4%;
+  padding-top: 2%;
+  line-height: 1.5; }
+
+.leitourgia-post .title {
+  color: #175394;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 4%;
+  padding-top: 2%;
+  line-height: 1.5; }
+
+.tabs .tab a {
+  font-size: 28px; }
 
 html {
   box-sizing: border-box; }
@@ -903,15 +1010,15 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #EEEC6E;
+  color: #EF2B1D;
   font-size: 42px;
   font-weight: bold; }
   .hero .hero-group {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .hero .herotitle {
-    align-self: flex-start;
-    margin-bottom: 1%; }
+    font-size: 60px; }
   .hero .herosubtitle {
     align-self: flex-end; }
 
@@ -922,7 +1029,7 @@ body {
   margin-bottom: 5rem; }
 
 .top-article {
-  background: url("/systima/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+  background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
   color: #ffffff; }
 
@@ -933,21 +1040,31 @@ body {
     font-size: 24px;
     padding: 5% 0; }
 
-.spoudes .component-header {
+.spoudes .component-header,
+.frontistiria--block .component-header {
   color: #36648e;
-  margin: 0 0 15%;
+  margin: 0 0 5%;
   padding: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
-  border: 3px solid #36648e; }
+  background: #E6E6E6; }
+
+.spoudes .spoudes-group:nth-child(4n+1) .type {
+  background: #132b46; }
+.spoudes .spoudes-group:nth-child(4n+2) .type {
+  background: #1c2640; }
+.spoudes .spoudes-group:nth-child(4n+3) .type {
+  background: #1e2536; }
+.spoudes .spoudes-group:nth-child(4n+4) .type {
+  background: #2d374f; }
 .spoudes .spoudes-group {
-  color: #fff; }
+  color: #fff;
+  min-height: 200px; }
   .spoudes .spoudes-group .type {
-    background-color: #242833;
     text-align: center; }
   .spoudes .spoudes-group .text {
     background-color: #2b303c; }
@@ -957,18 +1074,31 @@ body {
   background-color: #007da6; }
 
 .why {
-  background: url("/systima/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
+  background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
   color: #ffffff;
   margin-bottom: 10%; }
   .why .title {
     border: 3px solid #fff;
     padding: 3%;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 30px; }
+
+.frontistiria {
+  margin-bottom: 10%; }
+  .frontistiria .frontistirio .name {
+    font-size: 22px; }
+  .frontistiria .frontistirio a {
+    color: #132b46; }
+  .frontistiria .frontistirio:hover {
+    background-color: #007da6; }
+    .frontistiria .frontistirio:hover a {
+      color: #fff; }
 
 .width25 {
   width: 25%;
-  margin-left: 0%; }
+  margin-left: 0%;
+  margin-bottom: 10%; }
 
 .footer-wrapper {
   background: #151B27;
@@ -984,7 +1114,7 @@ body {
 
 .leitourgia .component-header {
   color: #36648e;
-  margin: 0 0 15%;
+  margin: 5% 0;
   padding: 3%;
   display: flex;
   flex-direction: column;
@@ -992,12 +1122,18 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  border: 3px solid #36648e; }
+  border: 2px solid #36648e;
+  background: #fff; }
 .leitourgia .leitourgia-group {
   color: #fff; }
+  .leitourgia .leitourgia-group a {
+    color: #fff; }
   .leitourgia .leitourgia-group .type {
     background-color: #242833;
-    text-align: center; }
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: 2px; }
   .leitourgia .leitourgia-group .text {
     background-color: #2b303c; }
 .leitourgia .leitourgia-group:hover .text {
@@ -1028,22 +1164,31 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 .maincontent {
   padding: 0 4%; }
   .maincontent .component-header {
-    margin: 4%;
-    padding: 3%;
+    margin-bottom: 4%;
     font-size: 24px;
     font-weight: bold;
     text-align: center; }
 
 .preface h1 {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 5%; }
 
 .preface,
-.teachers,
-.secretaria,
 .success {
   padding: 4%;
-  background: #fff;
-  margin-bottom: 10%; }
+  background: #fff; }
+
+.teachers {
+  padding: 4% 4% 0;
+  background: #fff; }
+
+.secretaria {
+  padding: 0 4% 4%;
+  margin-bottom: 10%;
+  background: #fff; }
+
+.secretaria .component-header {
+  padding: 2% 0 0; }
 
 .name {
   font-weight: bold; }
@@ -1083,23 +1228,25 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     display: flex;
     flex-direction: column; }
 
-  .contactonemap nav {
-    position: absolute;
-    top: 15px; }
-  .contactonemap .nav-wrapper {
-    position: relative;
-    height: 100%;
-    width: 90%;
-    margin: auto; }
-
   nav {
     max-width: 90%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    max-width: 1280px; }
     nav:after {
       content: " ";
       display: block;
       clear: both; }
+
+  .onemap nav {
+    max-width: 100%;
+    position: absolute;
+    top: 15px; }
+  .onemap .nav-wrapper {
+    position: relative;
+    height: 100%;
+    width: 1280px;
+    margin: auto; }
 
   .logo {
     width: 16.66667%;
@@ -1110,18 +1257,20 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     width: 75%;
     float: right;
     margin-right: 0;
-    max-width: 700px; }
+    max-width: 800px; }
 
   #nav-mobile a {
     font-size: 0.8rem; }
 
   .hero-group {
-    flex-basis: 80%; }
+    flex-basis: 80%;
+    max-width: 1280px; }
 
   .aboutus .hero-group {
     color: #CE4646; }
 
   .aboutus .component-title {
+    margin-top: 0;
     font-size: 31.38267px;
     margin-top: 1.11527em;
     line-height: 1.33832em;
@@ -1135,15 +1284,26 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
       margin-top: 1.11527em;
       line-height: 1.33832em;
       margin-bottom: 0.24011em; } }
-
 @media screen and (min-width: 993px) {
+  .aboutus .secretaria .component-title {
+    margin-top: 0;
+    padding: 2%; }
+
   .aboutus .teacher-group {
     display: flex; }
     .aboutus .teacher-group .name {
-      min-width: 33.33333%; }
+      min-width: 41.66667%; }
+
+  .frontistiria {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline; }
+    .frontistiria .frontistirio:nth-child(2) {
+      margin: 0 2em; }
 
   .success {
-    max-width: 1258px;
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
@@ -1171,6 +1331,18 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
       .success .success-group .name {
         min-width: 41.66667%; }
 
+  .articles {
+    display: flex;
+    /* flex-basis: 100px; */
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .articles .card {
+      flex-basis: 49%;
+      padding: 4%; }
+
+  .paroxes .card {
+    padding: 4%; }
+
   .contact .maincontent {
     display: flex;
     flex-wrap: wrap; }
@@ -1189,7 +1361,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     flex-direction: column; }
 
   nav {
-    max-width: 1258px;
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto; }
     nav:after {
@@ -1225,7 +1397,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
   .why .title,
   .why .content {
-    max-width: 1258px;
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto; }
     .why .title:after,

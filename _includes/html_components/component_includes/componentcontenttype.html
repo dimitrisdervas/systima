@@ -11,48 +11,52 @@
 {% assign include.component-data.post-title = %}
 {% assign include.component-data.postTag = %}
 <!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
-{% if include.component-data.data-type == 'data-list' %}
-
-<!-- If there is no post-tile it will look only for the file not inside the file -->
-<!-- Filter file of data -->
-<!--  -->
-<!-- POST TAG -->
-<!--  -->
-   {% if include.component-data.tag %}
-<!-- If TAG is page.tag or -->
-
-            {% if include.component-data.tag contains 'page' %}
-               {% assign whereTag = include.component-data.tag | split:"." | last %}
-               {% assign posts = site.data.content.[include.component-data.content-type] | where: include.component-data.tag-hash, page.[whereTag] %}
-            {% else %}
-               {% assign posts = site.data.content.[include.component-data.content-type] | where: include.component-data.tag-hash, include.component-data.tag %}
-            {% endif %}
-
-    {% endif %}<!-- END If there is include.component.tag -->
-
+  {% if include.component-data.content-type contains 'page' %}
+      {% assign contenttype = include.component-data.content-type | split:"." | last %}
+      {% assign contenttype2 = page.[contenttype] %}
       {% if include.component-data.folder %}
-             {% assign posts = site.data.content.[include.component-data.folder].[include.component-data.content-type] %}
+            {% assign posts = site.data.content.[include.component-data.folder].[contenttype2] %}
       {% else %}
-            {% assign posts = site.data.content.[include.component-data.content-type] %}
+            {% assign posts = site.data.content.[contenttype2] %}
       {% endif %}
-<!--            -->
-<!-- POST TITLE -->
-<!--            -->
-   {% if include.component-data.post-title %}
-      {% assign onepost = posts.[include.component-data.post-title] %}
-   {% else %}
-      {% assign onepost = posts %}
-   {% endif %}
-
-
-{% else %}
-<!--  -->
-<!-- COLLECTION -->
-<!--  -->
-      {% if include.component-data.postTag  %}
-         {% assign posts = site.[include.component-data.content-type] | where: 'tag' , include.component-data.postTag %}
-      {% else %}
-         {% assign posts = site.[include.component-data.content-type]  %}
-      {% endif %}
-   {% assign onepost = posts | where:'title', include.component-data.post-title %}
-{% endif %}
+  {% else%}
+    {% if include.component-data.data-type == 'data-list' %}
+    <!-- If there is no post-tile it will look only for the file not inside the file -->
+    <!-- Filter file of data -->
+    <!--  -->
+    <!-- POST TAG -->
+    <!--  -->
+       {% if include.component-data.tag %}
+    <!-- If TAG is page.tag or -->
+                {% if include.component-data.tag contains 'page' %}
+                   {% assign whereTag = include.component-data.tag | split:"." | last %}
+                   {% assign posts = site.data.content.[include.component-data.content-type] | where: include.component-data.tag-hash, page.[whereTag] %}
+                {% else %}
+                   {% assign posts = site.data.content.[include.component-data.content-type] | where: include.component-data.tag-hash, include.component-data.tag %}
+                {% endif %}
+        {% endif %}<!-- END If there is include.component.tag -->
+          {% if include.component-data.folder %}
+                 {% assign posts = site.data.content.[include.component-data.folder].[include.component-data.content-type] %}
+          {% else %}
+                {% assign posts = site.data.content.[include.component-data.content-type] %}
+          {% endif %}
+    <!--            -->
+    <!-- POST TITLE -->
+    <!--            -->
+       {% if include.component-data.post-title %}
+          {% assign onepost = posts.[include.component-data.post-title] %}
+       {% else %}
+          {% assign onepost = posts %}
+       {% endif %}
+    {% else %}
+    <!--  -->
+    <!-- COLLECTION -->
+    <!--  -->
+          {% if include.component-data.postTag  %}
+             {% assign posts = site.[include.component-data.content-type] | where:include.component-data.postTag,include.component-data.tag-hash %}
+          {% else %}
+             {% assign posts = site.[include.component-data.content-type]  %}
+          {% endif %}
+       {% assign onepost = posts | where:'title', include.component-data.post-title %}
+    {% endif %}
+  {% endif %}

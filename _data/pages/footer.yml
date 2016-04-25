@@ -31,6 +31,18 @@
                    icon: phone
    - div:
       theme:
+        class: menu
+     components:
+       - component: menu
+         data:
+          title: Χρήσιμα
+          hr:
+           class: width25
+          content-type: menu-footer
+          id: footer-menu
+          data-type: data-list
+   - div:
+      theme:
        class: social-footer
      components:
        - component: social

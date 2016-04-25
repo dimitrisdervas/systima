@@ -7,12 +7,11 @@
 <!--             -->
 <!-- CONFIG FILE -->
 <!--             -->
-{% if include.config-file %}
-   {% assign config = site.data.pages.[include.config-file] %}
-{% else %}
-   {% assign config = page.config %}
-{% endif %}
-
+  {% if include.config-file %}
+     {% assign config = site.data.pages.[include.config-file] %}
+  {% else %}
+     {% assign config = page.config %}
+  {% endif %}
 <!-- Loop through the page .yml file to create the html -->
 {% for section in config %}
 <!--  -->
@@ -46,11 +45,11 @@
 <!--  -->
 <!-- TO FIX -->
 <!--  -->
-    <!-- {% include basic_components/pageincludes/title.html component-data=section.sectionTitle.data element=section %} -->
+<!--  include basic_components/pageincludes/title.html component-data=section.sectionTitle.data element=section  -->
 
 
 
- {% include basic_components/pageincludes/pagetest.html %}
+ {% include basic_components/pageincludes/pageseotitle.html %}
 
 
 <!--                  -->

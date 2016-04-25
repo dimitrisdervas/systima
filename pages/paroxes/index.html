@@ -1,5 +1,6 @@
 ---
 title: "Παροχές"
+pagetitle: paroxes
 layout: default
 config:
  - section:
@@ -7,28 +8,33 @@ config:
       htmlelement: section
     theme:
       class: textarea
-    seoTitle: test seo
    divs:
       - div:
          theme:
-          class: top-article block
+          class: card
         components:
          - component: one-post
            data:
              data-type: collection
              content-type: other
              post-title: "Παροχές"
+             class: card-content
              fields:
               - field: group
-                class: color-overlay
+                class:
                 fields:
                 - field: title
                   data:
                    class: title
+                   element: h1
                 - field: content
                   data:
                    class: type
-
+css: |
+  header {
+    background: url("/assets/images/blackboard.jpg") no-repeat;
+    background-size: cover;
+  }
 ---
 
 {% include basic_components/page.html %}

@@ -1,0 +1,27 @@
+{% assign array-size = site.[include.component-data.content-type] | size %}
+
+{% for post in site.[include.component-data.content-type] %}
+  {% if post.title == page.title %}
+    {% assign array-position = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign next-position = array-position | plus:1 %}
+{% assign previous-position = array-position | minus:1 %}
+
+{% for post in site.[include.component-data.content-type] %}
+  {% if forloop.index0 == next-position %}
+    {% assign next = post.url %}
+  {% elsif forloop.index0 == previous-position %}
+    {% assign previous = post.url %}
+  {% endif %}
+{% endfor %}
+
+
+  {% unless previous-position < 0 %}
+    <div class="previous"><a href="{{previous}}">{{include.component-data.previous-label}}</a></div>
+  {% endunless %}
+
+  {% unless next-position == array-size %}
+    <div class="next"><a href="{{next}}">{{include.component-data.next-label}}</a></div>
+  {% endunless %}

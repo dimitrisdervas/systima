@@ -6,7 +6,7 @@ config:
     data:
       htmlelement: section
     theme:
-      class: textarea
+      class: notextarea
    divs:
       - div:
          theme:
@@ -15,7 +15,6 @@ config:
          - component: posts-list
            data:
              title: Λειτουργία
-             subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
              data-type: collection
              content-type: leitourgia
              fields:
@@ -25,11 +24,14 @@ config:
                 - field: title
                   data:
                     class: type
+                    link: posts
                 - field: text
                   data:
                     class: text
                     text-teaser: yes
                     text-words: 30
+                    more-label: περισσότερα
+                    more-class: waves-effect waves-teal btn-flat
 
 
 css: |

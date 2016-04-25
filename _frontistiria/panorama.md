@@ -5,4 +5,9 @@ tk: "Τ.Κ. 55236"
 phone: "2310343802, 2310347180"
 long: 23.03417
 lat: 40.59134
+images:
+ - image: frontistirio-panorama-1.jpg
+   tag: main
+ - image: frontistirio-panorama-1.jpg
+ - image: frontistirio-panorama-1.jpg
 ---

@@ -4,7 +4,7 @@
   divs:
    - div:
       theme:
-        class: map
+        class: onemap 
      components:
         - component: gmap
           data:
@@ -12,7 +12,7 @@
            javascript-plugin-data:
              apiKey: AIzaSyDMnz5pux1SPWE0DFlrXitKQO1S_8FnXbg
              gmapFilePath: googlemap-multiplemarkers.js
-             id: map-canvas-multiple        
+             id: map-canvas-multiple
              class: map-canvas
              height: 600px
         - component: materialize/navbar
@@ -21,4 +21,4 @@
            logo:
              image: /assets/images/logo-kroki.png
            content-type: menu
-           data-type: data-list             
+           data-type: data-list

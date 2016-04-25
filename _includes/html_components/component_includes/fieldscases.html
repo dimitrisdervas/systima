@@ -58,7 +58,7 @@
 
                               {% when 'group' %}
                                    {% if field.background %}
-                                          <div class="post-image {{ field.class }}"                                               
+                                          <div class="post-image {{ field.class }}"
                                                {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
                                                     style="background-image:url({{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
                                                  {% else %}
@@ -78,7 +78,7 @@
 
 
 
-                                      {% assign fields = field.fields %}
+                                      {% assign groupfields = field.fields %}
                                       {% include html_components/component_includes/groupfieldscases.html %}
 
                                    {{ divEnd }}

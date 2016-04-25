@@ -1,0 +1,52 @@
+---
+title: "Νέα"
+layout: default
+pagetitle: news
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: notextarea
+   divs:
+      - div:
+         theme:
+          class: block
+        components:
+         - component: posts-list
+           data:
+             data-type: collection
+             content-type: news
+             fields:
+               - field: group
+                 class: news card
+                 fields:
+                    - field: images
+                      data:
+                       class: card-image
+                       tag: main
+                       link: post
+                       images-path: /assets/images/frontistiria/
+                       image-hash: image
+                    - field: group
+                      class: card-content
+                      fields:
+                        - field: title
+                          data:
+                           class: title
+                        - field: text
+                          data:
+                           class: text
+                           text-teaser: yes
+                           text-words: 50
+                           more-label: περισσότερα...
+
+
+css: |
+    header {
+      background: url("/assets/images/blackboard.jpg") no-repeat;
+      background-size: cover;
+    }
+---
+
+{% include basic_components/page.html %}

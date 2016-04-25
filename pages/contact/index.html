@@ -11,6 +11,35 @@ config:
    divs:
       - div:
          theme:
+          class: frontistiria--block
+        components:
+         - component: posts-list
+           data:
+            title: "Φροντιστηρία"
+            data-type: collection
+            content-type: frontistiria
+            groupElement: div
+            groupElement-data:
+              class: frontistiria
+            fields:
+              - field: group
+                class: frontistirio card
+                fields:
+                   - field: images
+                     data:
+                      class: card-image
+                      tag: main
+                      link: post
+                      images-path: /assets/images/frontistiria/
+                      image-hash: image
+                   - field: group
+                     class: card-content
+                     fields:
+                       - field: name
+                         data:
+                          link: posts
+      - div:
+         theme:
           class: preface
         components:
          - component: one-post
@@ -81,7 +110,7 @@ config:
                     button-text: ΑΠΟΣΤΟΛΗ
 css: |
    header {
-   background: url("/assets/images/blackboard.jpg") no-repeat; 
+   background: url("/assets/images/blackboard.jpg") no-repeat;
    background-size: cover;
    }
    #map-canvas-multiple.title {

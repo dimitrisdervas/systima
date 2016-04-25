@@ -7,6 +7,8 @@
 
 <!-- MASONRY -->
    {% include html_components/component_includes/divmasonrysizer.html %}
+<!--    GROUP ELEMENT -->
+    {% include html_components/component_includes/groupelement.html %}
 
 <!--    GROUP FIELDS ELEMENT -->
    {% include html_components/component_includes/groupfieldselement.html %}
@@ -15,6 +17,8 @@
    {% include html_components/component_includes/listsjsfilters.html %}
 
    {% include html_components/component_includes/cloudcannon_editor.html %}
+
+   {{groupElement}}
 
    {{ groupdivUl }}
 <!-- Loop through the posts and set a limit if there it exists -->
@@ -45,7 +49,9 @@
 
          {{ groupdivDivEnd}}
       {% endfor %}
+      
    {{ groupdivUlEnd }}
 
+{{ groupElementEnd }}
 
 {{ filterDivEnd }}

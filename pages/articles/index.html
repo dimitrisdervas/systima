@@ -1,0 +1,44 @@
+---
+title: "Άρθρα"
+layout: default
+pagetitle: articles
+config:
+ - section:
+     data:
+       htmlelement: section
+     theme:
+       class: notextarea
+     seoTitle:
+      data:
+       label: "Χρήσιμα άρθρα"
+   divs:
+      - div:
+         theme:
+          class: articles
+        components:
+         - component: posts-list
+           data:
+             data-type: collection
+             content-type: articles
+             fields:
+              - field: group
+                class: card
+                fields:
+                - field: title
+                  data:
+                   class: title
+                - field: text
+                  data:
+                   class: type
+                   text-teaser: yes
+                   text-words: 50
+                   more-label: περισσότερα...
+css: |
+    header {
+      background: url("/assets/images/blackboard.jpg") no-repeat;
+      background-size: cover;
+    }
+
+---
+
+{% include basic_components/page.html %}

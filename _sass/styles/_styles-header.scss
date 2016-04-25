@@ -18,16 +18,18 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #EEEC6E;
+    color: #EF2B1D;
     font-size: 42px;
     font-weight: bold;
     .hero-group {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
     .herotitle {
-      align-self: flex-start;
-      margin-bottom: 1%;
+      // align-self: flex-start;
+      // margin-bottom: 1%;
+      font-size: 60px;
     }
     .herosubtitle {
       align-self: flex-end;

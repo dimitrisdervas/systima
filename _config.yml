@@ -23,10 +23,25 @@ collections:
     permalink: /other/:path
   leitourgia:
     output: true
-    permalink: /paroxes/:path
+    permalink: /leitourgia/:path
   frontistiria:
     output: true
-    permalink: /paroxes/:path
+    permalink: /frontistiria/:path
+  articles:
+    output: true
+    permalink: /articles/:path
+  news:
+    output: true
+    permalink: /news/:path
+  success:
+    output: true
+    permalink: /success/:path
+  sxoleio:
+    output: true
+    permalink: /sxoleio/:path
+  sxoles:
+    output: true
+    permalink: /success/:path
 
 defaults:
   - scope:
@@ -39,3 +54,13 @@ defaults:
       type: other
     values:
       layout: default
+  - scope:
+      path: ""
+      type: frontistiria
+    values:
+      layout: layout-frontistiria
+  - scope:
+      path: ""
+      type: leitourgia
+    values:
+      layout: layout-leitourgia

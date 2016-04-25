@@ -12,16 +12,24 @@
 {% for post in site.[include.component-data.content-type] %}
   {% if forloop.index0 == next-position %}
     {% assign next = post.url %}
+    {% assign next-title = post.title %}
   {% elsif forloop.index0 == previous-position %}
     {% assign previous = post.url %}
+    {% assign previous-title = post.title %}
   {% endif %}
 {% endfor %}
 
 
   {% unless previous-position < 0 %}
-    <div class="previous"><a href="{{previous}}">{{include.component-data.previous-label}}</a></div>
+    <div class="previous">
+    <a href="{{previous}}">{{previous-title}}</a>
+    <a href="{{previous}}">{{include.component-data.previous-label}}</a>
+  </div>
   {% endunless %}
 
   {% unless next-position == array-size %}
-    <div class="next"><a href="{{next}}">{{include.component-data.next-label}}</a></div>
+    <div class="next">
+      <a href="{{next}}">{{next-title}}</a>
+      <a href="{{next}}">{{include.component-data.next-label}}</a>
+    </div>
   {% endunless %}

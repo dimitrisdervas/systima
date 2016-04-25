@@ -875,6 +875,9 @@ body {
     display: block;
     clear: both; }
   .pagination .next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-left: auto; }
 
 /*  */
@@ -937,6 +940,9 @@ body {
 
 .more {
   text-transform: none; }
+
+.card {
+  padding: 4%; }
 
 .card-content {
   padding: 20px;

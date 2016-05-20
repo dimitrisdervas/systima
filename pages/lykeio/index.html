@@ -1,5 +1,6 @@
 ---
 title: "Λύκειο"
+pagetitle: lykeio
 layout: default
 config:
  - section:
@@ -28,7 +29,17 @@ config:
                 - field: content
                   data:
                    class: type
-
+css: |
+  .color-overlay .title {
+     padding: 2%;
+     font-size: 32px;
+    }
+  .lykeio .title {
+    font-weight: bold;
+    border-bottom: 3px solid #191818;
+    background: rgba(74, 73, 73, 0.7);
+    margin-bottom: 2%;
+    }
 ---
 
 {% include basic_components/page.html %}

@@ -4,7 +4,7 @@
   divs:
    - div:
       theme:
-        class: onemap 
+        class: onemap
      components:
         - component: gmap
           data:
@@ -19,6 +19,6 @@
           data:
            javascript-plugin: sidenav
            logo:
-             image: /assets/images/logo-kroki.png
+             image: /assets/images/logo-yellow.png
            content-type: menu
            data-type: data-list

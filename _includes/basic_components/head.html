@@ -14,15 +14,16 @@
             {% endif%}
       {% endfor %}
 
-     <style>
-      {{ page.css  }}
-      {{ layout.css }}
-   </style>
+
    <link rel="stylesheet" href="{{site.baseurl}}/css/components.css">
    <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Open+Sans:400">
    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-
+   <style>
+    {{ page.css  }}
+    {{ layout.css }}
+ </style>
+ 
 </head>

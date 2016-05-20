@@ -1,22 +1,22 @@
----
-layout: default-map
-config:
- - section:
-    data:
-      htmlelement: section
-    theme:
-      class: textarea
-   divs:
-      - div:
-          theme:
-           class: success block
-        components:
-         - component: /post_components/fields
-           data:
-             fields:
-              - field: title
-              - field: address
-              - field: phone
+- section:
+   data:
+    htmlelement: topnav
+  divs:
+   - div:
+      theme:
+        class: navigation
+     components:
+       - component: materialize/navbar
+         data:
+          javascript-plugin: sidenav
+          logo:
+           image: /assets/images/logo-yellow.png
+          content-type: menu
+          data-type: data-list
+- section:
+   data:
+    htmlelement: header
+  divs:
       - div:
          theme:
           class: gallery-slideshow
@@ -43,6 +43,10 @@ config:
                  class: success-group
                  image-hash: image
                  images-path: /assets/images/frontistiria/
+      - div:
+         theme:
+          class: gallery-thumbnails
+        components:
          - component: /post_components/fields
            data:
             fields:
@@ -51,42 +55,3 @@ config:
                      image-hash: image
                      images-path: /assets/thumbnails/
                      class: gallery-thumb
-css: |
-   header {
-   height: 450px;
-   }
-       nav .nav-wrapper {
-        position: relative;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-   topnav {
-       background: #192638;
-   }
-   nav {
-    margin-top: 0;
-   }
-   .logo {
-    width: 120px;
-    float: left;
-    max-width: 250px;
-   }
-   #nav-mobile {
-     background-color: transparent;
-   }
-   #nav-mobile a {
-    color: #f2f2f2;
-    font-weight: bold;
-   }
-    .owl-carousel .owl-stage-outer {
-      height: 450px;
-    }
-    .gallery-thumbnails {
-    width: 500px;
-    display: flex;
-    }
----
-
-{% include basic_components/layout.html %}

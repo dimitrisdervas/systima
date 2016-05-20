@@ -1,5 +1,5 @@
 ---
-title: ΒΙΒΛΙΑ-ΒΟΗΘΗΜΑΤΑ ΕΚΔΟΣΕΙΣ ΜΠΟΥΡΝΤΑ-ΛΟΥΚΙΔΟΥ Ο.Ε.
+title: "ΒΙΒΛΙΑ-ΒΟΗΘΗΜΑΤΑ ΕΚΔΟΣΕΙΣ ΜΠΟΥΡΝΤΑ-ΛΟΥΚΙΔΟΥ Ο.Ε."
 layout: default
 config:
  - section:
@@ -43,28 +43,33 @@ config:
                    class: book-title editable
                 - field: author
 css: |
-   header {
-   background: url("/assets/images/blackboard.jpg") no-repeat;
-   background-size: cover;
-   }
-   .books {
-   background: url("/assets/images/blackboard.jpg") no-repeat;
-   padding: 6% 4%;
-   color: #fff;
-   background-size: cover;
-   }
-   .book-group {
-   margin-bottom: 15%;
-   font-size: 16px;
-   }
-   .book-title {
-   font-weight: bold;
-   }
-   /* Fallback styles  - http://codepen.io/jasondavis/pen/szbDf */
-   .book-image {
-   box-shadow: 0 2px 7.68px .32px rgba(0, 0, 0, 0.4),0 12px 26px 0 rgba(0, 0, 0, 0.4);
-   max-width: 200px;
-   margin-bottom: 8%;
-   }
+    header {
+      background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
+      /* background: url("/assets/images/hero.png") no-repeat 50%, url("/assets/images/blackboard.jpg") no-repeat 50%, linear-gradient(#28364E, #3A4D6F);*/
+      height: 450px;
+    }
+     .books {
+       background: url("/assets/images/blackboard.jpg") no-repeat;
+       padding: 6% 4%;
+       color: #fff;
+       background-size: cover;
+     }
+     .book-group {
+       margin-bottom: 5%;
+       font-size: 16px;
+     }
+     .book-title {
+       font-weight: bold;
+       line-height: 1.5;
+     }
+     /* Fallback styles  - http://codepen.io/jasondavis/pen/szbDf */
+     .book-image {
+       box-shadow: 0 2px 7.68px .32px rgba(0, 0, 0, 0.4),0 12px 26px 0 rgba(0, 0, 0, 0.4);
+       max-width: 200px;
+       margin-bottom: 8%;
+     }
+     .author {
+        font-style: italic;
+      }
 ---
 {% include basic_components/page.html %}

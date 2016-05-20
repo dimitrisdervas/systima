@@ -3,6 +3,7 @@
   js: bower_components/jquery/dist/jquery.min.js
 
 - name: owl-carousel
+  state: active
   js: bower_components/owl.carousel.2/owl.carousel.min.js
   css:
    - css: bower_components/owl.carousel.2/assets/owl.carousel.min.css

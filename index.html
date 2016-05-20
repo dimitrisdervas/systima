@@ -75,24 +75,52 @@ config:
               class: frontistiria
             fields:
              - field: group
-               class: frontistirio
+               class: frontistirio card
                fields:
-                 - field: images
-                   data:
-                    tag: main
-                    link: post
-                    images-path: /assets/images/frontistiria/
-                    image-hash: image
-                 - field: name
-                   data:
-                    link: posts
+                  - field: images
+                    data:
+                     class: card-image
+                     tag: main
+                     link: post
+                     images-path: /assets/images/frontistiria/
+                     image-hash: image
+                  - field: group
+                    class: card-content
+                    fields:
+                      - field: name
+                        data:
+                         link: posts
+
 css: |
    header {
-    background-image: radial-gradient(#31415D, #1A2231);
-   /*     background: url("/assets/images/gradient.jpg") no-repeat; */
-   /*     background-size: cover; */
+   background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
+   height: 450px;
    }
-
+       nav .nav-wrapper {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   topnav {
+       background: #192638;
+   }
+   nav {
+    margin-top: 0;
+   }
+   .logo {
+    width: 120px;
+    float: left;
+    max-width: 250px;
+   }
+   #nav-mobile {
+     background-color: transparent;
+   }
+   #nav-mobile a {
+    color: #f2f2f2;
+    font-weight: bold;
+   }
 ---
 
 {% include basic_components/page.html %}

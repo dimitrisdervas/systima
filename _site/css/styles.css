@@ -941,9 +941,6 @@ body {
 .more {
   text-transform: none; }
 
-.card {
-  padding: 4%; }
-
 .card-content {
   padding: 20px;
   border-radius: 0; }

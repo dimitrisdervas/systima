@@ -3,9 +3,12 @@
     {% assign config = site.data.pages.[include.config-file] %}
 {% elsif page.config-file %}
    {% assign config = site.data.pages.[page.config-file] %}
+{% elsif layout.config %}
+   {% assign config = layout.config %}
 {% else %}
    {% assign config = page.config %}
 {% endif %}
+
 
 {% for section in config %}
 {% assign currentSectionDivs = section.divs %}
@@ -52,7 +55,7 @@
                {% when 'sidenav' %}
                   {% include basic_components/javascriptpluginscases/sidenav.js sidenavData= component.data.javascript-plugin-data %}
 
-              {% when 'navbar' %}
+               {% when 'navbar' %}
                  {% include basic_components/javascriptpluginscases/navbar.js navbarData= component.data.javascript-plugin-data %}
 
                {% when 'rome' %}

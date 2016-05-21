@@ -1,5 +1,6 @@
 ---
 layout: default-map
+pagetitle: frontistiria
 config:
  - section:
     data:
@@ -45,6 +46,9 @@ config:
                  images-path: /assets/images/frontistiria/
          - component: /post_components/fields
            data:
+            wrapperDiv:
+             theme:
+               class: gallery-thumbnails
             fields:
                  - field: thumbnails
                    data:
@@ -52,41 +56,7 @@ config:
                      images-path: /assets/thumbnails/
                      class: gallery-thumb
 css: |
-   header {
-   height: 450px;
-   }
-       nav .nav-wrapper {
-        position: relative;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-   topnav {
-       background: #192638;
-   }
-   nav {
-    margin-top: 0;
-   }
-   .logo {
-    width: 120px;
-    float: left;
-    max-width: 250px;
-   }
-   #nav-mobile {
-     background-color: transparent;
-   }
-   #nav-mobile a {
-    color: #f2f2f2;
-    font-weight: bold;
-   }
-    .owl-carousel .owl-stage-outer {
-      height: 450px;
-    }
-    .gallery-thumbnails {
-    width: 500px;
-    display: flex;
-    }
+
 ---
 
 {% include basic_components/layout.html %}

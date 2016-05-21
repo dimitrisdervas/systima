@@ -24,7 +24,7 @@
     
     
  </style>
- 
+
 </head>
 
 
@@ -106,7 +106,7 @@
 <!--                 -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
 <!-- INCLUDE basic_components/pageincludes/themeelement.html -->
-   <topnav >
+   <header >
 
 
 
@@ -274,82 +274,281 @@
                         </div>
                      <!--  End DIVS LOOP -->
                      
-                <!-- END section -->
-            </topnav>
-           <!-- EndSection name cases -->
-        
-      <!-- SECTION WRAPPER END -->
-   
-  <!-- End loop in sections -->
 
-<!--  -->
-<!-- ALIAS SECTION-->
-<!--  -->
+
+
+                  <!--            -->
+                  <!-- ALIAS DIVS -->
+                  <!--            -->
+                  
+                  
+                  
 
 
 
 
 
-
-<!-- CASES SECTION NAME -->
-   <!-- Check for custom staff -->
-   
-
-
-
-
-
-<!--               -->
-<!-- SECTION TITLE -->
-<!--               -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageincludes/title.html -->
-<!--  -->
-<!-- TO FIX -->
-<!--  -->
-<!--  include basic_components/pageincludes/title.html component-data=section.sectionTitle.data element=section  -->
-
-
-
- <!--               -->
-<!-- SECTION TITLE -->
-<!--               -->
-<!-- DEBUG FILE: html_components/basic_components/pageincludes/pageseotitle.html -->
-<!-- Section Title -->
-<!-- Check if there is a title for the html section and print it-->
-         
-
-
-
-<!--                  -->
-<!--  SECTION WRAPPER -->
-<!--                  -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageincludes/pagesectionwrapper.html -->
-   <!--       -->
+                        <!--                  -->
+                        <!--  DIVS            -->
+                        <!--                  -->
+                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
+                        <!-- INCLUDE basic_components/pageincludes/pagedivs.html -->
+                           <!--       -->
 <!-- ALIAS -->
 <!--       -->
 
 
 
- <!--                 -->
-<!--  SECTION WRAPPER -->
+<div 
+ 		class="hero"
+	>
+
+
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->
+                           
+
+                            <!--                  -->
+                            <!-- ALIAS COMPONENTS -->
+                            <!--                  -->
+                            
+                            
+                            
+
+
+
+                              <!--                        -->
+                              <!-- CUSTOM HTML SHORT CODE -->
+                              <!--                        -->
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->
+                                 
+
+
+
+
+                                 <!--                 -->
+                                 <!-- HTML COMPONENTS -->
+                                 <!--                 -->
+                                    
+                                    <!-- Include the html component template and bring it's details -->
+                                       <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+
+
+<!--  -->
+<!-- PAGE COMPONENTS -->
+<!--  -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+
+<!-- TITLE COMPONENT -->
+  <!--                 -->
+<!-- COMPONENT TITLE -->
 <!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it -->
+  
+
+
+<!--                       -->
+<!-- COMPONENT WRAPPER DIV -->
+<!--                       -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- INCLUDE basic_components/pageincludes/pagecomponentswrapper.html -->
+   
 
 
 
-<!--                 -->
-<!-- SECTION         -->
-<!--                 -->
-<!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageincludes/themeelement.html -->
-   <header >
+<!--                   -->
+<!-- COMPONENT CONTENT -->
+<!--                   -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- Include the html component template and bring it's details -->
+<!-- Capture the html component template -->
+  
+
+
+  <!--             -->
+<!-- COMPONENT POSTS LISTS -->
+<!--             -->
+<!-- DEBUG FILE: html_components/posts-list.html -->
+<!-- Check the content type - Data or Collections - Posts -->
+   <!--                        -->
+<!-- COMPONENT CONTENT TYPE -->
+<!--                        -->
+<!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
+
+<!--  -->
+<!-- ALIAS -->
 
 
 
 
-                  <!-- DIVS LOOP - Loop through the divs to create them -->
+
+<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+  
+    
+    <!-- If there is no post-tile it will look only for the file not inside the file -->
+    <!-- Filter file of data -->
+    <!--  -->
+    <!-- POST TAG -->
+    <!--  -->
+       <!-- END If there is include.component.tag -->
+          
+    <!--            -->
+    <!-- POST TITLE -->
+    <!--            -->
+       
+    
+  
+
+
+<!-- MASONRY -->
+   <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
+<!--            Masonry -->
+   
+<!--    GROUP ELEMENT -->
+    <!-- Check the group element -->
+
+
+
+<!--    GROUP FIELDS ELEMENT -->
+   <!-- Check the group  html element -->  
+
+
+         
+          
+
+         
+         
+
+
+
+<!-- LIST JS FILTERS HTML -->
+   <!--                   -->
+<!-- LIST.js - FILTERS -->
+<!--                   -->
+
+
+   <!--                         -->
+<!-- CLOUDCANNON EDITOR LINK -->
+<!--                         -->
+
+
+
+   
+
+   
+<!-- Loop through the posts and set a limit if there it exists -->
+   
+<!--  Component group fields html element-->
+   
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                   
+                                            <div class="hero-group">
+                                               
+                                    
+
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+<!-- Print every field as separate div -->
+                           <div class="herotitle ">
+                              
+                                        
+                                 
+                                      
+                                 ...πριν το Πανεπιστήμιο
+
+                                 </div>
+
+
+
+<!--  End case of fields -->
+                    
+<!--  End loop in fields -->
                   
+<!--  Check what type of field we are prinitng -->
+                     
+<!-- Print every field as separate div -->
+                           <div class="herosubtitle ">
+                              
+                                        
+                                 
+                                      
+                                 
+
+                                 </div>
+
+
+
+<!--  End case of fields -->
+                    
+<!--  End loop in fields -->
+                  
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--           -->
+
+         
+      
+      
+   
+
+
+
+
+ 
+
+
+
+
+
+
+
+                                    <!-- EndIF htmlComponent.component -->
+                                    
+
+                                          
+
+
+
+
+                           <!--  End Component Loop -->
+                           
+                        <!-- End DIV for simple divClass -->
+                        </div>
+                     <!--  End DIVS LOOP -->
+                     
                 <!-- END section -->
             </header>
            <!-- EndSection name cases -->
@@ -1584,7 +1783,8 @@
 
      <!-- DEBUG FILE: basic_components/perpageplugins.html -->
 
-{"section"=>{"data"=>{"htmlelement"=>"header"}}, "divs"=>[{"div"=>{"theme"=>{"class"=>"navigation"}}, "components"=>[{"component"=>"materialize/navbar", "data"=>{"javascript-plugin"=>"sidenav", "logo"=>{"image"=>"/assets/images/logo-kroki.png"}, "content-type"=>"menu", "data-type"=>"data-list"}}]}, {"div"=>{"theme"=>{"class"=>"hero"}}, "components"=>[{"component"=>"posts-list", "data"=>{"content-type"=>"hero", "data-type"=>"data-list", "javascript-plugin"=>"navbar", "fields"=>[{"field"=>"group", "class"=>"hero-group", "fields"=>[{"field"=>"herotitle"}, {"field"=>"herosubtitle"}]}]}}]}]}
+
+
 
 
    
@@ -1635,6 +1835,7 @@ $('.collapsible').collapsible();
  
 
      <!-- DEBUG FILE: basic_components/perpageplugins.html -->
+
 
 
 

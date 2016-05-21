@@ -34,6 +34,9 @@
    <!-- ICON  -->
                               {% when 'icon' %}
                                 {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}
+  <!-- DATE  -->
+                             {% when 'date' %}
+                               {% include html_components/fieldscases/datecase.html field_Data=field.data field_Field=field.field %}                                
 <!-- CONTENT -->
                               {% when 'content' %}
                                 {{ post.[field.field] | markdownify }}

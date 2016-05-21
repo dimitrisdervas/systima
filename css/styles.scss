@@ -8,6 +8,7 @@
 // COLORS
 /* @import "bower_components/crayon/dist/crayon"; */
 @import "styles/styles-colors";
+
 //
 // FONTS
 //
@@ -40,11 +41,7 @@
 /* Layouts */
 /*  */
 @import
-       "layouts/layout-global",
-       "layouts/layout-header",
-       "layouts/layout-frontpage",
-       "layouts/layout-blog",
-       "layouts/layout-footer"
+       "layouts/layout-global"
    ;
 
 
@@ -58,17 +55,12 @@
       "styles/styles-header",
       "styles/styles-frontpage",
       "styles/styles-footer",
-      "styles/styles-prices",
       "styles/styles-leitourgia",
-      "styles/styles-gallery",
       "styles/styles-contact",
-      "styles/styles-blog",
       "styles/styles-about",
       "styles/styles-map"
    ;
 @import
-       "layouts/layout-wide",
        "layouts/layout-normal",
-       "layouts/layout-narrower",
        "layouts/layout-mobile"
    ;

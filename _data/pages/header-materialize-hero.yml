@@ -16,3 +16,5 @@
 - section:
    data:
     htmlelement: header
+   theme:
+    class: hero-overlay

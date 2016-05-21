@@ -24,7 +24,10 @@
    <!-- ICON  -->
                               {% when 'icon' %}
                                 {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}
-   <!-- COUNT  -->
+  <!-- DATE  -->
+                             {% when 'date' %}
+                               {% include html_components/fieldscases/datecase.html field_Data=field.data field_Field=field.field %}
+  <!-- COUNT  -->
                               {% when 'count' %}
                                    {% if include.component-data.javascript-plugin-data.from %}
                                        {% assign fromNumber = include.component-data.javascript-plugin-data.from %}

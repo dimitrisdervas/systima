@@ -799,14 +799,14 @@ body {
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
-    padding: 2%; }
+    padding: 1rem; }
   .leitourgia-group .text {
     width: 66.66667%;
     float: right;
     margin-right: 0;
     display: flex;
     align-items: flex-end;
-    padding: 4%;
+    padding: 2rem;
     flex-direction: column; }
 
 .why .title,
@@ -857,10 +857,6 @@ body {
   flex-basis: 200px;
   display: flex;
   flex-direction: column; }
-
-/* MAP */
-#map-canvas {
-  width: 100%; }
 
 .pagination {
   max-width: 1170px;
@@ -924,6 +920,55 @@ body {
 .cms-editor-active .editor-link {
   display: block; }
 
+body {
+  background-color: #bcbdc0; }
+
+.block {
+  margin-bottom: 5rem; }
+
+.top-article {
+  background: #fff;
+  color: #323232;
+  padding: 3%; }
+
+.frontistiria h1 {
+  margin-top: 0; }
+
+.frontistiria .textarea {
+  margin-bottom: 5%; }
+
+.gallery-thumbnails {
+  width: 500px;
+  display: flex;
+  margin-bottom: 10%; }
+
+.contactonemap .frontistiria--block {
+  margin-bottom: 10%; }
+  .contactonemap .frontistiria--block .component-header {
+    color: #36648e;
+    margin: 0 0 5%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background: #E6E6E6; }
+  .contactonemap .frontistiria--block .card {
+    padding: 0; }
+  .contactonemap .frontistiria--block .frontistirio .name {
+    font-size: 22px; }
+  .contactonemap .frontistiria--block .frontistirio a {
+    color: #132b46; }
+  .contactonemap .frontistiria--block .frontistirio:hover {
+    background-color: #007da6; }
+    .contactonemap .frontistiria--block .frontistirio:hover a {
+      color: #fff; }
+
+#map-canvas-multiple.title {
+  font-weight: bold; }
+
 .paroxes h1.title {
   font-size: 48px;
   padding: 0;
@@ -933,13 +978,30 @@ body {
 
 .baseis .textarea {
   background: #fff;
-  padding: 3%;
-  margin-bottom: 5%; }
+  padding: 2rem 4rem;
+  margin-bottom: 5rem; }
   .baseis .textarea tr:first-child {
     padding-bottom: 2%; }
 
+.lykeio .top-article {
+  background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+  background-size: cover;
+  color: #ffffff;
+  padding: 0; }
+.lykeio .color-overlay {
+  background-color: rgba(18, 23, 32, 0.7);
+  padding: 4%; }
+  .lykeio .color-overlay .title {
+    font-size: 24px;
+    padding: 2%;
+    font-weight: bold;
+    border-bottom: 3px solid #191818;
+    background: #ae2929;
+    margin-bottom: 2%; }
+
 .more {
-  text-transform: none; }
+  text-transform: none;
+  float: right; }
 
 .card-content {
   padding: 20px;
@@ -948,11 +1010,13 @@ body {
 .articles .title,
 .news .title {
   color: #175394;
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 24px;
   padding-bottom: 4%;
   padding-top: 2%;
   line-height: 1.5; }
+.articles p,
+.news p {
+  font-size: 16px; }
 
 .leitourgia-post .title {
   color: #175394;
@@ -964,6 +1028,11 @@ body {
 
 .tabs .tab a {
   font-size: 28px; }
+
+.width25 {
+  width: 25%;
+  margin-left: 0%;
+  margin-bottom: 10%; }
 
 html {
   box-sizing: border-box; }
@@ -995,20 +1064,72 @@ a {
   line-height: inherit;
   background-color: transparent; }
 
+topnav {
+  background: #192638; }
+
+header {
+  height: 450px; }
+
+header {
+  background: url("/assets/images/blackboard.jpg") no-repeat;
+  background-size: cover; }
+
+header.hero-overlay {
+  background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat; }
+
+.frontpage header {
+  background-image: radial-gradient(#31415D, #1A2231); }
+
+.frontpagev1 header {
+  background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F); }
+
+.aboutus header.hero-overlay,
+.lykeio header.hero-overlay {
+  background: url("/assets/images/hero.png") no-repeat 50% 0%, url("/assets/images/blackboard.jpg") no-repeat;
+  background-size: auto, cover; }
+
 nav {
-  box-shadow: none;
-  margin-top: 50px;
-  background-color: transparent; }
+  margin-top: 0; }
 
 #nav-mobile {
+  background-color: transparent; }
+
+#nav-mobile a {
+  color: #f2f2f2;
+  font-weight: bold; }
+
+nav {
+  background-color: transparent; }
+  nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  nav ul li:hover,
+  nav ul li.active {
+    background-color: #ffffff; }
+  nav .button-collapse i {
+    color: #414141; }
+  nav #nav-mobile {
+    background-color: transparent; }
+    nav #nav-mobile a {
+      color: #f2f2f2;
+      font-weight: bold; }
+    nav #nav-mobile a:hover {
+      color: #323232; }
+
+.frontpage nav {
+  box-shadow: none;
+  margin-top: 50px; }
+.frontpage #nav-mobile {
   background-color: #fff;
   opacity: 0.8; }
-  #nav-mobile a {
+  .frontpage #nav-mobile a {
     color: #020510;
     font-weight: bold; }
-
-.hero {
-  margin: 10% 0;
+.frontpage .hero {
+  margin: 5% 0;
   padding: 0 5%;
   display: flex;
   justify-content: space-around;
@@ -1016,35 +1137,40 @@ nav {
   color: #EF2B1D;
   font-size: 42px;
   font-weight: bold; }
-  .hero .hero-group {
+  .frontpage .hero .hero-group {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .hero .herotitle {
+  .frontpage .hero .herotitle {
     font-size: 60px; }
-  .hero .herosubtitle {
+  .frontpage .hero .herosubtitle {
     align-self: flex-end; }
 
-body {
-  background-color: #bcbdc0; }
+.contactonemap nav {
+  box-shadow: none; }
 
-.block {
-  margin-bottom: 5rem; }
-
-.top-article {
+.frontpage .top-article {
   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 0; }
 
-.color-overlay {
+.frontpage .color-overlay,
+.frontpagev1 .color-overlay,
+.frontpagev2 .color-overlay {
   background-color: rgba(18, 23, 32, 0.7);
   padding: 4%; }
-  .color-overlay .title {
+  .frontpage .color-overlay .title,
+  .frontpagev1 .color-overlay .title,
+  .frontpagev2 .color-overlay .title {
     font-size: 24px;
     padding: 5% 0; }
-
-.spoudes .component-header,
-.frontistiria--block .component-header {
+.frontpage .spoudes .component-header,
+.frontpage .frontistiria--block .component-header,
+.frontpagev1 .spoudes .component-header,
+.frontpagev1 .frontistiria--block .component-header,
+.frontpagev2 .spoudes .component-header,
+.frontpagev2 .frontistiria--block .component-header {
   color: #36648e;
   margin: 0 0 5%;
   padding: 3%;
@@ -1055,58 +1181,89 @@ body {
   font-weight: bold;
   text-align: center;
   background: #E6E6E6; }
-
-.spoudes .spoudes-group:nth-child(4n+1) .type {
+.frontpage .spoudes .spoudes-group:nth-child(4n+1) .type,
+.frontpagev1 .spoudes .spoudes-group:nth-child(4n+1) .type,
+.frontpagev2 .spoudes .spoudes-group:nth-child(4n+1) .type {
   background: #132b46; }
-.spoudes .spoudes-group:nth-child(4n+2) .type {
+.frontpage .spoudes .spoudes-group:nth-child(4n+2) .type,
+.frontpagev1 .spoudes .spoudes-group:nth-child(4n+2) .type,
+.frontpagev2 .spoudes .spoudes-group:nth-child(4n+2) .type {
   background: #1c2640; }
-.spoudes .spoudes-group:nth-child(4n+3) .type {
+.frontpage .spoudes .spoudes-group:nth-child(4n+3) .type,
+.frontpagev1 .spoudes .spoudes-group:nth-child(4n+3) .type,
+.frontpagev2 .spoudes .spoudes-group:nth-child(4n+3) .type {
   background: #1e2536; }
-.spoudes .spoudes-group:nth-child(4n+4) .type {
+.frontpage .spoudes .spoudes-group:nth-child(4n+4) .type,
+.frontpagev1 .spoudes .spoudes-group:nth-child(4n+4) .type,
+.frontpagev2 .spoudes .spoudes-group:nth-child(4n+4) .type {
   background: #2d374f; }
-.spoudes .spoudes-group {
+.frontpage .spoudes .spoudes-group,
+.frontpagev1 .spoudes .spoudes-group,
+.frontpagev2 .spoudes .spoudes-group {
   color: #fff;
   min-height: 200px; }
-  .spoudes .spoudes-group .type {
+  .frontpage .spoudes .spoudes-group .type,
+  .frontpagev1 .spoudes .spoudes-group .type,
+  .frontpagev2 .spoudes .spoudes-group .type {
     text-align: center; }
-  .spoudes .spoudes-group .text {
+  .frontpage .spoudes .spoudes-group .text,
+  .frontpagev1 .spoudes .spoudes-group .text,
+  .frontpagev2 .spoudes .spoudes-group .text {
     background-color: #2b303c; }
-.spoudes .spoudes-group:hover .text {
+.frontpage .spoudes .spoudes-group:hover .text,
+.frontpagev1 .spoudes .spoudes-group:hover .text,
+.frontpagev2 .spoudes .spoudes-group:hover .text {
   background-color: #474c59; }
-.spoudes .spoudes-group:hover .type {
+.frontpage .spoudes .spoudes-group:hover .type,
+.frontpagev1 .spoudes .spoudes-group:hover .type,
+.frontpagev2 .spoudes .spoudes-group:hover .type {
   background-color: #007da6; }
-
-.why {
+.frontpage .why,
+.frontpagev1 .why,
+.frontpagev2 .why {
   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
   color: #ffffff;
   margin-bottom: 10%; }
-  .why .title {
+  .frontpage .why .title,
+  .frontpagev1 .why .title,
+  .frontpagev2 .why .title {
     border: 3px solid #fff;
     padding: 3%;
     text-align: center;
     margin-bottom: 30px; }
-
-.frontistiria {
+.frontpage .frontistiria,
+.frontpagev1 .frontistiria,
+.frontpagev2 .frontistiria {
   margin-bottom: 10%; }
-  .frontistiria .frontistirio .name {
+  .frontpage .frontistiria .card,
+  .frontpagev1 .frontistiria .card,
+  .frontpagev2 .frontistiria .card {
+    padding: 0; }
+  .frontpage .frontistiria .frontistirio .name,
+  .frontpagev1 .frontistiria .frontistirio .name,
+  .frontpagev2 .frontistiria .frontistirio .name {
     font-size: 22px; }
-  .frontistiria .frontistirio a {
+  .frontpage .frontistiria .frontistirio a,
+  .frontpagev1 .frontistiria .frontistirio a,
+  .frontpagev2 .frontistiria .frontistirio a {
     color: #132b46; }
-  .frontistiria .frontistirio:hover {
+  .frontpage .frontistiria .frontistirio:hover,
+  .frontpagev1 .frontistiria .frontistirio:hover,
+  .frontpagev2 .frontistiria .frontistirio:hover {
     background-color: #007da6; }
-    .frontistiria .frontistirio:hover a {
+    .frontpage .frontistiria .frontistirio:hover a,
+    .frontpagev1 .frontistiria .frontistirio:hover a,
+    .frontpagev2 .frontistiria .frontistirio:hover a {
       color: #fff; }
-
-.width25 {
-  width: 25%;
-  margin-left: 0%;
-  margin-bottom: 10%; }
 
 .footer-wrapper {
   background: #151B27;
   color: #fff;
   border-top: 3px solid #36648e; }
+
+.footer-wrapper .menu a:hover {
+  color: #151B27; }
 
 .social .icon {
   width: 40px;
@@ -1252,6 +1409,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     margin: auto; }
 
   .logo {
+    width: 120px;
+    float: left;
+    max-width: 250px; }
+
+  .frontpage .logo {
     width: 16.66667%;
     float: left;
     max-width: 250px; }
@@ -1259,8 +1421,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   #nav-mobile {
     width: 75%;
     float: right;
-    margin-right: 0;
-    max-width: 800px; }
+    margin-right: 0; }
 
   #nav-mobile a {
     font-size: 0.8rem; }
@@ -1272,17 +1433,17 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   .aboutus .hero-group {
     color: #CE4646; }
 
-  .aboutus .component-title {
+  .aboutus .teachers .component-title {
     margin-top: 0;
     font-size: 31.38267px;
     margin-top: 1.11527em;
     line-height: 1.33832em;
     margin-bottom: 0.24438em; } }
   @media screen and (min-width: 993px) and (min-width: 600px) {
-    .aboutus .component-title {
+    .aboutus .teachers .component-title {
       font-size: calc( 31.38267px + (39.22834 - 31.38267) * ((100vw - 600px) / (1140 - 600)) ); } }
   @media screen and (min-width: 993px) and (min-width: 1140px) {
-    .aboutus .component-title {
+    .aboutus .teachers .component-title {
       font-size: 39.22834px;
       margin-top: 1.11527em;
       line-height: 1.33832em;
@@ -1334,14 +1495,15 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
       .success .success-group .name {
         min-width: 41.66667%; }
 
+  .news,
   .articles {
     display: flex;
-    /* flex-basis: 100px; */
     flex-wrap: wrap;
     justify-content: space-between; }
+    .news .card,
     .articles .card {
       flex-basis: 49%;
-      padding: 4%; }
+      padding: 0; }
 
   .paroxes .card {
     padding: 4%; }

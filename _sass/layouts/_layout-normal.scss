@@ -1,9 +1,13 @@
 @include susy-media(normal) {
   $max-width: 1280px;
+
    .page {
       display: flex;
       flex-direction: column;
    }
+   //
+   // HEADER
+   //
    nav {
      @include layout($full-width);
      @include container;
@@ -23,12 +27,18 @@
       }
    }
    .logo {
-      @include span( 2 of 12);
-      max-width: 250px;
+    width: 120px;
+    float: left;
+    max-width: 250px;
+   }
+   .frontpage {
+     .logo {
+        @include span( 2 of 12);
+        max-width: 250px;
+     }
    }
    #nav-mobile {
       @include span( 9 of 12 last);
-      max-width: 800px;
    }
    #nav-mobile a {
     font-size: 0.8rem;
@@ -40,8 +50,13 @@
    .aboutus .hero-group {
       color: #CE4646;
    }
+
+  //  PAGES
+  //
+  // ABOUT US
+  //
    .aboutus {
-      .component-title {
+      .teachers .component-title {
         margin-top: 0;
          @include t-h2;
       }
@@ -80,14 +95,14 @@
          }
       }
    }
+   .news,
    .articles {
      display: flex;
-      /* flex-basis: 100px; */
       flex-wrap: wrap;
       justify-content: space-between;
       .card {
         flex-basis: 49%;
-        padding: 4%;
+        padding: 0;
       }
    }
    .paroxes {

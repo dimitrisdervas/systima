@@ -1,6 +1,6 @@
 ---
 title: Οι επιτυχίες
-layout: default
+layout: default-dev-frontpage
 config:
  - section:
     data:
@@ -27,6 +27,7 @@ config:
                     - field: group
                       class: success-group
                       fields:
+                       - field: number
                        - field: name
                          data:
                           element: div
@@ -41,6 +42,7 @@ config:
                    - field: group
                      class: success-group
                      fields:
+                      - field: number
                       - field: name
                         data:
                          element: div
@@ -55,6 +57,7 @@ config:
                    - field: group
                      class: success-group
                      fields:
+                      - field: number
                       - field: name
                         data:
                          element: div
@@ -69,16 +72,30 @@ config:
                    - field: group
                      class: success-group
                      fields:
+                      - field: number
                       - field: name
                         data:
                          element: div
                          class: name-title
                       - field: school
 css: |
-    header {
-      background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
-      /* background: url("/assets/images/hero.png") no-repeat 50%, url("/assets/images/blackboard.jpg") no-repeat 50%, linear-gradient(#28364E, #3A4D6F);*/
-       height: 450px;
+    .tabs {
+      margin-bottom: 2%;
+    }
+    .tabs .tab a:hover {
+      color: #EA8686;
+    }
+    .tabs .tab a {
+        font-size: 28px;
+    }
+    .tabs .tab a {
+        color: #E53F3F;
+    }
+    .tabs .indicator {
+        background-color: #E53F3F;
+    }
+    .number {
+      font-weight: bold;
     }
 ---
 {% include basic_components/page.html %}

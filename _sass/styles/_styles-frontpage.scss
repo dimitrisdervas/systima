@@ -1,108 +1,105 @@
 $baseurl: /systima;
-body {
-  background-color: $bodyBg;
-}
-.textarea {
-}
-.block {
-   margin-bottom: 5rem;
-}
-.top-article {
-  //  background: url("#{$baseurl}/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
-   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
-      background-size: cover;
-      color: $white;
-}
-.color-overlay {
-  background-color: rgba(18,23,32,0.7);
-  padding: 4%;
-  .title {
-    font-size: 24px;
-    padding: 5% 0;
+.frontpage{
+    .top-article {
+    //  background: url("#{$baseurl}/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+     background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+     background-size: cover;
+     color: $white;
+     padding: 0;
   }
 }
-.spoudes,
-.frontistiria--block {
-  .component-header {
-      color: #36648e;
-      margin: 0 0 5%;
-          // margin: 0 0 15%;
-      padding: 3%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 32px;
-      font-weight: bold;
-      text-align: center;
-      // border: 3px solid #36648e;
-      background: #E6E6E6;
-  }
-}
-// http://codepen.io/thebeckyhamm/pen/szEyK
-$colors: #295C96, #3C5186, #435277, #526490;
-.spoudes {
-  @for $i from 1 through length($colors) {
-   .spoudes-group:nth-child(#{length($colors)}n+#{$i}) {
-       .type {
-         background: darken(nth($colors, $i), 20%);
+.frontpage,
+.frontpagev1,
+.frontpagev2 {
+    .color-overlay {
+      background-color: rgba(18,23,32,0.7);
+      padding: 4%;
+      .title {
+        font-size: 24px;
+        padding: 5% 0;
+      }
+    }
+    .spoudes,
+    .frontistiria--block {
+      .component-header {
+          color: #36648e;
+          margin: 0 0 5%;
+              // margin: 0 0 15%;
+          padding: 3%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 32px;
+          font-weight: bold;
+          text-align: center;
+          // border: 3px solid #36648e;
+          background: #E6E6E6;
+      }
+    }
+    // http://codepen.io/thebeckyhamm/pen/szEyK
+    $colors: #295C96, #3C5186, #435277, #526490;
+    .spoudes {
+      @for $i from 1 through length($colors) {
+       .spoudes-group:nth-child(#{length($colors)}n+#{$i}) {
+           .type {
+             background: darken(nth($colors, $i), 20%);
+           }
+         }
        }
-     }
-   }
-   .spoudes-group {
-      color: #fff;
-      min-height: 200px;
-     .type {
-        text-align: center;
-     }
-     .text {
-        background-color: #2b303c;
-     }
-   }
-   .spoudes-group:hover {
-      .text {
-             background-color: #474c59;
-      }
-       .type {
-             background-color: #007da6;
-      }
-   }
-}
-
-.why {
-    // background: url("#{$baseurl}/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
-    background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
-    background-size: cover;
-    color: #ffffff;
-   margin-bottom: 10%;
-   .title {
-      border: 3px solid #fff;
-      padding: 3%;
-      text-align: center;
-      margin-bottom: 30px;
-   }
-}
-.frontistiria {
-  margin-bottom: 10%;
-    .frontistirio {
-      .post-image {
-        }
-      .name{
-          font-size: 22px;
-        }
-        a {
-          color: #132b46;
-        }
-    }
-    .frontistirio:hover {
-      background-color: #007da6;
-        a {
+       .spoudes-group {
           color: #fff;
-      }
+          min-height: 200px;
+         .type {
+            text-align: center;
+         }
+         .text {
+            background-color: #2b303c;
+         }
+       }
+       .spoudes-group:hover {
+          .text {
+                 background-color: #474c59;
+          }
+           .type {
+                 background-color: #007da6;
+          }
+       }
     }
-}
-// HR in footer after the title
-.width25 {
-   width: 25%;
-   margin-left: 0%;
-   margin-bottom: 10%;
+
+    .why {
+        // background: url("#{$baseurl}/assets/images/bg-content.jpg") no-repeat top center #26334A fixed;
+        background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+        background-size: cover;
+        color: #ffffff;
+       margin-bottom: 10%;
+       .title {
+          border: 3px solid #fff;
+          padding: 3%;
+          text-align: center;
+          margin-bottom: 30px;
+       }
+    }
+
+    .frontistiria {
+      .card {
+        padding: 0;
+      }
+      margin-bottom: 10%;
+        .frontistirio {
+          .post-image {
+            }
+          .name{
+              font-size: 22px;
+            }
+            a {
+              color: #132b46;
+            }
+        }
+        .frontistirio:hover {
+          background-color: #007da6;
+            a {
+              color: #fff;
+          }
+        }
+    }
 }

@@ -14,7 +14,7 @@
              gmapFilePath: googlemap-multiplemarkers.js
              id: map-canvas-multiple
              class: map-canvas
-             height: 600px
+             height: 450px
         - component: materialize/navbar
           data:
            javascript-plugin: sidenav

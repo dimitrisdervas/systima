@@ -78,13 +78,13 @@ body {
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
-    padding: 2%;
+    padding: 1rem;
   }
   .text {
     @include span(8 of 12 last);
     display: flex;
     align-items: flex-end;
-    padding: 4%;
+    padding: 2rem;
     flex-direction: column;
   }
 }
@@ -147,10 +147,7 @@ body {
    }
 
 
-/* MAP */
-#map-canvas {
-   width: 100%;
-}
+
 
 
 .pagination {

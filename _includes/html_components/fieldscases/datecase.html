@@ -1,0 +1,12 @@
+<div class="{{field.field}} {{field.data.class}}">
+{% if field.data.theme %}
+  {% case field.data.theme %}
+    {% when 'long' %}
+        {{ post.date | date_to_long_string }}
+    {% when 'short' %}
+      {{ post.date | date_to_string }}
+  {% endcase %}
+{% else %}
+  {{ post.date}}
+{% endif %}
+</div>

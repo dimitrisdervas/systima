@@ -21,15 +21,29 @@
 
 
   {% unless previous-position < 0 %}
-    <div class="previous">
-    <a href="{{previous}}">{{previous-title}}</a>
-    <a href="{{previous}}">{{include.component-data.previous-label}}</a>
+    <div class="previous {{include.component-data.class}}">
+      {% if include.component-data.icon %}
+         <a href="{{previous}}"><i class="material-icons">chevron_left</i>{{previous-title}}</a>
+      {% else %}
+        <a href="{{previous}}">{{previous-title}}</a>
+        <a href="{{previous}}">{{include.component-data.previous-label}}</a>
+      {% endif %}
   </div>
   {% endunless %}
 
   {% unless next-position == array-size %}
-    <div class="next">
-      <a href="{{next}}">{{next-title}}</a>
-      <a href="{{next}}">{{include.component-data.next-label}}</a>
+    <div class="next {{include.component-data.class}}">
+      {% if include.component-data.icon %}
+         <a href="{{next}}">{{next-title}}<i class="material-icons">chevron_right</i></a>
+      {% else %}
+        <a href="{{next}}">{{next-title}}</a>
+        <a href="{{next}}">{{include.component-data.next-label}}</a>
+      {% endif %}
     </div>
   {% endunless %}
+
+
+  {% if include.component-data.icon %}
+     <a href="{{next}}">{{include.component-data.next-label}}</a>
+     <i class="icon-fast-forward"></i>
+  {% endif %}

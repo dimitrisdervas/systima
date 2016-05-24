@@ -872,9 +872,12 @@ body {
     clear: both; }
   .pagination .next {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     margin-left: auto; }
+  .pagination .next a,
+  .pagination .previous a {
+    display: flex;
+    align-items: center; }
 
 /*  */
 /* Styles */
@@ -1051,6 +1054,35 @@ body {
 
 .author {
   font-style: italic; }
+
+.aboutus .textarea {
+  background: url("/assets/images/teachers-bg-195.jpg");
+  color: #ffffff;
+  padding: 0;
+  width: 1022px;
+  margin-bottom: 5%; }
+.aboutus .color-overlay {
+  background-color: rgba(18, 23, 32, 0.7); }
+.aboutus .preface h1 {
+  margin-top: 0;
+  margin-bottom: 5%;
+  color: #ffffff; }
+.aboutus .preface {
+  padding: 4%;
+  background: transparent; }
+.aboutus .secretaria {
+  padding: 4%; }
+
+.leitourgia-post.card {
+  padding: 4%; }
+
+.success {
+  padding: 4%;
+  background: #fff; }
+
+.preface {
+  padding: 4%;
+  background: #fff; }
 
 .width25 {
   width: 25%;
@@ -1343,51 +1375,6 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   color: #151B27; }
 .contact input[type=text], .contact input[type=password], .contact input[type=email], .contact input[type=url], .contact input[type=time], .contact input[type=date], .contact input[type=datetime-local], .contact input[type=tel], .contact input[type=number], .contact input[type=search], .contact textarea.materialize-textarea {
   border-bottom: 1px solid #151B27; }
-
-.maincontent {
-  padding: 0 4%; }
-  .maincontent .component-header {
-    margin-bottom: 4%;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center; }
-
-.preface h1 {
-  margin-top: 0;
-  margin-bottom: 5%; }
-
-.preface,
-.success {
-  padding: 4%;
-  background: #fff; }
-
-.teachers {
-  padding: 4% 4% 0;
-  background: #fff; }
-
-.secretaria {
-  padding: 0 4% 4%;
-  margin-bottom: 10%;
-  background: #fff; }
-
-.secretaria .component-header {
-  padding: 2% 0 0; }
-
-.name {
-  font-weight: bold; }
-
-.article {
-  padding: 0 4%;
-  background: #1B2433;
-  margin-bottom: 10%;
-  color: #fff; }
-  .article h1 {
-    color: #fff; }
-  .article h2, .article h3, .article h4 {
-    color: #988F0C; }
-  .article #section {
-    margin-top: 0;
-    padding-top: 1rem; }
 
 #map-canvas .map-title {
   font-size: 48px;

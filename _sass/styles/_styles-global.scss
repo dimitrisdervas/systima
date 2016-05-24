@@ -217,8 +217,50 @@ body {
 .author {
    font-style: italic;
  }
+//
+// ABOUT US
+//
+.aboutus {
+    .textarea {
+      background: url("/assets/images/teachers-bg-195.jpg");
+      color: #ffffff;
+      padding: 0;
+      width: 1022px;
+      margin-bottom: 5%;
+    }
+    .color-overlay {
+      background-color: rgba(18, 23, 32, 0.7);
+    }
+    .preface h1 {
+       margin-top: 0;
+       margin-bottom: 5%;
+       color: #ffffff;
+    }
+    .preface{
+       padding: 4%;
+       background: transparent;
+    }
+    .secretaria {
+      padding: 4%;
+     //  background: #fff;
+    }
+}
+//
+// LEITOURGIA
+//
+.leitourgia-post.card {
+  padding: 4%;
+}
+.success{
+   padding: 4%;
+   background: #fff;
+}
+.preface{
+   padding: 4%;
+   background: #fff;
+}
 
- 
+
 // HR in footer after the title
 .width25 {
    width: 25%;

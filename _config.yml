@@ -44,6 +44,8 @@ collections:
   sxoles:
     output: true
     permalink: /success/:path
+  themata:
+    permalink: /themata/:path
 
 defaults:
   - scope:
@@ -66,3 +68,13 @@ defaults:
       type: leitourgia
     values:
       layout: layout-leitourgia
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: layout-news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: layout-news

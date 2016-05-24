@@ -159,8 +159,12 @@ body {
   padding: 2%;
   .next {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     margin-left: auto;
+  }
+  .next a,
+  .previous a {
+    display: flex;
+    align-items: center;
   }
 }

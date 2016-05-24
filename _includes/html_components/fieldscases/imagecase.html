@@ -9,17 +9,16 @@
                <a href="{{ site.baseurl}}products/{{ post.sku }}.html">     {% capture linkEND %} </a> {% endcapture %}
       {% endcase %}
 
-      {% if post.[include.field_Data.image-hash] %}
 
            {% if post.[include.field_Data.image-hash] contains 'https://' or post.[include.field_Data.image-hash] contains 'http://' %}
               <img src="{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
-             {% else %}
+           {% elsif post.[include.field_Data.image-hash] %}
               <img src="{{ site.baseurl}}{{ include.field_Data.image-path }}{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+          {% else %}
+                  <img src="{{ site.baseurl}}{{ include.field_Data.image-path }}{{ include.field_Data.image-default }}" alt="{{ post.alt }}">
            {% endif %}
 
-         {% else %}
-             <img src="{{ site.baseurl}}{{ include.field_Data.image-path }}{{ include.field_Data.image-default }}" alt="{{ post.alt }}">
-      {% endif %}
+
 
        {{ linkEND }}
    </div>

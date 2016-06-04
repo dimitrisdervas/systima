@@ -1,7 +1,7 @@
 ---
-layout: default-dev-frontpage
+layout: default
 title: Σύστημα
-pagetitle: frontpagev2
+pagetitle: frontpage
 config:
  - section:
     data:
@@ -19,6 +19,9 @@ config:
              content-type: other
              post-title: "Ποιοί είμαστε"
              fields:
+              - field: group
+                class: color-overlay
+                fields:
                 - field: title
                   data:
                    class: title
@@ -86,7 +89,6 @@ config:
                       - field: title
                         data:
                          link: posts
-
 css: |
 
 ---

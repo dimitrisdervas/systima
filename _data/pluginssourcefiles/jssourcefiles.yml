@@ -16,6 +16,7 @@
   js: bower_components/masonry/dist/masonry.pkgd.js
 
 - name: accents
+  state: active
   js: js/remove-accents.js
 
 - name: webfontloader

@@ -17,11 +17,65 @@
    <link rel="stylesheet" href="/css/components.css">
    <link rel="stylesheet" href="/css/styles.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Open+Sans:400">
+   <link href='https://fonts.googleapis.com/css?family=Advent+Pro|Nova+Mono|Open+Sans+Condensed:300|Open+Sans|Roboto|Roboto+Condensed|Roboto+Slab|Noto+Sans|Arimo|Ubuntu|Ubuntu+Condensed|Noto+Serif|Play|Fira+Sans|Cardo|Caudex|Anonymous+Pro|Fira+Mono|GFS+Neohellenic|GFS+Didot&subset=greek,latin' rel='stylesheet' type='text/css'>
    <link rel="canonical" href="/">
 
    <style>
     
+
+.frontpagev3 .spoudes-group a {
+  font-size: 34px;
+  color: #323232;
+  font-family: "Advent Pro";
+  font-family: "Nova Mono";
+  font-family: "Open Sans Condensed";
+  font-family: "Open Sans";
+  font-family: "Roboto";
+  font-family: "Roboto Condensed";
+  font-family: "Roboto Slab";
+  font-family: "Noto Sans";
+  font-family: "Arimo";
+  font-family: "Ubuntu";
+  font-family: "Noto Serif";
+  font-family: "Play";
+  font-family: "Fira Sans";
+  font-family: "Cardo";
+  font-family: "Caudex";
+  font-family: "Anonymous Pro";
+  font-family: "Fira Mono";
+  font-family: "GFS Neohellenic";
+  font-family: "GFS Didot";
+  font-family: "Ubuntu Condensed";
+  font-family: "Roboto";
+}
+.spoudesnew {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.omada {
+  font-family: "Advent Pro";
+  font-family: "Nova Mono";
+  font-family: "Open Sans Condensed:300";
+  font-family: "Open Sans";
+  font-family: "Roboto";
+  font-family: "Roboto Condensed";
+  font-family: "Roboto Slab";
+  font-family: "Noto Sans";
+  font-family: "Arimo";
+  font-family: "Ubuntu";
+  font-family: "Ubuntu Condensed";
+  font-family: "Noto Serif";
+  font-family: "Play";
+  font-family: "Fira Sans";
+  font-family: "Cardo";
+  font-family: "Caudex";
+  font-family: "Anonymous Pro";
+  font-family: "Fira Mono";
+  font-family: "GFS Neohellenic";
+  font-family: "GFS Didot";
+}
+
     
  </style>
 
@@ -31,7 +85,7 @@
   <body>
 
 
-      <div class="page frontpagev2">
+      <div class="page frontpage frontpagev3">
 
         <!--      -->
 <!-- PAGE -->
@@ -209,6 +263,7 @@
   
 
 
+  
   <nav>
   <div class="nav-wrapper">
      
@@ -540,6 +595,7 @@
   
 
 
+  
   <!--             -->
 <!-- COMPONENT POSTS LISTS -->
 <!--             -->
@@ -550,24 +606,31 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
-    
-    <!--  -->
-    <!-- COLLECTION -->
-    <!--  -->
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
+           
           
        
     
   
-
 
 <!--    GROUP FIELDS ELEMENT -->
    <!-- Check the group  html element -->  
@@ -582,9 +645,9 @@
 
 
    
-<!-- Loop through the posts and set a limit if there it exists -->
-   
 
+
+   
 
 <!--  Component group fields html element-->
    
@@ -616,7 +679,7 @@
             
         >
 
-           Ποιοί είμαστε
+           Η ιστορία μας
 
         </div>
       
@@ -705,7 +768,144 @@
 
 
 <div 
- 		class="spoudes block"
+ 		class="omades-wrapper block"
+	>
+
+
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->
+                           
+
+                            <!--                  -->
+                            <!-- ALIAS COMPONENTS -->
+                            <!--                  -->
+                            
+                            
+                            
+
+
+
+                              <!--                        -->
+                              <!-- CUSTOM HTML SHORT CODE -->
+                              <!--                        -->
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->
+                                 
+
+
+
+
+                                 <!--                 -->
+                                 <!-- HTML COMPONENTS -->
+                                 <!--                 -->
+                                    
+                                    <!-- Include the html component template and bring it's details -->
+                                       <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+
+
+<!--  -->
+<!-- PAGE COMPONENTS -->
+<!--  -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+
+<!-- TITLE COMPONENT -->
+  <!--                 -->
+<!-- COMPONENT TITLE -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it -->
+  
+
+
+<!--                       -->
+<!-- COMPONENT WRAPPER DIV -->
+<!--                       -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- INCLUDE basic_components/pageincludes/pagecomponentswrapper.html -->
+   
+
+
+
+<!--                   -->
+<!-- COMPONENT CONTENT -->
+<!--                   -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- Include the html component template and bring it's details -->
+<!-- Capture the html component template -->
+  
+
+
+  
+  <div class="blockquote-swew">
+<span class="quote"><i class="material-icons">text_fields</i></span>
+<div class="omades blockquote">
+Στα φροντιστήρια Σύστημα θα βρείτε ομάδες προσανατολισμού για:</br>
+<span>Ανθρωπιστικές Σπουδές, </span><span>Θετικές Σπουδές, </span><span>Σπουδές Οικονομίας και Πληροφορικής</span>
+</div>
+</div>
+<!-- 
+<div class="omades-title">Ομάδες Προσανατολισμού</div>
+<div class="omades">
+	<div class="omada one">Ανθρωπιστικές Σπουδές</div>
+	<hr class="width45">
+	<div class="omada two">Θετικές Σπουδές</div>
+	<hr class="width45">
+	<div class="omada three">Οικονομικές & Πληροφορικής</div>
+	<hr class="width45">
+</div> -->
+
+ 
+
+
+
+
+
+
+
+                                    <!-- EndIF htmlComponent.component -->
+                                    
+
+                                          
+
+
+
+
+                           <!--  End Component Loop -->
+                           
+                        <!-- End DIV for simple divClass -->
+                        </div>
+                     <!--  End DIVS LOOP -->
+                     
+
+
+
+                  <!--            -->
+                  <!-- ALIAS DIVS -->
+                  <!--            -->
+                  
+                  
+                  
+
+
+
+
+
+                        <!--                  -->
+                        <!--  DIVS            -->
+                        <!--                  -->
+                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
+                        <!-- INCLUDE basic_components/pageincludes/pagedivs.html -->
+                           <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+<div 
+ 		class="spoudes"
 	>
 
 
@@ -757,7 +957,7 @@
   
       
          <div class="component-header">
-            <div class="component-title ">ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ ΓΙΑ ΟΛΑ ΤΑ ΕΠΙΣΤΗΜΟΝΙΚΑ ΠΕΔΙΑ  </div>
+            <div class="component-title ">Τμήματα  </div>
             
 
                <!-- COMPONENT SUBTITLE -->
@@ -774,7 +974,9 @@
 <!-- INCLUDE basic_components/pageincludes/pagecomponentswrapper.html -->
    
 
-
+<div 
+ 		class="spoudesnew"
+	>
 
 <!--                   -->
 <!-- COMPONENT CONTENT -->
@@ -785,6 +987,7 @@
   
 
 
+  
   <!--             -->
 <!-- COMPONENT POSTS LISTS -->
 <!--             -->
@@ -795,30 +998,88 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
     
-    <!-- If there is no post-tile it will look only for the file not inside the file -->
-    <!-- Filter file of data -->
-    <!--  -->
-    <!-- POST TAG -->
-    <!--  -->
-       <!-- END If there is include.component.tag -->
+
+          <!--     -->
+          <!-- TAG -->
+          <!--     -->
+          <!-- IF we want to look for a specific title-tag or whatever you call it inside a .yml file -->
+          <!-- 
+          If TAG is ex. [page.user = george] or we simply say which tag to find ex. george / we must also assign the tag-hash that means inside which category to find the tag ex. 
+          _data/users.yml
+          bios:
+           - name: george
+             age: 12
+           - name: eric
+             age: 14
+
+          plays:
+           - game: Warcraft
+           - game: LEON
+
+            ---
+            content-type: users
+            data-type: data-list
+            tag-hash: bios
+            tag: name
+            ---
+        -->
+         
+
+
+        <!-- IF the data file resides inside a folder ex. _data/success/1012.yml -->
           
-    <!--            -->
-    <!-- POST TITLE -->
-    <!--            -->
+
+        <!--            -->
+        <!-- POST TITLE -->
+        <!--            -->
+        <!-- If we want to find a certain post ex.
+
+            _data/strings.yml
+              thank-you: ευχαριστώ
+              goodnight: καληνύχτα 
+            
+            ---
+            post-title: thank-you
+            ---
+
+        -->
        
+ 
+    <!--            -->
+    <!-- COLLECTION -->
+    <!--            -->
+    <!-- IF DATA TYPE IS [collection] that means that the content is inside a collection -->  
+    <!-- IF we want to look for a specific FRONT MATTER value we use
+      ---
+      content-type: universities
+      data-type: data-list
+      tag-hash: bios
+      tag: name
+      ---
+       -->
     
   
-
 
 <!-- MASONRY -->
    <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
@@ -856,6 +1117,7 @@
    
 
    
+
 <!-- Loop through the posts and set a limit if there it exists -->
    
 <!--  Component group fields html element-->
@@ -874,7 +1136,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -889,33 +1151,18 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/lykeiou-a">
+                                       
                                  
                                       
-                                 ΛΥΚΕΙΟ
+                                 A ΛΥΚΕΙΟY
 
-                                 </div>
+                                 </a></div>
 
 
 
 <!--  End case of fields -->
                     
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Ολοκληρωμένη προετοιμασία για την εισαγωγή στην Τριτοβάθμια Εκπαίδευση στη σχολή της 1ης προτίμησης. Απαιτείται συστηματική προετοιμασία από Α’ προς Β’ Λυκείου καθώς και από Β’ προς Γ’ Λυκείου.</div>
-                        
-                    
-
-   <!-- TITLE  -->
-                              
 <!--  End loop in fields -->
                   
 
@@ -950,7 +1197,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -965,33 +1212,140 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/lykeiou-b">
+                                       
+                                 
+                                      
+                                 B ΛΥΚΕΙΟY
+
+                                 </a></div>
+
+
+
+<!--  End case of fields -->
+                    
+<!--  End loop in fields -->
+                  
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--           -->
+
+         
+      
+<!--  Component group fields html element-->
+   
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                   
+                                            <div class="spoudes-group z-depth-1-half">
+                                               
+                                    
+
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+<!-- Print every field as separate div -->
+                           <div class="type ">
+                              
+                                       <a href="/studies/lykeiou-c">
+                                       
+                                 
+                                      
+                                 Γ ΛΥΚΕΙΟΥ
+
+                                 </a></div>
+
+
+
+<!--  End case of fields -->
+                    
+<!--  End loop in fields -->
+                  
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--           -->
+
+         
+      
+<!--  Component group fields html element-->
+   
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                   
+                                            <div class="spoudes-group z-depth-1-half">
+                                               
+                                    
+
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+<!-- Print every field as separate div -->
+                           <div class="type ">
+                              
+                                       <a href="/studies/gymnasio">
+                                       
                                  
                                       
                                  ΓΥΜΝΑΣΙΟ
 
-                                 </div>
+                                 </a></div>
 
 
 
 <!--  End case of fields -->
                     
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Εμπέδωση βασικών εννοιών στην ύλη της Αρχαίας και Νέας Ελληνικής Γλώσσας, των Μαθηματικών, της Φυσικής και Χημείας, ώστε οι μαθητές να αντιμετωπίσουν την πρόκληση του Νέου Λυκείου με αξιώσεις.</div>
-                        
-                    
-
-   <!-- TITLE  -->
-                              
 <!--  End loop in fields -->
                   
 
@@ -1026,7 +1380,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -1041,33 +1395,18 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/epal">
+                                       
                                  
                                       
                                  ΕΠΑ.Λ
 
-                                 </div>
+                                 </a></div>
 
 
 
 <!--  End case of fields -->
                     
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Ολοκληρωμένη κάλυψη των κενών προηγούμενων τάξεων. Διδάσκονται Μαθηματικά, Νέα Ελληνική Γλώσσα και όλα τα Μαθήματα Ειδικότητας. Στόχος η εισαγωγή στα Τεχνολογικά Ιδρύματα.</div>
-                        
-                    
-
-   <!-- TITLE  -->
-                              
 <!--  End loop in fields -->
                   
 
@@ -1102,7 +1441,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -1117,33 +1456,18 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/apofoitoi">
+                                       
                                  
                                       
                                  ΑΠΟΦΟΙΤΟΙ
 
-                                 </div>
+                                 </a></div>
 
 
 
 <!--  End case of fields -->
                     
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Ειδικά τμήματα αποφοίτων με ενισχυμένο πρόγραμμα μαθημάτων.</div>
-                        
-                    
-
-   <!-- TITLE  -->
-                              
 <!--  End loop in fields -->
                   
 
@@ -1178,7 +1502,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -1193,33 +1517,18 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/sxedio">
+                                       
                                  
                                       
-                                 ΕΡΓΑΣΤΗΡΙΟ ΓΡΑΜΜΙΚΟΥ ΕΛΕΥΘΕΡΟΥ ΣΧΕΔΙΟΥ
+                                 ΣΧΕΔΙΟ ΓΡΑΜΜΙΚΟ & ΕΛΕΥΘΕΡΟ 
 
-                                 </div>
+                                 </a></div>
 
 
 
 <!--  End case of fields -->
                     
-<!--  End loop in fields -->
-                  
-<!--  Check what type of field we are prinitng -->
-                     
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Παρέχουμε ολοκληρωμένη υποστήριξη στα ειδικά μαθήματα όπως το Γραμμικό και Ελεύθερο Σχέδιο ,σε ειδικά διαμορφωμένο χώρο διδασκαλίας.</div>
-                        
-                    
-
-   <!-- TITLE  -->
-                              
 <!--  End loop in fields -->
                   
 
@@ -1254,7 +1563,7 @@
 <!--  Check what type of field we are prinitng -->
                      
                                    
-                                            <div class="spoudes-group">
+                                            <div class="spoudes-group z-depth-1-half">
                                                
                                     
 
@@ -1269,12 +1578,13 @@
 <!-- Print every field as separate div -->
                            <div class="type ">
                               
-                                        
+                                       <a href="/studies/therina">
+                                       
                                  
                                       
                                  ΘΕΡΙΝΑ ΤΜΗΜΑΤΑ
 
-                                 </div>
+                                 </a></div>
 
 
 
@@ -1282,20 +1592,65 @@
                     
 <!--  End loop in fields -->
                   
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--           -->
+
+         
+      
+<!--  Component group fields html element-->
+   
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
 <!--  Check what type of field we are prinitng -->
                      
-                                <!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
-<!-- If text is about blog which means the to print the post.content -->
-               
-<!-- If it is about a simple text field -->
-<!-- and there is a teaser -->
-                        
-                                 <div class="text">Αύξηση του χρόνου προετοιμασίας του υποψηφίου γεγονός που καθιστά τον υποψήφιο ισχυρότερο απέναντι στον ανταγωνισμό. Ο αυξημένος χρόνος προετοιμασίας εξασφαλίζει και τον aπαιτούμενο χρόνο αφομοίωσης ,με αποτέλεσμα ο μαθητής να αγγίξει τα μέγιστα της απόδοσής του </div>
-                        
-                    
+                                   
+                                            <div class="spoudes-group z-depth-1-half">
+                                               
+                                    
 
-   <!-- TITLE  -->
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+<!-- Print every field as separate div -->
+                           <div class="type ">
                               
+                                       <a href="/studies/sxedio">
+                                       
+                                 
+                                      
+                                 ΤA ΘΕΡΙΝΑ ΤΜΗΜΑΤΑ ΞΕΚΙΝΗΣΑΝ
+
+                                 </a></div>
+
+
+
+<!--  End case of fields -->
+                    
 <!--  End loop in fields -->
                   
 
@@ -1325,7 +1680,7 @@
 
 
 
-
+</div>
 
 
                                     <!-- EndIF htmlComponent.component -->
@@ -1438,6 +1793,7 @@
   
 
 
+  
   <!--             -->
 <!-- COMPONENT POSTS LISTS -->
 <!--             -->
@@ -1448,24 +1804,31 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
-    
-    <!--  -->
-    <!-- COLLECTION -->
-    <!--  -->
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
+           
           
        
     
   
-
 
 <!--    GROUP FIELDS ELEMENT -->
    <!-- Check the group  html element -->  
@@ -1480,9 +1843,9 @@
 
 
    
-<!-- Loop through the posts and set a limit if there it exists -->
-   
 
+
+   
 
 <!--  Component group fields html element-->
    
@@ -1527,7 +1890,7 @@
             
         >
 
-           και γιατί στο Σύστημα
+           και γιατί στο Σύστημα ?
 
         </div>
       
@@ -1706,7 +2069,7 @@
   
       
          <div class="component-header">
-            <div class="component-title ">Φροντιστήρια  </div>
+            <div class="component-title ">Μια ματιά στους χώρους μας...  </div>
             
 
                <!-- COMPONENT SUBTITLE -->
@@ -1734,6 +2097,7 @@
   
 
 
+  
   <!--             -->
 <!-- COMPONENT POSTS LISTS -->
 <!--             -->
@@ -1744,24 +2108,31 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
-    
-    <!--  -->
-    <!-- COLLECTION -->
-    <!--  -->
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
+           
           
        
     
   
-
 
 <!-- MASONRY -->
    <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
@@ -1801,6 +2172,7 @@
                       >
 
    
+
 <!-- Loop through the posts and set a limit if there it exists -->
    
 <!--  Component group fields html element-->
@@ -2349,6 +2721,7 @@
   
 
 
+  
   <!--             -->
 <!-- COMPONENT POSTS LISTS -->
 <!--             -->
@@ -2359,30 +2732,88 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
     
-    <!-- If there is no post-tile it will look only for the file not inside the file -->
-    <!-- Filter file of data -->
-    <!--  -->
-    <!-- POST TAG -->
-    <!--  -->
-       <!-- END If there is include.component.tag -->
+
+          <!--     -->
+          <!-- TAG -->
+          <!--     -->
+          <!-- IF we want to look for a specific title-tag or whatever you call it inside a .yml file -->
+          <!-- 
+          If TAG is ex. [page.user = george] or we simply say which tag to find ex. george / we must also assign the tag-hash that means inside which category to find the tag ex. 
+          _data/users.yml
+          bios:
+           - name: george
+             age: 12
+           - name: eric
+             age: 14
+
+          plays:
+           - game: Warcraft
+           - game: LEON
+
+            ---
+            content-type: users
+            data-type: data-list
+            tag-hash: bios
+            tag: name
+            ---
+        -->
+         
+
+
+        <!-- IF the data file resides inside a folder ex. _data/success/1012.yml -->
           
-    <!--            -->
-    <!-- POST TITLE -->
-    <!--            -->
+
+        <!--            -->
+        <!-- POST TITLE -->
+        <!--            -->
+        <!-- If we want to find a certain post ex.
+
+            _data/strings.yml
+              thank-you: ευχαριστώ
+              goodnight: καληνύχτα 
+            
+            ---
+            post-title: thank-you
+            ---
+
+        -->
        
+ 
+    <!--            -->
+    <!-- COLLECTION -->
+    <!--            -->
+    <!-- IF DATA TYPE IS [collection] that means that the content is inside a collection -->  
+    <!-- IF we want to look for a specific FRONT MATTER value we use
+      ---
+      content-type: universities
+      data-type: data-list
+      tag-hash: bios
+      tag: name
+      ---
+       -->
     
   
-
 
 <!-- MASONRY -->
    <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
@@ -2420,6 +2851,7 @@
    
 
    
+
 <!-- Loop through the posts and set a limit if there it exists -->
    
 <!--  Component group fields html element-->
@@ -2859,6 +3291,7 @@
 
 
   
+  
 <!-- DATA -->
 <!-- USE DATA FROM _data/content -->
 <!-- Check the content type - Datat or Collections - Posts -->
@@ -2867,30 +3300,88 @@
 <!--                        -->
 <!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
 
-<!--  -->
+<!--       -->
 <!-- ALIAS -->
+<!--       -->
 
 
 
 
 
-<!-- If data type is from yml or other data file  sent to find file in _data/content folder -->
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
   
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
     
-    <!-- If there is no post-tile it will look only for the file not inside the file -->
-    <!-- Filter file of data -->
-    <!--  -->
-    <!-- POST TAG -->
-    <!--  -->
-       <!-- END If there is include.component.tag -->
+
+          <!--     -->
+          <!-- TAG -->
+          <!--     -->
+          <!-- IF we want to look for a specific title-tag or whatever you call it inside a .yml file -->
+          <!-- 
+          If TAG is ex. [page.user = george] or we simply say which tag to find ex. george / we must also assign the tag-hash that means inside which category to find the tag ex. 
+          _data/users.yml
+          bios:
+           - name: george
+             age: 12
+           - name: eric
+             age: 14
+
+          plays:
+           - game: Warcraft
+           - game: LEON
+
+            ---
+            content-type: users
+            data-type: data-list
+            tag-hash: bios
+            tag: name
+            ---
+        -->
+         
+
+
+        <!-- IF the data file resides inside a folder ex. _data/success/1012.yml -->
           
-    <!--            -->
-    <!-- POST TITLE -->
-    <!--            -->
+
+        <!--            -->
+        <!-- POST TITLE -->
+        <!--            -->
+        <!-- If we want to find a certain post ex.
+
+            _data/strings.yml
+              thank-you: ευχαριστώ
+              goodnight: καληνύχτα 
+            
+            ---
+            post-title: thank-you
+            ---
+
+        -->
        
+ 
+    <!--            -->
+    <!-- COLLECTION -->
+    <!--            -->
+    <!-- IF DATA TYPE IS [collection] that means that the content is inside a collection -->  
+    <!-- IF we want to look for a specific FRONT MATTER value we use
+      ---
+      content-type: universities
+      data-type: data-list
+      tag-hash: bios
+      tag: name
+      ---
+       -->
     
   
-
 <nav id="footer-menu">
 <ul>
 
@@ -3117,6 +3608,7 @@
   
 
 
+  
   <!-- DEBUG FILE: html_components/social.html -->
 
 
@@ -3274,6 +3766,7 @@
   
 
 
+  
   <!-- FROM HERE -->
 <!--  https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Auto-complete_content -->
 <form id="reservation-form" data-parsley-validate action="https://getsimpleform.com/messages?form_api_token=4e4801ec96e34437f63d843c5ca3e435" method="post">
@@ -3412,6 +3905,11 @@ $('.collapsible').collapsible();
 
 
    
+   
+      
+         
+       
+    
    
       
          

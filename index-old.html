@@ -1,7 +1,7 @@
 ---
 layout: default-dev-frontpage
 title: Σύστημα
-pagetitle: frontpagev1
+pagetitle: frontpagev2
 config:
  - section:
     data:
@@ -17,7 +17,7 @@ config:
            data:
              data-type: collection
              content-type: other
-             post-title: "Ποιοί είμαστε"
+             post-title: "Η ιστορία μας"
              fields:
                 - field: title
                   data:
@@ -25,11 +25,15 @@ config:
                 - field: text
       - div:
          theme:
-          class: spoudes block
+          class: omades-wrapper block
+        components:
+          - component: custom/omades          
+      - div:
+         theme:
+          class: spoudes
         components:
          - component: posts-list
            data:
-             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ ΓΙΑ ΟΛΑ ΤΑ ΕΠΙΣΤΗΜΟΝΙΚΑ ΠΕΔΙΑ"
              data-type: data-list
              content-type: studies
              fields:
@@ -48,7 +52,7 @@ config:
            data:
              data-type: collection
              content-type: other
-             post-title: "και γιατί στο Σύστημα"
+             post-title: "και γιατί στο Σύστημα?"
              fields:
               - field: group
                 class: color-overlay
@@ -63,7 +67,7 @@ config:
         components:
          - component: posts-list
            data:
-            title: "Φροντιστήρια"
+            title: "Μια ματιά στους χώρους μας..."
             data-type: collection
             content-type: frontistiria
             groupElement: div

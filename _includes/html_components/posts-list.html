@@ -21,6 +21,7 @@
    {{groupElement}}
 
    {{ groupdivUl }}
+
 <!-- Loop through the posts and set a limit if there it exists -->
    {% for post in posts limit:{{include.component-data.limit}} offset:{{include.component-data.offset}}%}
 <!--  Component group fields html element-->

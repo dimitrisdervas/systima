@@ -14,16 +14,16 @@ header {
 header.hero-overlay {
     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat;
 }
-.frontpage {
-  header {
-    background-image: radial-gradient(#31415D, #1A2231);
-  }
-}
-.frontpagev1 {
-  header {
-    background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
-  }
-}
+// .frontpage {
+//   header {
+//     background-image: radial-gradient(#31415D, #1A2231);
+//   }
+// }
+// .frontpagev1 {
+//   header {
+//     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
+//   }
+// }
 .aboutus,
 .lykeio {
   header.hero-overlay {
@@ -69,46 +69,46 @@ nav {
  }
 }
 
-.frontpage {
-    nav {
-      box-shadow: none;
-      margin-top: 50px;
-    }
-    #nav-mobile {
-        background-color: #fff;
-        opacity: 0.8;
-      a {
-        color: #020510;
-        font-weight: bold;
-      }
-    }
+// .frontpage {
+//     nav {
+//       box-shadow: none;
+//       margin-top: 50px;
+//     }
+//     #nav-mobile {
+//         background-color: #fff;
+//         opacity: 0.8;
+//       a {
+//         color: #020510;
+//         font-weight: bold;
+//       }
+//     }
 //
 // HERO TEXT
 //
-  .hero{
-      margin: 5% 0;
-      padding: 0 5%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      color: #EF2B1D;
-      font-size: 42px;
-      font-weight: bold;
-      .hero-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .herotitle {
-        // align-self: flex-start;
-        // margin-bottom: 1%;
-        font-size: 60px;
-      }
-      .herosubtitle {
-        align-self: flex-end;
-      }
-  }
-}
+//   .hero{
+//       margin: 5% 0;
+//       padding: 0 5%;
+//       display: flex;
+//       justify-content: space-around;
+//       align-items: center;
+//       color: #EF2B1D;
+//       font-size: 42px;
+//       font-weight: bold;
+//       .hero-group {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//       }
+//       .herotitle {
+//         // align-self: flex-start;
+//         // margin-bottom: 1%;
+//         font-size: 60px;
+//       }
+//       .herosubtitle {
+//         align-self: flex-end;
+//       }
+//   }
+// }
 // CONTACT PAGE
 .contactonemap {
   nav {

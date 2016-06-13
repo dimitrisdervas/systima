@@ -32,60 +32,26 @@ body {
   clear: both;
   padding: 0 5% 15%;
 }
-.type {
-  @include container;
-}
-.text {
-  @include container;
-}
 
-.spoudes {
-  @include layout($textarea);
-  @include container;
-  flex-direction: column;
-  align-items: center;
-}
-.spoudes-group {
+
+
+.leitourgia-wrapper {
   @include layout($textarea);
   @include container;
   margin-bottom: 2rem;
   display: flex;
-  .type {
-    @include span(4 of 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
+  flex-wrap: wrap;
+  .leitourgia-group {
+    flex-basis: span(4 of 12);
     padding: 2%;
-  }
-  .text {
-    @include span(8 of 12 last);
-    display: flex;
-    align-items: center;
-    padding: 4%;
-  }
-}
-.leitourgia-group {
-  @include layout($textarea);
-  @include container;
-  margin-bottom: 2rem;
-  display: flex;
-  .type {
-    @include span(4 of 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 1rem;
-  }
-  .text {
-    @include span(8 of 12 last);
-    display: flex;
-    align-items: flex-end;
-    padding: 2rem;
-    flex-direction: column;
+      .type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 1rem;
+      }
   }
 }
 .why {

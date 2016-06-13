@@ -1,5 +1,6 @@
 ---
 title: Λειτουργία
+permalink: leitourgia
 layout: default-dev-frontpage
 config:
  - section:
@@ -15,8 +16,12 @@ config:
          - component: posts-list
            data:
              title: Λειτουργία
+             wrapperDiv:
+               theme:
+                 class: leitourgia-wrapper
              data-type: collection
              content-type: leitourgia
+             sort: sort
              fields:
              - field: group
                class: leitourgia-group
@@ -25,15 +30,6 @@ config:
                   data:
                     class: type
                     link: posts
-                - field: text
-                  data:
-                    class: text
-                    text-teaser: yes
-                    text-words: 20
-                    more-label: περισσότερα
-                    more-class: waves-effect waves-teal btn-flat
-
-
 css: |
     
 

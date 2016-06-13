@@ -1,7 +1,7 @@
 ---
 layout: default-dev-frontpage
 title: Σύστημα
-pagetitle: frontpagev2
+pagetitle: frontpage frontpagev3
 config:
  - section:
     data:
@@ -17,7 +17,7 @@ config:
            data:
              data-type: collection
              content-type: other
-             post-title: "Ποιοί είμαστε"
+             post-title: "Η ιστορία μας"
              fields:
                 - field: title
                   data:
@@ -25,21 +25,28 @@ config:
                 - field: text
       - div:
          theme:
-          class: spoudes block
+          class: omades-wrapper block
+        components:
+          - component: custom/omades
+      - div:
+         theme:
+          class: spoudes
         components:
          - component: posts-list
            data:
-             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ ΓΙΑ ΟΛΑ ΤΑ ΕΠΙΣΤΗΜΟΝΙΚΑ ΠΕΔΙΑ"
+             title: "Τμήματα"
              data-type: data-list
-             content-type: studies
+             content-type: studiesv2
+             wrapperDiv:
+              theme:
+                class: spoudesnew
              fields:
              - field: group
-               class: spoudes-group
+               class: spoudes-group z-depth-1-half
                fields:
                 - field: type
-                - field: text
                   data:
-                    class: text
+                   link: posts
       - div:
          theme:
           class: why block
@@ -48,7 +55,7 @@ config:
            data:
              data-type: collection
              content-type: other
-             post-title: "και γιατί στο Σύστημα"
+             post-title: "και γιατί στο Σύστημα ?"
              fields:
               - field: group
                 class: color-overlay
@@ -63,7 +70,7 @@ config:
         components:
          - component: posts-list
            data:
-            title: "Φροντιστήρια"
+            title: "Μια ματιά στους χώρους μας..."
             data-type: collection
             content-type: frontistiria
             groupElement: div
@@ -86,9 +93,61 @@ config:
                       - field: title
                         data:
                          link: posts
-
 css: |
 
+
+  .frontpagev3 .spoudes-group a {
+    font-size: 34px;
+    color: #323232;
+    font-family: "Advent Pro";
+    font-family: "Nova Mono";
+    font-family: "Open Sans Condensed";
+    font-family: "Open Sans";
+    font-family: "Roboto";
+    font-family: "Roboto Condensed";
+    font-family: "Roboto Slab";
+    font-family: "Noto Sans";
+    font-family: "Arimo";
+    font-family: "Ubuntu";
+    font-family: "Noto Serif";
+    font-family: "Play";
+    font-family: "Fira Sans";
+    font-family: "Cardo";
+    font-family: "Caudex";
+    font-family: "Anonymous Pro";
+    font-family: "Fira Mono";
+    font-family: "GFS Neohellenic";
+    font-family: "GFS Didot";
+    font-family: "Ubuntu Condensed";
+    font-family: "Roboto";
+  }
+  .spoudesnew {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .omada {
+    font-family: "Advent Pro";
+    font-family: "Nova Mono";
+    font-family: "Open Sans Condensed:300";
+    font-family: "Open Sans";
+    font-family: "Roboto";
+    font-family: "Roboto Condensed";
+    font-family: "Roboto Slab";
+    font-family: "Noto Sans";
+    font-family: "Arimo";
+    font-family: "Ubuntu";
+    font-family: "Ubuntu Condensed";
+    font-family: "Noto Serif";
+    font-family: "Play";
+    font-family: "Fira Sans";
+    font-family: "Cardo";
+    font-family: "Caudex";
+    font-family: "Anonymous Pro";
+    font-family: "Fira Mono";
+    font-family: "GFS Neohellenic";
+    font-family: "GFS Didot";
+  }
 ---
 
 {% include basic_components/page.html %}

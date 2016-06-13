@@ -47,6 +47,7 @@ body {
 
 .block {
    margin-bottom: 5rem;
+   @extend .z-depth-2;
 }
 
 .top-article {
@@ -179,16 +180,7 @@ body {
 }
 
 
-.leitourgia-post {
-    .title {
-      color: #175394;
-      font-size: 32px;
-      font-weight: bold;
-      padding-bottom: 4%;
-      padding-top: 2%;
-      line-height: 1.5;
-    }
-}
+
 
 .tabs .tab a {
     font-size: 28px;
@@ -248,6 +240,16 @@ body {
 //
 // LEITOURGIA
 //
+.leitourgia-post {
+    .title {
+      color: #175394;
+      font-size: 32px;
+      font-weight: bold;
+      padding-bottom: 4%;
+      padding-top: 2%;
+      line-height: 1.5;
+    }
+}
 .leitourgia-post.card {
   padding: 4%;
 }
@@ -266,4 +268,48 @@ body {
    width: 25%;
    margin-left: 0%;
    margin-bottom: 10%;
+}
+
+// STUDIES - TABLES
+tbody {
+
+}
+tr th,
+tr td {
+    padding: 0 5px;
+  }
+tr th:nth-child(2),
+tr td:nth-child(2) {
+  }
+
+tfoot {
+  tr:nth-child(1){
+  background: #ddd;
+  font-weight: bold;
+}
+  td {
+    padding: 5px;
+  }
+}
+.clykeiou,
+.apofoitoi {
+  tr td:nth-child(even) {
+    border-right: 2px solid #929292;
+  }
+  tbody tr:nth-child(4),
+  tfoot tr:nth-child(2),
+  tfoot tr:nth-child(3) {
+    color: #e53f3f;
+    font-weight: bold;
+  }
+}
+
+.blykeiou {
+  h4#section-2,
+  h4#section-3,
+  h4#section-4 {
+    background: #365073;
+    color: #fff;
+    padding: 5px 15px;
+  }
 }

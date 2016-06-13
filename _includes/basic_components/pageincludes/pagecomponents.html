@@ -34,23 +34,25 @@
 
   {% for component in components %}
 
-<!--  	   -->
-<!-- ALIAS -->
-<!--  	   -->
-{% assign component.module  = %}
-{% assign component.data = %}
+    <!--  	   -->
+    <!-- ALIAS -->
+    <!--  	   -->
+    {% assign component.module  = %}
+    {% assign component.data = %}
 
 
   {% capture htmlComponentHtml %}html_components/{{ component.module }}.html{% endcapture %}
   {% include {{ htmlComponentHtml }} component-data=component.data %} 
 
     {% endfor %}
+
 {% else %}
-{% if htmlComponent.component == custom %}
-   {% capture htmlComponentHtml %}html_components/custom/{{ htmlComponent.name }}.html{% endcapture %}
-{% else %}
-  {% capture htmlComponentHtml %}html_components/{{ htmlComponent.component }}.html{% endcapture %}
-{% endif %}
+
+  {% if htmlComponent.component == "custom" %}
+     {% capture htmlComponentHtml %}html_components/custom/{{ htmlComponent.name }}.html{% endcapture %}
+  {% else %}
+    {% capture htmlComponentHtml %}html_components/{{ htmlComponent.component }}.html{% endcapture %}
+  {% endif %}
   {% include {{ htmlComponentHtml }} component-data=htmlComponent.data %} 
 
 {% endif %}

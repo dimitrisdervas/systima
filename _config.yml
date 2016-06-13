@@ -27,27 +27,27 @@ collections:
     permalink: /other/:path
   leitourgia:
     output: true
-    permalink: /leitourgia/:path
+    permalink: /leitourgia/:path/
   frontistiria:
     output: true
-    permalink: /frontistiria/:path
+    permalink: /frontistiria/:path/
   articles:
     output: true
-    permalink: /articles/:path
+    permalink: /articles/:path/
   news:
     output: true
-    permalink: /news/:path
+    permalink: /news/:path/
   success:
     output: true
-    permalink: /success/:path
+    permalink: /success/:path/
   studies:
     output: true
-    permalink: /studies/:path
+    permalink: /studies/:path/
   sxoles:
     output: true
-    permalink: /success/:path
+    permalink: /success/:path/
   themata:
-    permalink: /themata/:path
+    permalink: /themata/:path/
 
 defaults:
   - scope:

@@ -80,18 +80,24 @@
 
    }
    .success {
-     @include layout($textarea);
-     @include container;
-      width: 100%;
-      .component-title {
-         @include t-h2;
-      }
+       @include layout($textarea);
+       @include container;
+        width: 100%;
+
       .success-group {
          display: flex;
       .name {
          min-width: span( 5 of 12);
          }
       }
+        .component-title {
+          @include t-h2;
+          background: #192638;
+          color: #fcd13b;
+          padding: 5px 15px;
+          font-family: "Roboto Condensed";
+          margin-top: 0;
+        }
    }
    .news,
    .articles {

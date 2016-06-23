@@ -106,12 +106,14 @@
       tag-hash: bios
       tag: name
       ---
+
+      Evething is sorted by the yaml sort - custom variable is not available
        -->
     {% else %}       
           {% if include.component-data.postTag  %}
              {% assign posts = site.[include.component-data.content-type] | where:include.component-data.postTag,include.component-data.tag-hash %}
           {% else %}
-             {% assign posts = site.[include.component-data.content-type]  %}
+             {% assign posts = site.[include.component-data.content-type]  | sort: 'sort' %}
           {% endif %}
        {% assign onepost = posts | where:'title', include.component-data.post-title %}
     {% endif %}

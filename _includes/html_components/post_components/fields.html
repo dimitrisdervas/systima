@@ -5,13 +5,25 @@
 <!--  Check what type of field we are prinitng -->
                     {% case field.field  %}
 
+                    {% when 'image' %}
+                      {% if  page.image %}
+                         <div class="post-image {{ field.data.class }}" data-hash="{{ page.[field.data.image-hash] }}">
+                              {% if image.[field.data.image-hash] contains 'https://' or image.[field.data.image-hash] contains 'http://'%}
+                                 <img src="{{ post.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                              {% else %}
+                                 <img src="{{ site.baseurl}}{{ field.data.image-path }}{{ page.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                              {% endif %}
+                                </a>
+                         </div>
+                      {% endif %}
+                    
                     {% when 'images' %}
                     {% for image in page.images limit: {{field.data.limit}}  %}
-                       <div class="post-image {{ field.data.class }}" data-hash="{{ image.[field.data.image-hash] }}">
-                            {% if image.[field.data.image-hash] contains 'https://' or image.[field.data.image-hash] contains 'http://'%}
-                               <img src="{{ image.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                       <div class="post-image {{ field.data.class }}" data-hash="{{ image.[field.data.images-hash] }}">
+                            {% if image.[field.data.images-hash] contains 'https://' or image.[field.data.images-hash] contains 'http://'%}
+                               <img src="{{ image.[field.data.images-hash] }}" alt="{{ image.alt }}">
                             {% else %}
-                               <img src="{{ site.baseurl}}{{ field.data.images-path }}{{ image.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                               <img src="{{ site.baseurl}}{{ field.data.images-path }}{{ image.[field.data.images-hash] }}" alt="{{ image.alt }}">
                             {% endif %}
                               </a>
                        </div>

@@ -20,41 +20,16 @@ config:
               - field: phone
       - div:
          theme:
-          class: gallery-slideshow
+          class: gallery
         components:
          - component: /post_components/fields
            data:
-            javascript-plugin: owl-carousel
-            javascript-plugin-data:
-                 items: 1
-                 loop: true
-                 autoplay: true
-                 margin: 10
-                 dots: false
-            wrapperDiv:
-             theme:
-                class: owl-carousel owl-theme
-                id: slideshow
-            groupFieldsElement: div
-            groupFieldsElement-data:
-             class: slideshow-item
-            fields:
-              - field: images
-                data:
-                 class: success-group
-                 image-hash: image
-                 images-path: /assets/images/frontistiria/
-         - component: /post_components/fields
-           data:
-            wrapperDiv:
-             theme:
-               class: gallery-thumbnails
-            fields:
-                 - field: thumbnails
+              fields:
+                 - field: images
                    data:
-                     image-hash: image
-                     images-path: /assets/thumbnails/
-                     class: gallery-thumb
+                     images-hash: image
+                     images-path: /assets/images/frontistiria/                    
+                     class: materialboxed           
 css: |
 
 ---

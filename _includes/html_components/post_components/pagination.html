@@ -12,10 +12,10 @@
 {% for post in site.[include.component-data.content-type] %}
   {% if forloop.index0 == next-position %}
     {% assign next = post.url %}
-    {% assign next-title = post.title %}
+    {% assign next-title = post.title  | truncate: 40 %}
   {% elsif forloop.index0 == previous-position %}
     {% assign previous = post.url %}
-    {% assign previous-title = post.title %}
+    {% assign previous-title = post.title  | truncate: 40 %}
   {% endif %}
 {% endfor %}
 

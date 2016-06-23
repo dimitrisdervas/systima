@@ -14,16 +14,10 @@ header {
 header.hero-overlay {
     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat;
 }
-// .frontpage {
-//   header {
-//     background-image: radial-gradient(#31415D, #1A2231);
-//   }
-// }
-// .frontpagev1 {
-//   header {
-//     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(#28364E, #3A4D6F);
-//   }
-// }
+// SXEDIO BG
+.sxedio header.hero-overlay {
+    background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/sxedio/sxedio-room-5.jpg") no-repeat;
+}
 .aboutus,
 .lykeio {
   header.hero-overlay {
@@ -33,6 +27,7 @@ header.hero-overlay {
 }
 nav {
  margin-top: 0;
+ box-shadow: none;
 }
 #nav-mobile {
   background-color: transparent;

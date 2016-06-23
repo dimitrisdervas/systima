@@ -14,6 +14,10 @@ config:
          - component: /post_components/fields
            data:
              fields:
+              - field: image
+                data:
+                 image-hash: image
+                 image-path: /assets/images/leitourgia/             
               - field: title
               - field: content
       - div:
@@ -22,7 +26,7 @@ config:
         components:
          - component: /post_components/pagination
            data:
-             content-type: articles
+             content-type: leitourgia
              icon: yes
              class: waves-effect waves-deep-orange btn-flat
 ---

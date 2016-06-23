@@ -13,7 +13,7 @@ function initialize()
                     // The latitude and longitude to center the map (always required)
                     center: new google.maps.LatLng(40.614213,23.071533), // Touba
                     // ONLY ROAD
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    disableDefaultUI: true,
 
                     // How you would like to style the map.
                     // This is where you would paste any style found on Snazzy Maps.

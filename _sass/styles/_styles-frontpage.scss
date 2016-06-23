@@ -2,6 +2,11 @@ $baseurl: /systima;
 .frontpage,
 .frontpagev1,
 .frontpagev2 {
+   .top-article .title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+   }
     .color-overlay {
       background-color: rgba(18,23,32,0.7);
       padding: 4%;
@@ -11,37 +16,36 @@ $baseurl: /systima;
       }
     }
     .omades-wrapper {
-      span.quote {
-          float: left;
-          padding: 25px;
+      .blockquote-frontpage {
+          display: flex;
+          align-items: center;
+          background: #fcd13b;
+          justify-content: space-between;
+          padding: 15px;
+        }      
+      .quote {
+          padding: 15px;
+          background: #fff;
+          border: 2px solid #323232;
+          margin-right: 15px;
+          width: 250px;
         }
-      i {
-        font-size: 110px;
-        padding: 15px;
-        color: #192638;
-        border: 5px solid #192638;
-        background: #fff;
+      .blockquote {
+        color: #323232;
+        padding-left: 55px;
+        span {
+          font-size: 36px;
+          font-weight: bold;
+          color: #192638;
+          line-height: 1.4;
+        }
       }
-    }
-    .blockquote {
-      color: #323232;
-    background: #fcd13b;
-    padding: 2rem;
-      span {
-        font-size: 36px;
-        font-weight: bold;
-        color: #192638;
-        margin: 5px 5px;
-        line-height: 1.4;
-      }
-
     }
     .spoudes,
     .frontistiria--block {
       .component-header {
           color: #36648e;
           margin: 0 0 5%;
-              // margin: 0 0 15%;
           padding: 3%;
           display: flex;
           flex-direction: column;
@@ -49,8 +53,8 @@ $baseurl: /systima;
           font-size: 32px;
           font-weight: bold;
           text-align: center;
-          // border: 3px solid #36648e;
           background: #E6E6E6;
+          @extend .z-depth-2;
       }
     }
     .why {
@@ -171,10 +175,10 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
  //          color: #fff;
  //         }
  //        }
- $images: vivliothiki, younggirl, vivliothiki, younggirl, vivliothiki, younggirl, diary, diary, diary;
+ $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, diary;
    @for $iv2 from 1 through length($images) {
     .frontpagev3 .spoudes-group:nth-child(#{$iv2}n) {
-        background: url(/assets/images/#{nth($images, $iv2)}.jpg);
+        background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg);
         }
       }
 .spoudesnew {
@@ -182,11 +186,14 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
 }
 
 .frontpagev3 {
+  .spoudes {
+    @include layout($symmetric);
+  }
   .spoudes-group {
-      @include layout($symmetric);
-      flex-basis: span(4 of 12);
-      margin-bottom: gutters(12);
       display: flex;
+      flex-basis: span(4 of 12);
+      margin-bottom: 15px;
+      height:302px;
     }
   .spoudes-group.type::after {
     content: " ";
@@ -213,71 +220,52 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
 
   }
   .spoudes-group .type a {
-    padding: 3rem;
+    font-size: 28px;
     color: #fff;
     font-weight: bold;
     border-width: 1px;
     border-style: solid;
     border-color: rgba(18, 23, 32, 0);
-    height: 100%;
+    height: 250px;
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .spoudes-group .type a:hover {
     border: 1px solid #fff;
     transition: border-color 1s ease;
     background: rgba(0,0,0,0.2);
+    font-size: 30px;
+    transition: font 1s ease;
   }
 }
 
 .frontpagev3 {
+  .spoudes-group:nth-child(6),
+  .spoudes-group:nth-child(7),
+  .spoudes-group:nth-child(8) {
+    .type a {
+      padding: 1.5em;
+    }
+  }
   .spoudes-group:nth-child(9) {
-        background: url(/assets/images/therina.jpg);
+      background: url(/assets/images/therina.jpg);
     .type {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1em;
       background: #192638;
     }
     .type a {
-      padding: 3rem;
+      padding: 1.5em;
       color: #fcd13b;
-      font-weight: bold;
-      border-width: 1px;
-      border-style: solid;
       border-color: rgba(18, 23, 32, 0);
-      height: 100%;
-      width: 100%;
-      text-align: center;
     }
     .type a:hover {
       border: 1px solid #fff;
       transition: border-color 1s ease;
-      background: rgba(0,0,0,0.2);
+      font-size: 30px;
+      transition: font 1s ease;
       }
     }
   }
 
-    //   .omades-wrapper {
-    //   background: #fff;
-    //   padding: 3%;
-    // }
-    // .omades-title {
-    //   font-size: 32px;
-    //   padding: 2%;
-    //   text-align: center;
-    // }
-    // .omades {
-    //   display: flex;
-    //   justify-content: space-around;
-    //   flex-direction: column;
-    // }
-    // .omada {
-    //   background: #5e3690;
-    //   color: #fff;
-    //   padding: 12px 25px;
-    //   font-size: 28px;
-    //   line-height: 1.4em;
-    // }

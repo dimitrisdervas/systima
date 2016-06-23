@@ -8,9 +8,31 @@ header {
   background: url("/assets/images/blackboard.jpg") no-repeat;
   background-size: cover;
 }
-// header {
-//   background-image: radial-gradient(#fff, #E3A441);
-// }
+// 
+// SLIDESHOW HEADER
+// 
+.header-slideshow,
+.slideshow-item,
+.post-image {
+  height: 100%;
+}
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+  height: 100% !important;    
+}
+
+.post-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #FFF;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 header.hero-overlay {
     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat;
 }

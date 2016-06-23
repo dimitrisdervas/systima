@@ -16,5 +16,36 @@
 - section:
    data:
     htmlelement: header
-   theme:
-    class: hero-overlay
+  divs:
+      - div:
+         theme:
+          class: header-slideshow
+        components:
+         - component: posts-list
+           data:
+            javascript-plugin: owl-carousel
+            javascript-plugin-data:
+                 items: 1
+                 loop: true
+                 autoplay: true
+                 margin: 10
+                 dots: false
+            wrapperDiv:
+             theme:
+                class: owl-carousel owl-theme
+                id: slideshow
+            groupFieldsElement: div
+            groupFieldsElement-data:
+             class: slideshow-item
+            content-type: slideshow
+            data-type: data-list
+            fields:
+              - field: group
+                background:
+                  image: multiple
+                  images-hash: image
+                  images-path: /assets/images/slideshow/
+                fields:
+                     - field: title
+                       data:
+                        class: slideshow-title

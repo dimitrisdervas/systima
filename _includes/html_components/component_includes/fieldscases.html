@@ -62,12 +62,27 @@
                               {% when 'group' %}
                                    {% if field.background %}
                                           <div class="post-image {{ field.class }}"
-                                               {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
+                                              {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
                                                     style="background-image:url({{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
                                                  {% else %}
-                                                    style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
-                                              {% endif %}
+                                                 {{ field.background.image }}
 
+                                                   {% if field.background.image == multiple %}
+                                                      style="background-image:
+                                                      {{ post.images }}
+                                                          {% for image-bg in post.images %}
+                                                              {% if image-bg.[field.background.images-hash] contains linear %}
+                                                                  {{ image-bg.[field.background.images-hash]}}
+                                                              {% endif %}
+                                                              
+                                                              url({{ site.baseurl}}{{ field.background.images-path }}{{ image-bg.[field.background.images-hash] }})" {% unless forloop.index == last %},{% endunless%}
+                                                          {% endfor %}
+
+                                                      {% else %}
+                                                              style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.images-hash] }})" data-hash="{{ post.[field.background.images-hash] }}">
+                                                      {% endif %}
+
+                                              {% endif %}
                                           {% capture divEnd %}</div>{% endcapture %}
 
                                     {% elsif  field.link %}

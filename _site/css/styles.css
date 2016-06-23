@@ -691,7 +691,8 @@ body {
   clear: both;
   padding: 0 4%;
   position: relative;
-  margin-top: -50px; }
+  margin-top: -50px;
+  z-index: 150; }
   .textarea:after,
   .maincontent:after {
     content: " ";
@@ -1123,6 +1124,26 @@ header {
 header {
   background: url("/assets/images/blackboard.jpg") no-repeat;
   background-size: cover; }
+
+.header-slideshow,
+.slideshow-item,
+.post-image {
+  height: 100%; }
+
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+  height: 100% !important; }
+
+.post-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #FFF;
+  background-size: cover;
+  background-position: 50% 50%; }
 
 header.hero-overlay {
   background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat; }
@@ -1570,6 +1591,9 @@ nav {
   transition: font 1s ease; }
 
 .leitourgia-group:nth-child(3) .type a {
+  padding: 2em; }
+
+.leitourgia-group:nth-child(5) .type a {
   padding: 1.5em; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {

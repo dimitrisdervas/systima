@@ -396,15 +396,438 @@
 <!--                 -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
 <!-- INCLUDE basic_components/pageincludes/themeelement.html -->
-   <header 
- 		class="hero-overlay"
-	>
+   <header >
 
 
 
 
                   <!-- DIVS LOOP - Loop through the divs to create them -->
                   
+
+
+
+                  <!--            -->
+                  <!-- ALIAS DIVS -->
+                  <!--            -->
+                  
+                  
+                  
+
+
+
+
+
+                        <!--                  -->
+                        <!--  DIVS            -->
+                        <!--                  -->
+                        <!-- DEBUG FILE: html_components/basic_components/page.html -->
+                        <!-- INCLUDE basic_components/pageincludes/pagedivs.html -->
+                           <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+<div 
+ 		class="header-slideshow"
+	>
+
+
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->
+                           
+
+                            <!--                  -->
+                            <!-- ALIAS COMPONENTS -->
+                            <!--                  -->
+                            
+                            
+                            
+
+
+
+                              <!--                        -->
+                              <!-- CUSTOM HTML SHORT CODE -->
+                              <!--                        -->
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->
+                                 
+
+
+
+
+                                 <!--                 -->
+                                 <!-- HTML COMPONENTS -->
+                                 <!--                 -->
+                                    
+                                    <!-- Include the html component template and bring it's details -->
+                                       <!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+
+
+<!--  -->
+<!-- PAGE COMPONENTS -->
+<!--  -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+
+<!-- TITLE COMPONENT -->
+  <!--                 -->
+<!-- COMPONENT TITLE -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it -->
+  
+
+
+<!--                       -->
+<!-- COMPONENT WRAPPER DIV -->
+<!--                       -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- INCLUDE basic_components/pageincludes/pagecomponentswrapper.html -->
+   
+
+<div 
+ 		class="owl-carousel owl-theme"
+	
+ 		id="slideshow"
+	>
+
+<!--                   -->
+<!-- COMPONENT CONTENT -->
+<!--                   -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagecomponents.html -->
+<!-- Include the html component template and bring it's details -->
+<!-- Capture the html component template -->
+  
+
+
+  
+  <!--             -->
+<!-- COMPONENT POSTS LISTS -->
+<!--             -->
+<!-- DEBUG FILE: html_components/posts-list.html -->
+<!-- Check the content type - Data or Collections - Posts -->
+   <!--                        -->
+<!-- COMPONENT CONTENT TYPE -->
+<!--                        -->
+<!-- DEBUG FILE: html_components/component_includes/componentsContentType.html -->
+
+<!--       -->
+<!-- ALIAS -->
+<!--       -->
+
+
+
+
+
+<!-- USE FILE IN _DATA FOLDER FOR CONTENT -->
+    <!-- CONTENT TYPE: page.year -->
+    <!-- content type is defined as page.year that means that the content is inside a file in _data folder - it is not a collection -->
+    <!-- FIND FILE in _DATA FOLDER BASED ON FRONT MATTER -->
+    <!-- If to find the data file we must use the page.{argument} from yaml and the file also resides inside a folder
+    e.x in the page FRONT MATTER we have year: 2012  nad we say folder: success then it should look in _data/success/2012.csv -->
+  
+
+    <!--           -->
+    <!-- DATA-LIST -->
+    <!--           -->
+    <!-- IF DATA TYPE IS [data-list] that means that the content is a .yml or .csv or .json file inside the _data folder -->
+    
+
+          <!--     -->
+          <!-- TAG -->
+          <!--     -->
+          <!-- IF we want to look for a specific title-tag or whatever you call it inside a .yml file -->
+          <!-- 
+          If TAG is ex. [page.user = george] or we simply say which tag to find ex. george / we must also assign the tag-hash that means inside which category to find the tag ex. 
+          _data/users.yml
+          bios:
+           - name: george
+             age: 12
+           - name: eric
+             age: 14
+
+          plays:
+           - game: Warcraft
+           - game: LEON
+
+            ---
+            content-type: users
+            data-type: data-list
+            tag-hash: bios
+            tag: name
+            ---
+        -->
+         
+
+
+        <!-- IF the data file resides inside a folder ex. _data/success/1012.yml -->
+          
+
+        <!--            -->
+        <!-- POST TITLE -->
+        <!--            -->
+        <!-- If we want to find a certain post ex.
+
+            _data/strings.yml
+              thank-you: ευχαριστώ
+              goodnight: καληνύχτα 
+            
+            ---
+            post-title: thank-you
+            ---
+
+        -->
+       
+ 
+    <!--            -->
+    <!-- COLLECTION -->
+    <!--            -->
+    <!-- IF DATA TYPE IS [collection] that means that the content is inside a collection -->  
+    <!-- IF we want to look for a specific FRONT MATTER value we use
+      ---
+      content-type: universities
+      data-type: data-list
+      tag-hash: bios
+      tag: name
+      ---
+
+      Evething is sorted by the yaml sort - custom variable is not available
+       -->
+    
+  
+
+<!-- MASONRY -->
+   <!-- DEBUG FILE: html_components/component_includes/divMasonrySizer.html -->
+<!--            Masonry -->
+   
+<!--    GROUP ELEMENT -->
+    <!-- Check the group element -->
+
+
+
+<!--    GROUP FIELDS ELEMENT -->
+   <!-- Check the group  html element -->  
+
+
+
+   
+      
+
+      
+
+   
+
+
+
+<!-- LIST JS FILTERS HTML -->
+   <!--                   -->
+<!-- LIST.js - FILTERS -->
+<!--                   -->
+
+
+   <!--                         -->
+<!-- CLOUDCANNON EDITOR LINK -->
+<!--                         -->
+
+
+
+   
+
+   
+
+<!-- Loop through the posts and set a limit if there it exists -->
+   
+<!--  Component group fields html element-->
+   
+        <div 
+                  class="slideshow-item"
+              >
+         
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                   
+                                          <div class="post-image "
+                                              
+                                                 multiple
+
+                                                   
+                                                              style="background-image:url(/assets/images/slideshow/)" data-hash="">
+                                                      
+
+                                              
+                                          
+
+                                    
+
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                <!-- DEBUG FILE: html_components/fieldscases/titleCase.html -->
+<!-- TITLE CASE -->
+
+      
+
+   
+      <div 
+     
+        
+           
+               class="slideshow-title"
+            
+        >
+
+           Πριν από το Πανεπιστήμιο...
+
+        </div>
+      
+
+   <!-- ICON  -->
+                              
+<!--  End loop in fields -->
+                  
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--          </div> -->
+
+         </div>
+      
+<!--  Component group fields html element-->
+   
+        <div 
+                  class="slideshow-item"
+              >
+         
+
+<!--  If there is grouping div got fields -->
+
+   
+
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+              
+              <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                   
+                                          <div class="post-image "
+                                              
+                                                 multiple
+
+                                                   
+                                                              style="background-image:url(/assets/images/slideshow/slideshow-2.jpg)" data-hash="slideshow-2.jpg">
+                                                      
+
+                                              
+                                          
+
+                                    
+
+
+
+                                      
+                                      <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              
+<!--  Check what type of field we are prinitng -->
+                     
+                                <!-- DEBUG FILE: html_components/fieldscases/titleCase.html -->
+<!-- TITLE CASE -->
+
+      
+
+   
+      <div 
+     
+        
+           
+               class="slideshow-title"
+            
+        >
+
+           εδώ μαθαίνεις καλύτερα...
+
+        </div>
+      
+
+   <!-- ICON  -->
+                              
+<!--  End loop in fields -->
+                  
+
+
+                                   </div>
+
+                               
+<!--  End loop in fields -->
+                  
+
+
+<!--  END IF to check for GROUP -->
+           
+<!--    END Component HTML WRAPPER ELEMENT -->
+<!--          </div> -->
+
+         </div>
+      
+      
+   
+
+
+
+
+ 
+
+
+
+
+</div>
+
+
+                                    <!-- EndIF htmlComponent.component -->
+                                    
+
+                                          
+
+
+
+
+                           <!--  End Component Loop -->
+                           
+                        <!-- End DIV for simple divClass -->
+                        </div>
+                     <!--  End DIVS LOOP -->
+                     
                 <!-- END section -->
             </header>
            <!-- EndSection name cases -->
@@ -3893,6 +4316,59 @@ $('.collapsible').collapsible();
  
 
    
+   
+      
+         
+
+            
+
+  <script type="text/javascript">
+       $(document).ready(function() {
+
+            
+                  var owl = $('#slideshow');
+owl.owlCarousel({
+   
+         items : 1 ,
+       
+         loop : true ,
+       
+         autoplay : true ,
+       
+         margin : 10 ,
+       
+         dots : false 
+       
+    });
+
+$('.play').on('click',function(){
+    owl.trigger('autoplay.play.owl',[1000])
+})
+$('.pause').on('click',function(){
+    owl.trigger('autoplay.stop.owl')
+})
+
+// Go to the next item
+$('.next').click(function() {
+    owl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.previous').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+})
+
+
+               
+
+       });
+ </script>
+
+
+          
+       
+    
  
 
      <!-- DEBUG FILE: basic_components/perpageplugins.html -->

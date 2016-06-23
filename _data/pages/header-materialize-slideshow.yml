@@ -41,6 +41,7 @@
             data-type: data-list
             fields:
               - field: group
+                class: slideshow-post
                 background:
                   image: multiple
                   images-hash: image

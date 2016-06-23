@@ -1127,7 +1127,7 @@ header {
 
 .header-slideshow,
 .slideshow-item,
-.post-image {
+.slideshow-post {
   height: 100%; }
 
 .owl-carousel,
@@ -1136,7 +1136,7 @@ header {
 .owl-item {
   height: 100% !important; }
 
-.post-image {
+.slideshow-post {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1144,6 +1144,14 @@ header {
   color: #FFF;
   background-size: cover;
   background-position: 50% 50%; }
+
+.slideshow-title {
+  background: #fcd13c;
+  padding: 0.5em;
+  color: #323232;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "ubuntu"; }
 
 header.hero-overlay {
   background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat; }

@@ -33,25 +33,29 @@
                 href="{{ site.baseurl}}products/{{ post.sku }}.html">{{ post.[include.field_Field] }}</a>
          </div>
       {% else %}
+      <!--  -->
+      <!-- Check if the field is not empty -->
+      <!--  -->
+        {% if post.[field.field] != nil %}
+           {% if include.field_Data.element %}
+             <{{ include.field_Data.element }}
+              {% capture elementEND %}{{ include.field_Data.element }}{% endcapture %}
+              {% else %}
+              <div {% capture elementEND %}div{% endcapture %}
+             {% endif %}
+                {% for data in include.field_Data %}
+                   {% case data[0] %}
+                    {% when 'id' %}
+                       {{data[0]}}="{{data[1]}}"
+                    {% when 'class' %}
+                       {{data[0]}}="{{data[1]}}"
+                    {% when 'theme' %}
+                       {{data[0]}}="{{data[1]}}"
+                    {% endcase%}
+                {% endfor %}>
 
-   {% if include.field_Data.element %}
-     <{{ include.field_Data.element }}
-      {% capture elementEND %}{{ include.field_Data.element }}{% endcapture %}
-      {% else %}
-      <div {% capture elementEND %}div{% endcapture %}
-     {% endif %}
-        {% for data in include.field_Data %}
-           {% case data[0] %}
-            {% when 'id' %}
-               {{data[0]}}="{{data[1]}}"
-            {% when 'class' %}
-               {{data[0]}}="{{data[1]}}"
-            {% when 'theme' %}
-               {{data[0]}}="{{data[1]}}"
-            {% endcase%}
-        {% endfor %}>
-
-           {{ post.[include.field_Field] }}
-
-        </{{ elementEND }}>
+                   {{ post.[include.field_Field] }}
+                
+                </{{ elementEND }}>
+        {% endif %}
       {% endcase %}

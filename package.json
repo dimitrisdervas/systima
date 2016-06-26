@@ -1,0 +1,40 @@
+{
+  "name": "gulpkyll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AchillesKal/Gulpkyll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AchillesKal/Gulpkyll/issues"
+  },
+  "homepage": "https://github.com/AchillesKal/Gulpkyll",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-main-bower-files": "^1.5.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.0"
+  },
+  "dependencies": {
+    "babyparse": "^0.4.3"
+  }
+}

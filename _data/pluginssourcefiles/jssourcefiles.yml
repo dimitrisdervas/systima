@@ -22,6 +22,10 @@
 - name: webfontloader
   js: js/webfontloader.js
 
+- name: backtotop
+  state: active
+  js: js/backtotop.js
+
 - name: countTo
   js: bower_components/jquery-countTo/jquery.countTo.js
 

@@ -53,9 +53,9 @@
                                    {% if field.background %}
                                           <div class="post-image {{ field.class }}"
                                                {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
-                                                    style="background-image:url({{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
+                                                    style="background-image:url({{ post.[field.background.image-hash] }})">
                                                  {% else %}
-                                                    style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.image-hash] }})" data-hash="{{ post.[field.background.image-hash] }}">
+                                                    style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.image-hash] }})" >
                                               {% endif %}
 
                                           {% capture divEnd %}</div>{% endcapture %}

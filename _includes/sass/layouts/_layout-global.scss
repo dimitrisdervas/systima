@@ -1,0 +1,125 @@
+/* PAGE */
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.textarea,
+.maincontent {
+  @include layout($textarea);
+  @include container;
+  @include break;
+  padding: 0 4%;
+  position: relative;
+  margin-top: -50px;
+  z-index: 150;
+  margin-bottom: 4rem;
+}
+.notextarea,
+.maincontent {
+  @include layout($textarea);
+  @include container;
+  @include break;
+  padding: 0 4%;
+  position: relative;
+}
+.top-article {
+  @include layout($textarea);
+  @include container;
+}
+.color-overlay {
+  clear: both;
+  padding: 0 5% 15%;
+}
+
+.footer {
+  @include layout($textarea);
+  @include container;
+  display: flex;
+  padding: 4%;
+   .contact-footer {
+     display: flex;
+     flex-direction: column;
+     .contact-group {
+       margin-bottom: 7%;
+     }
+   }
+   .menu {
+     nav {
+       margin-top: 0;
+     }
+       ul {
+       display: flex;
+       flex-direction: column;
+     }
+     a {
+       line-height: 2.1;
+     }
+   }
+   .social-footer {
+      display: flex;
+      flex-direction: column;
+      .social ul {
+        display: flex;
+          justify-content: space-around;
+      }
+
+    }
+  }
+   .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+   .book-group {
+    margin-bottom: 2rem;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+   }
+
+
+
+
+
+.pagination {
+  @include layout($textarea);
+  @include container;
+  display: flex;
+  background: #fff;
+  margin-bottom: 5%;
+  padding: 2%;
+  .next {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+  .next a,
+  .previous a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+@include susy-media(normal) {
+  .leitourgia-group {
+    flex-basis: span(4 of 12);
+    }
+  .leitourgia-group:nth-child(3) .type a{
+      padding: 2em;
+    } 
+  .leitourgia-group:nth-child(5) .type a{
+      padding: 1.5em;
+    }
+  .leitourgia-group .type a {
+    font-size: 28px;
+  }
+  .leitourgia-group .type a:hover {
+    font-size: 30px;
+  }
+}
+

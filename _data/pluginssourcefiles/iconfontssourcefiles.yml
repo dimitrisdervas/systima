@@ -1,6 +1,0 @@
-- name: FontAwesome
-  css: css/fonts/font-awesome/font-awesome.min.css
-- name: Et-Line
-  css: css/fonts/et-line/et-line.css
-- name: Material-Design-Icons
-  css: css/fonts/material-design-icons/material-design-icons.css

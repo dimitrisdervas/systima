@@ -1056,6 +1056,8 @@ body {
     margin-bottom: 3rem; }
   .pagination {
     display: none; }
+  .paroxes .card {
+    padding: 4%; }
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

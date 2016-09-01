@@ -19,64 +19,15 @@
   state: active
   js: js/remove-accents.js
 
-- name: webfontloader
-  js: js/webfontloader.js
-
 - name: backtotop
   state: active
   js: js/backtotop.js
-
-- name: countTo
-  js: bower_components/jquery-countTo/jquery.countTo.js
 
 - name: materialize
   state: active
   js: bower_components/materialize/dist/js/materialize.js
   css:
-   - css: bower_components/materialize/dist/css/materialize.css
-
-- name: eqjs
-  js: bower_components/eq.js/dist/eq.min.js
-
-- name: bootstrap
-  js: bower_components/bootstrap/dist/js/bootstrap.min.js
-
-- name: thether
-  js: bower_components/tether/dist/js/tether.min.js
-
-- name: dropjs
-  js: bower_components/tether-drop/dist/js/drop.min.js
-  css:
-   - css: bower_components/tether-drop/dist/css/drop-theme-arrows.css
-
-- name: conditionize
-  js: bower_components/conditionize/conditionize.jquery.js
-
-- name: jplist
-  js: bower_components/jplist/jplist-core/jplist.core.min.js
-  css:
-   - css: bower_components/jplist/jplist-core/jplist.core.min.css
-
-- name: simpsum
-  js: bower_components/simpsum/dist/simpsum.js
-
-- name: burger
-  js: bower_components/burger/dist/scripts/burger.min.js
-  css:
-   - css: bower_components/burger/dist/css/burger.min.css
-
-- name: photoswipe
-  js: bower_components/photoswipe/dist/photoswipe.min.js
-  css:
-   - css: bower_components/photoswipe/dist/photoswipe.css
-
-- name: photoswipe-ui
-  js: bower_components/photoswipe/dist/photoswipe-ui-default.min.js
-
-- name: rome
-  js: bower_components/rome/dist/rome.min.js
-  css:
-  - css: bower_components/rome/dist/rome.min.css
 
 - name: parsleyjs
+  state: active
   js: bower_components/parsleyjs/dist/parsley.min.js

@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+
+/* Copied normalize.csss to normalize-sass.scss */
+@import "../../_includes/bower_components/normalize.css/normalize-sass";
+
+// COLORS
+/* @import "bower_components/crayon/dist/crayon"; */
+@import "styles/styles-colors";
+
+//
+// FONTS
+//
+/* @import "custom-mixins/webfonts/webfonts"; */
+
+/* // TYPOGRAPHIC */
+@import "../../_includes/bower_components/typographic/scss/typographic";
+@import "styles/styles-typographic";
+
+//
+// LAYOUT
+//
+
+// NEUTRON
+// @import "custom-mixins/neutron/neutron";
+
+// SUSY
+@import "susy-config";
+@import "../../_includes/bower_components/susy/sass/susy";
+
+/*                               */
+/* Material design frameworks    */
+/*                               */
+/* getmdli.io */
+/* @import "bower_components/material-design-lite/src/material-design-lite"; */
+/* materializecss.com */
+/* @import "bower_components/materialize/sass/materialize"; */
+
+/*  */
+/* Layouts */
+/*  */
+@import
+       "layouts/layout-global",
+       "layouts/layout-normal",
+       "layouts/layout-mobile"
+   ;
+
+
+/*  */
+/* Styles */
+/*  */
+@import
+      "styles/styles-colors",
+      "styles/styles-global",
+      "styles/styles-basic-components",
+      "styles/styles-header",
+      "styles/styles-frontpage",
+      "styles/styles-footer",
+      "styles/styles-leitourgia",
+      "styles/styles-contact",
+      "styles/styles-map"
+   ;

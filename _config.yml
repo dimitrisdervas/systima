@@ -1,3 +1,13 @@
+exclude: ["_app",
+          "README.md",
+          "Gemfile",
+          "Gemfile.lock",
+          "gulpfile.js",
+          "_resources",
+          "node_modules",
+          "package.json"] # Don't forget that Jekyll automatically
+                          # excludes files with a dot prefix
+
 # Site settings
 title: ΣΥΣΤΗΜΑ Φροντιστηρια
 email: info@systimapylaia.gr

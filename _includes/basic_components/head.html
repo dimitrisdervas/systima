@@ -15,10 +15,10 @@
       {% endfor %}
 
 
-   <link rel="stylesheet" href="{{site.baseurl}}/css/components.css">
-   <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
+   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/vendor.css">
+   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link href='https://fonts.googleapis.com/css?family=Advent+Pro|Nova+Mono|Open+Sans+Condensed:300|Open+Sans|Roboto|Roboto+Condensed|Roboto+Slab|Noto+Sans|Arimo|Ubuntu|Ubuntu+Condensed|Noto+Serif|Play|Fira+Sans|Cardo|Caudex|Anonymous+Pro|Fira+Mono|GFS+Neohellenic|GFS+Didot&subset=greek,latin' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=greek,latin' rel='stylesheet' type='text/css'>
    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
    <style>
@@ -26,9 +26,5 @@
     {{ layout.css }}
  </style>
 
-<!-- http://web-development.ninja/tutorials/jekyll/inlining-critical-above-the-fold-stylesheets-in-a-jekyll-website -->
-<style type="text/css">
-    {% include sass/custom-mixins/_critical.scss %}
-</style>
 
 </head>

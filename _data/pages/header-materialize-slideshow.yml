@@ -11,7 +11,7 @@
          data:
           javascript-plugin: sidenav
           logo:
-           image: /assets/images/logo-yellow.png
+           image: /assets/images/sistima-site-logo.png
           content-type: menu
           data-type: data-list
 - section:

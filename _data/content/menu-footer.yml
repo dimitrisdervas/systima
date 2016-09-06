@@ -1,14 +1,14 @@
 - name: Νέα
-  url: /pages/news
+  url: /news
 - name: Άρθρα
-  url: /pages/articles
+  url: /articles
 - name: Φώτο
-  url: /pages/photos
+  url: /photos
 - name: Σχολές
-  url: /pages/sxoles
+  url: /sxoles
 - name: Το Νέο Λύκειο
-  url: /pages/lykeio
+  url: /lykeio
 - name: Βάσεις εισαγωγής στα Α.Ε.Ι-Τ.Ε.Ι
-  url: /pages/baseis
+  url: /baseis
 - name: Επικοινωνία
-  url: /pages/contact
+  url: /contact

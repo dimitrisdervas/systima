@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* Copied normalize.csss to normalize-sass.scss */
+@import "vendor/normalize-scss/sass/normalize";
+
+// COLORS
+/* @import "bower_components/crayon/dist/crayon"; */
+@import "styles/styles-colors";
+
+
+/* // TYPOGRAPHIC */
+@import "vendor/typographic/scss/typographic";
+@import "styles/styles-typographic";
+
+//
+// LAYOUT
+//
+
+// SUSY
+@import "susy-config";
+@import "vendor/susy/sass/susy";
+
+/*  */
+/* Layouts */
+/*  */
+@import
+       "layouts/layout-global",
+       "layouts/layout-normal",
+       "layouts/layout-mobile"
+   ;
+
+
+/*  */
+/* Styles */
+/*  */
+@import
+      "styles/styles-colors",
+      "styles/styles-global",
+      "styles/styles-basic-components",
+      "styles/styles-header",
+      "styles/styles-frontpage",
+      "styles/styles-footer",
+      "styles/styles-leitourgia",
+      "styles/styles-contact",
+      "styles/styles-map"
+   ;

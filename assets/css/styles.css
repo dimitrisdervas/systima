@@ -1,4 +1,5 @@
 /* Copied normalize.csss to normalize-sass.scss */
+@import url(vendor/normalize-css/sass/normalize.css);
 /* @import "bower_components/crayon/dist/crayon"; */
 /*  */
 /* Colors */

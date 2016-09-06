@@ -113,7 +113,7 @@
           {% if include.component-data.postTag  %}
              {% assign posts = site.[include.component-data.content-type] | where:include.component-data.postTag,include.component-data.tag-hash %}
           {% else %}
-             {% assign posts = site.[include.component-data.content-type]  | sort: 'sort' %}
+             {% assign posts = site.[include.component-data.content-type]  %}
           {% endif %}
        {% assign onepost = posts | where:'title', include.component-data.post-title %}
     {% endif %}

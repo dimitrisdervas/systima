@@ -1,0 +1,30 @@
+- section:
+   data:
+    htmlelement: topnav
+  divs:
+   - div:
+      theme:
+        class: navigation
+     components:
+       - component: materialize/navbar
+         data:
+          javascript-plugin: sidenav
+          logo:
+           image: /assets/images/logo-yellow.png
+          content-type: menu
+          data-type: data-list
+- section:
+   data:
+    htmlelement: header
+  divs:
+   - div:
+      theme:
+        class: slider
+     components:
+       - component: posts-list
+         data:
+          javascript-plugin: sidenav
+          logo:
+           image: /assets/images/logo-yellow.png
+          content-type: menu
+          data-type: data-list

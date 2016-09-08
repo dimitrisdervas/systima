@@ -1,0 +1,35 @@
+<!--  -->
+<!-- ALIAS TITLE-->
+<!--  -->
+{% assign include.component-data.title = %}
+{% assign include.component-data.title.data.separator = %}
+{% assign include.component-data.title.data.link = %}
+{% assign include.component-data.title.data.label = %}
+
+{% assign include.component-data.subtitle = %}
+{% assign include.component-data.subtitle.data.separator = %}
+{% assign include.component-data.subtitle.data.link = %}
+{% assign include.component-data.subtitle.data.label = %}
+
+<!--                 -->
+<!-- TITLE            -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it  -->
+{{ section.section.sectiontitle.data }}
+      {% if include.component-data.title %}
+         <div class="{{ include.element }}-header">
+            <div class="{{ include.element }}-title">
+	            {{ include.component-data.title}} {{ include.component-data.title.data.separator}}
+	            {% if include.component-data.title.data.link %}
+	            <a href="{{site.baseurl}}{{ include.component-data.title.data.link }}">{{ include.component-data.title.data.label }}</a>
+	            {% endif %}
+            </div>
+
+
+               <!-- COMPONENT SUBTITLE -->
+            {% if include.component-data.subtitle %}
+               <div class="{{ include.element }}-subtitle">{{ include.component-data.subtitle}} {{ include.component-data.subtitle.data.separator}} <a href="{{site.baseurl}}{{ include.component-data.subtitle.data.link }}">{{ include.component-data.subtitle-data.label }}</a></div>
+            {% endif %}
+	      </div>
+      {% endif %}

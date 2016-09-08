@@ -1,0 +1,35 @@
+---
+title: "Λύκειο"
+layout: default-dev-frontpage
+pagetitle: lykeio
+permalink: /lykeio/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: top-article block
+        components:
+         - component: posts-list
+           data:
+             data-type: collection
+             content-type: sxoleio
+             postTag: test
+             tag-hash: lykeio
+             fields:
+              - field: group
+                class: color-overlay
+                fields:
+                - field: title
+                  data:
+                   class: title
+                - field: content
+                  data:
+                   class: type
+---
+
+{% include basic_components/page.html %}

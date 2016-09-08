@@ -1,0 +1,54 @@
+- section:
+   data:
+    htmlelement: topnav
+  divs:
+   - div:
+      theme:
+        class: navigation
+        id: top
+     components:
+       - component: materialize/navbar
+         data:
+          javascript-plugin: sidenav
+          logo:
+           image: /assets/images/sistima-site-logo.png
+          content-type: menu
+          data-type: data-list
+- section:
+   data:
+    htmlelement: header
+  divs:
+      - div:
+         theme:
+          class: header-slideshow
+        components:
+         - component: posts-list
+           data:
+            javascript-plugin: owl-carousel
+            javascript-plugin-data:
+                 items: 1
+                 loop: true
+                 autoplay: true
+                 margin: 10
+                 dots: false
+                 URLhashListener: false
+            wrapperDiv:
+             theme:
+                class: owl-carousel owl-theme
+                id: slideshow
+            groupFieldsElement: div
+            groupFieldsElement-data:
+             class: slideshow-item
+            content-type: slideshow
+            data-type: data-list
+            fields:
+              - field: group
+                class: slideshow-post
+                background:
+                  image: multiple
+                  images-hash: image
+                  images-path: /assets/images/slideshow/
+                fields:
+                     - field: title
+                       data:
+                        class: slideshow-title

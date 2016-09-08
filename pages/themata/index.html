@@ -1,0 +1,33 @@
+---
+title: Οι επιτυχίες
+layout: default-dev-frontpage
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+    seoTitle:
+     data:
+      label: "Θέματα Πανελληνίων"
+   divs:
+      - div:
+         theme:
+          class: success block
+        components:
+         - component: materialize/tabs
+           data:
+            tabs:
+              - title: "2016"
+                data:
+                  data-type: collection
+                  content-type: themata
+                  fields:
+                      fields:
+                       - field: title
+                         data:
+                          link: themata-link
+
+css: |
+---
+{% include basic_components/page.html %}

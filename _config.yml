@@ -1,18 +1,26 @@
-gems:
-  - jekyll-sitemap
+exclude: ["_app",
+          "README.md",
+          "Gemfile",
+          "Gemfile.lock",
+          "gulpfile.js",
+          "_resources",
+          "node_modules",
+          "package.json"] # Don't forget that Jekyll automatically
+                          # excludes files with a dot prefix
 
 # Site settings
-title: Lila Villas
-email: info@lilavillas.gr
+title: ΣΥΣΤΗΜΑ Φροντιστηρια
+email: info@systimapylaia.gr
 description: > # this means to ignore newlines until "baseurl:"
-   On the beach of K.Stalos in Chania which is  awarded with a European blue flag for
-   its cleanness and facilities, Lila Villas, will be your perfect refuge for your summer
-   relaxation and the most convenient base for your trips to the island.
+
+version: 3.0.3
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lilavillas.gr" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+JEKYLL_ENV: development
 
 # Compress layout - Settings
 compress_html:
@@ -25,9 +33,29 @@ collections:
   other:
     output: true
     permalink: /other/:path
-  paroxes:
+  leitourgia:
     output: true
-    permalink: /paroxes/:path
+    permalink: /leitourgia/:path/
+  frontistiria:
+    output: true
+    permalink: /frontistiria/:path/
+  articles:
+    output: true
+    permalink: /articles/:path/
+  news:
+    output: true
+    permalink: /news/:path/
+  success:
+    output: true
+    permalink: /success/:path/
+  studies:
+    output: true
+    permalink: /studies/:path/
+  sxoles:
+    output: true
+    permalink: /success/:path/
+  themata:
+    permalink: /themata/:path/
 
 defaults:
   - scope:
@@ -40,3 +68,28 @@ defaults:
       type: other
     values:
       layout: default
+  - scope:
+      path: ""
+      type: frontistiria
+    values:
+      layout: layout-frontistiria
+  - scope:
+      path: ""
+      type: leitourgia
+    values:
+      layout: layout-leitourgia
+  - scope:
+      path: ""
+      type: studies
+    values:
+      layout: layout-studies      
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: layout-news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: layout-news

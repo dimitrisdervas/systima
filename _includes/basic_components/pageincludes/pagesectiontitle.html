@@ -1,0 +1,32 @@
+<!--              -->
+<!-- SECTION TITLE -->
+<!--                -->
+
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pagesectiontitle.html -->
+<!-- Section Title -->
+<!-- Check if there is a title for the html section and print it-->
+         {% if section.sectionTitle %}
+            <div class="section-header">
+               <div class="section-title">
+                  {% if section.sectionTitle.data.link %}
+                     <a href="{{site.baseurl}}{{ section.title-data.link }}">{{ section.sectionTitle.data.label }}</a>
+                   {% else %}
+                     {{ section.sectionTitle.data.label }} {{ section.sectionTitle.data.separator}}
+                  {% endif %}
+               </div>
+
+               <!-- section SUBTITLE -->
+               {% if section.sectionSubtitle %}
+                  <div class="section-subtitle">
+                        {% if section.sectionSubtitle.data.link %}
+                          <a href="{{site.baseurl}}{{ section.subtitle-data.link }}">{{ section.sectionSubtitle.data.label }}</a>
+                        {% else %}
+                          {{  section.sectionSubtitle.data.label }} {{ section.sectionSubtitle.data.separator}}
+                        {% endif %}
+
+
+                     </div>
+                  {% endif %}
+
+               </div>
+            {% endif %}

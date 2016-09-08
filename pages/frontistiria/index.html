@@ -1,0 +1,33 @@
+---
+title: "Φροντιστήρια"
+layout: default
+permalink: /frontistiria/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: top-article block
+        components:
+         - component: posts-list
+           data:
+             data-type: collection
+             content-type: frontistiria
+             fields:
+              - field: group
+                class: color-overlay
+                fields:
+                - field: title
+                  data:
+                   class: title
+                - field: content
+                  data:
+                   class: type
+
+---
+
+{% include basic_components/page.html %}

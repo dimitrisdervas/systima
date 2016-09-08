@@ -1,0 +1,24 @@
+<!-- DEBUG FILE: html_components/fieldscases/imageCase.html -->
+<!-- Loop through the images and set limit -->
+   <div class="post-image {{ include.field_Data.class }}">
+
+      {% case include.field_Data.link %}
+         {% when 'post' %}
+               <a href="{{ site.baseurl}}{{ post.url }}"> {% capture linkEND %} </a> {% endcapture %}
+         {% when 'products' %}
+               <a href="{{ site.baseurl}}products/{{ post.sku }}.html">     {% capture linkEND %} </a> {% endcapture %}
+      {% endcase %}
+
+
+           {% if post.[include.field_Data.image-hash] contains 'https://' or post.[include.field_Data.image-hash] contains 'http://' %}
+              <img src="{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+           {% elsif post.[include.field_Data.image-hash] %}
+              <img src="{{ site.baseurl}}{{ include.field_Data.image-path }}{{ post.[include.field_Data.image-hash] }}" alt="{{ post.alt }}">
+          {% else %}
+                  <img src="{{ site.baseurl}}{{ include.field_Data.image-path }}{{ include.field_Data.image-default }}" alt="{{ post.alt }}">
+           {% endif %}
+
+
+
+       {{ linkEND }}
+   </div>

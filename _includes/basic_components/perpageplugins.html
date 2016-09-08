@@ -1,0 +1,85 @@
+<!-- DEBUG FILE: basic_components/perpageplugins.html -->
+{% if include.config-file %}
+    {% assign config = site.data.pages.[include.config-file] %}
+{% elsif page.config-file %}
+   {% assign config = site.data.pages.[page.config-file] %}
+{% elsif layout.config %}
+   {% assign config = layout.config %}
+{% else %}
+   {% assign config = page.config %}
+{% endif %}
+
+
+{% for section in config %}
+{% assign currentSectionDivs = section.divs %}
+   {% for div in currentSectionDivs %}
+   {% assign currentComponents = div.components %}
+      {% for component in currentComponents %}
+         {% if component.data.javascript-plugin %}
+
+            {% case component.data.javascript-plugin %}
+
+               {% when 'gmap' %}
+                  <script src="https://maps.googleapis.com/maps/api/js?key={{ component.data.javascript-plugin-data.apiKey }}"
+  type="text/javascript"></script>
+
+                {% when 'photoswipe' %}
+                  <script>
+                      {% include basic_components/javascriptpluginscases/photoswipe.js photoswipeData= component.data.javascript-plugin-data %}
+                    </script>
+              {% endcase %}
+
+  <script type="text/javascript">
+       $(document).ready(function() {
+
+            {% case component.data.javascript-plugin %}
+
+               {% when 'gmap' %}
+                 {% capture gmapFile %}js/{{ component.data.javascript-plugin-data.gmapFilePath }}{% endcapture %}
+                 {% include  {{ gmapFile }} %}
+
+               {% when 'leaflet' %}
+                  {% include basic_components/javascriptpluginscases/leaflet.js leafletMaplData= component.data.javascript-plugin-data %}
+
+               {% when 'countTo' %}
+                  {% include basic_components/javascriptpluginscases/countto.js countToData= component.data.javascript-plugin-data %}
+
+               {% when 'list.js' %}
+                  {% include basic_components/javascriptpluginscases/listjs.js listjsData= component.data.javascript-plugin-data %}
+
+               {% when 'jplist' %}
+                  {% include basic_components/javascriptpluginscases/jplist.js jplistData= component.data.javascript-plugin-data %}
+
+               {% when 'masonry' %}
+
+               {% when 'sidenav' %}
+                  {% include basic_components/javascriptpluginscases/sidenav.js sidenavData= component.data.javascript-plugin-data %}
+
+               {% when 'navbar' %}
+                 {% include basic_components/javascriptpluginscases/navbar.js navbarData= component.data.javascript-plugin-data %}
+
+               {% when 'rome' %}
+                  {% include basic_components/javascriptpluginscases/rome.js %}
+
+               {% when 'dropjs' %}
+                  {% include basic_components/javascriptpluginscases/dropdown.js dropdownData= component.data.javascript-plugin-data %}
+
+               {% when 'owl-carousel' %}
+                  {% include basic_components/javascriptpluginscases/owlslideshow.js slideshowOwlData= component.data.javascript-plugin-data %}
+
+               {% when 'conditionize' %}
+                   $('.conditional').conditionize();
+
+               {% when 'simpsum-noactive' %}
+                   {% include basic_components/javascriptpluginscases/simpsum.js simpsumData= component.data.javascript-plugin-data %}
+
+             {% endcase %}
+
+       });
+ </script>
+
+
+          {% endif %}
+       {% endfor %}
+    {% endfor %}
+ {% endfor %}

@@ -1,0 +1,37 @@
+---
+title: "Παροχές"
+pagetitle: paroxes
+layout: default-dev-frontpage
+permalink: /paroxes/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: card
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "Παροχές"
+             class: card-content
+             fields:
+              - field: group
+                class:
+                fields:
+                - field: title
+                  data:
+                   class: title
+                   element: h1
+                - field: content
+                  data:
+                   class: type
+css: |
+---
+
+{% include basic_components/page.html %}

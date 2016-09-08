@@ -1,0 +1,16 @@
+<ul class="tabs {{include.component-data.class }}  ">
+{% for tab in include.component-data.tabs %}
+   		{% assign tabID = forloop.index %}
+      <li class="tab"><a href="#tab-content{{tabID}}">{{ tab.title }}</a>
+      </li>
+{% endfor %}
+</ul>
+
+
+{% for tab in include.component-data.tabs %}
+   {% assign tabID = forloop.index %}
+	<div id="tab-content{{tabID}}">
+	    {% include html_components/component_includes/componenttitle.html component-data=tab.data %}
+		{% include html_components/posts-list.html component-data=tab.data %}
+	</div>
+{% endfor %}

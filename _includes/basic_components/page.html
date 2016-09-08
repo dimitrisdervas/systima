@@ -7,12 +7,11 @@
 <!--             -->
 <!-- CONFIG FILE -->
 <!--             -->
-{% if include.config-file %}
-   {% assign config = site.data.pages.[include.config-file] %}
-{% else %}
-   {% assign config = page.config %}
-{% endif %}
-
+  {% if include.config-file %}
+     {% assign config = site.data.pages.[include.config-file] %}
+  {% else %}
+     {% assign config = page.config %}
+  {% endif %}
 <!-- Loop through the page .yml file to create the html -->
 {% for section in config %}
 <!--  -->
@@ -33,39 +32,51 @@
       {% when 'custom' %}   {% include {{section.customHtmlPath}} %}
    <!-- End section.name case -->
    {% else %}
+
+
+
+
+
 <!--               -->
 <!-- SECTION TITLE -->
 <!--               -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/title.html -->
-    {% include basic_components/pageIncludes/title.html component-data=section.sectionTitle.data element=section%}
+<!-- INCLUDE basic_components/pageincludes/title.html -->
+<!--  -->
+<!-- TO FIX -->
+<!--  -->
+<!--  include basic_components/pageincludes/title.html component-data=section.sectionTitle.data element=section  -->
+
+
+
+ {% include basic_components/pageincludes/pageseotitle.html %}
 
 
 <!--                  -->
 <!--  SECTION WRAPPER -->
 <!--                  -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/pageSectionWrapper.html -->
-   {% include basic_components/pageIncludes/pageSectionWrapper.html %}
+<!-- INCLUDE basic_components/pageincludes/pagesectionwrapper.html -->
+   {% include basic_components/pageincludes/pagesectionwrapper.html %}
 
 <!--                 -->
 <!-- SECTION         -->
 <!--                 -->
 <!-- DEBUG FILE: html_components/basic_components/page.html -->
-<!-- INCLUDE basic_components/pageIncludes/themeElement.html -->  
-   <{{section.section.data.htmlelement}} {% include basic_components/pageIncludes/themeElement.html elementData=section.section.theme %}>
+<!-- INCLUDE basic_components/pageincludes/themeelement.html -->
+   <{{section.section.data.htmlelement}} {% include basic_components/pageincludes/themeelement.html elementData=section.section.theme %}>
 
 
 
 
-                  <!-- DIVS LOOP - Loop through the divs to create them -->   
+                  <!-- DIVS LOOP - Loop through the divs to create them -->
                   {% for div in section.divs %}
 
 
 
                   <!--            -->
                   <!-- ALIAS DIVS -->
-                  <!--            -->                  
+                  <!--            -->
                   {% assign div.div = %}
                   {% assign div.components = %}
                   {% assign div.html = %}
@@ -78,16 +89,16 @@
                         <!--  DIVS            -->
                         <!--                  -->
                         <!-- DEBUG FILE: html_components/basic_components/page.html -->
-                        <!-- INCLUDE basic_components/pageIncludes/pageDivs.html -->
-                           {% include basic_components/pageIncludes/pageDivs.html %}
+                        <!-- INCLUDE basic_components/pageincludes/pagedivs.html -->
+                           {% include basic_components/pageincludes/pagedivs.html %}
 
 
-            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->   
+            <!-- LOOP THROUGH THE COMPONENTS OF THE CURENT DIV -->
                            {% for htmlComponent in div.components %}
 
                             <!--                  -->
                             <!-- ALIAS COMPONENTS -->
-                            <!--                  -->                  
+                            <!--                  -->
                             {% assign htmlComponent.html = %}
                             {% assign htmlComponent.component = %}
                             {% assign htmlComponent.data = %}
@@ -97,7 +108,7 @@
                               <!--                        -->
                               <!-- CUSTOM HTML SHORT CODE -->
                               <!--                        -->
-                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->         
+                              <!-- CheckIF we have custom html code code - short e.x. <i class="material-icons">menu</i> -->
                                  {% if htmlComponent.html %}{{ div.html }}{% endif %}
 
 
@@ -105,27 +116,27 @@
 
                                  <!--                 -->
                                  <!-- HTML COMPONENTS -->
-                                 <!--                 -->                      
+                                 <!--                 -->
                                     {% if htmlComponent.component %}
                                     <!-- Include the html component template and bring it's details -->
-                                       {% include basic_components/pageIncludes/pageComponents.html component-data=htmlComponent.data %} 
+                                       {% include basic_components/pageincludes/pagecomponents.html component-data=htmlComponent.data %}
                                     <!-- EndIF htmlComponent.component -->
                                     {% endif %}
-      
+
                                           {% if htmlComponent.data.javascript-plugin == 'photoswipe' %}
                                              <!-- PHOTOSWIPE -->
-                                              {% include html_components/component_includes/photoswipeDom.html %}        
+                                              {% include html_components/component_includes/photoswipeDom.html %}
                                           {% endif %}
-      
+
 
 
 
                            <!--  End Component Loop -->
-                           {% endfor %}         
+                           {% endfor %}
                         <!-- End DIV for simple divClass -->
-                        {{ divClassElementEnd }}      
+                        {{ divClassElementEnd }}
                      <!--  End DIVS LOOP -->
-                     {% endfor %}                  
+                     {% endfor %}
                 <!-- END section -->
             </{{section.section.data.htmlelement}}>
            <!-- EndSection name cases -->

@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: default-dev-frontpage
 title: Σύστημα
-cssClass: gallery
+pagetitle: frontpage frontpagev3
 config:
  - section:
     data:
@@ -11,56 +11,94 @@ config:
    divs:
       - div:
          theme:
-          class: top-article
+          class: top-article block
         components:
          - component: one-post
            data:
              data-type: collection
              content-type: other
-             post-title: "Ποιοί είμαστε"
+             post-title: "Η αποστολή μας"
              fields:
-              - field: group
-                class: color-overlay
-                fields:
                 - field: title
                   data:
                    class: title
-                - field: content
+                - field: text
+      - div:
+         theme:
+          class: omades-wrapper block
+        components:
+          - component: custom/omades
       - div:
          theme:
           class: spoudes
         components:
          - component: posts-list
            data:
-             title: "ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ"
-             subtitle: "ΑΝΘΡΩΠΙΣΤΙΚΕΣ-ΘΕΤΙΚΕΣ ΣΠΟΥΔΕΣ-ΣΠΟΥΔΕΣ ΟΙΚΟΝΟΜΙΑΣ & ΠΛΗΡΟΦΟΡΙΚΗΣ"
+             title: "Τμήματα"
              data-type: data-list
-             content-type: studies
+             content-type: studiesv2
+             wrapperDiv:
+              theme:
+                class: spoudesnew
              fields:
              - field: group
-               class: spoudes-group
+               class: spoudes-group z-depth-1-half
                fields:
                 - field: type
-                - field: text
                   data:
-                    class: text
+                   link: posts
       - div:
          theme:
-          class: why
+          class: why block
         components:
          - component: one-post
            data:
              data-type: collection
              content-type: other
-             post-title: "και γιατί στο Σύστημα"
+             post-title: "και γιατί στο Σύστημα ?"
              fields:
+              - field: group
+                class: color-overlay
+                fields:
+                 - field: title
+                   data:
+                    class: title
+                 - field: content
+      - div:
+         theme:
+          class: frontistiria--block
+        components:
+         - component: posts-list
+           data:
+            title: "Μια ματιά στους χώρους μας..."
+            data-type: collection
+            content-type: frontistiria
+            groupElement: div
+            groupElement-data:
+              class: frontistiria
+            fields:
              - field: group
-               class: color-overlay
+               class: frontistirio card
                fields:
-               - field: title
-                 data:
-                  class: title
-               - field: content              
+                  - field: images
+                    data:
+                     class: card-image
+                     tag: main
+                     link: post
+                     images-path: /assets/images/frontistiria/
+                     image-hash: image
+                  - field: group
+                    class: card-content
+                    fields:
+                      - field: title
+                        data:
+                         link: posts
+css: |
+  .spoudesnew {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 ---
 
 {% include basic_components/page.html %}

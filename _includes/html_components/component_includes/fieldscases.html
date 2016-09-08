@@ -1,0 +1,136 @@
+<!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+              {% for field in fields  %}
+<!--  Check what type of field we are prinitng -->
+                     {% case field.field  %}
+   <!-- Multiple images -->
+                              {% when 'images' %}
+                                {% include html_components/fieldscases/imagescase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!--  One images -->
+                              {% when 'image' %}
+                                {% include html_components/fieldscases/imagecase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+<!-- Slideshow thumbnails -->
+                              {% when 'thumbnail' %}
+                                {% include html_components/fieldscases/thumbnailcase.html field_Data=field.data field_Field=field.field  %}
+  <!--  Photoswipe -->
+                              {% when 'photoswipe' %}
+                                {% include html_components/fieldscases/photoswipecase.html field_Data=field.data field_Field=field.field content-type=include.component.content-type %}
+   <!-- LINK  -->
+                              {% when 'link' %}
+                                {% include html_components/fieldscases/linkcase.html field_Data=field.data field_Field=field.field %}
+   <!-- LINK  -->
+                              {% when 'fixed-button' %}
+                                {% include html_components/fieldscases/fixedbuttoncase.html field_Data=field.data field_Field=field.field %}
+
+   <!-- PERCENTAGE -->
+                              {% when 'percentage' %}
+                                {% include html_components/fieldscases/percentagecase.html field_Data=field.data field_Field=field.field %}
+   <!--   TEXT -->
+                              {% when 'text' %}
+                                {% include html_components/fieldscases/textcase.html field_Data=field.data field_Field=field.field  data-type=include.componentData.data-type %}
+   <!-- TITLE  -->
+                              {% when 'title' %}
+                                {% include html_components/fieldscases/titlecase.html field_Data=field.data field_Field=field.field %}
+   <!-- ICON  -->
+                              {% when 'icon' %}
+                                {% include html_components/fieldscases/iconcase.html field_Data=field.data field_Field=field.field %}
+  <!-- DATE  -->
+                             {% when 'date' %}
+                               {% include html_components/fieldscases/datecase.html field_Data=field.data field_Field=field.field %}                                
+<!-- CONTENT -->
+                              {% when 'content' %}
+                                {{ post.[field.field] | markdownify }}
+   <!-- COUNT  -->
+                              {% when 'count' %}
+                                   {% if include.component-data.javascript-plugin-data.from %}
+                                       {% assign fromNumber = include.component-data.javascript-plugin-data.from %}
+                                   {% else %}
+                                       {% assign fromNumber = 0 %}
+                                    {% endif %}
+
+                                    <div
+                                         class="countTo"
+                                         data-from="{{ fromNumber }}"
+                                         data-to="{{ post.[include.component-data.javascript-plugin-data.toField] }}"
+                                         data-speed="{{include.component-data.javascript-plugin-data.speed}}"
+                                         data-refresh-interval="{{include.component-data.javascript-plugin-data.refresh-interval}}">
+                                    </div>
+   <!-- VIDEO  -->
+                              {% when 'video' %}
+                                {% include html_components/fieldscases/videocase.html field_Data=field.data field_Field=field.field %}
+
+                              {% when 'group' %}
+                                   {% if field.background %}
+                                          <div class="post-image-bg {{ field.class }}"
+                                              {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
+                                                    style="background-image:url({{ post.[field.background.image-hash] }})" >
+                                                 {% else %}
+                                                 {{ field.background.image }}
+
+                                                   {% if field.background.image == multiple %}
+                                                      style="background-image:
+                                                      {{ post.images }}
+                                                          {% for image-bg in post.images %}
+                                                              {% if image-bg.[field.background.images-hash] contains linear %}
+                                                                  {{ image-bg.[field.background.images-hash]}}
+                                                              {% endif %}
+                                                              
+                                                              url({{ site.baseurl}}{{ field.background.images-path }}{{ image-bg.[field.background.images-hash] }})" {% unless forloop.index == last %},{% endunless%}
+                                                          {% endfor %}
+
+                                                      {% else %}
+                                                              style="background-image:url({{ site.baseurl}}{{ field.background.images-path }}{{ post.[field.background.images-hash] }})" >
+                                                      {% endif %}
+
+                                              {% endif %}
+                                          {% capture divEnd %}</div>{% endcapture %}
+
+                                    {% elsif  field.link %}
+                                          <a href="{{ post.url}}">
+                                          {% capture divEnd %}</a>{% endcapture %}
+
+                                    {% else %}
+                                            <div class="{{ field.class }}">
+                                               {% capture divEnd %}</div>{% endcapture%}
+                                    {% endif %}
+
+
+
+                                      {% assign groupfields = field.fields %}
+                                      {% include html_components/component_includes/groupfieldscases.html %}
+
+                                   {{ divEnd }}
+
+                               {% when 'lorem' %}
+                                  <p>{% raw %}{{ simpsum(20) }}{% endraw %}</p>
+
+                    {% else %}
+<!-- Print every field as separate div -->
+                           <div class="{{field.field}} {{field.data.class}}">
+                              {% case field.data.link %}
+                                       {% when 'posts' %}
+                                             <a href="{{ site.baseurl}}{{ post.url }}">
+                                             {% capture fieldDivEnd %}</a></div>{% endcapture%}
+                                       {% when 'products' %}
+                                              <a href="{{ site.baseurl}}products/{{ post.sku }}.html">
+                                              {% capture fieldDivEnd %}</a></div>{% endcapture%}
+                                       {% else %}
+                                              {% capture fieldDivEnd %}</div>{% endcapture%}
+                                 {% endcase %}
+
+                                      {% if field.data.icon %}
+                                       <i class="material-icons">{{field.data.icon}}</i>
+                                      {% endif %}
+
+
+                                 {{ post.[field.field] }}
+
+                                 {{fieldDivEnd}}
+                                
+
+
+
+<!--  End case of fields -->
+                    {% endcase %}
+<!--  End loop in fields -->
+                  {% endfor %}

@@ -1,0 +1,35 @@
+---
+layout: default-map
+pagetitle: frontistiria
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+          theme:
+           class: success block
+        components:
+         - component: /post_components/fields
+           data:
+             fields:
+              - field: title
+              - field: address
+              - field: phone
+      - div:
+         theme:
+          class: gallery
+        components:
+         - component: /post_components/fields
+           data:
+              fields:
+                 - field: images
+                   data:
+                     images-hash: image
+                     images-path: /assets/images/frontistiria/                    
+                     class: materialboxed           
+---
+
+{% include basic_components/layout.html %}

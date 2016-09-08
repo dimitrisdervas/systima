@@ -3,10 +3,10 @@
 <!--             -->
 <!-- DEBUG FILE: html_components/posts-list.html -->
 <!-- Check the content type - Data or Collections - Posts -->
-   {% include html_components/component_includes/componentContentType.html %}
+   {% include html_components/component_includes/componentcontenttype.html %}
 
 <!-- GROUP FIELDS ELEMENT -->
-   {% include html_components/component_includes/groupFieldsElement.html %}
+   {% include html_components/component_includes/groupfieldselement.html %}
 
 
    {{ groupdivUl }}
@@ -21,7 +21,7 @@
               {% for group in include.component-data.groupdiv %}
                  <div class="{{ group.class }}">
                     {% assign fields = group.fields %}                   
-                       {% include html_components/component_includes/fieldsCases.html %}
+                       {% include html_components/component_includes/fieldscases.html %}
                  </div>
                 {% endfor %}   
            {% else %} 
@@ -30,7 +30,7 @@
 <!-- Just print the fields -->
 <!-- Loop each field in the component -->
               {% assign fields = include.component-data.fields %}
-              {% include html_components/component_includes/fieldsCases.html componentData=include.component-data %}
+              {% include html_components/component_includes/fieldscases.html componentData=include.component-data %}
 
 <!--  END IF to check for GROUP -->
            {% endif %}

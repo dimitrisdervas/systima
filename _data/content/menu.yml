@@ -1,14 +1,14 @@
 - title: Αρχική
-  path: /home
+  path: /
 - title: Σχετικά με εμάς
-  path: /pages/aboutus
+  path: /aboutus
 - title: Λειτουργία
-  path: /pages/services
+  path: /leitourgia
 - title: Παροχές
-  path: /pages/paroxes
+  path: /paroxes
 - title: Εκδόσεις
-  path: /pages/publications
+  path: /publications
 - title: Οι επιτυχίες
-  path: /titlepages/success
+  path: /success
 - title: Επικοινωνία
-  path: /pages/contact
+  path: /contact

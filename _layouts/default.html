@@ -1,5 +1,4 @@
 ---
-layout: compress
 ---
 
 <!DOCTYPE html>
@@ -10,18 +9,20 @@ layout: compress
   <body>
 
 
-        {% include basic_components/page.html config-file='header-materialize' %}
+      <div class="page {{ page.pagetitle}}">
+
+        {% include basic_components/page.html config-file='header-materialize-hero' %}
 
         {{ content }}
 
         {% include basic_components/page.html config-file='footer' %}
 
-
-      <script type="text/javascript" src="{{ site.baseurl }}/js/components.js"></script>
-
-     {% include basic_components/perpagePlugins.html config-file='header-materialize' %}
-     {% include basic_components/perpagePlugins.html %}
+         </div>
+      <script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor.js"></script>
+     {% include basic_components/perpageplugins.html config-file='header-materialize-hero' %}
+     {% include basic_components/perpageplugins.html %}
 
   </body>
 
 </html>
+

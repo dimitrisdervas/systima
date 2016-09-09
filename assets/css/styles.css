@@ -1004,7 +1004,6 @@ body {
   background: #192638;
   color: #fcd13b;
   padding: 5px 15px;
-  font-family: "Roboto Condensed";
   margin-top: 0; }
   @media (min-width: 600px) {
     .success .component-title {
@@ -1931,7 +1930,7 @@ nav {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; } }
 
-.leitourgia .component-header {
+.leitourgia-grid .leitourgia .component-header {
   color: #36648e;
   margin: 5% 0;
   padding: 3%;
@@ -1951,7 +1950,7 @@ nav {
   border: 2px solid #36648e;
   background: #fff; }
 
-.leitourgia-wrapper {
+.leitourgia-grid .leitourgia-wrapper {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
@@ -1964,11 +1963,11 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .leitourgia-wrapper:after {
+  .leitourgia-grid .leitourgia-wrapper:after {
     content: " ";
     display: block;
     clear: both; }
-  .leitourgia-wrapper .leitourgia-group .type {
+  .leitourgia-grid .leitourgia-wrapper .leitourgia-group .type {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1983,76 +1982,76 @@ nav {
     font-weight: bold;
     padding: 1rem; }
 
-.frontpagev3 .spoudes-group:nth-child(1n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(1n) {
   background: url(/assets/images/bg-images/bag.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(2n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(2n) {
   background: url(/assets/images/bg-images/younggirl.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(3n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(3n) {
   background: url(/assets/images/bg-images/vivliothiki.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(4n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(4n) {
   background: url(/assets/images/bg-images/diary.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(5n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(5n) {
   background: url(/assets/images/bg-images/books.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(6n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(6n) {
   background: url(/assets/images/bg-images/smallbooks.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(7n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(7n) {
   background: url(/assets/images/bg-images/younggirl.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(8n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(8n) {
   background: url(/assets/images/bg-images/vivliothiki.jpg); }
 
-.frontpagev3 .spoudes-group:nth-child(9n) {
+.leitourgia-grid .frontpagev3 .spoudes-group:nth-child(9n) {
   background: url(/assets/images/bg-images/diary.jpg); }
 
-.leitourgia-group:nth-child(1n) {
+.leitourgia-grid .leitourgia-group:nth-child(1n) {
   background: url(/assets/images/bg-images/bag.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(2n) {
+.leitourgia-grid .leitourgia-group:nth-child(2n) {
   background: url(/assets/images/bg-images/younggirl.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(3n) {
+.leitourgia-grid .leitourgia-group:nth-child(3n) {
   background: url(/assets/images/bg-images/vivliothiki.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(4n) {
+.leitourgia-grid .leitourgia-group:nth-child(4n) {
   background: url(/assets/images/bg-images/diary.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(5n) {
+.leitourgia-grid .leitourgia-group:nth-child(5n) {
   background: url(/assets/images/bg-images/books.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(6n) {
+.leitourgia-grid .leitourgia-group:nth-child(6n) {
   background: url(/assets/images/bg-images/smallbooks.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(7n) {
+.leitourgia-grid .leitourgia-group:nth-child(7n) {
   background: url(/assets/images/bg-images/younggirl.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(8n) {
+.leitourgia-grid .leitourgia-group:nth-child(8n) {
   background: url(/assets/images/bg-images/vivliothiki.jpg);
   background-size: cover; }
 
-.leitourgia-group:nth-child(9n) {
+.leitourgia-grid .leitourgia-group:nth-child(9n) {
   background: url(/assets/images/bg-images/diary.jpg);
   background-size: cover; }
 
-.leitourgia-group {
+.leitourgia-grid .leitourgia-group {
   margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.leitourgia-group .type {
+.leitourgia-grid .leitourgia-group .type {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2066,10 +2065,10 @@ nav {
   padding: 1em;
   background-color: rgba(18, 23, 32, 0.7); }
 
-.leitourgia-group .type:hover {
+.leitourgia-grid .leitourgia-group .type:hover {
   background-color: rgba(18, 23, 32, 0.4); }
 
-.leitourgia-group .type a {
+.leitourgia-grid .leitourgia-group .type a {
   color: #fff;
   font-weight: bold;
   border-width: 1px;
@@ -2091,7 +2090,7 @@ nav {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.leitourgia-group .type a:hover {
+.leitourgia-grid .leitourgia-group .type a:hover {
   border: 1px solid #fff;
   -webkit-transition: border-color 1s ease;
   transition: border-color 1s ease;
@@ -2101,29 +2100,29 @@ nav {
   transition: font 1s ease; }
 
 @media screen and (min-width: 993px) {
-  .leitourgia-group {
+  .leitourgia-grid .leitourgia-group {
     margin-bottom: 1.69492%;
     height: 250px;
     -ms-flex-preferred-size: 49.15254%;
         flex-basis: 49.15254%; }
-  .leitourgia-group:nth-child(3) .type a {
+  .leitourgia-grid .leitourgia-group:nth-child(3) .type a {
     padding: 2em; }
-  .leitourgia-group:nth-child(5) .type a {
+  .leitourgia-grid .leitourgia-group:nth-child(5) .type a {
     padding: 1.5em; }
-  .leitourgia-group .type a {
+  .leitourgia-grid .leitourgia-group .type a {
     font-size: 28px; }
-  .leitourgia-group .type a:hover {
+  .leitourgia-grid .leitourgia-group .type a:hover {
     font-size: 30px; } }
 
 @media screen and (max-width: 992px) {
-  .leitourgia-group {
+  .leitourgia-grid .leitourgia-group {
     margin-bottom: 1.69492%;
     height: 150px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
-  .leitourgia-group .type a {
+  .leitourgia-grid .leitourgia-group .type a {
     font-size: 22px; }
-  .leitourgia-group .type a:hover {
+  .leitourgia-grid .leitourgia-group .type a:hover {
     font-size: 24px; } }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {

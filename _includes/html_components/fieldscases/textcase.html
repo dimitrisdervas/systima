@@ -6,7 +6,7 @@
    <!-- Check if there is words limit or use the excerpt separator -->
                              {% if include.field_Data.text-words %}
    <!-- The syntax it is not right but it works - I ommited }} at the end -->
-                                    <div class="{{include.field_Data.class}}">{{ post.content | truncatewords: include.field_Data.text-words }}
+                                    <div class="{{include.field_Data.class}}">{{ post.content | truncatewords: include.field_Data.text-words | strip_html }}
                                       <div class="more {{include.field_Data.more-class}}"><a href="{{post.url}}">{{include.field_Data.more-label}}</a></div></div>
                               {% else %}
                                     <div class="{{include.field_Data.class}}">{{ post.content | split:'<!--more-->' | first }}

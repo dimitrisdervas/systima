@@ -1,14 +1,16 @@
 - name: Νέα
-  url: /news
+  url: /news/
 - name: Άρθρα
   url: /articles
 - name: Φώτο
-  url: /photos
+  url: /photos/
 - name: Σχολές
-  url: /sxoles
+  url: /sxoles/
 - name: Το Νέο Λύκειο
-  url: /lykeio
+  url: /lykeio/
 - name: Βάσεις εισαγωγής στα Α.Ε.Ι-Τ.Ε.Ι
-  url: /baseis
+  url: /baseis/
 - name: Επικοινωνία
-  url: /contact
+  url: /contact/
+- name: Λειτουργία 2
+  url: /leitourgiav2/

@@ -1743,6 +1743,194 @@ nav {
 .footer .contact-group .material-icons {
   padding: 0 10px 0 0px; }
 
+.leitourgia-blocks .leitourgia .component-header {
+  color: #36648e;
+  margin: 5% 0;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #36648e;
+  background: #fff; }
+
+.leitourgia-blocks .leitourgia-wrapper {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .leitourgia-blocks .leitourgia-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .leitourgia-blocks .leitourgia-wrapper .leitourgia-group .type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 1rem; }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(1n) {
+  background: url(/assets/images/bg-images/bag.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(2n) {
+  background: url(/assets/images/bg-images/younggirl.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(3n) {
+  background: url(/assets/images/bg-images/vivliothiki.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(4n) {
+  background: url(/assets/images/bg-images/diary.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(5n) {
+  background: url(/assets/images/bg-images/books.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(6n) {
+  background: url(/assets/images/bg-images/smallbooks.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(7n) {
+  background: url(/assets/images/bg-images/younggirl.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(8n) {
+  background: url(/assets/images/bg-images/vivliothiki.jpg); }
+
+.leitourgia-blocks .frontpagev3 .spoudes-group:nth-child(9n) {
+  background: url(/assets/images/bg-images/diary.jpg); }
+
+.leitourgia-blocks .leitourgia-group:nth-child(1n) {
+  background: url(/assets/images/bg-images/bag.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(2n) {
+  background: url(/assets/images/bg-images/younggirl.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(3n) {
+  background: url(/assets/images/bg-images/vivliothiki.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(4n) {
+  background: url(/assets/images/bg-images/diary.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(5n) {
+  background: url(/assets/images/bg-images/books.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(6n) {
+  background: url(/assets/images/bg-images/smallbooks.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(7n) {
+  background: url(/assets/images/bg-images/younggirl.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(8n) {
+  background: url(/assets/images/bg-images/vivliothiki.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group:nth-child(9n) {
+  background: url(/assets/images/bg-images/diary.jpg);
+  background-size: cover; }
+
+.leitourgia-blocks .leitourgia-group {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.leitourgia-blocks .leitourgia-group .type {
+  -ms-flex-preferred-size: 40.67797%;
+      flex-basis: 40.67797%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  background-color: rgba(1, 15, 41, 0.93); }
+
+.leitourgia-blocks .leitourgia-group .text {
+  -ms-flex-preferred-size: 66.66667%;
+      flex-basis: 66.66667%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  background-color: #151f31;
+  color: #ffffff; }
+
+.leitourgia-blocks .leitourgia-group .type a {
+  color: #fff;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(18, 23, 32, 0);
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+@media screen and (min-width: 993px) {
+  .leitourgia-blocks .leitourgia-group {
+    margin-bottom: 1.69492%;
+    height: 250px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
+
+@media screen and (max-width: 992px) {
+  .leitourgia-blocks .leitourgia-group {
+    margin-bottom: 1.69492%;
+    height: 150px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
+
 .leitourgia .component-header {
   color: #36648e;
   margin: 5% 0;

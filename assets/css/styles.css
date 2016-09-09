@@ -1482,7 +1482,7 @@ nav {
   background: url(/assets/images/bg-images/vivliothiki.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(9n) {
-  background: url(/assets/images/bg-images/diary.jpg); }
+  background: url(/assets/images/bg-images/therina.jpg); }
 
 .spoudesnew {
   margin-bottom: 5rem; }
@@ -1557,22 +1557,6 @@ nav {
 .frontpagev3 .spoudes-group:nth-child(7) .type a,
 .frontpagev3 .spoudes-group:nth-child(8) .type a {
   padding: 1.5em; }
-
-.frontpagev3 .spoudes-group:nth-child(9) {
-  background: url(/assets/images/therina.jpg); }
-  .frontpagev3 .spoudes-group:nth-child(9) .type {
-    background: #192638; }
-  .frontpagev3 .spoudes-group:nth-child(9) .type a {
-    padding: 1.5em;
-    color: #fcd13b;
-    border-color: rgba(18, 23, 32, 0); }
-  .frontpagev3 .spoudes-group:nth-child(9) .type a:hover {
-    border: 1px solid #fff;
-    -webkit-transition: border-color 1s ease;
-    transition: border-color 1s ease;
-    font-size: 30px;
-    -webkit-transition: font 1s ease;
-    transition: font 1s ease; }
 
 .omades-wrapper .blockquote-frontpage {
   display: -webkit-box;

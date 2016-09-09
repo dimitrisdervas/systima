@@ -149,7 +149,7 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
  //          color: #fff;
  //         }
  //        }
- $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, diary;
+ $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, therina;
    @for $iv2 from 1 through length($images) {
     .frontpagev3 .spoudes-group:nth-child(#{$iv2}n) {
         background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg);
@@ -224,23 +224,6 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
       padding: 1.5em;
     }
   }
-  .spoudes-group:nth-child(9) {
-      background: url(/assets/images/therina.jpg);
-    .type {
-      background: #192638;
-    }
-    .type a {
-      padding: 1.5em;
-      color: #fcd13b;
-      border-color: rgba(18, 23, 32, 0);
-    }
-    .type a:hover {
-      border: 1px solid #fff;
-      transition: border-color 1s ease;
-      font-size: 30px;
-      transition: font 1s ease;
-      }
-    }
   }
 // GLOBAL
     .omades-wrapper {

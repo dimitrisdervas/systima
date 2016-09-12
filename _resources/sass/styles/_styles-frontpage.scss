@@ -73,7 +73,11 @@
   flex-direction: column;
   align-items: center;
 }
-
+.spoudesnew {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 // http://codepen.io/thebeckyhamm/pen/szEyK
 $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
 // #333A66, #257b77, #333A66, #257b77, #333A66, #257b77;

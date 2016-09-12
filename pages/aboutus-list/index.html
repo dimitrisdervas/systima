@@ -36,6 +36,13 @@ config:
              subtitle: "Οι εκπαιδευτικοί μας"
              data-type: data-list
              content-type: teachers
+             javascript-plugin: list.js
+             javascript-plugin-data:
+               filters: 
+                 - element: all
+                 - element: teacher
+                   categories:
+                     - filter: ΦΥΣΙΚΟΣ
              fields:
               - field: group
                 class: teacher-group

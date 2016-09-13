@@ -52,3 +52,7 @@
                      - field: title
                        data:
                         class: slideshow-title
+                     - field: image
+                       data:
+                          image-hash: front
+                          image-path: /assets/images/slideshow/

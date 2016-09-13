@@ -15,16 +15,35 @@
 	.pagination {
 		display: none;
 	}
+   .contactonemap,
+   .layout-frontistiria {
+      .onemap nav{
+        @include full;
+        background: #192638;
+      }
+      .logo {
+      	width: 120px;
+      }
+      #map-canvas-multiple {
+      	display: none;
+      }
+   }
     .paroxes {
       .card {
         padding: 4%;
       }
     }
+    .paroxes h3 {
+    	font-size: 1.92rem
+	}
 	.footer {
 	  flex-direction: column;
 	  padding: 4%;
 	  .menu {
-	  	height: 320px;
+	  	height: 400px;
 	  }
+	}
+	.width25 {
+	    margin-bottom: 4%;
 	}
 }

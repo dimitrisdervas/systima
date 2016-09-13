@@ -3282,7 +3282,6 @@ small {
   width: 37px;
   height: 37px;
   line-height: 37px;
-  line-height: 2.3125rem;
   padding: 0;
   background-color: #26a69a;
   border-radius: 50%;
@@ -3295,8 +3294,7 @@ small {
     text-align: center;
     color: #fff;
     font-size: 1.6rem;
-    line-height: 37px;
-    line-height: 2.3125rem; }
+    line-height: 37px; }
   .btn-floating:hover {
     background-color: #26a69a; }
   .btn-floating:before {
@@ -3305,8 +3303,7 @@ small {
     width: 55.5px;
     height: 55.5px; }
     .btn-floating.btn-large i {
-      line-height: 55.5px;
-      line-height: 3.46875rem; }
+      line-height: 55.5px; }
 
 button.btn-floating {
   border: none; }
@@ -5932,6 +5929,73 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/googlefonts/Open_Sans-normal-400.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/googlefonts/Open_Sans-normal-700.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/googlefonts/Open_Sans_Condensed-normal-700.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/googlefonts/Roboto-normal-400.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/googlefonts/Roboto-normal-700.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/googlefonts/Roboto_Condensed-normal-400.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/googlefonts/Roboto_Condensed-normal-700.woff) format("woff");
+  unicode-range: U+0-10FFFF; }
+
+html {
+  font-size: calc(16px + 4 * ((100vw - 420px) / 860));
+  line-height: 1.75;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
+
+@media screen and (min-width: 1280px) {
+
+  html {
+    font-size: 20px; } }
+
+@media screen and (max-width: 420px) {
+
+  html {
+    font-size: 16px; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Condensed", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
+
 /*
  *  Default theme - Owl Carousel CSS File
  */
@@ -6048,13 +6112,11 @@ body {
     content: " ";
     display: block;
     clear: both; }
-  .footer .contact-footer {
-    display: flex;
-    flex-direction: column; }
-    .footer .contact-footer .contact-group {
-      margin-bottom: 7%; }
+  .footer .contact-footer .contact-group {
+    margin-bottom: 7%; }
   .footer .menu nav {
-    margin-top: 0; }
+    margin-top: 0;
+    height: auto; }
   .footer .menu ul {
     display: flex;
     flex-direction: column; }
@@ -6135,8 +6197,14 @@ body {
   .onemap .nav-wrapper {
     position: relative;
     height: 100%;
-    width: 1280px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin: auto; }
+    .onemap .nav-wrapper:after {
+      content: " ";
+      display: block;
+      clear: both; }
   .logo {
     display: flex;
     justify-content: center;
@@ -6148,13 +6216,20 @@ body {
     width: 75%;
     float: right;
     margin-right: 0; }
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0 0.2rem; }
   .hero-group {
     flex-basis: 80%;
     max-width: 1280px; }
   .aboutus .hero-group {
     color: #CE4646; }
   .aboutus .teachers .component-title {
-    margin-top: 0; }
+    margin-top: 0;
+    font-size: 48px;
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem; }
   .aboutus .secretaria .component-title {
     margin-top: 0;
     padding: 2% 0; }
@@ -6193,15 +6268,12 @@ body {
       padding: 0; }
   .paroxes .card {
     padding: 4%; }
-  .contact .maincontent {
-    display: flex;
-    flex-wrap: wrap; }
-  .contact .contact-footer {
-    background: #fff;
-    flex-basis: 50%;
-    height: 100%; }
-  .contact .contact .contact-form-materialize {
-    margin-bottom: 10%; }
+  .contactonemap .onemap {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
   .footer {
     max-width: 1170px;
     margin-left: auto;
@@ -6217,10 +6289,10 @@ body {
       clear: both; }
     .footer div {
       flex-basis: 33.33333%; }
-    .footer .contact-footer {
+    .footer .contact-footer .group-fields {
       display: flex;
       flex-direction: column; }
-      .footer .contact-footer .contact-group {
+      .footer .contact-footer .group-fields .contact-group {
         margin-bottom: 7%; }
     .footer .menu nav {
       margin-top: 0; }
@@ -6229,12 +6301,19 @@ body {
       flex-direction: column; }
     .footer .menu a {
       line-height: 2.1; }
+    .footer .width25 {
+      margin-bottom: 5%; }
     .footer .social-footer {
       display: flex;
       flex-direction: column; }
       .footer .social-footer .social ul {
         display: flex;
         justify-content: space-around; } }
+
+@media screen and (min-width: 1355px) {
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0 15px; } }
 
 @media screen and (max-width: 992px) {
   .page {
@@ -6248,13 +6327,43 @@ body {
     margin-bottom: 3rem; }
   .pagination {
     display: none; }
+  .contactonemap .onemap nav,
+  .layout-frontistiria .onemap nav {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #192638; }
+  .contactonemap .logo,
+  .layout-frontistiria .logo {
+    width: 120px; }
+  .contactonemap #map-canvas-multiple,
+  .layout-frontistiria #map-canvas-multiple {
+    display: none; }
   .paroxes .card {
     padding: 4%; }
+  .paroxes h3 {
+    font-size: 1.92rem; }
   .footer {
     flex-direction: column;
     padding: 4%; }
     .footer .menu {
-      height: 320px; } }
+      height: 400px; }
+  .width25 {
+    margin-bottom: 4%; } }
+
+@media screen and (min-width: 768px) {
+  .frontistiria {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .frontistiria .frontistirio:nth-child(2) {
+      margin: 0 2em; }
+    .frontistiria .card {
+      margin: 0; }
+  .footer {
+    flex-direction: row; } }
 
 /*  */
 /* Styles */
@@ -6263,12 +6372,6 @@ body {
 /* Colors */
 /*  */
 /* Defaults */
-@font-face {
-  font-family: "Material-Design-Icons";
-  src: url("../fonts/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../fonts/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../fonts/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../fonts/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 .z-depth-0 {
   box-shadow: none !important; }
 
@@ -6306,6 +6409,9 @@ body {
 .cms-editor-active .editor-link {
   display: block; }
 
+.btn-floating.btn-large i {
+  line-height: 55.5px; }
+
 body {
   background-color: #bcbdc0; }
 
@@ -6318,7 +6424,9 @@ body {
   margin-top: 0; }
 
 .frontistiria .textarea {
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  line-height: 55.5px;
+  line-height: 3.46875rem; }
 
 .gallery-thumbnails {
   width: 500px;
@@ -6458,7 +6566,11 @@ body {
   background: #192638;
   color: #fcd13b;
   padding: 5px 15px;
-  margin-top: 0; }
+  margin-top: 0;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 .books {
   background: url("/assets/images/blackboard.jpg") no-repeat;
@@ -6490,13 +6602,14 @@ body {
   background-color: rgba(18, 23, 32, 0.7); }
 
 .aboutus .preface h1 {
-  margin-top: 0;
-  margin-bottom: 5%;
-  color: #ffffff; }
+  margin-bottom: 5%; }
 
 .aboutus .preface {
   padding: 0;
   background: transparent; }
+
+.aboutus .name {
+  font-weight: bold; }
 
 .aboutus .secretaria {
   padding: 4% 0; }
@@ -6506,8 +6619,6 @@ body {
 
 .leitourgia-post .title {
   color: #175394;
-  font-size: 32px;
-  font-size: 2rem;
   font-weight: bold;
   padding-bottom: 4%;
   padding-top: 2%;
@@ -6526,8 +6637,7 @@ body {
 
 .width25 {
   width: 25%;
-  margin-left: 0%;
-  margin-bottom: 10%; }
+  margin-left: 0%; }
 
 tr th,
 tr td {
@@ -6676,8 +6786,7 @@ nav {
   background-color: transparent; }
 
 #nav-mobile a {
-  color: #f2f2f2;
-  font-weight: bold; }
+  color: #f2f2f2; }
 
 nav {
   background-color: transparent; }
@@ -6695,8 +6804,7 @@ nav {
   nav #nav-mobile {
     background-color: transparent; }
     nav #nav-mobile a {
-      color: #f2f2f2;
-      font-weight: bold; }
+      color: #f2f2f2; }
     nav #nav-mobile a:hover {
       color: #323232; }
 
@@ -6760,8 +6868,8 @@ nav {
   .frontpage .why .title,
   .frontpagev1 .why .title,
   .frontpagev2 .why .title {
-    font-size: 42px;
-    font-size: 2.625rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: bold;
     padding: 2rem 0;
     margin-bottom: 30px;
@@ -7016,8 +7124,8 @@ nav {
     color: #323232;
     padding-left: 55px; }
     .omades-wrapper .blockquote span {
-      font-size: 36px;
-      font-size: 2.25rem;
+      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 1.4; }
   .frontpagev3 .spoudes-group {
     flex-basis: 32.20339%;
@@ -7033,8 +7141,8 @@ nav {
   .frontpagev3 .spoudes-group .type:hover {
     background-color: rgba(18, 23, 32, 0.4); }
   .frontpagev3 .spoudes-group .type a {
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     color: #fff;
     font-weight: bold;
     border-width: 1px;
@@ -7050,8 +7158,8 @@ nav {
     border: 1px solid #fff;
     transition: border-color 1s ease;
     background: rgba(0, 0, 0, 0.2);
-    font-size: 30px;
-    font-size: 1.875rem;
+    font-size: 26px;
+    font-size: 1.625rem;
     transition: font 1s ease; }
   .why .title,
   .why .content {
@@ -7239,7 +7347,8 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  font-family: "Open Sans Condensed", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 @media screen and (min-width: 993px) {
   .leitourgia-blocks .leitourgia-group {
@@ -7429,19 +7538,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 .contactonemap .contact-form-materialize {
   background: #fff;
-  padding: 0 4%;
+  padding: 4%;
   margin-bottom: 10%; }
-
-.contact .contact-form-materialize {
-  background: #619BB9;
-  padding: 0 4%;
-  margin-bottom: 10%; }
-
-.contact .input-field label {
-  color: #151B27; }
-
-.contact input[type=text], .contact input[type=password], .contact input[type=email], .contact input[type=url], .contact input[type=time], .contact input[type=date], .contact input[type=datetime-local], .contact input[type=tel], .contact input[type=number], .contact input[type=search], .contact textarea.materialize-textarea {
-  border-bottom: 1px solid #151B27; }
 
 #map-canvas .map-title {
   font-size: 48px;

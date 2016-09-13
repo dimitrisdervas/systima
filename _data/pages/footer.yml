@@ -18,6 +18,9 @@
            class: width25
           content-type: frontistiria
           data-type: data-list
+          groupElement: 
+           data:
+             class: group-fields
           fields:
              - field: group
                class: contact-group

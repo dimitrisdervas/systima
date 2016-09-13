@@ -41,8 +41,6 @@ body {
   display: flex;
   padding: 4%;
    .contact-footer {
-     display: flex;
-     flex-direction: column;
      .contact-group {
        margin-bottom: 7%;
      }
@@ -50,6 +48,7 @@ body {
    .menu {
      nav {
        margin-top: 0;
+       height: auto;
      }
        ul {
        display: flex;
@@ -122,4 +121,5 @@ body {
     font-size: 30px;
   }
 }
+
 

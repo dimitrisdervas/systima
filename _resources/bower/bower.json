@@ -23,6 +23,7 @@
     "susy": "^2.2.12",
     "normalize-strings": "normalize#^1.1.0",
     "normalize-css": "^4.2.0",
-    "typographic": "^2.9.3"
+    "typographic": "^2.9.3",
+    "shufflejs": "^4.0.1"
   }
 }

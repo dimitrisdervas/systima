@@ -4,17 +4,6 @@
 // 
 @import "vendor/normalize-scss/sass/normalize";
 // 
-// TYPOGRAPHY
-// 
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/googlefonts/Roboto_Slab-normal-400.woff) format('woff');
-  unicode-range: U+0-10FFFF;
-}
-
-// 
 // ΜΑΤΕRIALIZE
 // 
 // Mixins
@@ -49,6 +38,30 @@
 @import "vendor/materialize/sass/components/date_picker/default";
 @import "vendor/materialize/sass/components/date_picker/default.date";
 @import "vendor/materialize/sass/components/date_picker/default.time";
+
+// 
+// TYPOGRAPHY
+// 
+@import "fonts/googlecss/myGoogleFonts";
+
+$roboto: 'Roboto','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$roboto-condensed: 'Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$open-sans: 'Open sans','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$open-sans-condensed: 'Open Sans Condensed','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+
+html {
+  font-size: responsive;
+  min-font-size: 16px;
+  max-font-size: 20px;
+
+  line-height: 1.75;
+
+  font-family: $roboto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $open-sans-condensed;
+}
 
 // 
 // OWL.carousel
@@ -97,7 +110,9 @@ $dot-background-active: $color-base !default;
 @import
        "layouts/layout-global",
        "layouts/layout-normal",
-       "layouts/layout-mobile"
+
+       "layouts/layout-mobile",
+              "layouts/layout-tablet"
    ;
 
 

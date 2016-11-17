@@ -3,4 +3,4 @@ _site
 node_modules
 gulpfile.js
 package.json
-_includes/bower.json
+_resources/bower

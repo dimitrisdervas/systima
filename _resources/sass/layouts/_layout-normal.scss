@@ -77,7 +77,8 @@
    }
    .aboutus {
     .preface,
-    .teachers {
+    .teachers,
+    #teachers {
        @include layout($textarea);
        @include container;
        width: 100%;

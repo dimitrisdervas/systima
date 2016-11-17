@@ -6239,13 +6239,15 @@ body {
     .aboutus .teacher-group .name {
       min-width: 41.66667%; }
   .aboutus .preface,
-  .aboutus .teachers {
+  .aboutus .teachers,
+  .aboutus #teachers {
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
     .aboutus .preface:after,
-    .aboutus .teachers:after {
+    .aboutus .teachers:after,
+    .aboutus #teachers:after {
       content: " ";
       display: block;
       clear: both; }
@@ -6699,7 +6701,9 @@ body {
 
 .aboutus .filtr-item {
   width: 256px;
-  margin: 25px; }
+  margin: 25px;
+  padding: 15px;
+  border: 1px solid #ccc; }
 
 .aboutus .name {
   font-weight: bold;

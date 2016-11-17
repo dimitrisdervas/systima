@@ -370,16 +370,13 @@ body {
           }
         }
     }
-    .filtr-item {
-      width: 256px;
-      margin: 25px;
-      img {
-
-      }
+     .filtr-item {
+        width: 256px;
+        margin: 25px;
+        padding: 15px;
+        border: 1px solid #ccc;
     }
-    #teachers {
 
-    }
     .name {
       font-weight: bold;
       font-size: 15px;

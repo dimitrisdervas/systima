@@ -1,7 +1,0 @@
-<!-- Check the group element -->
-{% if include.component-data.groupElement %}
-        {% capture groupElement %}<div {% for data in include.component-data.groupElement.data %}
-                          {{data[0]}}="{{data[1]}}"
-                      {% endfor %}>{% endcapture%}
-        {% capture groupElementEnd %}</div>{% endcapture%}
-{% endif %}

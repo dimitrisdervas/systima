@@ -1,8 +1,0 @@
-<nav class="android-navigation mdl-navigation">
-   {% assign menu-yaml =  site.data.content.[include.component-data.content-type] %}
-   {% for menu in menu-yaml %}
-         <div class="menu-item mdl-navigation" data-theme-menu="{{ include.data-theme }}">
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ site.baseurl }}/{{ menu.url }}">{{ menu.name }}</a>
-         </div>
-      {% endfor %}
-</nav>

@@ -53,12 +53,15 @@ $Comfortaa: 'Comfortaa','Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 html {
   font-size: responsive;
   min-font-size: 16px;
-  max-font-size: 20px;
+  max-font-size: 16px;
   line-height: 1.75;
   font-family: $roboto;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,
+.title,
+.component-title,
+.spoudesnew .type {
   font-family: $Comfortaa;
 }
 

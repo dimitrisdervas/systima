@@ -5972,21 +5972,24 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   unicode-range: U+0-10FFFF; }
 
 html {
-  font-size: calc(16px + 4 * ((100vw - 420px) / 860));
+  font-size: calc(16px + 0 * ((100vw - 420px) / 860));
   line-height: 1.75;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 @media screen and (min-width: 1280px) {
 
   html {
-    font-size: 20px; } }
+    font-size: 16px; } }
 
 @media screen and (max-width: 420px) {
 
   html {
     font-size: 16px; } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.title,
+.component-title,
+.spoudesnew .type {
   font-family: "Comfortaa", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 /*

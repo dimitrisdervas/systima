@@ -217,10 +217,11 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
           display: flex;
           align-items: center;
           background: #fcd13b;
-          justify-content: space-between;
+          justify-content: center;
           padding: 15px;
         }      
       .blockquote {
+        text-align: center;
         span {
           font-weight: bold;
           color: #192638;

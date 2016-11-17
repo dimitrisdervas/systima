@@ -1,0 +1,114 @@
+---
+title: Επικοινωνία
+layout: default-map
+pagetitle: contactonemap
+permalink: /contact/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: maincontent
+   divs:
+      - div:
+         theme:
+          class: frontistiria--block
+        components:
+         - component: posts-list
+           data:
+            title: "Φροντιστηρία"
+            data-type: collection
+            content-type: frontistiria
+            groupElement:
+              data:
+                class: frontistiria
+            fields:
+              - field: group
+                class: frontistirio card
+                fields:
+                   - field: images
+                     data:
+                      class: card-image
+                      tag: main
+                      link: post
+                      images-path: /assets/images/frontistiria/
+                      image-hash: image
+                   - field: group
+                     class: card-content
+                     fields:
+                       - field: title
+                         data:
+                          link: posts
+      - div:
+         theme:
+          class: preface
+        components:
+         - component: one-post
+           data:
+             title: Επικοινωνία
+             data-type: collection
+             content-type: other
+             post-title: "contact-preface"
+             fields:
+              - field: content
+      - div:
+         theme:
+          class: contact-form-materialize
+        components:
+         - component: form
+           data:
+            title: Φόρμα Επικοινωνίας
+            javascript-plugin: form
+            theme:
+              class: form
+            fields:
+                 - field: redirect
+                   data:
+                     url: pages/thankyou.html
+                 - field: input
+                   wrapperDiv:
+                     theme:
+                       class: input-field
+                   data:
+                    name: name
+                    label: όνομα
+                    class: name validate
+                    type: text
+                 - field: input
+                   wrapperDiv:
+                     theme:
+                       class: input-field
+                   data:
+                    name: email
+                    label: email
+                    class: email validate
+                    type: email
+                 - field: input
+                   wrapperDiv:
+                     theme:
+                       class: input-field
+                   data:
+                     name: phone
+                     class: phone validate
+                     type: text
+                     label: τηλέφωνο
+                 - field: textarea
+                   wrapperDiv:
+                     theme:
+                        class: input-field message
+                   data:
+                    class: materialize-textarea
+                    name: message
+                    type: text
+                    id: textarea
+                    label: μήνυμα
+                 - field: button
+                   data:
+                    class: submit-button btn waves-effect
+                    type: submit
+                    name: action
+                    value: Contact
+                    button-text: ΑΠΟΣΤΟΛΗ
+---
+
+{% include basic_components/page.html %}

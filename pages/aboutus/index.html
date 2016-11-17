@@ -1,0 +1,70 @@
+---
+title: Σχετικά με εμάς
+layout: default-dev-frontpage
+pagetitle: aboutus
+permalink: /aboutus/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+    seoTitle:
+     data:
+      label: "Σχετικά με εμάς"
+   divs:
+      - div:
+         theme:
+          class: preface
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "Σχετικά με εμάς"
+             fields:
+              - field: title
+                data:
+                  element: h1
+                  class: page-title
+              - field: content
+      - div:
+         theme:
+          class: teachers
+        components:
+         - component: posts-list-filterizr
+           data:
+             title: "ΜΠΟΥΡΝΤΑ-ΛΟΥΚΙΔΟΥ Ο.Ε."
+             subtitle: "Οι εκπαιδευτικοί μας"
+             data-type: data-list
+             content-type: teachers
+             javascript-plugin: filterizr
+             groupElement:
+              data:
+                id: teachers
+             fields:
+              - field: group
+                filterizr: true
+                class: teacher-filterizr
+                fields:
+                  - field: image
+                    data:
+                     image-hash: image
+                     image-path: /assets/images/teachers/
+                  - field: name
+                  - field: teacher                  
+      - div:
+         theme:
+          class: secretaria
+        components:
+         - component: posts-list
+           data:
+             title: Γραμματεία
+             data-type: data-list
+             content-type: secretaria
+             fields:
+              - field: name
+
+
+---
+{% include basic_components/page.html %}

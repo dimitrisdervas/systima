@@ -1,0 +1,69 @@
+<!-- FROM HERE -->
+<!--  https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Auto-complete_content -->
+<form id="reservation-form" data-parsley-validate action="https://getsimpleform.com/messages?form_api_token=4e4801ec96e34437f63d843c5ca3e435" method="post">
+<!-- Just print the fields -->
+<!-- Loop each field in the component -->
+   <!--  If there is grouping div got fields -->
+   
+           {% if include.component-data.fieldset %}
+
+             {% include html_components/formCases/formgroup.html %}
+
+           {% else %}
+               
+                        <!-- Just print the fields -->
+                        <!-- Loop each field in the component -->
+                         {% assign fields = include.component-data.fields %}    
+                           <!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+                           <!-- Just print the fields -->
+                           {% for field in fields  %}
+                     <div {% include basic_components/pageincludes/themeelement.html elementData=field.wrapperDiv.theme %} >
+                        
+                              {% case field.field  %}
+                        
+                                 {% when 'redirect' %}
+                                       <input type='hidden' name='redirect_to' value='{{site.url}}{{site.baseurl}}/{{field.data.url}}' />
+                        
+                                 {% when 'date' %}
+  
+                                       <label for="{{ field.data.id }}">{{ field.data.label }}</label>                 
+                                       <input type="date" class="datepicker {{ field.data.class }}" name="{{ field.data.name }}" required>
+                     
+                                 {% when 'textarea' %}
+                                       <textarea {% include basic_components/pageincludes/themeelement.html elementData=field.data %}></textarea>
+                              <!-- INPUT --> 
+                                 {% when 'input' %}
+                              <label for="{{ field.data.id }}">{{ field.data.label }}</label>                 
+                                       <input {% include basic_components/pageincludes/themeelement.html elementData=field.data %} required>
+                              <!-- DROPDOWN BOX --> 
+                                 {% when 'select' %}
+                                       <select required name="{{ field.data.name }}">
+                                          {% for option in field.options %}
+                                             {% if forloop.first  %}
+                                             <option value="" {{ option.data }} >{{ option.option }}</option>
+                                          {% else %}
+                                              <option value="{{ option.option }}">{{ option.option }}</option>
+                                          {% endif %}
+                                          {%  endfor %}
+                                       </select>
+                               <label for="{{ field.data.id }}">{{ field.data.label }}</label>
+                              <!-- CHECKABLE  -->                 
+                                 {% when 'check' %}
+                                      <label for="{{ field.data.id }}">{{ field.data.label }}</label>
+                                       <input type="checkbox" checked>
+                              <!-- BUTTONS -->
+                                 {% when 'button' %}
+                                       <button {% for data in field.data %} {{ data[0] }}="{{ data[1] }}" {% endfor %} >
+                                             {{ field.data.button-text }}
+                                       </button>
+                              <!--  End case of fields -->
+                               {% endcase %}
+
+                           <!--  End loop in fields -->
+                                </div>
+                             {% endfor %} 
+                        <!--  END IF to check for GROUP -->
+          
+           {% endif %}
+   
+    </form>

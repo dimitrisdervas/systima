@@ -1,0 +1,499 @@
+// Z-levels
+.z-depth-0 {
+  box-shadow: none !important;
+}
+.z-depth-1{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.z-depth-1-half{
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.z-depth-2{
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-3{
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-4{
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.z-depth-5{
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.waves-effect.waves-greenlila .waves-ripple {
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+   background-color: rgba(119, 147, 60, 0.65);
+}
+
+.editor-link {
+  display: none;
+}
+
+.cms-editor-active .editor-link {
+  display: block;
+}
+.btn-floating.btn-large i {
+  line-height: 55.5px;      
+}
+body {
+  background-color: $bodyBg;
+}
+
+.block {
+  @extend .z-depth-2;
+}
+
+.top-article {
+    background: #fff;
+    color: #323232;
+    padding: 3% 5%;
+}
+
+.frontistiria h1 {
+    margin-top: 0;
+  }
+.frontistiria .textarea {
+  margin-bottom: 5%;
+  line-height: 55.5px;
+}
+
+
+.gallery-thumbnails {
+ width: 500px;
+ display: flex;
+ margin-bottom: 10%;
+ }
+
+.contactonemap {
+  .frontistiria--block {
+    .component-header {
+        color: #36648e;
+        margin: 0 0 5%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #E6E6E6;
+    }
+    .card {
+      padding: 0;
+    }
+    margin-bottom: 10%;
+      .frontistirio {
+        .post-image {
+          }
+        .name{
+            font-size: 22px;
+          }
+          a {
+            color: #132b46;
+          }
+      }
+      .frontistirio:hover {
+        background-color: #007da6;
+          a {
+            color: #fff;
+        }
+      }
+  }
+}
+
+
+
+#map-canvas-multiple.title {
+   font-weight: bold;
+}
+
+.paroxes {
+  h1.title {
+    font-size: 48px;
+    padding: 0;
+    text-align: center;
+  }
+  h3 {
+    font-weight: bold;
+  }
+}
+// 
+// BASEIS
+// 
+.baseis .textarea {
+      background: #fff;
+      padding: 2rem 4rem;
+      margin-bottom: 5rem;
+      tr:first-child {
+        padding-bottom: 2%;
+      }
+}
+// BASEIS - DIV 
+.baseis-group {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  .code,
+  .school,
+  .university {
+    float: left;
+  }
+  .basi {
+    float: right;
+  }
+  .code {
+        font-weight: bold;
+        padding-right: 5px;
+  }
+  .school {
+    font-weight: bold;
+    width: span( 8 of 12);
+  }
+}
+.baseis-group:nth-child(even) {
+    background: #dddddd;
+}
+
+
+.lykeio {
+  .top-article {
+  //  background: url("#{$baseurl}/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
+   background-size: cover;
+   color: $white;
+   padding: 0;
+ }
+ .color-overlay {
+   background-color: rgba(18,23,32,0.7);
+   padding: 4%;
+     .title {
+       font-size: 24px;
+       padding: 2%;
+       font-weight: bold;
+       border-bottom: 3px solid #191818;
+       background: rgb(174, 41, 41);
+       margin-bottom: 2%;
+     }
+  }
+}
+
+.more {
+    text-transform: none;
+    float: right;
+}
+
+.card-content {
+  padding: 20px;
+  border-radius: 0;
+}
+
+
+.articles,
+.news {
+  .title {
+    color: #175394;
+    font-size: 24px;
+    padding-bottom: 4%;
+    padding-top: 2%;
+    line-height: 1.5;
+  }
+  p {
+    font-size:16px;
+  }
+}
+
+
+// 
+// SUCCESS PAGE
+// 
+.success {
+  .tabs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 48px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    white-space: nowrap;
+    @extend .z-depth-1;
+    }
+  .tab {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: .8px ;
+    width: 15%;
+    min-width: 100px;
+    }
+  .tabs .tab a {
+    font-size: 28px;
+    }
+  .success-group {
+    display: flex;
+    padding: 5px;
+    }
+  .success-group:nth-child(even) {
+    background: #dddddd;
+    }
+  .name.name-title {
+    padding-left: 5px;
+    font-weight: bold;
+    }
+
+  .component-title {
+    background: #192638;
+    color: #fcd13b;
+    padding: 5px 15px;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $open-sans-condensed;
+    }
+}
+
+// PUBLICATIONS
+.books {
+  background: url("/assets/images/blackboard.jpg") no-repeat;
+  padding: 6% 4%;
+  color: #fff;
+  background-size: cover;
+}
+.book-group {
+  margin-bottom: 5%;
+  font-size: 16px;
+}
+.book-title {
+  font-weight: bold;
+  line-height: 1.5;
+}
+/* Fallback styles  - http://codepen.io/jasondavis/pen/szbDf */
+.book-image {
+  box-shadow: 0 2px 7.68px .32px rgba(0, 0, 0, 0.4),0 12px 26px 0 rgba(0, 0, 0, 0.4);
+  max-width: 200px;
+}
+.author {
+   font-style: italic;
+ }
+//
+// ABOUT US
+//
+.aboutus {
+    .color-overlay {
+      background-color: rgba(18, 23, 32, 0.7);
+    }
+    .preface h1 {
+       margin-bottom: 5%;
+      float: left;
+      display: block;
+      width: 100%;
+    }
+    .preface {
+      background: #fff;
+      padding: 0% 4% 1%;
+    }
+    .teachers {
+      background: #fff;
+      padding: 0 4% 4%;
+    }
+    .secretaria {
+      background: #fff;
+      padding: 0 4% 4%;
+    }
+    ul.filters {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          max-height: 40px;
+        }
+        li.active {
+              border-bottom: 1px solid #26a69a;
+          }
+        li:before {
+            content: '';
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            z-index: 0;
+            border: 2px solid #5a5a5a;
+            border-radius: 1px;
+            margin-top: 2px;
+            transition: .2s;
+            margin-right: 20px;
+        }
+        li.active:before {
+              content: '';
+              display: flex;
+              top: -4px;
+              left: -5px;
+              width: 12px;
+              height: 22px;
+              border-top: 2px solid transparent;
+              border-left: 2px solid transparent;
+              border-right: 2px solid #26a69a;
+              border-bottom: 2px solid #26a69a;
+              -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+        }
+        ul.subfilters {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            max-height: 40px;
+          }
+        }
+    }
+     .filtr-item {
+        width: 256px;
+        margin: 25px;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .secretaria .component-title {
+        font-weight: bold;
+    }
+}
+//
+// LEITOURGIA
+//
+.leitourgia-post {
+    .title {
+      color: #175394;
+      font-weight: bold;
+      padding-bottom: 4%;
+      padding-top: 2%;
+      line-height: 1.5;
+    }
+}
+.leitourgia-post.card {
+  padding: 4%;
+}
+.success{
+   padding: 4%;
+   background: #fff;
+}
+.preface{
+   padding: 4%;
+   background: #fff;
+}
+
+
+// HR in footer after the title
+.width25 {
+   width: 25%;
+   margin-left: 0%;
+}
+
+// STUDIES - TABLES
+tbody {
+
+}
+tr th,
+tr td {
+    padding: 0 5px;
+  }
+tr th {
+  background: #365073;
+  color: #fff;
+  border-radius: 0px;
+}
+tfoot {
+  tr:nth-child(1){
+    background: #ddd;
+    font-weight: bold;
+}
+  td {
+    padding: 5px;
+  }
+}
+.clykeiou,
+.apofoitoi {
+  tr td:nth-child(even) {
+    border-right: 2px solid #929292;
+  }
+  tbody tr:nth-child(4),
+  tfoot tr:nth-child(2),
+  tfoot tr:nth-child(3) {
+    color: #e53f3f;
+    font-weight: bold;
+  }
+}
+
+.blykeiou {
+  table {
+      margin-bottom: 0;
+  }
+  h2#section-1 {
+      background: #ffee58;
+      padding: 0.2em;
+  }
+  h4#section-2,
+  h4#section-3,
+  h4#section-4,
+  h4#section-5 {
+    background: #365073;
+    color: #fff;
+    padding: 5px 15px;
+  }
+  table:nth-child(1) tr td:nth-child(even) {
+    border-right: 2px solid #929292;
+  }
+}
+
+// FRONTISTIRIA
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-bottom: 50px;
+  .material-placeholder {
+    @include layout($symmetric);
+    flex-basis: span(4 of 12);
+    img {
+      @extend .z-depth-1; 
+      margin-bottom: 3px;
+    }
+  }
+}
+@include susy-media(mobile) {
+  .success-group {
+    flex-wrap: wrap;
+    }
+}
+@include susy-media(normal) {
+  .success-group {
+    flex-wrap: no-wrap;
+    }
+}

@@ -1,0 +1,56 @@
+<!-- DEBUG FILE: html_components/components_includes/fieldscases.html -->
+<!-- Just print the fields -->
+{% assign fields = include.component-data.fields %}
+              {% for field in fields  %}
+<!--  Check what type of field we are prinitng -->
+                    {% case field.field  %}
+
+                    {% when 'image' %}
+                      {% if  page.image %}
+                         <div class="post-image {{ field.data.class }}" data-hash="{{ page.[field.data.image-hash] }}">
+                              {% if image.[field.data.image-hash] contains 'https://' or image.[field.data.image-hash] contains 'http://'%}
+                                 <img src="{{ post.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                              {% else %}
+                                 <img src="{{ site.baseurl}}{{ field.data.image-path }}{{ page.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                              {% endif %}
+                                </a>
+                         </div>
+                      {% endif %}
+                    
+                    {% when 'images' %}
+                    {% for image in page.images limit: {{field.data.limit}}  %}
+                       <div class="post-image {{ field.data.class }}" data-hash="{{ image.[field.data.images-hash] }}">
+                            {% if image.[field.data.images-hash] contains 'https://' or image.[field.data.images-hash] contains 'http://'%}
+                               <img src="{{ image.[field.data.images-hash] }}" alt="{{ image.alt }}">
+                            {% else %}
+                               <img src="{{ site.baseurl}}{{ field.data.images-path }}{{ image.[field.data.images-hash] }}" alt="{{ image.alt }}">
+                            {% endif %}
+                              </a>
+                       </div>
+                    {% endfor %}
+
+                    {% when 'thumbnails' %}
+                    {% for image in page.images limit: field.data.limit  %}
+                    <a class="slideshow-thumbnail {{ include.field_Data.class }}" href="#{{ image.[field.data.image-hash] }}">
+                      {% if image.[field.data.image-hash] contains 'https://' or image.[field.data.image-hash] contains 'http://'%}
+                         <img src="{{ image.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                      {% else %}
+                         <img src="{{ site.baseurl}}{{ field.data.images-path }}{{ image.[field.data.image-hash] }}" alt="{{ image.alt }}">
+                      {% endif %}
+                        </a>
+                    {% endfor %}
+
+
+                    {% when 'title' %}
+                    <h1 class="{{field.field}}">
+                       {{ page.[field.field] }}
+                    </h1>
+
+                    {% else %}
+                    <div class="{{field.field}}">
+                       {{ page.[field.field] }}
+                    </div>
+
+                    {% endcase %}
+<!--  End loop in fields -->
+                  {% endfor %}

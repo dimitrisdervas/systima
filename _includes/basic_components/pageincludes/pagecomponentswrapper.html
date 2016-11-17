@@ -1,0 +1,9 @@
+{% if htmlComponent.data.wrapperDiv %}
+   {% capture componentWrapperDiv %}<div {% include basic_components/pageincludes/themeelement.html elementData=htmlComponent.data.wrapperDiv.theme %}>{% endcapture %}
+   {% capture componentWrapperDivEnd %}</div>{% endcapture %}
+{% else %}
+   {% capture componentWrapperDiv %}{% endcapture %}
+   {% capture componentWrapperDivEnd %}{% endcapture %}
+{% endif %}
+
+{{ componentWrapperDiv }}

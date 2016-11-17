@@ -1,0 +1,38 @@
+<!--                   -->
+<!-- LIST.js - FILTERS -->
+<!--                   -->
+{% if include.component-data.javascript-plugin == 'list.js'  %}
+
+   <div id="testlistsjs">
+<!--    Filters for the listsjs  -->
+      <div class="filter-categories">
+         <ul>
+       {% for element in include.component-data.javascript-plugin-data.filters %}     
+            {% for filter in element.categories %}
+                  <li id="filter-{{ filter.filter | slugify }}" >
+                    {{ filter.filter }}
+                     </li>
+               {% endfor %}
+         {% endfor %}    
+         </ul>
+
+      </div>
+   
+      {% if include.component-data.javascript-plugin-data.search %}
+<!--    SEARCH -->
+       <input class="search" placeholder="{{include.component-data.javascript-plugin-data.search.placeholder}}" />
+      {% endif %}
+      
+<!--    SORT -->
+      {% if include.component-data.javascript-plugin-data.sort %}
+         {% for sort in include.component-data.javascript-plugin-data.sort %}
+         <ul class="sort-by">
+                  <li class="sort btn" data-sort="{{ sort.data }}">{{ sort.label }}</li>
+                </ul>
+               {% endfor %}
+      {% endif%}
+
+
+   {% capture filterDivEnd %}</div>{% endcapture%}
+
+{% endif %}

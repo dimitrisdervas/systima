@@ -1,0 +1,32 @@
+<!-- DEBUG FILE: html_components/fieldscases/textCase.html -->
+<!-- If text is about blog which means the to print the post.content -->
+               {% if include.data-type == 'collection' %}
+<!-- If it is about a blog teaser -->
+                        {% if include.field_Data.text-teaser != nill %}
+   <!-- Check if there is words limit or use the excerpt separator -->
+                             {% if include.field_Data.text-words %}
+   <!-- The syntax it is not right but it works - I ommited }} at the end -->
+                                    <div class="{{include.field_Data.class}}">{{ post.content | truncatewords: include.field_Data.text-words | strip_html }}
+                                      <div class="more {{include.field_Data.more-class}}"><a href="{{post.url}}">{{include.field_Data.more-label}}</a></div></div>
+                              {% else %}
+                                    <div class="{{include.field_Data.class}}">{{ post.content | split:'<!--more-->' | first }}
+                                      <div class="more {{include.field_Data.more-class}}"><a href="{{post.url}}">{{include.field_Data.more-label}}</a></div></div>
+                              {% endif %}
+                        {% else %}
+                           <div class="{{include.field_Data.class}}">{{ post.content }}</div>
+
+                           {% endif %}
+                 {% else %}
+<!-- If it is about a simple text field -->
+<!-- and there is a teaser -->
+                        {% if include.field_Data.text-teaser != nill %}
+<!-- Check if there is words limit or use the excerpt separator -->
+                                    {% if include.field_Data.text-words %}
+                                          <div class="{{include.field_Data.class}}">{{ post.text | truncatewords:{{ include.field_Data.text-words }}</div>
+                                    {% else %}
+                                          <div class="{{include.field_Data.class}}">{{ post.text | split:'<!--more-->' | first }}</div>
+                                       {% endif %}
+                              {% else %}
+                                 <div class="{{ include.field_Data.class }}">{{ post.text }}</div>
+                        {% endif %}
+                    {% endif %}

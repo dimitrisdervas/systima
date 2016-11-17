@@ -1,0 +1,24 @@
+<!--                 -->
+<!-- COMPONENT TITLE -->
+<!--                 -->
+<!-- DEBUG FILE: html_components/component_includes/componentsTitle.html -->
+<!-- Check if there is a title for the html component and print it -->
+  {% if include.component-data.title %}
+      {% if include.component-data.title contains 'page' %}
+        <div class="component-header">
+           <div class="component-title {{include.component-data.class}}">{{ page.title }} </div>
+         </div>
+      {% else %}
+         <div class="component-header">
+            <div class="component-title {{page.class}}">{{ include.component-data.title}} {{ include.component-data.title.data.separator}} {% if include.component-data.title.data.link %}<a href="{{site.baseurl}}{{ include.component-data.title.data.link }}">{{ include.component-data.title-data.label }}</a>{% endif %}</div>
+            {% if include.component-data.hr %}
+               <hr class="{{include.component-data.hr.class}}">
+            {% endif %}
+
+               <!-- COMPONENT SUBTITLE -->
+            {% if include.component-data.subtitle %}
+               <div class="component-subtitle {{include.component-data.class}}">{{ include.component-data.subtitle}} {{ include.component-data.subtitle.data.separator}} <a href="{{site.baseurl}}{{ include.component-data.subtitle.data.link }}">{{ include.component-data.subtitle-data.label }}</a></div>
+            {% endif %}
+          </div>
+        {% endif %}
+  {% endif %}

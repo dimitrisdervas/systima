@@ -1,0 +1,32 @@
+<!--               -->
+<!-- SECTION TITLE -->
+<!--               -->
+<!-- DEBUG FILE: html_components/basic_components/pageincludes/pageseotitle.html -->
+<!-- Section Title -->
+<!-- Check if there is a title for the html section and print it-->
+         {% if section.seoTitle %}
+            <div class="seo-header">
+               <h1 class="seo-title">
+                  {{ section.seoTitle.data.label }} {{ section.seoTitle.data.separator}}
+                  {% if section.seoTitle.data.link %}
+                     <a href="{{site.baseurl}}{{ section.title-data.link }}">{{ section.seoTitle.data.label }}</a>
+                  {% endif %}
+               </h1>
+
+               <!-- section SUBTITLE -->
+               {% if section.seoSubtitle %}
+                  <div class="seo-subtitle">
+                        {{  section.seoSubtitle.data.label }} {{ section.seoSubtitle.data.separator}}
+
+                        {% if section.seoSubtitle.data.link %}
+                        <a href="{{site.baseurl}}{{ section.subtitle-data.link }}">{{ section.seoSubtitle.data.label }}</a>
+                       {% else %}
+                        {{ section.seoSubtitle.data.label }}
+                        {% endif %}
+
+
+                     </div>
+                  {% endif %}
+
+               </div>
+            {% endif %}

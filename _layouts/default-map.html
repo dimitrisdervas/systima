@@ -1,0 +1,27 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="gr">
+
+  {% include basic_components/head.html %}
+
+  <body>
+        
+      <div class="page {{ page.pagetitle }}{{ layout.pagetitle }}">
+
+        {% include basic_components/page.html config-file='header-materialize-map' %}
+
+        {{ content }}
+
+        {% include basic_components/page.html config-file='footer' %}
+
+         </div>
+
+     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor.js"></script>
+     {% include basic_components/perpageplugins.html config-file='header-materialize-map' %}
+     {% include basic_components/perpageplugins.html %}
+
+  </body>
+
+</html>

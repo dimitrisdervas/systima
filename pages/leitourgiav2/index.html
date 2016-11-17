@@ -1,0 +1,41 @@
+---
+title: "Λειτουργία"
+layout: default-dev-frontpage
+permalink: /leitourgiav2/
+pagetitle: leitourgia-blocks
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: notextarea
+   divs:
+      - div:
+         theme:
+          class: leitourgia
+        components:
+         - component: posts-list
+           data:
+             title: Λειτουργία
+             wrapperDiv:
+               theme:
+                 class: leitourgia-wrapper
+             data-type: collection
+             content-type: leitourgia
+             fields:
+             - field: group
+               class: leitourgia-group
+               fields:
+                - field: title
+                  data:
+                    class: type
+                    link: posts
+                - field: text 
+                  data: 
+                    text-teaser: yes 
+                    text-words: 20 
+                    class: text                     
+---
+
+{% include basic_components/page.html %}
+

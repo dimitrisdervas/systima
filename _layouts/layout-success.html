@@ -1,0 +1,31 @@
+---
+layout: default
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: success block
+        components:
+         - component: posts-list
+           data:
+             title: page.title
+             data-type: data-list
+             content-type: page.filename
+             folder: success
+             fields:
+             - field: group
+               class: success-group
+               fields:
+                - field: name
+                  data:
+                   element: div
+                   class: name-title
+                - field: school
+---
+
+{% include basic_components/layout.html %}

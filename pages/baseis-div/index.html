@@ -1,0 +1,35 @@
+---
+title: "Βάσεις"
+layout: default-dev-frontpage
+pagetitle: baseis
+permalink: /baseis2/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: basi
+        components:
+         - component: posts-list
+           data:
+             data-type: data-list
+             content-type: baseis2015
+             cloudcannon-editor: baseis2015.csv
+             fields:
+               - field: group
+                 class: baseis-group
+                 fields:             
+                  - field: code
+                    data:
+                  - field: school
+                    data:
+                  - field: university
+                    data:
+                  - field: basi
+                    data:
+---
+{% include basic_components/page.html %}

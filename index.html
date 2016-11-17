@@ -1,0 +1,100 @@
+---
+layout: default-dev-frontpage
+title: Σύστημα
+pagetitle: frontpage frontpagev3
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+   divs:
+      - div:
+         theme:
+          class: top-article block
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "Η αποστολή μας"
+             fields:
+                - field: title
+                  data:
+                   class: title
+                - field: text
+      - div:
+         theme:
+          class: omades-wrapper block
+        components:
+          - component: custom/omades
+      - div:
+         theme:
+          class: spoudes
+        components:
+         - component: posts-list
+           data:
+             title: "Τμήματα"
+             data-type: data-list
+             content-type: studiesv2
+             wrapperDiv:
+              theme:
+                class: spoudesnew
+             fields:
+             - field: group
+               class: spoudes-group z-depth-1-half
+               fields:
+                - field: type
+                  data:
+                   link: posts
+      - div:
+         theme:
+          class: why block
+        components:
+         - component: one-post
+           data:
+             data-type: collection
+             content-type: other
+             post-title: "και γιατί στο Σύστημα ?"
+             fields:
+              - field: group
+                class: color-overlay
+                fields:
+                 - field: title
+                   data:
+                    class: title
+                 - field: content
+      - div:
+         theme:
+          class: frontistiria--block
+        components:
+         - component: posts-list
+           data:
+            title: "Μια ματιά στους χώρους μας..."
+            data-type: collection
+            content-type: frontistiria
+            groupElement:
+              data:
+                class: frontistiria
+            fields:
+             - field: group
+               class: frontistirio card
+               fields:
+                  - field: images
+                    data:
+                     class: card-image
+                     tag: main
+                     link: post
+                     images-path: /assets/images/frontistiria/
+                     image-hash: image
+                  - field: group
+                    class: card-content
+                    fields:
+                      - field: title
+                        data:
+                         link: posts
+css: |
+
+---
+
+{% include basic_components/page.html %}

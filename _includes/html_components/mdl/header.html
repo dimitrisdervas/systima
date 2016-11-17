@@ -1,0 +1,13 @@
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Simple Layout</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        {% assign menuFile = site.data.[include.data-component.content-type] %}
+        {% for menu in menuFile %}
+              <a class="mdl-navigation__link" href="{{ menu.url }}">{{ menu.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>

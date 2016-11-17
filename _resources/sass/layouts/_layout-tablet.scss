@@ -1,0 +1,17 @@
+@include susy-media(tablet) {
+   .frontistiria {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+	     .frontistirio:nth-child(2){
+	        margin: 0 2em;
+		 }
+		 .card {
+	        margin: 0;
+	  	 }
+	}
+	.footer {
+    	flex-direction: row;
+	}
+
+}

@@ -1,0 +1,180 @@
+
+@include susy-media(normal) {
+  $max-width: 1280px;
+   .page {
+      display: flex;
+      flex-direction: column;
+   }
+   .block {
+   margin-bottom: 5rem;
+  }
+   //
+   // HEADER
+   //
+   nav {
+     @include layout($full-width);
+     @include container;
+     max-width: $max-width;
+   }
+   .onemap {
+      nav {
+         max-width: 100%;
+         position: absolute;
+         top: 15px;
+      }
+      .nav-wrapper {
+         position: relative;
+         height: 100%;
+         @include container;
+         margin: auto;
+      }
+   }
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: span( 3 of 12 );
+      img {
+        width: 150px;
+      }
+   }
+   #nav-mobile {
+      @include span( 9 of 12 last);
+   }
+   nav ul li a {
+    font-size: 0.9rem;
+    padding: 0 0.2rem;
+   }
+   .hero-group {
+      flex-basis: 80%;
+      max-width: $max-width;
+   }
+   .aboutus .hero-group {
+      color: #CE4646;
+   }
+
+  //  PAGES
+  //
+  // ABOUT US
+  //
+   .aboutus {
+      .teachers .component-title {
+        margin-top: 0;
+        font-size:48px;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+      }
+      .secretaria .component-title {
+        margin-top: 0;
+        padding: 2% 0;
+      }
+   }
+   .aboutus .teacher-group {
+      display: flex;
+      .name {
+         min-width: span(5 of 12);
+      }
+   }
+   .aboutus {
+    .preface,
+    .teachers,
+    #teachers {
+       @include layout($textarea);
+       @include container;
+       width: 100%;
+    }
+   }
+   .frontistiria {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: baseline;
+     .frontistirio:nth-child(2){
+        margin: 0 2em;
+      }
+   }
+   .success {
+       @include layout($textarea);
+       @include container;
+        width: 100%;
+
+      .success-group {
+         display: flex;
+      .name {
+         min-width: span( 5 of 12);
+         }
+      }
+   }
+   .news,
+   .articles {
+     display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .card {
+        flex-basis: 49%;
+        padding: 0;
+      }
+   }
+   .paroxes {
+     .card {
+       padding: 4%;
+     }
+   }
+   .contactonemap {
+      .onemap {
+        @include full;
+      }
+   }
+   .footer {
+      @include layout($textarea);
+      @include container;
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      justify-content: space-between;
+      padding: 4%;
+       div {
+         flex-basis: span( 4 of 12);
+       }
+       .contact-footer .group-fields {
+         display: flex;
+         flex-direction: column;
+         .contact-group {
+           margin-bottom: 7%;
+         }
+       }
+       .menu {
+         nav {
+           margin-top: 0;
+         }
+           ul {
+           display: flex;
+           flex-direction: column;
+         }
+         a {
+           line-height: 2.1;
+         }
+       }
+      .width25 {
+      margin-bottom: 5%;
+      }
+       .social-footer {
+          display: flex;
+          flex-direction: column;
+          .social ul {
+            display: flex;
+              justify-content: space-around;
+          }
+
+        }
+      }
+}
+
+
+
+@include susy-media(wide) {
+   nav ul li a {
+    font-size: 1rem;  
+    padding: 0 15px;
+   }
+}

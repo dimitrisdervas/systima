@@ -1,0 +1,36 @@
+---
+title: "Λειτουργία"
+layout: default-dev-frontpage
+permalink: /leitourgia/
+pagetitle: leitourgia-grid
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: notextarea
+   divs:
+      - div:
+         theme:
+          class: leitourgia
+        components:
+         - component: posts-list
+           data:
+             title: Λειτουργία
+             wrapperDiv:
+               theme:
+                 class: leitourgia-wrapper
+             data-type: collection
+             content-type: leitourgia
+             fields:
+             - field: group
+               class: leitourgia-group
+               fields:
+                - field: title
+                  data:
+                    class: type
+                    link: posts
+---
+
+{% include basic_components/page.html %}
+

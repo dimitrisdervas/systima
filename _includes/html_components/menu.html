@@ -1,0 +1,46 @@
+
+<!-- DATA -->
+<!-- USE DATA FROM _data/content -->
+<!-- Check the content type - Datat or Collections - Posts -->
+{% include html_components/component_includes/componentcontenttype.html %}
+<nav id="{{include.component-data.id}}">
+<ul>
+{% for menu in posts limit:{{include.component-data.limit}} offset:{{include.component-data.offset}} %}
+
+         {% if menu.url %}
+            <li class="menu-item menu-{{ menu.name | slugify }}">
+            <a class="drop-target" href="{{ site.baseurl }}{{ menu.url }}">{{ menu.name }}
+               {% case include.component-data.icon %}
+                   {% when 'et-line' %}
+                     <i class="icon-{{ menu.icon }}"></i>
+                   {% when 'font-awesome' %}
+                     <i class="fa fa-{{ menu.icon }}"></i>
+                  {% endcase %}
+               </a>
+          {% else %}
+             <li class="menu-item nolink menu-{{ menu.name | slugify }}">
+               <div class="menu-title">{{ menu.name }}</div>
+         {% endif %}
+
+
+   {% if menu.submenu %}
+<ul>
+      {% for submenu in menu.submenu %}
+          <li class="submenu-item">
+            <a href="{{ site.baseurl }}/{{ submenu.url }}">{{ submenu.name }}
+               {% case include.component-data.icon %}
+                   {% when 'et-line' %}
+                     <i class="icon-{{ submenu.icon }}"></i>
+                   {% when 'font-awesome' %}
+                     <i class="fa fa-{{ submenu.icon }}"></i>
+                  {% endcase %}
+               </a>
+              </li>
+          {% endfor %}
+   </ul>
+   {% endif %}
+
+         </li>
+ {% endfor %}
+</ul>
+</nav>

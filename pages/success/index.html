@@ -1,0 +1,106 @@
+---
+title: Οι επιτυχίες
+layout: default-dev-frontpage
+permalink: /success/
+config:
+ - section:
+    data:
+      htmlelement: section
+    theme:
+      class: textarea
+    seoTitle:
+     data:
+      label: "Οι επιτυχίες μας"
+   divs:
+      - div:
+         theme:
+          class: success block
+        components:
+         - component: materialize/tabs
+           data:
+            tabs:
+              - title: "2015"
+                data:
+                  data-type: data-list
+                  content-type: success2015
+                  title: "2015 - 190 επιτυχόντες"
+                  folder: success
+                  fields:
+                    - field: group
+                      class: success-group
+                      fields:
+                       - field: number
+                       - field: name
+                         data:
+                          element: div
+                          class: name-title
+                       - field: school
+              - title: "2014"
+                data:
+                 data-type: data-list
+                 content-type: success2014
+                 title: "2014 - 190 επιτυχόντες"
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: number
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
+              - title: "2013"
+                data:
+                 data-type: data-list
+                 content-type: success2013
+                 title: "2013 - 194 επιτυχόντες"
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: number
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
+              - title: "2012"
+                data:
+                 data-type: data-list
+                 content-type: success2012
+                 title: "2012 - 182 επιτυχόντες"
+                 folder: success
+                 fields:
+                   - field: group
+                     class: success-group
+                     fields:
+                      - field: number
+                      - field: name
+                        data:
+                         element: div
+                         class: name-title
+                      - field: school
+css: |
+    .tabs {
+      margin-bottom: 2%;
+    }
+    .tabs .tab a:hover {
+      color: #EA8686;
+    }
+    .tabs .tab a {
+        font-size: 28px;
+    }
+    .tabs .tab a {
+        color: #E53F3F;
+    }
+    .tabs .indicator {
+        background-color: #E53F3F;
+    }
+    .number {
+      font-weight: bold;
+    }
+---
+{% include basic_components/page.html %}

@@ -1,0 +1,1 @@
+$(".countTo").countTo();

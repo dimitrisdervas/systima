@@ -233,3 +233,36 @@
       }
   }
 }
+.leitourgia-post {
+  @include layout($textarea);
+  @include container;
+  .group-title-section {
+      @include layout($textarea);
+  @include container;
+    display: flex;
+  }
+  .group-title {
+    border-top: 1px solid #ccc;
+  }
+  .group-title1,
+  .group-title3{
+    @include span(3 of 12);
+    text-align: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .group-title2 {
+    @include span(6 of 12);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .group {
+    float:left;
+    width: span(3 of 12);
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+}

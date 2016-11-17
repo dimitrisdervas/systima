@@ -5992,6 +5992,15 @@ h1, h2, h3, h4, h5, h6,
 .spoudesnew .type {
   font-family: "Comfortaa", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.1rem; }
+
+h3 {
+  font-size: 1.92rem; }
+
 /*
  *  Default theme - Owl Carousel CSS File
  */
@@ -6737,8 +6746,6 @@ tr td {
   padding: 0 5px; }
 
 tr th {
-  background: #365073;
-  color: #fff;
   border-radius: 0px; }
 
 tfoot tr:nth-child(1) {
@@ -7570,6 +7577,45 @@ nav {
   .leitourgia-grid .leitourgia-group .type a:hover {
     font-size: 24px;
     font-size: 1.5rem; } }
+
+.leitourgia-post {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto; }
+  .leitourgia-post:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .leitourgia-post .group-title-section {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; }
+    .leitourgia-post .group-title-section:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .leitourgia-post .group-title {
+    border-top: 1px solid #ccc; }
+  .leitourgia-post .group-title1,
+  .leitourgia-post .group-title3 {
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
+  .leitourgia-post .group-title2 {
+    width: 50%;
+    float: left;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .leitourgia-post .group {
+    float: left;
+    width: 25%; }
+  .leitourgia-post tr {
+    border: 1px solid #ccc; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
   padding: 0.4375em 0; }

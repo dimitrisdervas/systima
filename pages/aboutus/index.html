@@ -7,9 +7,11 @@ config:
  - section:
     data:
       htmlelement: section
-   wrapperSection:
-     theme:
+    theme:
       class: textarea
+    seoTitle:
+     data:
+      label: "Σχετικά με εμάς"
    divs:
       - div:
          theme:
@@ -30,18 +32,27 @@ config:
          theme:
           class: teachers
         components:
-         - component: posts-list
+         - component: posts-list-filterizr
            data:
              title: "ΜΠΟΥΡΝΤΑ-ΛΟΥΚΙΔΟΥ Ο.Ε."
              subtitle: "Οι εκπαιδευτικοί μας"
              data-type: data-list
              content-type: teachers
+             javascript-plugin: filterizr
+             groupElement:
+              data:
+                id: teachers
              fields:
               - field: group
-                class: teacher-group
+                filterizr: true
+                class: teacher-filterizr
                 fields:
+                  - field: image
+                    data:
+                     image-hash: image
+                     image-path: /assets/images/teachers/
                   - field: name
-                  - field: teacher
+                  - field: teacher                  
       - div:
          theme:
           class: secretaria
@@ -53,7 +64,6 @@ config:
              content-type: secretaria
              fields:
               - field: name
-css: |
 
 
 ---

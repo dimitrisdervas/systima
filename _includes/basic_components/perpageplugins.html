@@ -64,6 +64,12 @@
                {% when 'dropjs' %}
                   {% include basic_components/javascriptpluginscases/dropdown.js dropdownData= component.data.javascript-plugin-data %}
 
+               {% when 'shufflejs' %}
+                  {% include basic_components/javascriptpluginscases/shuffle.js shuffleData= component.data.javascript-plugin-data %}
+                  
+               {% when 'filterizr' %}
+                  {% include basic_components/javascriptpluginscases/filterizr.js shuffleData= component.data.javascript-plugin-data %}
+
                {% when 'owl-carousel' %}
                   {% include basic_components/javascriptpluginscases/owlslideshow.js slideshowOwlData= component.data.javascript-plugin-data %}
 

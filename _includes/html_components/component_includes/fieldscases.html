@@ -65,7 +65,6 @@
                                               {% if post.[field.background.image-hash] contains 'https://' or post.[field.background.image-hash] contains 'http://'%}
                                                     style="background-image:url({{ post.[field.background.image-hash] }})" >
                                                  {% else %}
-                                                 {{ field.background.image }}
 
                                                    {% if field.background.image == multiple %}
                                                       style="background-image:
@@ -89,11 +88,19 @@
                                           <a href="{{ post.url}}">
                                           {% capture divEnd %}</a>{% endcapture %}
 
+                                    {% elsif  field.shuffle %}
+                                          <div class="{{ field.class }} " data-group='["{{ post.slug }}"]'>
+                                            {% capture divEnd %}</div>{% endcapture%}                                    
+
+                                    {% elsif  field.filterizr %}
+                                          <div class="{{ field.class }} filtr-item" data-category="{{ post.slug }}">
+                                            {% capture divEnd %}</div>{% endcapture%}
+
+
                                     {% else %}
                                             <div class="{{ field.class }}">
                                                {% capture divEnd %}</div>{% endcapture%}
                                     {% endif %}
-
 
 
                                       {% assign groupfields = field.fields %}

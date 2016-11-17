@@ -30,29 +30,34 @@ topnav {
   }
   .slideshow-title {
       background: rgb(252, 209, 60);
-      padding: 0.5em;
+      padding: 0.2em 1.2em;
       color: #323232;
-      font-size: 60px;
+      font-size: 45px;
       font-weight: bold;
       font-family: "ubuntu";
   }
+}
+
+.owl-item:nth-child(8) {
+  background: url("/assets/images/slideshow/slideshow-1.jpg.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat;
 }
 
 
 header.hero-overlay {
     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat;
 }
-// SXEDIO BG
-.sxedio header.hero-overlay {
-    background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/sxedio/sxedio-room-5.jpg") no-repeat;
-}
-.aboutus,
-.lykeio {
-  header.hero-overlay {
-  background: url("/assets/images/hero.png") no-repeat 50% 0%, url("/assets/images/blackboard.jpg") no-repeat;
-  background-size: auto, cover;
-  }
-}
+// // SXEDIO BG
+// .sxedio header.hero-overlay {
+//     background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/sxedio/sxedio-room-5.jpg") no-repeat;
+// }
+// .aboutus,
+// .lykeio {
+//   header.hero-overlay {
+//   background: url("/assets/images/hero.png") no-repeat 50% 0%, url("/assets/images/blackboard.jpg") no-repeat;
+//   background-size: auto, cover;
+//   }
+// }
+
 nav {
  margin-top: 0;
  box-shadow: none;

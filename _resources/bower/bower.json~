@@ -1,0 +1,29 @@
+{
+  "name": "sistima",
+  "homepage": "https://github.com/dimitrisdervas/systima",
+  "authors": [
+    "dimitris-techangel"
+  ],
+  "description": "sistima bower files",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "owl.carousel": "owl-carousel2#^2.1.6",
+    "normalize-scss": "normalize.scss#^5.0.3",
+    "parsleyjs": "^2.4.4",
+    "susy": "^2.2.12",
+    "normalize-strings": "normalize#^1.1.0",
+    "normalize-css": "^4.2.0",
+    "typographic": "^2.9.3",
+    "shufflejs": "^4.0.1"
+  }
+}

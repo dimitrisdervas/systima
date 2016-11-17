@@ -93,8 +93,10 @@ body {
   padding: 2%;
   .next {
     display: flex;
-    align-items: flex-end;
     margin-left: auto;
+  }
+  .previous {
+    display: flex;
   }
   .next a,
   .previous a {

@@ -159,10 +159,13 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
         background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg);
         }
       }
+
+// 
+// SPOUDES NEW
+// 
 .spoudesnew {
     margin-bottom: 5rem;
 }
-
 .frontpagev3 {
   .spoudes {
     @include layout($symmetric);
@@ -197,37 +200,16 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
     background-color: rgba(18, 23, 32, 0.4);
 
   }
-  .spoudes-group .type a {
-    font-size: 28px;
-    color: #fff;
-    font-weight: bold;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(18, 23, 32, 0);
-    height: 250px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .spoudes-group .type a:hover {
-    border: 1px solid #fff;
-    transition: border-color 1s ease;
-    background: rgba(0,0,0,0.2);
-    font-size: 30px;
-    transition: font 1s ease;
-  }
 }
 
 .frontpagev3 {
   .spoudes-group:nth-child(6),
   .spoudes-group:nth-child(7),
   .spoudes-group:nth-child(8) {
-    .type a {
-      padding: 1.5em;
+      .type a {
+        padding: 1.5em;
+      }
     }
-  }
   }
 // GLOBAL
     .omades-wrapper {
@@ -245,46 +227,20 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
         }
       }
     }
-    .frontpagev3 {
-      .spoudes {
-        @include layout($symmetric);
-      }
-      .spoudes-group {
-          display: flex;
-        }
-      .spoudes-group .type {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        background-color: rgba(18, 23, 32, 0.7);
-      }
-      .spoudes-group .type:hover {
-        background-color: rgba(18, 23, 32, 0.4);
-      }
-      .spoudes-group .type a {
-        font-size: 28px;
-        color: #fff;
-        font-weight: bold;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(18, 23, 32, 0);
-        height: 250px;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .spoudes-group .type a:hover {
-        border: 1px solid #fff;
-        transition: border-color 1s ease;
-        background: rgba(0,0,0,0.2);
-        font-size: 30px;
-        transition: font 1s ease;
+@include susy-media(mobile) {
+.frontpagev3 {
+  .spoudes-group:nth-child(6),
+  .spoudes-group:nth-child(7),
+  .spoudes-group:nth-child(8) {
+      .type a {
+        padding: 0;
       }
     }
+  .spoudes-group .type {
+    padding: 0;
+    }
+  }
+}
 @include susy-media(normal) {
     .omades-wrapper {    
       .quote {

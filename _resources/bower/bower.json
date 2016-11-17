@@ -16,14 +16,15 @@
     "tests"
   ],
   "dependencies": {
-    "materialize": "^0.97.7",
+    "jquery": "^3.1.0",
     "owl.carousel": "owl-carousel2#^2.1.6",
+    "filterizr": "^1.2.3",
+    "shufflejs": "^4.0.1",
+    "materialize": "^0.97.7",
     "normalize-scss": "normalize.scss#^5.0.3",
     "parsleyjs": "^2.4.4",
     "susy": "^2.2.12",
     "normalize-strings": "normalize#^1.1.0",
-    "normalize-css": "^4.2.0",
-    "typographic": "^2.9.3",
-    "shufflejs": "^4.0.1"
+    "normalize-css": "^4.2.0"
   }
 }

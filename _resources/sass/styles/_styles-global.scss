@@ -118,6 +118,9 @@ body {
     font-weight: bold;
   }
 }
+// 
+// BASEIS
+// 
 .baseis .textarea {
       background: #fff;
       padding: 2rem 4rem;
@@ -126,6 +129,32 @@ body {
         padding-bottom: 2%;
       }
 }
+// BASEIS - DIV 
+.baseis-group {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  .code,
+  .school,
+  .university {
+    float: left;
+  }
+  .basi {
+    float: right;
+  }
+  .code {
+        font-weight: bold;
+        padding-right: 5px;
+  }
+  .school {
+    font-weight: bold;
+    width: span( 8 of 12);
+  }
+}
+.baseis-group:nth-child(even) {
+    background: #dddddd;
+}
+
 
 .lykeio {
   .top-article {
@@ -265,29 +294,99 @@ body {
 // ABOUT US
 //
 .aboutus {
-    .textarea {
-      background: #fff;
-    }
     .color-overlay {
       background-color: rgba(18, 23, 32, 0.7);
     }
     .preface h1 {
        margin-bottom: 5%;
+      float: left;
+      display: block;
+      width: 100%;
     }
-    .preface{
-       padding: 0;
-       background: transparent;
+    .preface {
+      background: #fff;
+      padding: 0% 4% 1%;
+    }
+    .teachers {
+      background: #fff;
+      padding: 0 4% 4%;
+    }
+    .secretaria {
+      background: #fff;
+      padding: 0 4% 4%;
+    }
+    ul.filters {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          max-height: 40px;
+        }
+        li.active {
+              border-bottom: 1px solid #26a69a;
+          }
+        li:before {
+            content: '';
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            z-index: 0;
+            border: 2px solid #5a5a5a;
+            border-radius: 1px;
+            margin-top: 2px;
+            transition: .2s;
+            margin-right: 20px;
+        }
+        li.active:before {
+              content: '';
+              display: flex;
+              top: -4px;
+              left: -5px;
+              width: 12px;
+              height: 22px;
+              border-top: 2px solid transparent;
+              border-left: 2px solid transparent;
+              border-right: 2px solid #26a69a;
+              border-bottom: 2px solid #26a69a;
+              -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+        }
+        ul.subfilters {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            max-height: 40px;
+          }
+        }
+    }
+    .filtr-item {
+      width: 256px;
+      margin: 25px;
+      img {
+
+      }
+    }
+    #teachers {
+
     }
     .name {
       font-weight: bold;
-    }
-    .secretaria {
-      padding: 4% 0 ;
-     //  background: #fff;
+      font-size: 15px;
     }
     .secretaria .component-title {
         font-weight: bold;
-      }
+    }
 }
 //
 // LEITOURGIA

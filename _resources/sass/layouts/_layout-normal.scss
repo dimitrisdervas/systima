@@ -75,6 +75,14 @@
          min-width: span(5 of 12);
       }
    }
+   .aboutus {
+    .preface,
+    .teachers {
+       @include layout($textarea);
+       @include container;
+       width: 100%;
+    }
+   }
    .frontistiria {
      display: flex;
      flex-direction: row;

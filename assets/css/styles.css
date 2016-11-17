@@ -6154,8 +6154,9 @@ body {
     clear: both; }
   .pagination .next {
     display: flex;
-    align-items: flex-end;
     margin-left: auto; }
+  .pagination .previous {
+    display: flex; }
   .pagination .next a,
   .pagination .previous a {
     display: flex;
@@ -6237,6 +6238,17 @@ body {
     display: flex; }
     .aboutus .teacher-group .name {
       min-width: 41.66667%; }
+  .aboutus .preface,
+  .aboutus .teachers {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+    .aboutus .preface:after,
+    .aboutus .teachers:after {
+      content: " ";
+      display: block;
+      clear: both; }
   .frontistiria {
     display: flex;
     flex-direction: row;
@@ -6351,7 +6363,9 @@ body {
     .footer .menu {
       height: 400px; }
   .width25 {
-    margin-bottom: 4%; } }
+    margin-bottom: 4%; }
+  h1 {
+    font-size: 2rem; } }
 
 @media screen and (min-width: 768px) {
   .frontistiria {
@@ -6478,6 +6492,26 @@ body {
   .baseis .textarea tr:first-child {
     padding-bottom: 2%; }
 
+.baseis-group {
+  float: left;
+  width: 100%;
+  padding: 5px; }
+  .baseis-group .code,
+  .baseis-group .school,
+  .baseis-group .university {
+    float: left; }
+  .baseis-group .basi {
+    float: right; }
+  .baseis-group .code {
+    font-weight: bold;
+    padding-right: 5px; }
+  .baseis-group .school {
+    font-weight: bold;
+    width: 66.66667%; }
+
+.baseis-group:nth-child(even) {
+  background: #dddddd; }
+
 .lykeio .top-article {
   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;
@@ -6595,24 +6629,82 @@ body {
 .author {
   font-style: italic; }
 
-.aboutus .textarea {
-  background: #fff; }
-
 .aboutus .color-overlay {
   background-color: rgba(18, 23, 32, 0.7); }
 
 .aboutus .preface h1 {
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  float: left;
+  display: block;
+  width: 100%; }
 
 .aboutus .preface {
-  padding: 0;
-  background: transparent; }
+  background: #fff;
+  padding: 0% 4% 1%; }
 
-.aboutus .name {
-  font-weight: bold; }
+.aboutus .teachers {
+  background: #fff;
+  padding: 0 4% 4%; }
 
 .aboutus .secretaria {
-  padding: 4% 0; }
+  background: #fff;
+  padding: 0 4% 4%; }
+
+.aboutus ul.filters {
+  display: flex;
+  flex-wrap: wrap; }
+  .aboutus ul.filters li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    max-height: 40px; }
+  .aboutus ul.filters li.active {
+    border-bottom: 1px solid #26a69a; }
+  .aboutus ul.filters li:before {
+    content: '';
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    margin-top: 2px;
+    transition: .2s;
+    margin-right: 20px; }
+  .aboutus ul.filters li.active:before {
+    content: '';
+    display: flex;
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #26a69a;
+    border-bottom: 2px solid #26a69a;
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-origin: 100% 100%; }
+  .aboutus ul.filters ul.subfilters {
+    display: flex;
+    flex-wrap: wrap; }
+    .aboutus ul.filters ul.subfilters li {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      max-height: 40px; }
+
+.aboutus .filtr-item {
+  width: 256px;
+  margin: 25px; }
+
+.aboutus .name {
+  font-weight: bold;
+  font-size: 15px;
+  font-size: 0.9375rem; }
 
 .aboutus .secretaria .component-title {
   font-weight: bold; }
@@ -6760,23 +6852,18 @@ topnav {
     background-position: 50% 50%; }
   .slideshow-title {
     background: #fcd13c;
-    padding: 0.5em;
+    padding: 0.2em 1.2em;
     color: #323232;
-    font-size: 60px;
-    font-size: 3.75rem;
+    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: bold;
     font-family: "ubuntu"; } }
 
+.owl-item:nth-child(8) {
+  background: url("/assets/images/slideshow/slideshow-1.jpg.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat; }
+
 header.hero-overlay {
   background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/bathmoi.jpg") no-repeat; }
-
-.sxedio header.hero-overlay {
-  background: url("/assets/images/hero.png") no-repeat 50% 0%, linear-gradient(rgba(18, 23, 32, 0.7), rgba(18, 23, 32, 0.7)), url("/assets/images/sxedio/sxedio-room-5.jpg") no-repeat; }
-
-.aboutus header.hero-overlay,
-.lykeio header.hero-overlay {
-  background: url("/assets/images/hero.png") no-repeat 50% 0%, url("/assets/images/blackboard.jpg") no-repeat;
-  background-size: auto, cover; }
 
 nav {
   margin-top: 0;
@@ -7037,29 +7124,6 @@ nav {
 .frontpagev3 .spoudes-group .type:hover {
   background-color: rgba(18, 23, 32, 0.4); }
 
-.frontpagev3 .spoudes-group .type a {
-  font-size: 28px;
-  font-size: 1.75rem;
-  color: #fff;
-  font-weight: bold;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(18, 23, 32, 0);
-  height: 250px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.frontpagev3 .spoudes-group .type a:hover {
-  border: 1px solid #fff;
-  transition: border-color 1s ease;
-  background: rgba(0, 0, 0, 0.2);
-  font-size: 30px;
-  font-size: 1.875rem;
-  transition: font 1s ease; }
-
 .frontpagev3 .spoudes-group:nth-child(6) .type a,
 .frontpagev3 .spoudes-group:nth-child(7) .type a,
 .frontpagev3 .spoudes-group:nth-child(8) .type a {
@@ -7076,42 +7140,13 @@ nav {
   font-weight: bold;
   color: #192638; }
 
-.frontpagev3 .spoudes-group {
-  display: flex; }
-
-.frontpagev3 .spoudes-group .type {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
-  background-color: rgba(18, 23, 32, 0.7); }
-
-.frontpagev3 .spoudes-group .type:hover {
-  background-color: rgba(18, 23, 32, 0.4); }
-
-.frontpagev3 .spoudes-group .type a {
-  font-size: 28px;
-  font-size: 1.75rem;
-  color: #fff;
-  font-weight: bold;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(18, 23, 32, 0);
-  height: 250px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.frontpagev3 .spoudes-group .type a:hover {
-  border: 1px solid #fff;
-  transition: border-color 1s ease;
-  background: rgba(0, 0, 0, 0.2);
-  font-size: 30px;
-  font-size: 1.875rem;
-  transition: font 1s ease; }
+@media screen and (max-width: 992px) {
+  .frontpagev3 .spoudes-group:nth-child(6) .type a,
+  .frontpagev3 .spoudes-group:nth-child(7) .type a,
+  .frontpagev3 .spoudes-group:nth-child(8) .type a {
+    padding: 0; }
+  .frontpagev3 .spoudes-group .type {
+    padding: 0; } }
 
 @media screen and (min-width: 993px) {
   .omades-wrapper .quote {
@@ -7507,6 +7542,9 @@ nav {
     margin-bottom: 1.69492%;
     height: 250px;
     flex-basis: 49.15254%; }
+  .leitourgia-grid .leitourgia-group:nth-child(1) .type a,
+  .leitourgia-grid .leitourgia-group:nth-child(2) .type a {
+    padding: 2em; }
   .leitourgia-grid .leitourgia-group:nth-child(3) .type a {
     padding: 2em; }
   .leitourgia-grid .leitourgia-group:nth-child(5) .type a {

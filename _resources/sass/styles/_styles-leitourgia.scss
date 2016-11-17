@@ -201,6 +201,10 @@
       height: 250px;
       flex-basis: span( 6 of 12);
       }
+    .leitourgia-group:nth-child(1) .type a,
+    .leitourgia-group:nth-child(2) .type a{
+      padding: 2em;
+      } 
     .leitourgia-group:nth-child(3) .type a{
         padding: 2em;
       } 

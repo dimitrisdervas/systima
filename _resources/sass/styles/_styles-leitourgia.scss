@@ -265,4 +265,10 @@
   tr {
     border: 1px solid #ccc;
   }
+  .group-c1,
+  .group-c2,
+  .group-c3 {
+    float:left;
+    width: span(4 of 12);
+  }
 }

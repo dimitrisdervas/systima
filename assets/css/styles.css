@@ -6755,10 +6755,6 @@ tfoot tr:nth-child(1) {
 tfoot td {
   padding: 5px; }
 
-.clykeiou tr td:nth-child(even),
-.apofoitoi tr td:nth-child(even) {
-  border-right: 2px solid #929292; }
-
 .clykeiou tbody tr:nth-child(4),
 .clykeiou tfoot tr:nth-child(2),
 .clykeiou tfoot tr:nth-child(3),
@@ -7616,6 +7612,11 @@ nav {
     width: 25%; }
   .leitourgia-post tr {
     border: 1px solid #ccc; }
+  .leitourgia-post .group-c1,
+  .leitourgia-post .group-c2,
+  .leitourgia-post .group-c3 {
+    float: left;
+    width: 33.33333%; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
   padding: 0.4375em 0; }

@@ -1,6 +1,4 @@
 _site
 .sass-cache
 node_modules
-gulpfile.js
-package.json
 _resources/bower

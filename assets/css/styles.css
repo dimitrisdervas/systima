@@ -6003,6 +6003,9 @@ h2 {
 h3 {
   font-size: 1.92rem; }
 
+h4 {
+  font-size: 1.72rem; }
+
 /*
  *  Default theme - Owl Carousel CSS File
  */
@@ -6730,68 +6733,15 @@ body {
 .aboutus .secretaria .component-title {
   font-weight: bold; }
 
-.leitourgia-post .title {
-  color: #175394;
-  font-weight: bold;
-  padding-bottom: 4%;
-  padding-top: 2%;
-  line-height: 1.5; }
-
-.leitourgia-post.card {
-  padding: 4%; }
-
-.success {
-  padding: 4%;
-  background: #fff; }
-
-.preface {
-  padding: 4%;
-  background: #fff; }
-
 .width25 {
   width: 25%;
   margin-left: 0%; }
 
-tr th,
-tr td {
-  padding: 0 5px; }
-
-tr th {
-  border-radius: 0px; }
-
-tfoot tr:nth-child(1) {
-  background: #ddd;
-  font-weight: bold; }
-
-tfoot td {
-  padding: 5px; }
-
-.clykeiou tbody tr:nth-child(4),
-.clykeiou tfoot tr:nth-child(2),
-.clykeiou tfoot tr:nth-child(3),
-.apofoitoi tbody tr:nth-child(4),
-.apofoitoi tfoot tr:nth-child(2),
-.apofoitoi tfoot tr:nth-child(3) {
-  color: #e53f3f;
-  font-weight: bold; }
-
-.blykeiou table {
-  margin-bottom: 0; }
-
-.blykeiou h2#section-1 {
-  background: #ffee58;
-  padding: 0.2em; }
-
-.blykeiou h4#section-2,
-.blykeiou h4#section-3,
-.blykeiou h4#section-4,
-.blykeiou h4#section-5 {
-  background: #365073;
-  color: #fff;
-  padding: 5px 15px; }
-
-.blykeiou table:nth-child(1) tr td:nth-child(even) {
-  border-right: 2px solid #929292; }
+.post-slideshow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px; }
 
 .gallery {
   display: flex;
@@ -7020,67 +6970,6 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.frontpagev2.spoudes-group:nth-child(6n+1) .type {
-  background: #132b46; }
-
-.frontpagev2.spoudes-group:nth-child(6n+2) .type {
-  background: #1c2640; }
-
-.frontpagev2.spoudes-group:nth-child(6n+3) .type {
-  background: #1e2536; }
-
-.frontpagev2.spoudes-group:nth-child(6n+4) .type {
-  background: #2d374f; }
-
-.frontpagev2.spoudes-group:nth-child(6n+5) .type {
-  background: #132b46; }
-
-.frontpagev2.spoudes-group:nth-child(6n+6) .type {
-  background: #1c2640; }
-
-.frontpagev2 .spoudes-group {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  display: flex;
-  color: #fff; }
-  .frontpagev2 .spoudes-group:after {
-    content: " ";
-    display: block;
-    clear: both; }
-  .frontpagev2 .spoudes-group .type {
-    width: 33.33333%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 2%; }
-  .frontpagev2 .spoudes-group .text {
-    width: 66.66667%;
-    float: right;
-    margin-right: 0;
-    display: flex;
-    align-items: center;
-    padding: 4%; }
-
-.frontpagev2 .spoudes {
-  margin-bottom: 5rem; }
-  .frontpagev2 .spoudes .spoudes-group {
-    min-height: 200px;
-    margin-bottom: 1rem; }
-    .frontpagev2 .spoudes .spoudes-group .type {
-      text-align: center; }
-    .frontpagev2 .spoudes .spoudes-group .text {
-      background-color: #2b303c; }
-  .frontpagev2 .spoudes .spoudes-group:hover .text {
-    background-color: #474c59; }
-  .frontpagev2 .spoudes .spoudes-group:hover .type {
-    background-color: #007da6; }
-
 .frontpagev3 .spoudes-group:nth-child(1n) {
   background: url(/assets/images/bg-images/likeio1.jpg); }
 
@@ -7248,7 +7137,14 @@ nav {
     background: rgba(0, 0, 0, 0.2);
     font-size: 30px;
     font-size: 1.875rem;
-    transition: font 1s ease; } }
+    transition: font 1s ease; }
+  .spoudes-group:nth-child(5) .type a,
+  .spoudes-group:nth-child(6) .type a,
+  .spoudes-group:nth-child(7) .type a,
+  .spoudes-group:nth-child(8) .type a {
+    padding: 0; }
+  .spoudes-group .type {
+    padding: 0; } }
 
 .footer-wrapper {
   background: #151B27;
@@ -7409,7 +7305,9 @@ nav {
     justify-content: center; }
   .leitourgia-post .group {
     float: left;
-    width: 25%; }
+    width: 25%;
+    font-size: 15px;
+    font-size: 0.9375rem; }
   .leitourgia-post tr {
     border: 1px solid #ccc; }
   .leitourgia-post .group-c1,
@@ -7417,6 +7315,73 @@ nav {
   .leitourgia-post .group-c3 {
     float: left;
     width: 33.33333%; }
+  .leitourgia-post .programma {
+    background: #2766c1;
+    text-align: center;
+    color: #fff;
+    padding: 8px;
+    font-weight: bold; }
+  .leitourgia-post .atention {
+    color: #e53f3f; }
+
+.leitourgia-post .title {
+  color: #175394;
+  font-weight: bold;
+  padding-bottom: 0;
+  padding-top: 2%;
+  line-height: 1.5; }
+
+.leitourgia-post.card {
+  padding: 4%; }
+
+.success {
+  padding: 4%;
+  background: #fff; }
+
+.preface {
+  padding: 4%;
+  background: #fff; }
+
+tr th,
+tr td {
+  padding: 0 5px; }
+
+tr th {
+  border-radius: 0px; }
+
+tfoot tr:nth-child(1) {
+  background: #ddd;
+  font-weight: bold; }
+
+tfoot td {
+  padding: 5px; }
+
+.clykeiou tbody tr:nth-child(4),
+.clykeiou tfoot tr:nth-child(2),
+.clykeiou tfoot tr:nth-child(3),
+.apofoitoi tbody tr:nth-child(4),
+.apofoitoi tfoot tr:nth-child(2),
+.apofoitoi tfoot tr:nth-child(3) {
+  color: #e53f3f;
+  font-weight: bold; }
+
+.blykeiou .main {
+  width: 66.66667%; }
+  .blykeiou .main th:nth-child(2),
+  .blykeiou .main td:nth-child(2) {
+    border-right: 1px solid #ccc; }
+
+.blykeiou .group th {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+.blykeiou tfoot tr:nth-child(2) {
+  color: #e53f3f;
+  font-weight: bold; }
+
+.blykeiou tfoot tr:nth-child(3),
+.blykeiou tfoot tr:nth-child(5) {
+  border-bottom: 1px solid #fff; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
   padding: 0.4375em 0; }

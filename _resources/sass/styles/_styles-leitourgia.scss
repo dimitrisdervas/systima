@@ -254,9 +254,10 @@
   .group {
     float:left;
     width: span(3 of 12);
+    font-size: 15px;
   }
   tr {
-    border: 1px solid #ccc;
+  border: 1px solid #ccc;
   }
   .group-c1,
   .group-c2,
@@ -264,4 +265,89 @@
     float:left;
     width: span(4 of 12);
   }
+
+  .programma {
+    background: #2766c1;
+    text-align: center;
+    color: #fff;
+    padding: 8px;
+    font-weight: bold;
+  }
+  .atention {
+    color: #e53f3f;
+  }
+}
+
+.leitourgia-post {
+    .title {
+      color: #175394;
+      font-weight: bold;
+      padding-bottom: 0;
+      padding-top: 2%;
+      line-height: 1.5;
+    }
+}
+.leitourgia-post.card {
+  padding: 4%;
+}
+.success{
+   padding: 4%;
+   background: #fff;
+}
+.preface{
+   padding: 4%;
+   background: #fff;
+}
+
+ // STUDIES - TABLES
+tr th,
+tr td {
+    padding: 0 5px;
+  }
+tr th {
+  border-radius: 0px;
+}
+tfoot {
+  tr:nth-child(1){
+    background: #ddd;
+    font-weight: bold;
+}
+  td {
+    padding: 5px;
+  }
+}
+.clykeiou,
+.apofoitoi {
+  // tr td:nth-child(even) {
+  //   border-right: 2px solid #929292;
+  // }
+  tbody tr:nth-child(4),
+  tfoot tr:nth-child(2),
+  tfoot tr:nth-child(3) {
+    color: #e53f3f;
+    font-weight: bold;
+  }
+}
+
+.blykeiou {
+  .main {
+    width: span(8 of 12);
+    th:nth-child(2),
+    td:nth-child(2) {
+      border-right: 1px solid #ccc;
+    }
+  }
+  .group {
+    th {
+      font-size: 12px;
+    }
+  }
+    tfoot tr:nth-child(2) {
+      color: #e53f3f;
+      font-weight: bold;
+    }
+    tfoot tr:nth-child(3),
+    tfoot tr:nth-child(5) {
+      border-bottom: 1px solid #fff;
+    }
 }

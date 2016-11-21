@@ -394,29 +394,6 @@ body {
         font-weight: bold;
     }
 }
-//
-// LEITOURGIA
-//
-.leitourgia-post {
-    .title {
-      color: #175394;
-      font-weight: bold;
-      padding-bottom: 4%;
-      padding-top: 2%;
-      line-height: 1.5;
-    }
-}
-.leitourgia-post.card {
-  padding: 4%;
-}
-.success{
-   padding: 4%;
-   background: #fff;
-}
-.preface{
-   padding: 4%;
-   background: #fff;
-}
 
 
 // HR in footer after the title
@@ -425,63 +402,14 @@ body {
    margin-left: 0%;
 }
 
-// STUDIES - TABLES
-tbody {
-
-}
-tr th,
-tr td {
-    padding: 0 5px;
-  }
-tr th {
-  // background: #365073;
-  // color: #fff;
-  border-radius: 0px;
-}
-tfoot {
-  tr:nth-child(1){
-    background: #ddd;
-    font-weight: bold;
-}
-  td {
-    padding: 5px;
-  }
-}
-.clykeiou,
-.apofoitoi {
-  // tr td:nth-child(even) {
-  //   border-right: 2px solid #929292;
-  // }
-  tbody tr:nth-child(4),
-  tfoot tr:nth-child(2),
-  tfoot tr:nth-child(3) {
-    color: #e53f3f;
-    font-weight: bold;
-  }
-}
-
-.blykeiou {
-  table {
-      margin-bottom: 0;
-  }
-  h2#section-1 {
-      background: #ffee58;
-      padding: 0.2em;
-  }
-  h4#section-2,
-  h4#section-3,
-  h4#section-4,
-  h4#section-5 {
-    background: #365073;
-    color: #fff;
-    padding: 5px 15px;
-  }
-  table:nth-child(1) tr td:nth-child(even) {
-    border-right: 2px solid #929292;
-  }
-}
-
 // FRONTISTIRIA
+.post-slideshow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-bottom: 50px;
+}
+// STATIC IMAGES
 .gallery {
   display: flex;
   flex-wrap: wrap;

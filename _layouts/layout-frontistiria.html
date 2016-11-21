@@ -20,16 +20,30 @@ config:
               - field: phone
       - div:
          theme:
-          class: gallery
+          class: post-slideshow
         components:
          - component: /post_components/fields
            data:
-              fields:
+            javascript-plugin: owl-carousel
+            javascript-plugin-data:
+                 items: 1
+                 loop: true
+                 autoplay: true
+                 margin: 10
+                 dots: true
+            wrapperDiv:
+             theme:
+                class: owl-carousel owl-theme
+                id: slideshow-frontistirio
+            groupFieldsElement: div
+            groupFieldsElement-data:
+             class: slideshow-item
+            fields:
                  - field: images
                    data:
                      images-hash: image
                      images-path: /assets/images/frontistiria/                    
-                     class: materialboxed           
+                     class: slideshow-item                               
 ---
 
 {% include basic_components/layout.html %}

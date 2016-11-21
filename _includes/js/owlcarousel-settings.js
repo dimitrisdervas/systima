@@ -1,77 +1,82 @@
-$(document).ready(function() {
-  $(".owl-carousel").owlCarousel({ 
-    // Most important owl features
-    items : 5,
-    itemsCustom : false,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [980,3],
-    itemsTablet: [768,2],
-    itemsTabletSmall: false,
-    itemsMobile : [479,1],
-    singleItem : false,
-    itemsScaleUp : false,
+  var time = 7; // time in seconds
  
-    //Basic Speeds
-    slideSpeed : 200,
-    paginationSpeed : 800,
-    rewindSpeed : 1000,
+  var $progressBar,
+      $bar,
+      $elem, 
+      isPause, 
+      tick,
+      percentTime;
  
-    //Autoplay
-    autoPlay : false,
-    stopOnHover : false,
+    //Init the carousel
+    $("#owl-frontistirio").owlCarousel({
+      slideSpeed : 500,
+      paginationSpeed : 500,
+      singleItem : true,
+      afterInit : progressBar,
+      afterMove : moved,
+      startDragging : pauseOnDragging
+    });
  
-    // Navigation
-    navigation : false,
-    navigationText : ["prev","next"],
-    rewindNav : true,
-    scrollPerPage : false,
+    //Init progressBar where elem is $("#owl-demo")
+    function progressBar(elem){
+      $elem = elem;
+      //build progress bar elements
+      buildProgressBar();
+      //start counting
+      start();
+    }
  
-    //Pagination
-    pagination : true,
-    paginationNumbers: false,
+    //create div#progressBar and div#bar then prepend to $("#owl-demo")
+    function buildProgressBar(){
+      $progressBar = $("<div>",{
+        id:"progressBar"
+      });
+      $bar = $("<div>",{
+        id:"bar"
+      });
+      $progressBar.append($bar).prependTo($elem);
+    }
  
-    // Responsive 
-    responsive: true,
-    responsiveRefreshRate : 200,
-    responsiveBaseWidth: window,
+    function start() {
+      //reset timer
+      percentTime = 0;
+      isPause = false;
+      //run interval every 0.01 second
+      tick = setInterval(interval, 10);
+    };
  
-    // CSS Styles
-    baseClass : "owl-carousel",
-    theme : "owl-theme",
+    function interval() {
+      if(isPause === false){
+        percentTime += 1 / time;
+        $bar.css({
+           width: percentTime+"%"
+         });
+        //if percentTime is equal or greater than 100
+        if(percentTime >= 100){
+          //slide to next item 
+          $elem.trigger('owl.next')
+        }
+      }
+    }
  
-    //Lazy load
-    lazyLoad : false,
-    lazyFollow : true,
-    lazyEffect : "fade",
+    //pause while dragging 
+    function pauseOnDragging(){
+      isPause = true;
+    }
  
-    //Auto height
-    autoHeight : false,
+    //moved callback
+    function moved(){
+      //clear interval
+      clearTimeout(tick);
+      //start again
+      start();
+    }
  
-    //JSON 
-    jsonPath : false, 
-    jsonSuccess : false,
+    //uncomment this to make pause on mouseover 
+    // $elem.on('mouseover',function(){
+    //   isPause = true;
+    // })
+    // $elem.on('mouseout',function(){
+    //   isPause = false;
+    // })
  
-    //Mouse Events
-    dragBeforeAnimFinish : true,
-    mouseDrag : true,
-    touchDrag : true,
- 
-    //Transitions
-    transitionStyle : false,
- 
-    // Other
-    addClassActive : false,
- 
-    //Callbacks
-    beforeUpdate : false,
-    afterUpdate : false,
-    beforeInit: false, 
-    afterInit: false, 
-    beforeMove: false, 
-    afterMove: false,
-    afterAction: false,
-    startDragging : false
-    afterLazyLoad : false
- 
-  }) ;
-});

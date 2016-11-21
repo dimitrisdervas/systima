@@ -336,7 +336,7 @@ gulp.task('images', function () {
     '_site/**/*.css',
     '_site/**/*.html'
   ]);
-  return gulp.src('assets/images/systima-images/*.{png,jpg}')
+  return gulp.src('assets/images/teachers/*.{png,jpg}')
     // Use configuration
     .pipe(responsive({
       '*.jpg': [{
@@ -360,5 +360,5 @@ gulp.task('images', function () {
       withMetadata: false,
       compressionLevel: 7,
     }))
-    .pipe(gulp.dest('assets/images/systima-images'));
+    .pipe(gulp.dest('assets/images/teachers'));
 });

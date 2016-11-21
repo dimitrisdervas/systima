@@ -5990,7 +5990,7 @@ h1, h2, h3, h4, h5, h6,
 .title,
 .component-title,
 .spoudesnew .type,
-.omades .blockquote {
+.omades-wrapper .blockquote {
   font-family: "Comfortaa", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 h1 {

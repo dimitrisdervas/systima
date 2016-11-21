@@ -33,26 +33,37 @@
       } 
   } 
 } 
- 
- $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, diary; 
-   @for $iv2 from 1 through length($images) { 
-    .frontpagev3 .spoudes-group:nth-child(#{$iv2}n) { 
-        background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg); 
+ // 
+ // $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, diary; 
+ //   @for $iv2 from 1 through length($images) { 
+ //    .frontpagev3 .spoudes-group:nth-child(#{$iv2}n) { 
+ //        background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg); 
+ //        } 
+ //      } 
+ //   @for $iv2 from 1 through length($images) { 
+ //    .leitourgia-group:nth-child(#{$iv2}n) { 
+ //        background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg); 
+ //        background-size: cover; 
+ //        } 
+ //      } 
+
+$colorsv2: #62406a, #295C96, #3C5186, #435277, #526490, #526490;
+   @for $i from 1 through length($colorsv2) { 
+    .leitourgia-group:nth-child(#{$i}n) { 
+      .type a:hover {
+          background: (nth($colorsv2, $i));
         } 
-      } 
-   @for $iv2 from 1 through length($images) { 
-    .leitourgia-group:nth-child(#{$iv2}n) { 
-        background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg); 
-        background-size: cover; 
-        } 
-      } 
+      }
+    }
+
   .leitourgia-group { 
       @include layout($symmetric); 
-      margin-bottom: 15px; 
+      margin-bottom: 25px; 
       display: flex; 
     } 
   .leitourgia-group .type { 
-    flex-basis: span( 5 of 12); 
+    flex-basis: span( 4 of 12); 
+    margin-right: gutters(12); 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -60,13 +71,14 @@
     background-color: rgba(1, 15, 41, 0.93);     
   } 
   .leitourgia-group .text { 
-    flex-basis: span( 8 of 12 0 ); 
+    flex-basis: span( 8 of 12 );  
     display: flex; 
     align-items: center; 
     justify-content: center; 
     padding: 1em; 
     background-color: rgb(21, 31, 49); 
     color: #ffffff;    
+
   } 
   .leitourgia-group .type a { 
     color: #fff; 

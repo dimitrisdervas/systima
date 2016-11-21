@@ -203,11 +203,12 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
 }
 
 .frontpagev3 {
+  .spoudes-group:nth-child(5),
   .spoudes-group:nth-child(6),
   .spoudes-group:nth-child(7),
   .spoudes-group:nth-child(8) {
       .type a {
-        padding: 1.5em;
+        padding: 2.2rem;
       }
     }
   }
@@ -230,6 +231,7 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
     }
 @include susy-media(mobile) {
 .frontpagev3 {
+  .spoudes-group:nth-child(5),
   .spoudes-group:nth-child(6),
   .spoudes-group:nth-child(7),
   .spoudes-group:nth-child(8) {

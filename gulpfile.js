@@ -23,17 +23,17 @@ var gulpFilter     = require('gulp-filter');
 var critical       = require('critical');
 var googleWebFonts = require('gulp-google-webfonts');
 var stripComments  = require('gulp-strip-comments');
-var rensponsive    = require('gulp-rensponsive');
-var rensponsiveConfig    = require('gulp-rensponsive-config');
+var responsive    = require('gulp-responsive');
+var responsiveConfig    = require('gulp-responsive-config');
 
 
 var postcss        = require('gulp-postcss');
 var autoprefixer   = require('autoprefixer');
 var pxtorem        = require('postcss-pxtorem');
-var orderedValues  = require('postcss-ordered-values')
-var colorHexAlpha  = require("postcss-color-hex-alpha")
-var responsiveType = require("postcss-responsive-type")
-var debug          = require('postcss-debug').createDebugger()
+var orderedValues  = require('postcss-ordered-values');
+var colorHexAlpha  = require("postcss-color-hex-alpha");
+var responsiveType = require("postcss-responsive-type");
+var debug          = require('postcss-debug').createDebugger();
 
 //
 // ACHILEAS
@@ -336,28 +336,23 @@ gulp.task('images', function () {
     '_site/**/*.css',
     '_site/**/*.html'
   ]);
-  return gulp.src('assets/images/*.{png,jpg}')
+  return gulp.src('assets/images/systima-images/*.{png,jpg}')
     // Use configuration
-    .pipe(responsive(config, {
-        '*.jpg': [{
-        width: 200,
-        rename: { suffix: '-200px' },
+    .pipe(responsive({
+      '*.jpg': [{
+        width: 100,
+        height: 100,
+        grayscale: true,
+        rename: { dirname: '200px' },
       }, {
         width: 500,
-        rename: { suffix: '-500px' },
+        rename: { dirname: '500px' },
       }, {
         width: 630,
-        rename: { suffix: '-630px' },
+        rename: { dirname: '600px' },
       }, {
         // Compress, strip metadata, and rename original image
-        rename: { suffix: '-original' },
-      }],
-      // Resize all PNG images to be retina ready
-      '*.png': [{
-        width: 250,
-      }, {
-        width: 250 * 2,
-        rename: { suffix: '@2x' },
+        rename: { dirname: 'original' },
       }],
     },{
       errorOnEnlargement: false,
@@ -365,6 +360,5 @@ gulp.task('images', function () {
       withMetadata: false,
       compressionLevel: 7,
     }))
-    .pipe(gulp.dest('assets/images'));
-    .pipe(gulp.dest('_site/assets/images'));
+    .pipe(gulp.dest('assets/images/systima-images'));
 });

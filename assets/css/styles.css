@@ -5989,7 +5989,8 @@ html {
 h1, h2, h3, h4, h5, h6,
 .title,
 .component-title,
-.spoudesnew .type {
+.spoudesnew .type,
+.omades .blockquote {
   font-family: "Comfortaa", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; }
 
 h1 {
@@ -7071,28 +7072,28 @@ nav {
     background-color: #007da6; }
 
 .frontpagev3 .spoudes-group:nth-child(1n) {
-  background: url(/assets/images/bg-images/bag.jpg); }
+  background: url(/assets/images/bg-images/likeio1.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(2n) {
-  background: url(/assets/images/bg-images/younggirl.jpg); }
+  background: url(/assets/images/bg-images/likeio2.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(3n) {
-  background: url(/assets/images/bg-images/vivliothiki.jpg); }
+  background: url(/assets/images/bg-images/likeio3.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(4n) {
-  background: url(/assets/images/bg-images/diary.jpg); }
+  background: url(/assets/images/bg-images/gymnasio.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(5n) {
-  background: url(/assets/images/bg-images/books.jpg); }
+  background: url(/assets/images/bg-images/epal1.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(6n) {
-  background: url(/assets/images/bg-images/smallbooks.jpg); }
+  background: url(/assets/images/bg-images/apofitoi.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(7n) {
-  background: url(/assets/images/bg-images/younggirl.jpg); }
+  background: url(/assets/images/bg-images/sxedio.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(8n) {
-  background: url(/assets/images/bg-images/vivliothiki.jpg); }
+  background: url(/assets/images/bg-images/therina.jpg); }
 
 .frontpagev3 .spoudes-group:nth-child(9n) {
   background: url(/assets/images/bg-images/therina.jpg); }

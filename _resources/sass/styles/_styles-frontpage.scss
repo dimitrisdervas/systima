@@ -153,7 +153,7 @@ $colors: #295C96, #3C5186, #435277, #526490, #295C96, #3C5186;
  //          color: #fff;
  //         }
  //        }
- $images: bag, younggirl, vivliothiki, diary, books, smallbooks,younggirl, vivliothiki, therina;
+ $images: likeio1, likeio2, likeio3, gymnasio, epal1, apofitoi, sxedio, therina, therina;
    @for $iv2 from 1 through length($images) {
     .frontpagev3 .spoudes-group:nth-child(#{$iv2}n) {
         background: url(/assets/images/bg-images/#{nth($images, $iv2)}.jpg);

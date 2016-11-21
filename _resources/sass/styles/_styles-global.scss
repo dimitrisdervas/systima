@@ -154,7 +154,17 @@ body {
 .baseis-group:nth-child(even) {
     background: #dddddd;
 }
-
+.baseis-group:nth-child(1) {
+    background: #fff;
+  .code,
+  .school,
+  .university {
+    float: left;
+  }
+  .basi {
+    float: right;
+  }
+}
 
 .lykeio {
   .top-article {

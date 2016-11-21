@@ -6523,6 +6523,15 @@ body {
 .baseis-group:nth-child(even) {
   background: #dddddd; }
 
+.baseis-group:nth-child(1) {
+  background: #fff; }
+  .baseis-group:nth-child(1) .code,
+  .baseis-group:nth-child(1) .school,
+  .baseis-group:nth-child(1) .university {
+    float: left; }
+  .baseis-group:nth-child(1) .basi {
+    float: right; }
+
 .lykeio .top-article {
   background: url("/assets/images/bathmoi.jpg") no-repeat top center #26334A fixed;
   background-size: cover;

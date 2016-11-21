@@ -61,7 +61,11 @@
     padding: 1em; 
     background-color: rgb(21, 31, 49); 
     color: #ffffff;    
+    flex-direction: column;
   } 
+  .more {
+    align-self: flex-end;
+  }
   .leitourgia-group .type a { 
     color: #fff; 
     font-weight: bold; 

@@ -7328,7 +7328,11 @@ nav {
   justify-content: center;
   padding: 1em;
   background-color: #151f31;
-  color: #ffffff; }
+  color: #ffffff;
+  flex-direction: column; }
+
+.leitourgia-blocks .more {
+  align-self: flex-end; }
 
 .leitourgia-blocks .leitourgia-group .type a {
   color: #fff;

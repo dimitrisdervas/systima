@@ -6673,17 +6673,17 @@ body {
   background: #fff;
   padding: 0 4% 4%; }
 
-.aboutus ul.filters {
+.aboutus .filter-categories ul {
   display: flex;
   flex-wrap: wrap; }
-  .aboutus ul.filters li {
+  .aboutus .filter-categories ul li {
     display: flex;
     align-items: center;
     padding: 0 10px;
     max-height: 40px; }
-  .aboutus ul.filters li.active {
+  .aboutus .filter-categories ul li.active {
     border-bottom: 1px solid #26a69a; }
-  .aboutus ul.filters li:before {
+  .aboutus .filter-categories ul li:before {
     content: '';
     display: flex;
     top: 0;
@@ -6696,7 +6696,7 @@ body {
     margin-top: 2px;
     transition: .2s;
     margin-right: 20px; }
-  .aboutus ul.filters li.active:before {
+  .aboutus .filter-categories ul li.active:before {
     content: '';
     display: flex;
     top: -4px;
@@ -6711,16 +6711,20 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform-origin: 100% 100%; }
-  .aboutus ul.filters ul.subfilters {
+  .aboutus .filter-categories ul ul.subfilters {
     display: flex;
     flex-wrap: wrap; }
-    .aboutus ul.filters ul.subfilters li {
+    .aboutus .filter-categories ul ul.subfilters li {
       display: flex;
       align-items: center;
       padding: 0 10px;
       max-height: 40px; }
 
-.aboutus .filtr-item {
+.aboutus ul.list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.aboutus ul.list li {
   width: 25%;
   padding: 15px;
   border: 1px solid #ccc; }

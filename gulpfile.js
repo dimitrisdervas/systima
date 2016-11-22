@@ -1,4 +1,4 @@
-var gulp           = require('gulp');
+var gulp          = require('gulp');
 var browserSync    = require('browser-sync');
 var sass           = require('gulp-sass');
 var prefix         = require('gulp-autoprefixer');
@@ -61,25 +61,28 @@ var app = {};
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
+    'use strict';
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build', ''], {stdio: 'inherit'})
+    return cp.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
         .on('close', done);
 });
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['removeHtmlComments'], function () {
-    browserSync.reload();
+gulp.task('jekyll-rebuild', ['jekyll-build','removeHtmlComments'], function () {
+    'use strict';
+   browserSync.reload();
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
 gulp.task('browser-sync', ['removeHtmlComments'], function() {
+    'use strict';
     browserSync({
         server: {
-            baseDir: '_site'
+                    baseDir: '_site'
         }
     });
 });
@@ -88,12 +91,13 @@ gulp.task('browser-sync', ['removeHtmlComments'], function() {
  * Compile files from _resources/_scss into both [project-folder]/_site/css (for live injecting) and [project-folder]/css (for future jekyll builds)
  */
 gulp.task('styles', function () {
+  'use strict';
   var processors = [
     autoprefixer({browsers: ['last 1 version']}),
     pxtorem({replace: false,selectorBlackList: ['btn-floating']}),
     colorHexAlpha(),
-    responsiveType(),
-  ];
+    responsiveType()
+    ];
    return gulp.src(config.assetsDir+'/sass/styles.scss')
         .pipe(plumber())
         .pipe(gulpif(config.sourceMaps, sourcemaps.init()))
@@ -111,15 +115,17 @@ gulp.task('styles', function () {
 
 });
 
+
 gulp.task('css-debug', ['styles'], function () {
-  debug.inspect()
-})
-
-
+  'use strict';
+  debug.inspect();
+});
 /**
  * Image optimization
  */
+
 gulp.task('images', function() {
+    'use strict';
     gulp.src(config.assetsDir+'/images/*')
         .pipe(imagemin({
             progressive: true,
@@ -135,6 +141,7 @@ gulp.task('images', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
+    'use strict';
     gulp.watch(config.assetsDir+'/sass/**/*.scss', ['styles']);
     gulp.watch(config.assetsDir+'/js/**/*.js', ['scripts']);
     gulp.watch(['*.html',
@@ -157,6 +164,7 @@ gulp.task('watch', function () {
 
 // WATCH ONLY SASS STYLES
 gulp.task('watch-only-styles', function () {
+  'use strict';
   gulp.watch(config.assetsDir+'/sass/*.scss', ['styles']);
 });
 
@@ -168,6 +176,7 @@ gulp.task('watch-styles', ['browser-sync', 'watch-only-styles']);
 * Critical CSS
 */
 gulp.task('critical', function () {
+    'use strict';
     critical.generate({
         base: './',
         src: '_site/index.html',
@@ -213,6 +222,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 // };
 
 app.addScripts = function(paths, outputFilename){
+    'use strict';
     gulp.src(paths)
         .pipe(plumber())
         .pipe(gulpif(config.sourceMaps, sourcemaps.init()))
@@ -224,7 +234,9 @@ app.addScripts = function(paths, outputFilename){
         .pipe(gulp.dest('js'));
 };
 
-app.copy = function(srcFiles, outputDir) {
+'use strict';
+ app.copy = function(srcFiles, outputDir) {
+    'use strict';
     gulp.src(srcFiles)
         .pipe(gulp.dest(outputDir))
     ;
@@ -240,21 +252,24 @@ var key = '';
 // https://developers.google.com/speed/docs/insights/v2/getting-started
 
 gulp.task('mobile', function () {
-    return psi(site, {
+    'use strict';
+    return psi(
+        site, {
         // key: key
         nokey: 'true',
-        strategy: 'mobile',
-    }).then(function (data) {
+        strategy: 'mobile' })
+    .then(function (data) {
         console.log('Speed score: ' + data.ruleGroups.SPEED.score);
         console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
     });
 });
 
 gulp.task('desktop', function () {
+    'use strict';
     return psi(site, {
         nokey: 'true',
         // key: key,
-        strategy: 'desktop',
+        strategy: 'desktop'
     }).then(function (data) {
         console.log('Speed score: ' + data.ruleGroups.SPEED.score);
     });
@@ -263,22 +278,27 @@ gulp.task('desktop', function () {
 // HTML MINIFY not working
 //
 gulp.task('minify', function() {
+    'use strict';
   return gulp.src('_site/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('_site'))
+    .pipe(gulp.dest('_site'));
 });
 
-
+    
 gulp.task('main-bower-files-js', function(){
+    'use strict';
     var filterJS = gulpFilter('**/*.js', { restore: true });
     return gulp.src('./_resources/bower/bower.json')
         .pipe(mainBowerFiles( ))
         .pipe(filterJS)
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('assets/js'));
+        .pipe(gulp.dest('assets/js'))
+        .pipe(gulp.dest('_site/assets/js'))
+        ;
 });
 
 gulp.task('main-bower-files-css', function(){
+    'use strict';
     var filterJS = gulpFilter('**/*.css', { restore: true });
     return gulp.src('./_resources/bower/bower.json')
         .pipe(mainBowerFiles( ))
@@ -288,10 +308,11 @@ gulp.task('main-bower-files-css', function(){
 });
 
 gulp.task('main-bower-files-sass', function(){
+    'use strict';
     var filterJS = gulpFilter('**/sass/**', { restore: true });
     return gulp.src('./_resources/bower/bower_components/')
         .pipe(filterJS)
-        .pipe(filterJS.restore) 
+        .pipe(filterJS.restore)
         .pipe(gulp.dest('_resources/sass/vendor'));
 });
 
@@ -301,6 +322,7 @@ gulp.task('main-bower-files-sass', function(){
  * Compile fonts
  */
 gulp.task('fonts', function () {
+    'use strict';
     var options = {
     fontsDir: 'googlefonts/',
     cssDir: 'googlecss/',
@@ -316,6 +338,7 @@ gulp.task('fonts', function () {
 
 
 gulp.task('removeHtmlComments',['styles','jekyll-build'], function () {
+    'use strict';
   return gulp.src('_site/**/*.html')
     .pipe(stripComments())
     .pipe(gulp.dest('_site'));
@@ -324,6 +347,7 @@ gulp.task('removeHtmlComments',['styles','jekyll-build'], function () {
 
 
 gulp.task('maincss', function() {
+    'use strict';
   return gulp.src(['assets/css/styles.css','assets/css/vendor.css'])
     .pipe(concat('main.css'))
     .pipe(nano())
@@ -331,6 +355,7 @@ gulp.task('maincss', function() {
 });
 
 gulp.task('images', function () {
+  'use strict';
   // Make configuration from existing HTML and CSS files
   var config = responsiveConfig([
     '_site/**/*.css',
@@ -343,22 +368,22 @@ gulp.task('images', function () {
         width: 100,
         height: 100,
         grayscale: true,
-        rename: { dirname: '200px' },
+        rename: { dirname: '200px' }
       }, {
         width: 500,
-        rename: { dirname: '500px' },
+        rename: { dirname: '500px' }
       }, {
         width: 630,
-        rename: { dirname: '600px' },
+        rename: { dirname: '600px' }
       }, {
         // Compress, strip metadata, and rename original image
-        rename: { dirname: 'original' },
-      }],
+        rename: { dirname: 'original' }
+      }]
     },{
       errorOnEnlargement: false,
       quality: 80,
       withMetadata: false,
-      compressionLevel: 7,
+      compressionLevel: 7
     }))
     .pipe(gulp.dest('assets/images/teachers'));
 });

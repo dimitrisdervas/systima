@@ -113,30 +113,7 @@
 
                     {% else %}
 <!-- Print every field as separate div -->
-                           <div class="{{field.field}} {{field.data.class}}">
-                              {% case field.data.link %}
-                                       {% when 'posts' %}
-                                             <a href="{{ site.baseurl}}{{ post.url }}">
-                                             {% capture fieldDivEnd %}</a></div>{% endcapture%}
-                                       {% when 'products' %}
-                                              <a href="{{ site.baseurl}}products/{{ post.sku }}.html">
-                                              {% capture fieldDivEnd %}</a></div>{% endcapture%}
-                                       {% else %}
-                                              {% capture fieldDivEnd %}</div>{% endcapture%}
-                                 {% endcase %}
-
-                                      {% if field.data.icon %}
-                                       <i class="material-icons">{{field.data.icon}}</i>
-                                      {% endif %}
-
-
-                                 {{ post.[field.field] }}
-
-                                 {{fieldDivEnd}}
-                                
-
-
-
+                           <div class="{{field.field}} {{field.data.class}}">{% case field.data.link %}{% when 'posts' %}<a href="{{ site.baseurl}}{{ post.url }}">{% capture fieldDivEnd %}</a></div>{% endcapture%}{% when 'products' %}<a href="{{ site.baseurl}}products/{{ post.sku }}.html">{% capture fieldDivEnd %}</a></div>{% endcapture%}{% else %}{% capture fieldDivEnd %}</div>{% endcapture%}{% endcase %}{% if field.data.icon %}<i class="material-icons">{{field.data.icon}}</i>{% endif %}{{ post.[field.field] | lstrip  }}{{fieldDivEnd}}                           
 <!--  End case of fields -->
                     {% endcase %}
 <!--  End loop in fields -->

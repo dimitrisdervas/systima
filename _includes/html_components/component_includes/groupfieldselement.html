@@ -1,7 +1,6 @@
 <!-- Check the group  html element -->  
 {% if include.component-data.groupFieldsElement %}
 
-
    {% case include.component-data.groupFieldsElement %}
    {% when 'div' %}
       {% capture groupdivDiv %}
@@ -17,7 +16,8 @@
             <ul {% for data in include.component-data.groupFieldsElement-data-ul %}
                   {{data[0]}}="{{data[1]}}"
                  {% endfor %}>
-            {% endcapture%}
+                 test
+        {% endcapture%}
 
          {% capture groupdivDiv %}
             <li {% for data in include.component-data.groupFieldsElement-data-li %}

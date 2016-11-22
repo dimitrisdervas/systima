@@ -7,11 +7,9 @@ config:
  - section:
     data:
       htmlelement: section
-    theme:
+   wrapperSection:
+     theme:
       class: textarea
-    seoTitle:
-     data:
-      label: "Σχετικά με εμάς"
    divs:
       - div:
          theme:
@@ -32,27 +30,50 @@ config:
          theme:
           class: teachers
         components:
-         - component: posts-list-filterizr
+         - component: posts-list
            data:
              title: "ΜΠΟΥΡΝΤΑ-ΛΟΥΚΙΔΟΥ Ο.Ε."
              subtitle: "Οι εκπαιδευτικοί μας"
              data-type: data-list
              content-type: teachers
-             javascript-plugin: filterizr
-             groupElement:
-              data:
-                id: teachers
+             javascript-plugin: listjs
+             javascript-plugin-data:
+               filters: 
+                 - element: all
+                   categories:
+                    - filter: all
+                      label: "Όλοι"
+                 - element: teacher
+                   categories:
+                     - filter: "ΦΥΣΙΚΟΣ"
+                       label: ΦΥΣΙΚΟΣ
+                     - filter: "ΦΙΛΟΛΟΓΟΣ"
+                       label: ΦΙΛΟΛΟΓΟΣ
+                     - filter: "ΜΑΘΗΜΑΤΙΚΟΣ"
+                       label: ΜΑΘΗΜΑΤΙΚΟΣ
+                     - filter: "ΠΛΗΡΟΦΟΡΙΚΟΣ"
+                       label: ΠΛΗΡΟΦΟΡΙΚΟΣ
+                     - filter: "ΑΓΓΛΙΚΩΝ"
+                       label: ΑΓΓΛΙΚΩΝ
+                     - filter: "ΒΙΟΛΟΓΟΣ"
+                       label: ΒΙΟΛΟΓΟΣ
+                     - filter: "ΟΙΚΟΝΟΜΟΛΟΓΟΣ"
+                       label: ΟΙΚΟΝΟΜΟΛΟΓΟΣ
+                     - filter: "ΧΗΜΙΚΟΣ"
+                       label: ΧΗΜΙΚΟΣ                                   
+                 - element: name
+               search: 
+                placeholder: search
+             groupFieldsElement: ul
+             groupFieldsElement-data-ul:
+               class: list
              fields:
-              - field: group
-                filterizr: true
-                class: teacher-filterizr
-                fields:
                   - field: image
                     data:
-                     image-hash: image
-                     image-path: /assets/images/teachers/
+                       image-hash: image
+                       image-path: /assets/images/teachers/
                   - field: name
-                  - field: teacher                  
+                  - field: teacher
       - div:
          theme:
           class: secretaria
@@ -64,7 +85,5 @@ config:
              content-type: secretaria
              fields:
               - field: name
-
-
 ---
 {% include basic_components/page.html %}

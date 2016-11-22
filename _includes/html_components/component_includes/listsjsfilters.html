@@ -1,38 +1,39 @@
-<!--                   -->
-<!-- LIST.js - FILTERS -->
-<!--                   -->
-{% if include.component-data.javascript-plugin == 'list.js'  %}
-
+{% comment %}
+LIST.js - FILTERS 
+{% endcomment %}               
+{% if include.component-data.javascript-plugin == 'listjs'  %}
    <div id="testlistsjs">
-<!--    Filters for the listsjs  -->
+{% comment %}   
+Filters for the listsjs  
+{% endcomment %}
       <div class="filter-categories">
          <ul>
        {% for element in include.component-data.javascript-plugin-data.filters %}     
             {% for filter in element.categories %}
-                  <li id="filter-{{ filter.filter | slugify }}" >
-                    {{ filter.filter }}
+                  <li id="filter-{{ filter.filter }}" >
+                    {{ filter.label }}
                      </li>
                {% endfor %}
          {% endfor %}    
          </ul>
 
       </div>
-   
+{% comment %}   
+SEARCH    
+{% endcomment %}
       {% if include.component-data.javascript-plugin-data.search %}
-<!--    SEARCH -->
-       <input class="search" placeholder="{{include.component-data.javascript-plugin-data.search.placeholder}}" />
-      {% endif %}
-      
-<!--    SORT -->
+          <input class="search" placeholder="{{include.component-data.javascript-plugin-data.search.placeholder}}" />
+      {% endif %}      
+{% comment %}   
+SORT 
+{% endcomment %}
       {% if include.component-data.javascript-plugin-data.sort %}
          {% for sort in include.component-data.javascript-plugin-data.sort %}
-         <ul class="sort-by">
-                  <li class="sort btn" data-sort="{{ sort.data }}">{{ sort.label }}</li>
-                </ul>
-               {% endfor %}
+            <ul class="sort-by">
+              <li class="sort btn" data-sort="{{ sort.data }}">{{ sort.label }}</li>
+            </ul>
+         {% endfor %}
       {% endif%}
 
-
    {% capture filterDivEnd %}</div>{% endcapture%}
-
 {% endif %}

@@ -325,7 +325,7 @@ body {
       background: #fff;
       padding: 0 4% 4%;
     }
-    ul.filters {
+    .filter-categories ul {
         display: flex;
         flex-wrap: wrap;
         li {
@@ -380,12 +380,15 @@ body {
           }
         }
     }
-     .filtr-item {
-        width: span(3 of 12);
-        padding: 15px;
-        border: 1px solid #ccc;
+    ul.list {
+      display: flex;
+      flex-wrap: wrap;
     }
-
+    ul.list  li {
+      width: span(3 of 12);
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
     .name {
       font-weight: bold;
       font-size: 15px;
